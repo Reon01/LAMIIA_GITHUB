@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Weapon
+  - Enemy
+  - Kajiki
+  - Unagi
+  - Kurage
+  - kame
   layers:
   - Default
   - TransparentFX
