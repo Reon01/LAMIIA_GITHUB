@@ -5,7 +5,8 @@ using UnityEngine;
 public class Kajiki : MonoBehaviour
 {
     //れおん改訂版
-    public bool isSkill;
+    public bool isSkill; //スキルが選択されてるか制御
+    public bool spendskill; //スキルを消費
 
     [SerializeField] GameObject kajiki;
 
@@ -35,9 +36,11 @@ public class Kajiki : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && isSkill == true)
+        if (Input.GetKeyDown(KeyCode.F) && isSkill == true && GetComponent<GetSkill>().a_Kajiki >= 1)
         {
             FishShot();
+            GetComponent<GetSkill>().a_Kajiki -= 1; //スキルを１消費
+            spendskill = true;
         }
         /*
         if (Input.GetKeyDown(KeyCode.F))

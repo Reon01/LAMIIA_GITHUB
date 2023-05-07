@@ -7,22 +7,22 @@ public class GetSkill : MonoBehaviour
 {
     //カジキ
     public Text amount_Kajiki;　//残りの数を表記するテキスト
-    private int a_Kajiki; //数を計算する
+    public int a_Kajiki; //数を計算する
     private bool isKajiki; //取得エリアにいるかいないか判断する
 
     //ウナギ
     public Text amount_Unagi;　//残りの数を表記するテキスト
-    private int a_Unagi; //数を計算する
+    public int a_Unagi; //数を計算する
     private bool isUnagi; //取得エリアにいるかいないか判断する
 
     //クラゲ
     public Text amount_Kurage;　//残りの数を表記するテキスト
-    private int a_Kurage; //数を計算する
+    public int a_Kurage; //数を計算する
     private bool isKurage; //取得エリアにいるかいないか判断する
 
     //カメ
     public Text amount_Kame;　//残りの数を表記するテキスト
-    private int a_Kame; //数を計算する
+    public int a_Kame; //数を計算する
     private bool isKame; //取得エリアにいるかいないか判断する
 
     // Start is called before the first frame update
@@ -60,6 +60,19 @@ public class GetSkill : MonoBehaviour
         {
             a_Kame += 1;　//スキルの数＋１
             amount_Kame.text = "" + a_Kame;　//スキルの数を表記するテキストの中身を変更
+        }
+
+
+        //カジキのスキルを使ったら、表記をー１する
+        if (GetComponent<Kajiki>().spendskill == true)
+        {
+            amount_Kajiki.text = "" + a_Kajiki;
+        }
+
+        //カメのスキルを使ったら、表記を-1する
+        if (GetComponent<Kame2>().spendskill == true)
+        {
+            amount_Kame.text = "" + a_Kame;
         }
     }
 
