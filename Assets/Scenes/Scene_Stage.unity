@@ -1572,6 +1572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSkill: 0
+  spendskill: 0
   kajiki: {fileID: 548867217499864177, guid: b82badefb19657a49aed3781fb2eec96, type: 3}
   firingPoint: {fileID: 507153814}
 --- !u!114 &507153827
@@ -1589,6 +1590,8 @@ MonoBehaviour:
   Turtle: {fileID: 2072608384}
   i: 0
   iscount: 0
+  spendskill: 0
+  player: {fileID: 0}
 --- !u!114 &507153828
 MonoBehaviour:
   m_ObjectHideFlags: 0
