@@ -1,11 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class PlayerMove3 : MonoBehaviour
 {
-void Update()
+    public CinemachineBrain brain;
+    private ICinemachineCamera Cam;
+    private CinemachineVirtualCamera vcam;
+    public float kando;
+    private GameObject vCamObj;
+
+    void Start()
     {
+        GameObject vCamObj = GameObject.Find("GameObject");
+        vcam = vCamObj.GetComponent<CinemachineVirtualCamera>();
+    }
+
+    void Update()
+    {
+        var pov = vcam.GetCinemachineComponent<CinemachinePOV>();
+        pov.m_VerticalAxis.m_MaxSpeed = kando;
+        pov.m_HorizontalAxis.m_MaxSpeed = kando;
         // ƒJƒƒ‰‚ÌŒü‚«‚©‚çY²‚Ì‰ñ“]‚ğŒvZ‚·‚é
         Quaternion horizontalRot = Quaternion.Euler(0f, Camera.main.transform.eulerAngles.y, 0f);
 

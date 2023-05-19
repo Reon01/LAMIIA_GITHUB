@@ -8,12 +8,12 @@ public class EnemyHP : MonoBehaviour
     public float HP = 100;
     public Slider HPBar;
     public GameObject Enemy;
-    public GameObject Player;
+    private GameObject Player;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
