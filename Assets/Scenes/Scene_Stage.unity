@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1591,7 +1591,7 @@ MonoBehaviour:
   i: 0
   iscount: 0
   spendskill: 0
-  player: {fileID: 0}
+  player: {fileID: 507153814}
 --- !u!114 &507153828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1619,6 +1619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38aed15bd5c7be849a0d50d9215802bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brain: {fileID: 963194229}
+  kando: 0
 --- !u!114 &507153830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4259,7 +4261,7 @@ MonoBehaviour:
   HP: 100
   HPBar: {fileID: 933274872}
   Enemy: {fileID: 1241558677}
-  Player: {fileID: 507153814}
+  Player: {fileID: 0}
 --- !u!1 &1249171754
 GameObject:
   m_ObjectHideFlags: 0
