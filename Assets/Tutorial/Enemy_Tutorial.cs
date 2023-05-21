@@ -7,6 +7,7 @@ public class Enemy_Tutorial : MonoBehaviour
     public GameObject enemy;
     public float hp = 100;
     public GameObject enemyspawner;
+    public bool isspawn;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,12 @@ public class Enemy_Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isspawn == true && Input.GetKeyDown(KeyCode.E))
+        {
+            Instantiate(enemy, new Vector3(3f, 0f, 6f), Quaternion.identity);
+            isspawn = false;
+        }
+
         /*
         hp = enemy.GetComponent<EnemyHP>().HP;
 
@@ -28,14 +35,11 @@ public class Enemy_Tutorial : MonoBehaviour
         */
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
-       if(other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Instantiate(enemy, new Vector3(3f, 0f, 6f), Quaternion.identity);
-            }
+            isspawn = true;
         }
     }
 }
