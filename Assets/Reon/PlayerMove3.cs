@@ -13,7 +13,7 @@ public class PlayerMove3 : MonoBehaviour
 
     void Start()
     {
-        GameObject vCamObj = GameObject.Find("GameObject");
+        GameObject vCamObj = GameObject.Find("ChinemachineVirtualCamera");
         vcam = vCamObj.GetComponent<CinemachineVirtualCamera>();
     }
 

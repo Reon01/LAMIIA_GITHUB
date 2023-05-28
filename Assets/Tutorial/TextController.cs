@@ -10,10 +10,13 @@ public class TextController : MonoBehaviour
     public string[] word;
     private int num = 0;
 
+    public GameObject panel;
+
     // Start is called before the first frame update
     void Start()
     {
         textLabel.text = charaName + "\n" + word[num];
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
@@ -24,6 +27,8 @@ public class TextController : MonoBehaviour
             if (num == word.Length - 1)
             {
                 this.gameObject.SetActive(false);
+                Time.timeScale = 1;
+                panel.SetActive(true);
                 return;
             }
 
