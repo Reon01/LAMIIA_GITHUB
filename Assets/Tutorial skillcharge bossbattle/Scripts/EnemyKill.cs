@@ -3,18 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHP : MonoBehaviour
+public class EnemyKill : MonoBehaviour
 {
-    public float HP = 100;
-    public Slider HPBar;
-    public GameObject Enemy;
-    private GameObject Player;
-
-    /*
     //スキル取得
     private int value;
 
-    
     //カジキ
     public Text amount_Kajiki;　//残りの数を表記するテキスト
     private int a_Kajiki; //数を計算する
@@ -26,51 +19,36 @@ public class EnemyHP : MonoBehaviour
     //クラゲ
     public Text amount_Kurage;　//残りの数を表記するテキスト
     private int a_Kurage; //数を計算する
-    */
 
 
-    //EnemyKill
-    private GameObject enemykill;
+    //敵が死んだら
+    private GameObject enemy1prefab;
 
     // Start is called before the first frame update
     void Start()
     {
-        Player = GameObject.Find("Player");
-        enemykill = GameObject.Find("EnemyKillSystem");
+        a_Kajiki = 0;
+        a_Kurage = 0;
+        a_Unagi = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //死ぬ処理
-        if (HP <= 0)
+        /*
+        enemy1prefab = GameObject.FindGameObjectWithTag("Enemy1");
+        if (enemy1prefab.GetComponent<EnemyHP>().HP <= 0)
         {
-            //getskill();
-            enemykill.GetComponent<EnemyKill>().getskill();
-            Destroy(Enemy);
+            getskill();
+            Debug.Log("Dead");
         }
+        */
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Weapon"))
-        {
-            if (Player.GetComponent<SkillElectronic>().IsLightning == false)
-            {
-                HP = HP - 10;
-                HPBar.value = HP;
-            }
-            if (Player.GetComponent<SkillElectronic>().IsLightning == true)
-            {
-                HP = HP - 20;
-                HPBar.value = HP;
-            }
-        }
-    }
-
-    /*
     public void getskill()
     {
+        Debug.Log("Hi");
+
         //カジキ
         value = Random.Range(5, 10);
         a_Kajiki += value; //スキルの数＋value
@@ -86,5 +64,4 @@ public class EnemyHP : MonoBehaviour
         a_Kurage += value; //スキルの数＋value
         amount_Kurage.text = "" + a_Kurage;　//スキルの数を表記するテキストの中身を変更
     }
-    */
 }

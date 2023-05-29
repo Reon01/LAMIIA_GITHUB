@@ -9,11 +9,18 @@ public class Timer : MonoBehaviour
     public GameObject canvas;
     public Slider slider_timer;
 
+    //プレイヤーのHP表示
+    public GameObject hpcanvas;
+
+    //敵出現
+    public GameObject enemybattlesystem;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        hpcanvas.SetActive(true);
+        enemybattlesystem.SetActive(true);
     }
 
     // Update is called once per frame
