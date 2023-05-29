@@ -10,6 +10,21 @@ public class EnemyHP : MonoBehaviour
     public GameObject Enemy;
     private GameObject Player;
 
+    //スキル取得
+    private int value;
+
+    //カジキ
+    public Text amount_Kajiki;　//残りの数を表記するテキスト
+    private int a_Kajiki; //数を計算する
+
+    //ウナギ
+    public Text amount_Unagi;　//残りの数を表記するテキスト
+    private int a_Unagi; //数を計算する
+
+    //クラゲ
+    public Text amount_Kurage;　//残りの数を表記するテキスト
+    private int a_Kurage; //数を計算する
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +37,7 @@ public class EnemyHP : MonoBehaviour
         //死ぬ処理
         if (HP <= 0)
         {
+            getskill();
             Destroy(Enemy);
         }
     }
@@ -41,5 +57,23 @@ public class EnemyHP : MonoBehaviour
                 HPBar.value = HP;
             }
         }
+    }
+
+    public void getskill()
+    {
+        //カジキ
+        value = Random.Range(5, 10);
+        a_Kajiki += value; //スキルの数＋value
+        amount_Kajiki.text = "" + a_Kajiki;　//スキルの数を表記するテキストの中身を変更
+
+        //ウナギ
+        value = Random.Range(5, 10);
+        a_Unagi += value; //スキルの数＋value
+        amount_Unagi.text = "" + a_Unagi;　//スキルの数を表記するテキストの中身を変更
+
+        //クラゲ
+        value = Random.Range(5, 10);
+        a_Kurage += value; //スキルの数＋value
+        amount_Kurage.text = "" + a_Kurage;　//スキルの数を表記するテキストの中身を変更
     }
 }

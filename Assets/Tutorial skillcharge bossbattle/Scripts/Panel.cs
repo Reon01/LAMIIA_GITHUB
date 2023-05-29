@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Panel1 : MonoBehaviour
+public class Panel : MonoBehaviour
 {
-    private float count;
-    public float timer = 5;
+    private GameObject[] enemy;
     public GameObject canvas;
 
     // Start is called before the first frame update
@@ -17,8 +16,8 @@ public class Panel1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        count += Time.deltaTime;
-        if (count >= timer)
+        enemy = GameObject.FindGameObjectsWithTag("Enemy");
+        if (enemy.Length == 0)
         {
             canvas.SetActive(true);
             gameObject.SetActive(false);
