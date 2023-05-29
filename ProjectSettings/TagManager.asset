@@ -10,6 +10,7 @@ TagManager:
   - Unagi
   - Kurage
   - kame
+  - Enemy1
   layers:
   - Default
   - TransparentFX
