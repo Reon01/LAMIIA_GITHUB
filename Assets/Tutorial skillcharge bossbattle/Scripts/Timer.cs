@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Panel1 : MonoBehaviour
+public class Timer : MonoBehaviour
 {
-    private float count;
-    public float timer = 5;
+    public float timer = 60;
     public GameObject canvas;
+    public Slider slider_timer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -17,8 +19,10 @@ public class Panel1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        count += Time.deltaTime;
-        if (count >= timer)
+        timer -= Time.deltaTime;
+        slider_timer.value = timer;
+
+        if (timer <= 0)
         {
             canvas.SetActive(true);
             gameObject.SetActive(false);

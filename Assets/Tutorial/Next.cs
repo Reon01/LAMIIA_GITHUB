@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Next : MonoBehaviour
 {
@@ -48,6 +49,7 @@ public class Next : MonoBehaviour
         Cursor.visible = false;
         //カーソルロックを解除
         Cursor.lockState = CursorLockMode.Locked;
+        SceneManager.LoadScene("Scene_Tutorial skillcharge bossbattle");
     }
 
     //いいえのボタンを押した場合
