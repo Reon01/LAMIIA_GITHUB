@@ -49,6 +49,12 @@ public class EnemyHP : MonoBehaviour
             enemykill.GetComponent<EnemyKill>().getskill();
             Destroy(Enemy);
         }
+
+        //UŒ‚‚³‚ê‚½‚Æ‚«
+        if (HP <= 90)
+        {
+            this.GetComponent<FishMove>().getdamage = true;
+        }
     }
 
     public void OnTriggerEnter(Collider other)
