@@ -8,20 +8,12 @@ public class TimeController : MonoBehaviour
     public Slider slider_timer;
     public GameObject player;
     public GameObject warppoint;
-
-    float x;
-    float y;
-    float z;
+    public GameObject mediumbosssystem;
 
     // Start is called before the first frame update
     void Start()
     {
-        //player = GameObject.Find("Player");
-        //warppoint = GameObject.Find("WarpPoint");
-        //Vector3 point = warppoint.transform.position;
-        //x = point.x;
-        //y = point.y;
-        //z = point.z;
+        
     }
 
     // Update is called once per frame
@@ -29,9 +21,17 @@ public class TimeController : MonoBehaviour
     {
         if (slider_timer.value <= 0)
         {
-            Vector3 point = warppoint.transform.position;
-            player.transform.position = point;
-            Debug.Log(point);
+            warp();
+            gameObject.SetActive(false);
         }
+    }
+
+    public void warp()
+    {
+        player.GetComponent<CharacterController>().enabled = false;
+        Vector3 point = warppoint.transform.position;
+        player.transform.position = point;
+        player.GetComponent<CharacterController>().enabled = true;
+        mediumbosssystem.SetActive(true);
     }
 }
