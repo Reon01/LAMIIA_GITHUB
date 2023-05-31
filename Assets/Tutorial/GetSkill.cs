@@ -69,11 +69,13 @@ public class GetSkill : MonoBehaviour
             amount_Kajiki.text = "" + a_Kajiki;
         }
 
+        /*
         //カメのスキルを使ったら、表記を-1する
         if (GetComponent<Kame2>().spendskill == true)
         {
             amount_Kame.text = "" + a_Kame;
         }
+        */
     }
 
     //　↓カジキのエリアに入ったらスキルを取得できるようにする
