@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1104221627603313779}
   - component: {fileID: 793366505210273877}
   - component: {fileID: 1682047381915078987}
-  - component: {fileID: 694925083665941767}
+  - component: {fileID: -2181025541655907642}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -99,7 +99,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &694925083665941767
+--- !u!114 &-2181025541655907642
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,13 +108,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 669677707160422561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceeae1d05b7110a4f9b9b6e68c201067, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d1ae8c2832d4cd4fa7ca0864d899e8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 100
   HPBar: {fileID: 586901137602949756}
   Enemy: {fileID: 669677707160422561}
-  Player: {fileID: 0}
 --- !u!1 &841989244050319521
 GameObject:
   m_ObjectHideFlags: 0

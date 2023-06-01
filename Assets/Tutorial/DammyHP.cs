@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHP : MonoBehaviour
+public class DammyHP : MonoBehaviour
 {
     public float HP = 100;
     public Slider HPBar;
@@ -46,14 +46,14 @@ public class EnemyHP : MonoBehaviour
         if (HP <= 0)
         {
             //getskill();
-            enemykill.GetComponent<EnemyKill>().getskill();
+            //enemykill.GetComponent<EnemyKill>().getskill();
             Destroy(Enemy);
         }
 
         //çUåÇÇ≥ÇÍÇΩÇ∆Ç´
         if (HP <= 90)
         {
-            this.GetComponent<FishMove>().getdamage = true;
+            //this.GetComponent<FishMove>().getdamage = true;
         }
     }
 
