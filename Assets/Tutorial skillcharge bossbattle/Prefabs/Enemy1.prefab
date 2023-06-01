@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 4638994780542181429}
   m_Layer: 0
   m_Name: Enemy1
-  m_TagString: Enemy1
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -697,10 +697,6 @@ MonoBehaviour:
   HP: 100
   HPBar: {fileID: 4513251063936998864}
   Enemy: {fileID: 3630781181798207514}
-  amount_Kajiki: {fileID: 5047500834144718661, guid: f008c2aba5c04f946bdf3aa2a2eeed0d, type: 3}
-  amount_Unagi: {fileID: 6924368408046029654, guid: ec856fa6bb3323440a2e86cf57ffb600, type: 3}
-  amount_Kurage: {fileID: 5912341959719500936, guid: 9fae1d15d2bb3584ea4638b5e157ccd9, type: 3}
-  enemykill: {fileID: 7853600609644614664, guid: 74d7b506c52c7cc4294ba8d6768ebcf7, type: 3}
 --- !u!114 &4638994780542181429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,6 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0629ba0c87797dd4c9484b24081299c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  getdamage: 0
 --- !u!1 &3738152373252773575
 GameObject:
   m_ObjectHideFlags: 0
