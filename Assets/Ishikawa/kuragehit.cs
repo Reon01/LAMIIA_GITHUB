@@ -20,7 +20,6 @@ public class kuragehit : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            //Destroy(other.gameObject);
             player.GetComponent<Kurage>().damage();
         }
     }

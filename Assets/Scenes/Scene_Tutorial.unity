@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2069,7 +2069,6 @@ GameObject:
   - component: {fileID: 507153821}
   - component: {fileID: 507153822}
   - component: {fileID: 507153823}
-  - component: {fileID: 507153824}
   - component: {fileID: 507153825}
   - component: {fileID: 507153826}
   - component: {fileID: 507153827}
@@ -2216,20 +2215,6 @@ MonoBehaviour:
   isSkill: 0
   iscount: 0
   count: 0
---- !u!114 &507153824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507153814}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e63d7d70a33b4e44ca042831d16ccc6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playabledirector: {fileID: 1500277416}
-  turtle: {fileID: 0}
 --- !u!114 &507153825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4434,7 +4419,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -4763,7 +4748,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009768606}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!1 &1037919997
 GameObject:
   m_ObjectHideFlags: 0
