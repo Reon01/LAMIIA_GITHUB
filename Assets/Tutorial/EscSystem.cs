@@ -5,11 +5,12 @@ using UnityEngine;
 public class EscSystem : MonoBehaviour
 {
     public GameObject canvas_esc;
+    private GameObject cursourlocksystem;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        cursourlocksystem = GameObject.Find("CursorLockSystem");
     }
 
     // Update is called once per frame
@@ -31,5 +32,12 @@ public class EscSystem : MonoBehaviour
 #else
     Application.Quit();//ゲームプレイ終了
 #endif
+    }
+
+    public void GameContinue()
+    {
+        Time.timeScale = 1;
+        cursourlocksystem.GetComponent<CursorLockSystem>().cursorlock();
+        canvas_esc.SetActive(false);
     }
 }

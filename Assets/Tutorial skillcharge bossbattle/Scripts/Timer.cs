@@ -15,12 +15,16 @@ public class Timer : MonoBehaviour
     //ìGèoåª
     public GameObject enemybattlesystem;
 
+    private GameObject player;
+
 
     // Start is called before the first frame update
     void Start()
     {
         hpcanvas.SetActive(true);
         enemybattlesystem.SetActive(true);
+        player = GameObject.Find("Player");
+        player.GetComponent<PlayerHP>().maxheal();
     }
 
     // Update is called once per frame
