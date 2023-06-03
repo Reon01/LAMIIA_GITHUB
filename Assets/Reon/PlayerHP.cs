@@ -47,6 +47,16 @@ public class PlayerHP : MonoBehaviour
             HPBar.value = HP;
             HP_num = HP;
             Text_HP.text = "HP:" + HP_num;
+            Debug.Log("ƒNƒ‰ƒQ‰ñ•œ");
         }
+    }
+
+    public void maxheal()
+    {
+        HP = 100;
+        HPBar.value = HP;
+        HP_num = HP;
+        Text_HP.text = "HP:" + HP_num;
+        Debug.Log("maxheal");
     }
 }
