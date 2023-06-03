@@ -24,17 +24,20 @@ public class Kurage : MonoBehaviour
             kuragesield.SetActive(true);
             kuragesieldHP = 1;
             player.GetComponent<PlayerHP>().kaihuku();
+            GetComponent<GetSkill>().a_Kurage -= 1; //ƒXƒLƒ‹‚ğ‚PÁ”ï
         }
-        if (kuragesieldHP == 0)
+
+        if (kuragesieldHP <= 0)
         {
             kuragesield.SetActive(false);
+            Debug.Log("ƒNƒ‰ƒQÁ–Å");
         }
 
     }
     public void damage()
     {
-
-        kuragesieldHP -= 1;
-
+        //kuragesieldHP -= 1;
+        kuragesield.SetActive(false);
+        Debug.Log("ƒNƒ‰ƒQÁ–Å");
     }
 }

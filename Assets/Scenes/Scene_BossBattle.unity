@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &128211985
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 59e83ebb56f243342a5aa0f4b30d7861, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e83ebb56f243342a5aa0f4b30d7861, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e83ebb56f243342a5aa0f4b30d7861, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.58
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e83ebb56f243342a5aa0f4b30d7861, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e83ebb56f243342a5aa0f4b30d7861, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.49425673
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e83ebb56f243342a5aa0f4b30d7861, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.058061805
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e83ebb56f243342a5aa0f4b30d7861, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.86145127
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e83ebb56f243342a5aa0f4b30d7861, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.101197235
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e83ebb56f243342a5aa0f4b30d7861, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 13.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e83ebb56f243342a5aa0f4b30d7861, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 120.31
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e83ebb56f243342a5aa0f4b30d7861, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59e83ebb56f243342a5aa0f4b30d7861, type: 3}
+      propertyPath: m_Name
+      value: Boss_kansei
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59e83ebb56f243342a5aa0f4b30d7861, type: 3}
 --- !u!1001 &368625419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,6 +190,10 @@ PrefabInstance:
     - target: {fileID: 1784069008590501379, guid: 0e4455be00289c040922f12203b2a8c3, type: 3}
       propertyPath: m_Name
       value: Terrain_Stage
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784069008590501379, guid: 0e4455be00289c040922f12203b2a8c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1784069008590501382, guid: 0e4455be00289c040922f12203b2a8c3, type: 3}
       propertyPath: m_RootOrder
