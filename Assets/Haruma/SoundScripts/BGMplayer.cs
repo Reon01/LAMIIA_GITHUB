@@ -16,6 +16,7 @@ public class BGMplayer : MonoBehaviour
 
     void Start()
     {
+        /*
         int n_SceneValue = ASManager.n_Scene;
         
         if(n_SceneValue == 0)
@@ -32,6 +33,7 @@ public class BGMplayer : MonoBehaviour
             Debug.Log("Tutorial_BGM");
             playerController.Play();
         }
+        */
     }
 
     // Update is called once per frame

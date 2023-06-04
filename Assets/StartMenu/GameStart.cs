@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using CriWare;
 
 public class GameStart : MonoBehaviour
 {
@@ -9,10 +10,16 @@ public class GameStart : MonoBehaviour
     public GameObject storytext;
     public GameObject backbutton;
 
+    [SerializeField]
+    private PlayerController playerController;
+
+    [SerializeField]
+    private AtomLoader atomLoader;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        SceneManager.sceneLoaded += SceneLoaded;
     }
 
     // Update is called once per frame
@@ -24,6 +31,14 @@ public class GameStart : MonoBehaviour
     public void gamestart()
     {
         SceneManager.LoadScene("Scene_Tutorial");
+    }
+
+    public void SceneLoaded(Scene nextScene, LoadSceneMode mode)
+    {
+        playerController.SetAcb(atomLoader.acbAssets[0].Handle);
+        playerController.SetCueName("Tutorial_BGM");
+        Debug.Log("Tutorial_BGM");
+        playerController.Play();
     }
 
     public void keyconfig()
