@@ -11,6 +11,7 @@ TagManager:
   - Kurage
   - kame
   - Enemy1
+  - MediumBoss
   layers:
   - Default
   - TransparentFX
