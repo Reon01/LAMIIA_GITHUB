@@ -1,50 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using CriWare;
 
 public class BGMplayer : MonoBehaviour
 {
-    public bool dontDestroyOnLoad = true;
-
-    void Awake()
-    {
-        if (dontDestroyOnLoad)
-        {
-            DontDestroyOnLoad(transform.gameObject);
-        }
-    }
-
-    void Start()
-    {
-        //シーンアクティブを検知するデリゲートの登録
-        SceneManager.activeSceneChanged += ActiveSceneChanged;
-        Scene scene_Tutorial = SceneManager.GetSceneByName("Scene_Tutorial");
-        Scene scene_Tutorialskillchargebossbattle = SceneManager.GetSceneByName("Scene_Tutorialskillchargebossbattle");
-
-    }
-
+    //n_Sceneの番号によってBGMを再生
     [SerializeField]
     private PlayerController playerController;
 
     [SerializeField]
     private AtomLoader atomLoader;
 
-    // Update is called once per frame
-    void Update()
+    public ActiveSceneManager ASManager;
+
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.F5))
+        int n_SceneValue = ASManager.n_Scene;
+        
+        if(n_SceneValue == 0)
+        {
+            playerController.SetAcb(atomLoader.acbAssets[0].Handle);
+            playerController.SetCueName("Title_BGM");
+            Debug.Log("Title_BGM");
+            playerController.Play();
+        }
+        else if (n_SceneValue == 1)
         {
             playerController.SetAcb(atomLoader.acbAssets[0].Handle);
             playerController.SetCueName("Tutorial_BGM");
+            Debug.Log("Tutorial_BGM");
             playerController.Play();
         }
     }
 
-    void ActiveSceneChanged(Scene thisScene, Scene nextScene)
+    // Update is called once per frame
+    void Update()
     {
-        if(nextScene == SceneManager.GetSceneByName("Scene_Tutorial"))
+        if (Input.GetKeyDown(KeyCode.F5))
         {
             playerController.SetAcb(atomLoader.acbAssets[0].Handle);
             playerController.SetCueName("Tutorial_BGM");
