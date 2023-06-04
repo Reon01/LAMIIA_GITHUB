@@ -22,5 +22,9 @@ public class kuragehit : MonoBehaviour
         {
             player.GetComponent<Kurage>().damage();
         }
+        else if (other.CompareTag("MediumBoss"))
+        {
+            player.GetComponent<Kurage>().damage();
+        }
     }
 }

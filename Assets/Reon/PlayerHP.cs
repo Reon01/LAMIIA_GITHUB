@@ -12,10 +12,14 @@ public class PlayerHP : MonoBehaviour
     public Text Text_HP;
     public int HP_num = 100;
 
+    //Ž€‚ñ‚¾‚Æ‚«‚É•\Ž¦‚·‚é
+    public GameObject canvas_restart;
+    private GameObject cursorlocksystem;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        cursorlocksystem = GameObject.Find("CursorLockSystem");
     }
 
     // Update is called once per frame
@@ -26,8 +30,7 @@ public class PlayerHP : MonoBehaviour
 
         if (HP <= 0)
         {
-            Debug.Log("Dead");
-            Time.timeScale = 0;
+            dead();
         }
     }
 
@@ -58,5 +61,13 @@ public class PlayerHP : MonoBehaviour
         HP_num = HP;
         Text_HP.text = "HP:" + HP_num;
         Debug.Log("maxheal");
+    }
+
+    public void dead()
+    {
+        canvas_restart.SetActive(true);
+        Time.timeScale = 0;
+        cursorlocksystem.GetComponent<CursorLockSystem>().cursoropen();
+        Debug.Log("Ž€‚ñ‚¾‚—");
     }
 }
