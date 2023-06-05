@@ -11,10 +11,10 @@ public class ActiveSceneManager : MonoBehaviour
     public static bool S_Skill = false;
     public static bool S_Boss = false;
 
+    //シーン切り替わり検知の準備
     void Start()
     {
         SceneManager.sceneLoaded += SceneLoaded;
-        SceneManager.sceneUnloaded += SceneUnloaded;
     }
     private void OnEnable()
     {
@@ -26,11 +26,11 @@ public class ActiveSceneManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
+    //シーンロード時に変数をTrueに変更
     void SceneLoaded (Scene nextScene, LoadSceneMode mode)
     {
         Debug.Log("SceneLoaded");
         Scene AScene = SceneManager.GetActiveScene();
-        Debug.Log(AScene);
         if (AScene.name == "Scene_Start")
         {
             S_Title = true;
@@ -53,10 +53,6 @@ public class ActiveSceneManager : MonoBehaviour
         }
     }
 
-    void SceneUnloaded (Scene thisScene)
-    {
-        Debug.Log("SceneUnloaded");
-    }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // シーンが切り替わったときに実行される処理
