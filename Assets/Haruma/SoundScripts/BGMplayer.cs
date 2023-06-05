@@ -5,6 +5,8 @@ using CriWare;
 
 public class BGMplayer : MonoBehaviour
 {
+    public bool dontDestroyOnLoad = true;
+
     //n_Scene‚Ì”Ô†‚É‚æ‚Á‚ÄBGM‚ğÄ¶
     [SerializeField]
     private PlayerController playerController;
@@ -12,6 +14,13 @@ public class BGMplayer : MonoBehaviour
     [SerializeField]
     private AtomLoader atomLoader;
 
+    void Awake()
+    {
+        if (dontDestroyOnLoad)
+        {
+            DontDestroyOnLoad(transform.gameObject);
+        }
+    }
 
     void Start()
     {

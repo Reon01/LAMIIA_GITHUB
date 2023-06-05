@@ -8,6 +8,9 @@ public class Kajiki : MonoBehaviour
     public bool isSkill; //スキルが選択されてるか制御
     public bool spendskill; //スキルを消費
 
+    //はるまサウンド用
+    public static bool Kajiki_Sound = false;
+
     [SerializeField] GameObject kajiki;
 
     private float fishspeed = 1000;
@@ -31,6 +34,7 @@ public class Kajiki : MonoBehaviour
             GetComponent<GetSkill>().a_Kajiki -= 1; //スキルを１消費
             spendskill = true;
             Debug.Log("カジキ発射");
+            Kajiki_Sound = true;
         }
     }
     public void FishShot()
