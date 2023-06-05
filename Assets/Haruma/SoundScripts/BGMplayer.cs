@@ -12,28 +12,10 @@ public class BGMplayer : MonoBehaviour
     [SerializeField]
     private AtomLoader atomLoader;
 
-    public ActiveSceneManager ASManager;
 
     void Start()
     {
-        /*
-        int n_SceneValue = ASManager.n_Scene;
-        
-        if(n_SceneValue == 0)
-        {
-            playerController.SetAcb(atomLoader.acbAssets[0].Handle);
-            playerController.SetCueName("Title_BGM");
-            Debug.Log("Title_BGM");
-            playerController.Play();
-        }
-        else if (n_SceneValue == 1)
-        {
-            playerController.SetAcb(atomLoader.acbAssets[0].Handle);
-            playerController.SetCueName("Tutorial_BGM");
-            Debug.Log("Tutorial_BGM");
-            playerController.Play();
-        }
-        */
+
     }
 
     // Update is called once per frame
@@ -44,6 +26,36 @@ public class BGMplayer : MonoBehaviour
             playerController.SetAcb(atomLoader.acbAssets[0].Handle);
             playerController.SetCueName("Tutorial_BGM");
             playerController.Play();
+        }
+
+        if (ActiveSceneManager.S_Title == true)
+        {
+            playerController.SetAcb(atomLoader.acbAssets[0].Handle);
+            playerController.SetCueName("Title_BGM");
+            playerController.Play();
+            ActiveSceneManager.S_Title = false;
+        }
+        else if (ActiveSceneManager.S_Tutorial == true)
+        {
+            playerController.SetAcb(atomLoader.acbAssets[0].Handle);
+            playerController.SetCueName("Tutorial_BGM");
+            playerController.Play();
+            ActiveSceneManager.S_Tutorial = false;
+            Debug.Log("Playing Tutorial_BGM");
+        }
+        else if (ActiveSceneManager.S_Skill == true)
+        {
+            playerController.SetAcb(atomLoader.acbAssets[0].Handle);
+            playerController.SetCueName("Skill_BGM");
+            playerController.Play();
+            ActiveSceneManager.S_Skill = false;
+        }
+        else if (ActiveSceneManager.S_Boss == true)
+        {
+            playerController.SetAcb(atomLoader.acbAssets[0].Handle);
+            playerController.SetCueName("Boss_Battle_BGM");
+            playerController.Play();
+            ActiveSceneManager.S_Boss = false;
         }
     }
 }

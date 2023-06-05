@@ -8,6 +8,16 @@ using CriWare.Assets;
 
 public class AtomLoader : MonoBehaviour
 {
+    public bool dontDestroyOnLoad = true;
+
+    void Awake()
+    {
+        if (dontDestroyOnLoad)
+        {
+            DontDestroyOnLoad(transform.gameObject);
+        }
+    }
+
     /* (9) 全データがロード済みかどうか(他コンポーネントへの返答用) */
     public bool isLoaded
     {
