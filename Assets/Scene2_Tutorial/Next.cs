@@ -49,7 +49,7 @@ public class Next : MonoBehaviour
         Cursor.visible = false;
         //カーソルロックを解除
         Cursor.lockState = CursorLockMode.Locked;
-        SceneManager.LoadScene("Scene_Tutorial skillcharge bossbattle");
+        SceneManager.LoadScene("Scene3_Tutorial skillcharge bossbattle");
     }
 
     //いいえのボタンを押した場合
