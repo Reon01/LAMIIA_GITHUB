@@ -19,7 +19,8 @@ public class Kurage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && kuragesield.activeSelf == false && isSkill == true)
+        if (Input.GetKeyDown(KeyCode.F) && kuragesield.activeSelf == false && isSkill == true && 
+            GetComponent<GetSkill>().a_Kurage >= 1)
         {
             kuragesield.SetActive(true);
             kuragesieldHP = 1;
@@ -30,7 +31,7 @@ public class Kurage : MonoBehaviour
         if (kuragesieldHP <= 0)
         {
             kuragesield.SetActive(false);
-            Debug.Log("ƒNƒ‰ƒQÁ–Å");
+            //Debug.Log("ƒNƒ‰ƒQÁ–Å");
         }
 
     }

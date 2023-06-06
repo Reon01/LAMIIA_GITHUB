@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2076,7 +2076,6 @@ GameObject:
   - component: {fileID: 507153829}
   - component: {fileID: 507153821}
   - component: {fileID: 507153822}
-  - component: {fileID: 507153825}
   - component: {fileID: 507153826}
   - component: {fileID: 507153830}
   - component: {fileID: 507153831}
@@ -2189,22 +2188,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &507153825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507153814}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9447ced614d80f54faee6b51b05742ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kuragesield: {fileID: 328687267}
-  player: {fileID: 507153814}
-  kuragesieldHP: 0
-  isSkill: 0
 --- !u!114 &507153826
 MonoBehaviour:
   m_ObjectHideFlags: 0
