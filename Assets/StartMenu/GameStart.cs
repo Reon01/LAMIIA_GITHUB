@@ -24,7 +24,7 @@ public class GameStart : MonoBehaviour
 
     public void gamestart()
     {
-        SceneManager.LoadScene("Scene_Tutorial");
+        SceneManager.LoadScene("Scene2_Tutorial");
     }
 
 

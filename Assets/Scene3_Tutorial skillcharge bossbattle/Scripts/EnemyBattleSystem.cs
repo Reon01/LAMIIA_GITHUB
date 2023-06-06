@@ -17,13 +17,10 @@ public class EnemyBattleSystem : MonoBehaviour
     [Tooltip("¶¬‚·‚é”ÍˆÍB")]
     private Transform rangeB;
 
-    GameObject[] tagObjects; //ƒ^ƒO‚Ìæ“¾
-
     // Start is called before the first frame update
     void Start()
     {
         enemyamount = Random.Range(5, 10);
-        tagObjects = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     // Update is called once per frame
@@ -33,20 +30,6 @@ public class EnemyBattleSystem : MonoBehaviour
         {
             enemyspawn();
         }
-
-        /*
-        timer -= Time.deltaTime;
-        if (timer <= 0)
-        {
-            Destroy(GameObject.FindGameObjectWithTag("Enemy")); //G‹›“G‚ğE‚·
-            Debug.Log("G‹›“G”rœ");
-        }
-        else if (tagObjects.Length == 0)
-        {
-            timer = 1000000; //‚à‚¤‚P“xG‹›“G‚ğE‚³‚È‚¢‚æ‚¤‚Éƒ^ƒCƒ}[‚ğ‚ß‚Á‚¿‚áL‚Î‚·
-            Debug.Log("‘S–Å");
-        }
-        */
     }
 
     public void enemyspawn()
