@@ -8,6 +8,9 @@ public class Kurage : MonoBehaviour
     public int kuragesieldHP;
     public bool isSkill;
 
+    //はるまサウンド用
+    public static bool Kurage_Sound = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,9 @@ public class Kurage : MonoBehaviour
             kuragesieldHP = 1;
             player.GetComponent<PlayerHP>().kaihuku();
             GetComponent<GetSkill>().a_Kurage -= 1; //スキルを１消費
+
+            //はるまサウンド用変数true
+            Kurage_Sound = true;
         }
 
         if (kuragesieldHP <= 0)

@@ -36,5 +36,21 @@ public class SFXplayer : MonoBehaviour
             Debug.Log("KajikiSound");
         }
 
+        if (mori.Mori_Sound == true)
+        {
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("attack_Hrpn");
+            playerController.Play();
+            mori.Mori_Sound = false;
+            Debug.Log("HrpnSound");
+        }
+        if (Kurage.Kurage_Sound == true)
+        {
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("skill_Jf");
+            playerController.Play();
+            Kurage.Kurage_Sound = false;
+            Debug.Log("KurageSound");
+        }
     }
 }
