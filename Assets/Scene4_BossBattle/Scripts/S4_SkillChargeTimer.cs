@@ -10,27 +10,31 @@ public class S4_SkillChargeTimer:MonoBehaviour
     public float timer;
     private bool istimer;
     private GameObject enemydestroysystem;
+    private GameObject bossspawnsystem;
 
     // Start is called before the first frame update
     void Start()
     {
         istimer = true;
+        timer = skillchargetimer.value;
         enemydestroysystem = GameObject.Find("EnemyDestroySystem");
+        bossspawnsystem = GameObject.Find("BossSpawnSystem");
     }
 
     // Update is called once per frame
     void Update()
     {
-        skillchargetimer.value = timer;
+        skillchargetimer.value = timer; //スライダーと時間を合わせる
         if (istimer == true)
         {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
+            timer -= Time.deltaTime; //１秒ずつ減らす
+            if (timer <= 0)　//もしタイマーが０になった場合
             {
-                canvas_skillcharge.SetActive(false);
-                enemydestroysystem.GetComponent<S4_EnemyDestroySystem>().enabled = true;
-                timer = 1;
-                istimer = false;
+                canvas_skillcharge.SetActive(false); //時間表示のスライダーを非表示にする
+                enemydestroysystem.GetComponent<S4_EnemyDestroySystem>().enabled = true; //←のスクリプトをオンにする
+                timer = 1;　//タイマーを１にして繰り返し実行されないようにする
+                istimer = false;　//istimerをオフにして繰り返し予防
+                bossspawnsystem.GetComponent<S4_BossSpawnSystem>().BossSpawn(); //ボス召喚
             }
         }
     }
