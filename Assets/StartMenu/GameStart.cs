@@ -9,6 +9,8 @@ public class GameStart : MonoBehaviour
     public GameObject storytext;
     public GameObject backbutton;
 
+    // はるま用サウンド変数
+    public static bool menu_C = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class GameStart : MonoBehaviour
 
     public void gamestart()
     {
+        menu_C = true;
         SceneManager.LoadScene("Scene2_Tutorial");
     }
 
