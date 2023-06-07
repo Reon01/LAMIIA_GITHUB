@@ -34,6 +34,7 @@ public class Kajiki : MonoBehaviour
             GetComponent<GetSkill>().a_Kajiki -= 1; //スキルを１消費
             spendskill = true;
             Debug.Log("カジキ発射");
+            //はるまサウンド変数true
             Kajiki_Sound = true;
         }
     }

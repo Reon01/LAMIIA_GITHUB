@@ -7,6 +7,9 @@ public class mori : MonoBehaviour
     private Animator animator;
     private string AttackStr = "Attack";
 
+    //はるまサウンド用変数
+    public static bool Mori_Sound = false;
+
     BoxCollider boxCol;
 
     // Start is called before the first frame update
@@ -33,6 +36,9 @@ public class mori : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             boxCol.enabled = true;
+
+            //はるまサウンド用
+            Mori_Sound = true;
         }
         if (Input.GetMouseButtonUp(0))
         {
