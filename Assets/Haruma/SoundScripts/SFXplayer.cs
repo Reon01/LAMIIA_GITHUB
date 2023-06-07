@@ -27,15 +27,16 @@ public class SFXplayer : MonoBehaviour
     }
     void Update()
     {
-        if (Kajiki.Kajiki_Sound == true)
+        //メニューSFX
+        if (GameStart.menu_C == true)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("skill_Sf");
+            playerController.SetCueName("menu_Confirm");
             playerController.Play();
-            Kajiki.Kajiki_Sound = false;
-            Debug.Log("KajikiSound");
+            GameStart.menu_C = false;
+            Debug.Log("Confirm");
         }
-
+        //スキル＆銛
         if (mori.Mori_Sound == true)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
@@ -44,13 +45,29 @@ public class SFXplayer : MonoBehaviour
             mori.Mori_Sound = false;
             Debug.Log("HrpnSound");
         }
-        if (Kurage.Kurage_Sound == true)
+        if (Kajiki.Kajiki_Sound == true)
+        {
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("skill_Sf");
+            playerController.Play();
+            Kajiki.Kajiki_Sound = false;
+            Debug.Log("KajikiSound");
+        }
+        if (Kurage.Kurage_Sound_s == true)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_Jf");
             playerController.Play();
-            Kurage.Kurage_Sound = false;
-            Debug.Log("KurageSound");
+            Kurage.Kurage_Sound_s = false;
+            Debug.Log("KurageSound_s");
+        }
+        if (Kurage.Kurage_Sound_e == true)
+        {
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("skill_Jf");
+            playerController.Play();
+            Kurage.Kurage_Sound_e = false;
+            Debug.Log("KurageSound_e");
         }
     }
 }

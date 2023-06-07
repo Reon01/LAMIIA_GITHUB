@@ -9,7 +9,8 @@ public class Kurage : MonoBehaviour
     public bool isSkill;
 
     //はるまサウンド用
-    public static bool Kurage_Sound = false;
+    public static bool Kurage_Sound_s = false;
+    public static bool Kurage_Sound_e = false;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class Kurage : MonoBehaviour
             GetComponent<GetSkill>().a_Kurage -= 1; //スキルを１消費
 
             //はるまサウンド用変数true
-            Kurage_Sound = true;
+            Kurage_Sound_s = true;
         }
 
         if (kuragesieldHP <= 0)
@@ -46,5 +47,6 @@ public class Kurage : MonoBehaviour
         //kuragesieldHP -= 1;
         kuragesield.SetActive(false);
         Debug.Log("クラゲ消滅");
+        Kurage_Sound_e = true;
     }
 }
