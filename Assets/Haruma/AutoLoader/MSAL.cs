@@ -12,5 +12,4 @@ public class MSAL
             SceneManager.LoadScene(managerSceneName, LoadSceneMode.Additive);
         }
     }
-    
 }

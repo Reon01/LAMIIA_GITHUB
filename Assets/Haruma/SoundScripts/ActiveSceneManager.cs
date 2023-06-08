@@ -31,22 +31,22 @@ public class ActiveSceneManager : MonoBehaviour
     {
         Debug.Log("SceneLoaded");
         Scene AScene = SceneManager.GetActiveScene();
-        if (AScene.name == "Scene_Start")
+        if (AScene.name == "Scene1_Start")
         {
             S_Title = true;
             Debug.Log("AS = Title");
         }
-        else if (AScene.name == "Scene_Tutorial")
+        else if (AScene.name == "Scene2_Tutorial")
         {
             S_Tutorial = true;
             Debug.Log("AS = Tutorial");
         }
-        else if (AScene.name == "Scene_Tutorial skillcharge bossbattle") 
+        else if (AScene.name == "Scene3_Tutorial skillcharge bossbattle") 
         {
             S_Skill = true;
             Debug.Log("AS = Scene_Tutorial skillcharge bossbattle");
         }
-        else if (AScene.name == "Scene_BossBattle") 
+        else if (AScene.name == "Scene4_BossBattle") 
         {
             S_Boss = true;
             Debug.Log("AS = BossBattle");
@@ -58,23 +58,22 @@ public class ActiveSceneManager : MonoBehaviour
         // ÉVÅ[ÉìÇ™êÿÇËë÷ÇÌÇ¡ÇΩÇ∆Ç´Ç…é¿çsÇ≥ÇÍÇÈèàóù
         Debug.Log("OnSceneLoaded");
         Scene AScene = SceneManager.GetActiveScene();
-        Debug.Log(AScene);
-        if (AScene.name == "Scene_Start")
+        if (AScene.name == "Scene1_Start")
         {
             S_Title = true;
             Debug.Log("AS = Title");
         }
-        else if (AScene.name == "Scene_Tutorial")
+        else if (AScene.name == "Scene2_Tutorial")
         {
             S_Tutorial = true;
             Debug.Log("AS = Tutorial");
         }
-        else if (AScene.name == "Scene_Tutorial skillcharge bossbattle")
+        else if (AScene.name == "Scene3_Tutorial skillcharge bossbattle")
         {
             S_Skill = true;
             Debug.Log("AS = Scene_Tutorial skillcharge bossbattle");
         }
-        else if (AScene.name == "Scene_BossBattle")
+        else if (AScene.name == "Scene4_BossBattle")
         {
             S_Boss = true;
             Debug.Log("AS = BossBattle");
