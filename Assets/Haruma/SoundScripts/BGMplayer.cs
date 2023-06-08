@@ -7,7 +7,6 @@ public class BGMplayer : MonoBehaviour
 {
     public bool dontDestroyOnLoad = true;
 
-    //n_Scene‚Ì”Ô†‚É‚æ‚Á‚ÄBGM‚ğÄ¶
     [SerializeField]
     private PlayerController playerController;
 
