@@ -61,7 +61,7 @@ public class BGMplayer : MonoBehaviour
         else if (ActiveSceneManager.S_Boss == true)
         {
             playerController.SetAcb(atomLoader.acbAssets[0].Handle);
-            playerController.SetCueName("Boss_Battle_BGM");
+            playerController.SetCueName("Boss_BGM");
             playerController.Play();
             ActiveSceneManager.S_Boss = false;
         }

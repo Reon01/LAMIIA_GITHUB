@@ -16,6 +16,9 @@ public class PlayerHP : MonoBehaviour
     public GameObject canvas_restart;
     private GameObject cursorlocksystem;
 
+    //はるまサウンド用変数
+    public static bool damaged_Sound_P = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +39,7 @@ public class PlayerHP : MonoBehaviour
 
     public void damage()
     {
+        damaged_Sound_P = true;
         HP -= 10;
         HPBar.value = HP;
         HP_num = HP;
