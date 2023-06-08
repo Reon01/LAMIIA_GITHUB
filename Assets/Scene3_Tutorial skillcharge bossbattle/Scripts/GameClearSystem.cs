@@ -26,6 +26,6 @@ public class GameClearSystem : MonoBehaviour
 
     public void next()
     {
-        SceneManager.LoadScene("Scene4_BossBattle");
+        SceneManager.LoadScene("Scene4_BossStage");
     }
 }
