@@ -28,41 +28,43 @@ public class SFXplayer : MonoBehaviour
     void Update()
     {
         //メニューSFX
-        if (GameStart.menu_C == true)
-        {
+        if (GameStart.menu_Sound == 1){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("menu_Confirm");
             playerController.Play();
-            GameStart.menu_C = false;
+            GameStart.menu_Sound = 0;
             Debug.Log("Confirm");
         }
+        if (GameStart.menu_Sound == 2){
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("menu_Back");
+            playerController.Play();
+            GameStart.menu_Sound = 0;
+            Debug.Log("Back");
+        }
         //スキル＆銛
-        if (mori.Mori_Sound == true)
-        {
+        if (mori.Mori_Sound == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("attack_Hrpn");
             playerController.Play();
             mori.Mori_Sound = false;
             Debug.Log("HrpnSound");
         }
-        if (Kajiki.Kajiki_Sound == true)
-        {
+        if (Kajiki.Kajiki_Sound == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_Sf");
             playerController.Play();
             Kajiki.Kajiki_Sound = false;
             Debug.Log("KajikiSound");
         }
-        if (Kurage.Kurage_Sound_s == true)
-        {
+        if (Kurage.Kurage_Sound_s == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_Jf");
             playerController.Play();
             Kurage.Kurage_Sound_s = false;
             Debug.Log("KurageSound_s");
         }
-        if (Kurage.Kurage_Sound_e == true)
-        {
+        if (Kurage.Kurage_Sound_e == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_Jf");
             playerController.Play();

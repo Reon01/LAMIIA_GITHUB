@@ -10,7 +10,7 @@ public class GameStart : MonoBehaviour
     public GameObject backbutton;
 
     // はるま用サウンド変数
-    public static bool menu_C = false;
+    public static int menu_Sound = 0; 
 
     // Start is called before the first frame update
     void Start()
@@ -26,18 +26,20 @@ public class GameStart : MonoBehaviour
 
     public void gamestart()
     {
-        menu_C = true;
+        menu_Sound = 1;
         SceneManager.LoadScene("Scene2_Tutorial");
     }
 
 
     public void keyconfig()
     {
+        menu_Sound = 1;
 
     }
 
     public void story()
     {
+        menu_Sound = 1;
         canvas.SetActive(false);
         storytext.SetActive(true);
         backbutton.SetActive(true);
@@ -45,6 +47,7 @@ public class GameStart : MonoBehaviour
 
     public void back()
     {
+        menu_Sound = 2;
         canvas.SetActive(true);
         storytext.SetActive(false);
         backbutton.SetActive(false);
