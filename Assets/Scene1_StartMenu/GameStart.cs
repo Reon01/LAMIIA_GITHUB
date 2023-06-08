@@ -27,7 +27,7 @@ public class GameStart : MonoBehaviour
     public void gamestart()
     {
         menu_Sound = 1;
-        SceneManager.LoadScene("Scene2_Tutorial");
+        SceneManager.LoadScene("Scene1.5_StageSelect");
     }
 
 

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Restart : MonoBehaviour
+public class StageSelect : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +18,13 @@ public class Restart : MonoBehaviour
         
     }
 
-    public void restart()
+    public void Tutorial()
     {
-        SceneManager.LoadScene("Scene3_Tutorial skillcharge bossbattle");
+        SceneManager.LoadScene("Scene2_Tutorial");
+    }
+
+    public void MainStage()
+    {
+        SceneManager.LoadScene("Scene4_BossStage");
     }
 }
