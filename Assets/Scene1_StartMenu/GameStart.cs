@@ -5,9 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GameStart : MonoBehaviour
 {
-    public GameObject canvas;
-    public GameObject storytext;
-    public GameObject backbutton;
+    public GameObject button_back;
+
+    public GameObject button_keyconfig;
+    public GameObject keyconfiggallary;
+    public GameObject backgrounds;
+
+    //canvas一覧
+    public GameObject canvas_start;
+    public GameObject canvas_option;
+    public GameObject canvas_keyconfig;
 
     // はるま用サウンド変数
     public static int menu_Sound = 0; 
@@ -31,27 +38,38 @@ public class GameStart : MonoBehaviour
     }
 
 
-    public void keyconfig()
+    public void option()
     {
+        canvas_start.SetActive(false);
+        canvas_option.SetActive(true);
         menu_Sound = 1;
-
     }
 
-    public void story()
+    public void KeyConfig()
     {
-        menu_Sound = 1;
-        canvas.SetActive(false);
-        storytext.SetActive(true);
-        backbutton.SetActive(true);
+        backgrounds.SetActive(false);
+        keyconfiggallary.SetActive(true);
+        canvas_option.SetActive(false);
+        canvas_keyconfig.SetActive(true);
     }
-
-    public void back()
+    
+    public void back1()
     {
         menu_Sound = 2;
-        canvas.SetActive(true);
-        storytext.SetActive(false);
-        backbutton.SetActive(false);
+        canvas_start.SetActive(true);
+        canvas_option.SetActive(false);
+        backgrounds.SetActive(true);
     }
+
+    public void back2()
+    {
+        menu_Sound = 2;
+        canvas_option.SetActive(true);
+        canvas_keyconfig.SetActive(false);
+        keyconfiggallary.SetActive(false);
+        backgrounds.SetActive(true);
+    }
+    
 
     public void quit()
     {
