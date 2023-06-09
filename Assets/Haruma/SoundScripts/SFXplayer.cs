@@ -65,6 +65,8 @@ public class SFXplayer : MonoBehaviour
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_Jf_e");
             playerController.Play();
+            playerController.SetCueName("skill_Jf_s");
+            playerController.Stop();
             Kurage.Kurage_Sound_e = false;
             Debug.Log("KurageSound_e");
         }
