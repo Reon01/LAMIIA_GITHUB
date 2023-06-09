@@ -11,6 +11,10 @@ public class SkillElectronic : MonoBehaviour
     public bool iscount;
     public float count;
 
+    //はるまサウンド用変数
+    public static int EE_Sound = 0;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +32,8 @@ public class SkillElectronic : MonoBehaviour
             spend();
             iscount = true;
             isSkill = false;
+
+            EE_Sound = 1;
         }
 
 
@@ -41,6 +47,8 @@ public class SkillElectronic : MonoBehaviour
                 isSkill = true;
                 count = 0;
                 iscount = false;
+
+                EE_Sound = 3;
             }
         }
     }
