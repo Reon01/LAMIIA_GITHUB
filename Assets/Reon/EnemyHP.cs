@@ -51,6 +51,7 @@ public class EnemyHP : MonoBehaviour
             //getskill();
             enemykill.GetComponent<EnemyKill>().getskill();
             Destroy(Enemy);
+
             damaged_Sound_E = 2;
         }
 
@@ -76,6 +77,8 @@ public class EnemyHP : MonoBehaviour
                 HP = HP - 20;
                 HPBar.value = HP;
                 damaged_Sound_E = 1;
+
+                SkillElectronic.EE_Sound = 2;
             }
         }
     }
