@@ -25,6 +25,7 @@ public class StageSelect : MonoBehaviour
 
     public void MainStage()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Scene4_BossStage");
     }
 }
