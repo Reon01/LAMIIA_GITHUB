@@ -64,7 +64,7 @@ public class SFXplayer : MonoBehaviour
         if (Kurage.Kurage_Sound_s == true)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("skill_Jf");
+            playerController.SetCueName("skill_Jf_s");
             playerController.Play();
             Kurage.Kurage_Sound_s = false;
             Debug.Log("KurageSound_s");
@@ -72,7 +72,7 @@ public class SFXplayer : MonoBehaviour
         if (Kurage.Kurage_Sound_e == true)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("skill_Jf");
+            playerController.SetCueName("skill_Jf_e");
             playerController.Play();
             Kurage.Kurage_Sound_e = false;
             Debug.Log("KurageSound_e");
