@@ -20,7 +20,10 @@ public class kuragehit : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            //Destroy(other.gameObject);
+            player.GetComponent<Kurage>().damage();
+        }
+        else if (other.CompareTag("MediumBoss"))
+        {
             player.GetComponent<Kurage>().damage();
         }
     }

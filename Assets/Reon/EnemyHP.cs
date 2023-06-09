@@ -32,6 +32,9 @@ public class EnemyHP : MonoBehaviour
     //EnemyKill
     private GameObject enemykill;
 
+    //はるまサウンド用変数
+    public static int damaged_Sound_E;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +51,13 @@ public class EnemyHP : MonoBehaviour
             //getskill();
             enemykill.GetComponent<EnemyKill>().getskill();
             Destroy(Enemy);
+            damaged_Sound_E = 2;
+        }
+
+        //攻撃されたとき
+        if (HP <= 90)
+        {
+            this.GetComponent<FishMove>().getdamage = true;
         }
     }
 
@@ -55,15 +65,17 @@ public class EnemyHP : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Weapon"))
         {
-            if (Player.GetComponent<SkillElectronic>().IsLightning == false)
+            if (Player.GetComponent<SkillElectronic_new>().IsLightning == false)
             {
                 HP = HP - 10;
                 HPBar.value = HP;
+                damaged_Sound_E = 1;
             }
-            if (Player.GetComponent<SkillElectronic>().IsLightning == true)
+            if (Player.GetComponent<SkillElectronic_new>().IsLightning == true)
             {
                 HP = HP - 20;
                 HPBar.value = HP;
+                damaged_Sound_E = 1;
             }
         }
     }

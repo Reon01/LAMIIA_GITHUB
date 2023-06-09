@@ -7,6 +7,14 @@ public class FishMove : MonoBehaviour
     private float chargeTime = 5.0f;
     private float timeCount;
 
+    public bool getdamage;
+    private GameObject player;
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     void Update()
     {
         timeCount += Time.deltaTime;
@@ -23,6 +31,19 @@ public class FishMove : MonoBehaviour
 
             // タイムカウントを０に戻す
             timeCount = 0;
+        }
+
+        if (getdamage == true)
+        {
+            transform.LookAt(player.transform);
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            player.GetComponent<PlayerHP>().damage();
         }
     }
 }
