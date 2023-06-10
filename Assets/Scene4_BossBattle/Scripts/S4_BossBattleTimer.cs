@@ -11,6 +11,7 @@ public class S4_BossBattleTimer : MonoBehaviour
     public GameObject boss;
     public GameObject canvas_boss;
     private GameObject enemyspawn;
+    public GameObject canvas_skillchargetimer;
 
     // Start is called before the first frame update
     void Start()
@@ -29,12 +30,19 @@ public class S4_BossBattleTimer : MonoBehaviour
             timer -= Time.deltaTime; //‚P•b‚¸‚ÂŒ¸‚ç‚·
             if (timer <= 0)@//‚à‚µƒ^ƒCƒ}[‚ª‚O‚É‚È‚Á‚½ê‡
             {
-                enemyspawn.GetComponent<S4_EnemySpawn>().enabled = true;
+                enemyspawn.GetComponent<S4_EnemySpawn>().enemyspawn2();
+                canvas_skillchargetimer.SetActive(true);
+                canvas_skillchargetimer.GetComponent<S4_SkillChargeTimer>().timerstart();
                 boss.SetActive(false);
                 canvas_boss.SetActive(false);
-                timer = 1;
+                timer = 30;
                 istimer = false;
             }
         }
+    }
+
+    public void timerstart()
+    {
+        istimer = true;
     }
 }
