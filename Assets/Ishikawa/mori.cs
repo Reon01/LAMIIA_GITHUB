@@ -38,10 +38,7 @@ public class mori : MonoBehaviour
             boxCol.enabled = true;
 
             //はるまサウンド用
-            if(Cursor.visible == false)
-            {
-                Mori_Sound = true;
-            }
+            Mori_Sound = true;
         }
         if (Input.GetMouseButtonUp(0))
         {
