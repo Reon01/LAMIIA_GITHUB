@@ -3,20 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MediumBossHP : MonoBehaviour
+public class S4_BossHP : MonoBehaviour
 {
-    public Slider slider_mediumbosshp;
-    private int hp = 200;
-    private GameObject mediumbosssystem;
+    public Slider slider_bosshp;
+    private int hp = 600;
     public GameObject gameclearsystem;
-
-    private GameObject player;
+    public GameObject bosssystems;
 
     // Start is called before the first frame update
     void Start()
     {
-        mediumbosssystem = GameObject.Find("MediumBossSystem");
-        player = GameObject.Find("Player");
+        
     }
 
     // Update is called once per frame
@@ -25,8 +22,8 @@ public class MediumBossHP : MonoBehaviour
         if (hp <= 0)
         {
             gameclearsystem.SetActive(true);
+            bosssystems.SetActive(false);
             Time.timeScale = 0;
-            Destroy(mediumbosssystem);
         }
     }
 
@@ -35,7 +32,7 @@ public class MediumBossHP : MonoBehaviour
         if (other.gameObject.CompareTag("Weapon"))
         {
             hp -= 10;
-            slider_mediumbosshp.value = hp;
+            slider_bosshp.value = hp;
         }
     }
 }

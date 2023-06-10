@@ -20,12 +20,16 @@ public class GameClearSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //cleartext.SetActive(true);
-        //button_next.SetActive(true);
+
     }
 
     public void next()
     {
-        SceneManager.LoadScene("Scene4_BossStage");
+        SceneManager.LoadScene("Scene1.5_StageSelect");
+    }
+
+    public void startscene()
+    {
+        SceneManager.LoadScene("Scene1_Start");
     }
 }

@@ -11,10 +11,17 @@ public class SkillElectronic : MonoBehaviour
     public bool iscount;
     public float count;
 
+    private GameObject unagitimer;
+
+    //はるまサウンド用変数
+    public static int EE_Sound = 0;
+
+
     // Start is called before the first frame update
     void Start()
     {
         IsLightning = false;
+        unagitimer = GameObject.Find("UnagiTimer");
     }
 
     // Update is called once per frame
@@ -28,20 +35,9 @@ public class SkillElectronic : MonoBehaviour
             spend();
             iscount = true;
             isSkill = false;
-        }
+            unagitimer.GetComponent<UnagiTimer>().iscount = true;
 
-
-        if (iscount == true)
-        {
-            count += Time.deltaTime;          
-            if (count >= 3)
-            {
-                Lightning.SetActive(false);
-                IsLightning = false;
-                isSkill = true;
-                count = 0;
-                iscount = false;
-            }
+            EE_Sound = 1;
         }
     }
 
