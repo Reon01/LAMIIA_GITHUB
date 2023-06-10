@@ -12,11 +12,15 @@ TagManager:
   - kame
   - Enemy1
   - MediumBoss
+  - WhaleGO1
+  - WhaleGO2
+  - WhaleGO3
+  - WhaleGO4
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PostProcess
   - Water
   - UI
   - 
