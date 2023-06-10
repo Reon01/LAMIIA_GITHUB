@@ -27,4 +27,9 @@ public class GameClearSystem : MonoBehaviour
     {
         SceneManager.LoadScene("Scene1.5_StageSelect");
     }
+
+    public void startscene()
+    {
+        SceneManager.LoadScene("Scene1_Start");
+    }
 }

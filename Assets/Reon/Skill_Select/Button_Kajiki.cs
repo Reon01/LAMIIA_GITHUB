@@ -23,10 +23,16 @@ public class Button_Kajiki : MonoBehaviour
     {
         //PlayerオブジェクトについてるKajikiスクリプトからisSkillをtrueに変えてスキルを変更する
         Player.GetComponent<Kajiki>().isSkill = true;
+        //スクリプトをオンにする
+        Player.GetComponent<Kajiki>().enabled = true;
+
 
         //他のスキルをオフにする
         Player.GetComponent<Kurage>().isSkill = false;
         Player.GetComponent<SkillElectronic>().isSkill = false;
+        //スクリプトごとオフにする
+        Player.GetComponent<Kurage>().enabled = false;
+        Player.GetComponent<SkillElectronic>().enabled = false;
 
         //カーソル非表示
         Cursor.visible = false;

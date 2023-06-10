@@ -16,6 +16,13 @@ public class BossSpeir : MonoBehaviour
 
     public Vector3 velocity;
 
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+    }
+
     void Update()
     {
         target = GameObject.FindGameObjectWithTag("Player");
@@ -55,5 +62,13 @@ public class BossSpeir : MonoBehaviour
         velocity += acceleration * Time.deltaTime;
         position += velocity * Time.deltaTime;
         transform.position = position;
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            player.GetComponent<PlayerHP>().speirdamage();
+        }
     }
 }

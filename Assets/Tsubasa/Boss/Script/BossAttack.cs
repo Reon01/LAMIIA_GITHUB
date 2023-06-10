@@ -29,6 +29,9 @@ public class BossAttack : MonoBehaviour
 
     private void SpeirAttackSet()
     {
-        Instantiate(Speir, transform.position, Quaternion.identity);
+        //Instantiate(Speir, transform.position, Quaternion.identity);
+        GameObject ball = (GameObject)Instantiate(Speir, transform.position, Quaternion.identity);
+        Destroy(ball, 3f);
+        Debug.Log("É{ÉXçUåÇÇP");
     }
 }

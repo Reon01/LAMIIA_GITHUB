@@ -46,6 +46,15 @@ public class PlayerHP : MonoBehaviour
         Text_HP.text = "HP:" + HP_num;
     }
 
+    public void speirdamage()
+    {
+        damaged_Sound_P = true;
+        HP -= 5;
+        HPBar.value = HP;
+        HP_num = HP;
+        Text_HP.text = "HP:" + HP_num;
+    }
+
     public void kaihuku()
     {
         if (HP <= 90) //HP‚ª‚X‚OˆÈ‰º‚ÌŽž‚Ì‚Ý‰ñ•œ‚Å‚«‚éiHPãŒÀ‚Í‚P‚O‚Oj

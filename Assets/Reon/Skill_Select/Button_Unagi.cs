@@ -23,10 +23,15 @@ public class Button_Unagi : MonoBehaviour
     {
         //PlayerオブジェクトについてるKurageスクリプトからisSkillをtrueに変えてスキルを変更する
         Player.GetComponent<SkillElectronic>().isSkill = true;
+        //スクリプトをオンにする
+        Player.GetComponent<SkillElectronic>().enabled = true;
 
         //他のスキルをオフにする
         Player.GetComponent<Kajiki>().isSkill = false;
         Player.GetComponent<Kurage>().isSkill = false;
+        //スクリプトごとオフにする
+        Player.GetComponent<Kajiki>().enabled = false;
+        Player.GetComponent<Kurage>().enabled = false;
 
         //カーソル非表示
         Cursor.visible = false;
