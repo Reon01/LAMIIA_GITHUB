@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8781,6 +8781,7 @@ MonoBehaviour:
   timer: 30
   boss: {fileID: 1855520141}
   canvas_boss: {fileID: 739343811}
+  canvas_skillchargetimer: {fileID: 0}
 --- !u!4 &1346918561
 Transform:
   m_ObjectHideFlags: 0
@@ -10271,6 +10272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas_esc: {fileID: 1555988771}
+  canvas_option: {fileID: 0}
 --- !u!4 &1483965388
 Transform:
   m_ObjectHideFlags: 0
@@ -11277,6 +11279,7 @@ MonoBehaviour:
   canvas_skillcharge: {fileID: 1769932493}
   skillchargetimer: {fileID: 1439941328}
   timer: 30
+  bossbattletimer: {fileID: 0}
 --- !u!114 &1769932495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11490,6 +11493,7 @@ MonoBehaviour:
   WhaleGO2: {fileID: 374958594}
   WhaleGO3: {fileID: 1559280154}
   WhaleGO4: {fileID: 2110552905}
+  speed: 0
 --- !u!1 &1860774963
 GameObject:
   m_ObjectHideFlags: 0

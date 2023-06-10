@@ -6,6 +6,7 @@ public class EscSystem : MonoBehaviour
 {
     public GameObject canvas_esc;
     private GameObject cursourlocksystem;
+    public GameObject canvas_option;
 
     // Start is called before the first frame update
     void Start()
@@ -34,10 +35,23 @@ public class EscSystem : MonoBehaviour
 #endif
     }
 
+    public void Options()
+    {
+        canvas_option.SetActive(true);
+        canvas_esc.SetActive(false);
+    }
+
     public void GameContinue()
     {
         Time.timeScale = 1;
         cursourlocksystem.GetComponent<CursorLockSystem>().cursorlock();
         canvas_esc.SetActive(false);
+    }
+
+    public void Back()
+    {
+        canvas_esc.SetActive(true);
+        canvas_option.SetActive(false);
+        Time.timeScale = 0;
     }
 }

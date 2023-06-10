@@ -12,6 +12,8 @@ public class BossMove : MonoBehaviour
     //[SerializeField] GameObject circlingtarget;
     //public float TurnSpan = 10f;
     //private float currentTime = 0f;
+    public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +21,12 @@ public class BossMove : MonoBehaviour
         transform.LookAt(WhaleGO1.transform);
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("WhaleGO1"))
         {
             transform.LookAt(WhaleGO2.transform);
-
+            Debug.Log("ä—í ÇP");
         }
         if (other.CompareTag("WhaleGO2"))
         {
@@ -47,7 +49,7 @@ public class BossMove : MonoBehaviour
     {
 
 
-        transform.Translate(0, 0, 10.0f * Time.deltaTime);
+        transform.Translate(0, 0, 0 + speed * Time.deltaTime);
 
         //éÂêlåˆÇ…ìÀêi
         /*currentTime += Time.deltaTime;
