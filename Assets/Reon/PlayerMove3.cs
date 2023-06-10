@@ -31,4 +31,9 @@ public class PlayerMove3 : MonoBehaviour
         // プレイヤーの回転を更新する
         transform.rotation = horizontalRot * verticalRot;
     }
+    public void CameraSliderOnValueChange(float newSliderValue)
+    {
+        // カメラ感度をスライドバーの値に変更
+        kando = newSliderValue;
+    }
 }
