@@ -54,43 +54,50 @@ public class SFXplayer : MonoBehaviour
             Debug.Log("KajikiSound");
         }
         //クラゲ
-        if (Kurage.Kurage_Sound_s == true){
+        if (Kurage.Kurage_Sound_s == true)
+        {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_Jf_s");
-            playerController.Play();
+            playerController.KuragePlay();
             Kurage.Kurage_Sound_s = false;
             Debug.Log("KurageSound_s");
         }
-        if (Kurage.Kurage_Sound_e == true){
+        if (Kurage.Kurage_Sound_e == true)
+        {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_Jf_e");
             playerController.Play();
-            playerController.SetCueName("skill_Jf_s");
-            playerController.Stop();
+            playerController.KurageStop();
             Kurage.Kurage_Sound_e = false;
             Debug.Log("KurageSound_e");
         }
+
         //デンキウナギ
-        if (SkillElectronic.EE_Sound == 1){
+        if (SkillElectronic.EE_Sound == 1)
+        {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_EE_s");
             playerController.Play();
+            playerController.SetCueName("skill_EE_l");
+            playerController.EEPlay();
             SkillElectronic.EE_Sound = 0;
             Debug.Log("EESound_Start");
         }
-        if (SkillElectronic.EE_Sound == 2){
+        if (SkillElectronic.EE_Sound == 2)
+        {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_EE_h");
             playerController.Play();
             SkillElectronic.EE_Sound = 0;
             Debug.Log("EESound_Hit");
         }
-        if (SkillElectronic.EE_Sound == 3){
+        if (SkillElectronic.EE_Sound == 3)
+        {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_EE_l");
-            playerController.Stop();
+            playerController.EEStop();
             SkillElectronic.EE_Sound = 0;
-            Debug.Log("EESound_Pause");
+            Debug.Log("EESound_Stop");
         }
         //被弾＆与ダメージ時
         if (PlayerHP.damaged_Sound_P == true){
