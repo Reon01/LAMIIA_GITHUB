@@ -93,8 +93,6 @@ public class SFXplayer : MonoBehaviour
         }
         if (SkillElectronic.EE_Sound == 3)
         {
-            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("skill_EE_l");
             playerController.EEStop();
             SkillElectronic.EE_Sound = 0;
             Debug.Log("EESound_Stop");
