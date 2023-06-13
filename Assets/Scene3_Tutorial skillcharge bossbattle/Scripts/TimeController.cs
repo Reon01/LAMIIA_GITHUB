@@ -9,6 +9,7 @@ public class TimeController : MonoBehaviour
     public GameObject player;
     public GameObject warppoint;
     public GameObject mediumbosssystem;
+    public GameObject mediumboss;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class TimeController : MonoBehaviour
         player.GetComponent<CharacterController>().enabled = false;
         Vector3 point = warppoint.transform.position;
         player.transform.position = point;
-        player.GetComponent<CharacterController>().enabled = true;
         mediumbosssystem.SetActive(true);
+        player.GetComponent<CharacterController>().enabled = true;
     }
 }

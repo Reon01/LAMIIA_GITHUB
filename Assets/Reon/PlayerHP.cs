@@ -46,6 +46,15 @@ public class PlayerHP : MonoBehaviour
         Text_HP.text = "HP:" + HP_num;
     }
 
+    public void fivedamage()
+    {
+        damaged_Sound_P = true;
+        HP -= 5;
+        HPBar.value = HP;
+        HP_num = HP;
+        Text_HP.text = "HP:" + HP_num;
+    }
+
     public void speirdamage()
     {
         damaged_Sound_P = true;
