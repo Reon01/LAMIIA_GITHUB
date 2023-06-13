@@ -43,7 +43,7 @@ public class FishMove : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            player.GetComponent<PlayerHP>().damage();
+            player.GetComponent<PlayerHP>().fivedamage();
         }
     }
 }
