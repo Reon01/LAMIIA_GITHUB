@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EscSystem : MonoBehaviour
 {
@@ -46,6 +47,10 @@ public class EscSystem : MonoBehaviour
         Time.timeScale = 1;
         cursourlocksystem.GetComponent<CursorLockSystem>().cursorlock();
         canvas_esc.SetActive(false);
+    }
+    public void Home()
+    {
+        SceneManager.LoadScene("Scene1_Start");
     }
 
     public void Back()
