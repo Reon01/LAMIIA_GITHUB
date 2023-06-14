@@ -103,7 +103,7 @@ public class SFXplayer : MonoBehaviour
             playerController.SetCueName("damage_P");
             playerController.Play();
             PlayerHP.damaged_Sound_P = false;
-            Debug.Log("�ɂ��I");
+            Debug.Log("痛い！");
         }
         if (EnemyHP.damaged_Sound_E == 1){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);

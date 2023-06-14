@@ -23,6 +23,8 @@ public class EscSystem : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
             Time.timeScale = 0;
             canvas_esc.SetActive(true);
+
+            GameStart.menu_Sound = 1;
         }
     }
 
@@ -39,6 +41,8 @@ public class EscSystem : MonoBehaviour
     {
         canvas_option.SetActive(true);
         canvas_esc.SetActive(false);
+
+        GameStart.menu_Sound = 1;
     }
 
     public void GameContinue()
@@ -46,6 +50,8 @@ public class EscSystem : MonoBehaviour
         Time.timeScale = 1;
         cursourlocksystem.GetComponent<CursorLockSystem>().cursorlock();
         canvas_esc.SetActive(false);
+
+        GameStart.menu_Sound = 2;
     }
 
     public void Back()
@@ -53,5 +59,7 @@ public class EscSystem : MonoBehaviour
         canvas_esc.SetActive(true);
         canvas_option.SetActive(false);
         Time.timeScale = 0;
+
+        GameStart.menu_Sound = 2;
     }
 }
