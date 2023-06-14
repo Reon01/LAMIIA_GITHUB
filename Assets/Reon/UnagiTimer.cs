@@ -9,9 +9,6 @@ public class UnagiTimer : MonoBehaviour
 
     private GameObject player;
 
-    //はるまサウンド用変数
-    public static int EE_Sound = 0;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +29,7 @@ public class UnagiTimer : MonoBehaviour
                 count = 0;
                 iscount = false;
 
-                EE_Sound = 3;
+                SkillElectronic.EE_Sound = 3;
             }
         }
     }

@@ -46,10 +46,10 @@ public class ActiveSceneManager : MonoBehaviour
             S_Skill = true;
             Debug.Log("AS = Scene_Tutorial skillcharge bossbattle");
         }
-        else if (AScene.name == "Scene4_BossBattle") 
+        else if (AScene.name == "Scene4_BossStage") 
         {
             S_Boss = true;
-            Debug.Log("AS = BossBattle");
+            Debug.Log("AS = BossStage");
         }
     }
 
@@ -61,7 +61,7 @@ public class ActiveSceneManager : MonoBehaviour
         if (AScene.name == "Scene1_Start")
         {
             S_Title = true;
-            Debug.Log("AS = Title");
+            Debug.Log("AS = Start");
         }
         else if (AScene.name == "Scene2_Tutorial")
         {
