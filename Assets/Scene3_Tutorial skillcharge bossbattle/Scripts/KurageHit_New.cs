@@ -27,5 +27,10 @@ public class KurageHit_New : MonoBehaviour
         {
             fishskillsystem.GetComponent<FishSkillSystem>().damage();
         }
+        else if (other.CompareTag("Boss"))
+        {
+            fishskillsystem.GetComponent<FishSkillSystem>().damage();
+        }
+
     }
 }
