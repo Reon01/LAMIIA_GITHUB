@@ -29,15 +29,13 @@ public class BGMplayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
         if (ActiveSceneManager.S_Title == true)
         {
-            playerController.SetAcb(atomLoader.acbAssets[0].Handle);
-            playerController.SetCueName("Title_BGM");
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("skill_Jf_s");
             playerController.Play();
             ActiveSceneManager.S_Title = false;
         }
-        */
         if (ActiveSceneManager.S_Tutorial == true)
         {
             playerController.SetAcb(atomLoader.acbAssets[0].Handle);
@@ -61,6 +59,12 @@ public class BGMplayer : MonoBehaviour
             playerController.Play();
             ActiveSceneManager.S_Boss = false;
             Debug.Log("Playing Skill_BGM for Scene_BossStage");
+        }
+        else if (ActiveSceneManager.S_StageSelect == true)
+        {
+            playerController.Play();
+            ActiveSceneManager.S_StageSelect = false;
+            Debug.Log("Stop BGM");
         }
     }
 }

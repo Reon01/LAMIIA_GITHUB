@@ -40,13 +40,14 @@ public class GameStart : MonoBehaviour
 
     public void option()
     {
+        menu_Sound = 1;
         canvas_start.SetActive(false);
         canvas_option.SetActive(true);
-        menu_Sound = 1;
     }
 
     public void KeyConfig()
     {
+        menu_Sound = 1;
         backgrounds.SetActive(false);
         keyconfiggallary.SetActive(true);
         canvas_option.SetActive(false);
