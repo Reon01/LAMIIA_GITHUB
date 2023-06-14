@@ -10,6 +10,7 @@ public class ActiveSceneManager : MonoBehaviour
     public static bool S_Tutorial = false;
     public static bool S_Skill = false;
     public static bool S_Boss = false;
+    public static bool S_StageSelect = false;
 
     //ÉVÅ[ÉìêÿÇËë÷ÇÌÇËåüímÇÃèÄîı
     void Start()
@@ -51,6 +52,11 @@ public class ActiveSceneManager : MonoBehaviour
             S_Boss = true;
             Debug.Log("AS = BossStage");
         }
+        else if (AScene.name == "Scene1.5_StageSelect")
+        {
+            S_StageSelect = true;
+            Debug.Log("AS = StageSelect");
+        }
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -61,7 +67,7 @@ public class ActiveSceneManager : MonoBehaviour
         if (AScene.name == "Scene1_Start")
         {
             S_Title = true;
-            Debug.Log("AS = Start");
+            Debug.Log("AS = Title");
         }
         else if (AScene.name == "Scene2_Tutorial")
         {
@@ -73,10 +79,15 @@ public class ActiveSceneManager : MonoBehaviour
             S_Skill = true;
             Debug.Log("AS = Scene_Tutorial skillcharge bossbattle");
         }
-        else if (AScene.name == "Scene4_BossBattle")
+        else if (AScene.name == "Scene4_BossStage")
         {
             S_Boss = true;
-            Debug.Log("AS = BossBattle");
+            Debug.Log("AS = BossStage");
+        }
+        else if (AScene.name == "Scene1.5_StageSelect")
+        {
+            S_StageSelect = true;
+            Debug.Log("AS = StageSelect");
         }
     }
 }

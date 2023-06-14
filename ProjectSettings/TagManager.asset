@@ -16,6 +16,8 @@ TagManager:
   - WhaleGO2
   - WhaleGO3
   - WhaleGO4
+  - Boss
+  - Shield
   layers:
   - Default
   - TransparentFX

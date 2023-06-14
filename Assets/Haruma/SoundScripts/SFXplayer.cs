@@ -22,7 +22,7 @@ public class SFXplayer : MonoBehaviour
     void Start(){}
 
     void Update(){
-        //ƒƒjƒ…[SFX
+        //ï¿½ï¿½ï¿½jï¿½ï¿½ï¿½[SFX
         if (GameStart.menu_Sound == 1){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("menu_Confirm");
@@ -37,7 +37,7 @@ public class SFXplayer : MonoBehaviour
             GameStart.menu_Sound = 0;
             Debug.Log("Back");
         }
-        //çó
+        //ï¿½ï¿½
         if (mori.Mori_Sound == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("attack_Hrpn");
@@ -45,7 +45,7 @@ public class SFXplayer : MonoBehaviour
             mori.Mori_Sound = false;
             Debug.Log("HrpnSound");
         }
-        //ƒJƒWƒL
+        //ï¿½Jï¿½Wï¿½L
         if (Kajiki.Kajiki_Sound == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_Sf");
@@ -53,7 +53,7 @@ public class SFXplayer : MonoBehaviour
             Kajiki.Kajiki_Sound = false;
             Debug.Log("KajikiSound");
         }
-        //ƒNƒ‰ƒQ
+        //ï¿½Nï¿½ï¿½ï¿½Q
         if (Kurage.Kurage_Sound_s == true)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
@@ -72,7 +72,7 @@ public class SFXplayer : MonoBehaviour
             Debug.Log("KurageSound_e");
         }
 
-        //ƒfƒ“ƒLƒEƒiƒM
+        //ï¿½fï¿½ï¿½ï¿½Lï¿½Eï¿½iï¿½M
         if (SkillElectronic.EE_Sound == 1)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
@@ -97,13 +97,13 @@ public class SFXplayer : MonoBehaviour
             SkillElectronic.EE_Sound = 0;
             Debug.Log("EESound_Stop");
         }
-        //”í’e•—^ƒ_ƒ[ƒW
+        //ï¿½ï¿½eï¿½ï¿½ï¿½^ï¿½_ï¿½ï¿½ï¿½[ï¿½Wï¿½ï¿½
         if (PlayerHP.damaged_Sound_P == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("damage_P");
             playerController.Play();
             PlayerHP.damaged_Sound_P = false;
-            Debug.Log("’É‚¢I");
+            Debug.Log("ç—›ã„ï¼");
         }
         if (EnemyHP.damaged_Sound_E == 1){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
