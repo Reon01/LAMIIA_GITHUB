@@ -70,5 +70,10 @@ public class BossSpeir : MonoBehaviour
         {
             player.GetComponent<PlayerHP>().speirdamage();
         }
+
+        else if (other.gameObject.CompareTag("Shield"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
