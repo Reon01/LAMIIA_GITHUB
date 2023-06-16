@@ -32,42 +32,42 @@ public class Tip : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W)&&step == 0)
         {
             showcorrect();//正解の円を出す
-            Invoke(nameof(S), 2f);//２秒後に次のステップに進む
+            Invoke(nameof(S), 1f);//２秒後に次のステップに進む
         }
         if (Input.GetKeyDown(KeyCode.S)&&step == 1)
         {
             showcorrect();
-            Invoke(nameof(A), 2f);
+            Invoke(nameof(A), 1f);
         }
         if (Input.GetKeyDown(KeyCode.A)&&step == 2)
         {
             showcorrect();
-            Invoke(nameof(D), 2f);
+            Invoke(nameof(D), 1f);
         }
         if (Input.GetKeyDown(KeyCode.D) && step == 3)
         {
             showcorrect();
-            Invoke(nameof(Space), 2f);
+            Invoke(nameof(Space), 1f);
         }
         if (Input.GetKeyDown(KeyCode.Space) && step == 4)
         {
             showcorrect();
-            Invoke(nameof(Ctrl), 2f);
+            Invoke(nameof(Ctrl), 1f);
         }
         if (Input.GetKeyDown(KeyCode.LeftControl) && step == 5)
         {
             showcorrect();
-            Invoke(nameof(Mouse), 2f);
+            Invoke(nameof(Mouse), 1f);
             iscount = true;
         }
         //マウスの動きは、５秒のカウントをしたら丸が出るようにする
         if (iscount == true)
         {
             count += Time.deltaTime;
-            if (count >= 5)
+            if (count >= 3)
             {
                 showcorrect();
-                Invoke(nameof(end), 2f);
+                Invoke(nameof(end), 1f);
                 count = 0;
                 iscount = false;
             }

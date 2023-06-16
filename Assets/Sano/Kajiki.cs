@@ -42,7 +42,7 @@ public class Kajiki : MonoBehaviour
     {
         //’e‚ğ”­Ë‚·‚éêŠ‚ğæ“¾
         Vector3 bulletPosition = firingPoint.transform.position;
-        GameObject ball = (GameObject)Instantiate(kajiki, bulletPosition, Quaternion.identity);
+        GameObject ball = (GameObject)Instantiate(kajiki, bulletPosition, transform.rotation);
         Rigidbody ballRigidbody = ball.GetComponent<Rigidbody>();
 
         ballRigidbody.AddForce(transform.forward * fishspeed);
