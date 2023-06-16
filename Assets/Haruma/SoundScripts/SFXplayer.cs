@@ -54,21 +54,23 @@ public class SFXplayer : MonoBehaviour
             Debug.Log("KajikiSound");
         }
         //�N���Q
-        if (Kurage.Kurage_Sound_s == true)
+        if (Kurage.Kurage_Sound_s == true || FishSkillSystem.Kurage_Sound_s_2 == true)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_Jf_s");
             playerController.KuragePlay();
             Kurage.Kurage_Sound_s = false;
+            FishSkillSystem.Kurage_Sound_s_2 = false;
             Debug.Log("KurageSound_s");
         }
-        if (Kurage.Kurage_Sound_e == true)
+        if (Kurage.Kurage_Sound_e == true || FishSkillSystem.Kurage_Sound_e_2 == true)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_Jf_e");
             playerController.Play();
             playerController.KurageStop();
             Kurage.Kurage_Sound_e = false;
+            FishSkillSystem.Kurage_Sound_e_2 = false;
             Debug.Log("KurageSound_e");
         }
 

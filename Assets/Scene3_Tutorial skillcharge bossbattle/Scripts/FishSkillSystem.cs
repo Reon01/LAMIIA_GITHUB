@@ -17,6 +17,10 @@ public class FishSkillSystem : MonoBehaviour
     public GameObject kuragesield;
     public int kuragesieldHP;
 
+    //はるまサウンド用変数
+    public static bool Kurage_Sound_s_2 = false;
+    public static bool Kurage_Sound_e_2 = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -90,6 +94,8 @@ public class FishSkillSystem : MonoBehaviour
         player.GetComponent<PlayerHP>().kaihuku();
         enemykill.GetComponent<EnemyKill>().a_Kurage -= 1;
         Debug.Log("クラゲ使用");
+
+        Kurage_Sound_s_2 = true;
     }
 
     public void KurageClick()
@@ -104,5 +110,7 @@ public class FishSkillSystem : MonoBehaviour
     public void damage()
     {
         kuragesieldHP -= 1;
+
+        Kurage_Sound_e_2 = true;
     }
 }
