@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EscSystem : MonoBehaviour
 {
@@ -52,6 +53,11 @@ public class EscSystem : MonoBehaviour
         canvas_esc.SetActive(false);
 
         GameStart.menu_Sound = 2;
+    }
+
+    public void Home()
+    {
+        SceneManager.LoadScene("Scene1_Start");
     }
 
     public void Back()

@@ -30,4 +30,9 @@ public class StageSelect : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene("Scene4_BossStage");
     }
+
+    public void Home()
+    {
+        SceneManager.LoadScene("Scene1_Start");
+    }
 }
