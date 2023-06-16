@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -598,8 +598,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4dd7cf4fb72f74b4293732619f2d7685, type: 3}
-    m_FontSize: 60
+    m_Font: {fileID: 12800000, guid: 9b2d620acf410e54188875c6621c8461, type: 3}
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -5606,11 +5606,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4dd7cf4fb72f74b4293732619f2d7685, type: 3}
-    m_FontSize: 60
+    m_Font: {fileID: 12800000, guid: 9b2d620acf410e54188875c6621c8461, type: 3}
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 0
     m_MaxSize: 60
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -10063,8 +10063,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4dd7cf4fb72f74b4293732619f2d7685, type: 3}
-    m_FontSize: 60
+    m_Font: {fileID: 12800000, guid: 9b2d620acf410e54188875c6621c8461, type: 3}
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -326,6 +326,14 @@ PrefabInstance:
     - target: {fileID: 5047500834144718661, guid: f008c2aba5c04f946bdf3aa2a2eeed0d, type: 3}
       propertyPath: m_Text
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5047500834144718661, guid: f008c2aba5c04f946bdf3aa2a2eeed0d, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 9b2d620acf410e54188875c6621c8461, type: 3}
+    - target: {fileID: 5047500834144718661, guid: f008c2aba5c04f946bdf3aa2a2eeed0d, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5047500834144718663, guid: f008c2aba5c04f946bdf3aa2a2eeed0d, type: 3}
       propertyPath: m_Name
@@ -9502,6 +9510,14 @@ PrefabInstance:
       propertyPath: m_Text
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6924368408046029654, guid: ec856fa6bb3323440a2e86cf57ffb600, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 9b2d620acf410e54188875c6621c8461, type: 3}
+    - target: {fileID: 6924368408046029654, guid: ec856fa6bb3323440a2e86cf57ffb600, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 6924368408046029655, guid: ec856fa6bb3323440a2e86cf57ffb600, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -17345,6 +17361,18 @@ PrefabInstance:
     - target: {fileID: 5912341959719500936, guid: 9fae1d15d2bb3584ea4638b5e157ccd9, type: 3}
       propertyPath: m_Text
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912341959719500936, guid: 9fae1d15d2bb3584ea4638b5e157ccd9, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 9b2d620acf410e54188875c6621c8461, type: 3}
+    - target: {fileID: 5912341959719500936, guid: 9fae1d15d2bb3584ea4638b5e157ccd9, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912341959719500936, guid: 9fae1d15d2bb3584ea4638b5e157ccd9, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5912341959719500938, guid: 9fae1d15d2bb3584ea4638b5e157ccd9, type: 3}
       propertyPath: m_Name
