@@ -29,6 +29,8 @@ public class SkillElectronic_new : MonoBehaviour
                 IsLightning = false;
                 count = 0;
                 iscount = false;
+
+                SkillElectronic.EE_Sound = 3;
             }
         }
     }
@@ -38,5 +40,7 @@ public class SkillElectronic_new : MonoBehaviour
         Lightning.SetActive(true);
         IsLightning = true;
         iscount = true;
+
+        SkillElectronic.EE_Sound = 1;
     }
 }
