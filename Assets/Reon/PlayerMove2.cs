@@ -60,13 +60,13 @@ public class PlayerMove2 : MonoBehaviour
         {
             playerVelocity.y = 0;
         }
-        if (Input.GetKey(KeyCode.LeftControl))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
 
             playerVelocity.y = downHeight;
 
         }
-        if (Input.GetKeyUp(KeyCode.LeftControl))
+        if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             playerVelocity.y = 0;
         }

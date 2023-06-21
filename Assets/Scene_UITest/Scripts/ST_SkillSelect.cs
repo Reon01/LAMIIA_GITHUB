@@ -55,5 +55,4 @@ public class ST_SkillSelect : MonoBehaviour
         button_unagi.image.color = Color.yellow;
         button_kurage.image.color = Color.white;
     }
-
 }
