@@ -1,77 +1,77 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-/* (1) –¼‘O‹óŠÔ‚Ìİ’è */
+/* (1) åå‰ç©ºé–“ã®è¨­å®š */
 using CriWare;
-/*‚±‚±‚Å‚Íƒf[ƒ^‚ğQÆ‚µ‚È‚¢‚Ì‚ÅAAsset‚Ì‚â‚Â‚Í‘‚©‚È‚¢*/
+/*ã“ã“ã§ã¯ãƒ‡ãƒ¼ã‚¿ã‚’å‚ç…§ã—ãªã„ã®ã§ã€Assetã®ã‚„ã¤ã¯æ›¸ã‹ãªã„*/
 
 public class PlayerController : MonoBehaviour
 {
-    /* (2) ƒvƒŒ[ƒ„[ */
+    /* (2) ãƒ—ãƒ¬ãƒ¼ãƒ¤ãƒ¼ */
     private CriAtomExPlayer player;
 
-    //ƒvƒŒƒCƒoƒbƒN
+    //ãƒ—ãƒ¬ã‚¤ãƒãƒƒã‚¯
     private CriAtomExPlayback Kurageplayback;
     private CriAtomExPlayback EEplayback;
     private CriAtomExPlayback BGMplayback;
 
-    /* (12) ACB î•ñ */
+    /* (12) ACB æƒ…å ± */
     private CriAtomExAcb acb;
 
-    /* (16) ƒLƒ…[–¼ */
+    /* (16) ã‚­ãƒ¥ãƒ¼å */
     private string cueName;
 
-    /* (3) ƒRƒ‹[ƒ`ƒ“‰»‚·‚é */
+    /* (3) ã‚³ãƒ«ãƒ¼ãƒãƒ³åŒ–ã™ã‚‹ */
     IEnumerator Start(){
-        /* (4) ƒ‰ƒCƒuƒ‰ƒŠ‚Ì‰Šú‰»Ï‚İƒ`ƒFƒbƒN */
+        /* (4) ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®åˆæœŸåŒ–æ¸ˆã¿ãƒã‚§ãƒƒã‚¯ */
         while (!CriWareInitializer.IsInitialized()){
             yield return null;
         }
 
-        /* (5) ƒvƒŒ[ƒ„[‚Ìì¬ */
+        /* (5) ãƒ—ãƒ¬ãƒ¼ãƒ¤ãƒ¼ã®ä½œæˆ */
         player = new CriAtomExPlayer();
     }
 
     void Update() { }
 
     public void Play(){
-        /* (10) ƒ|[ƒYó‘Ô‚É‰‚¶‚½ˆ— */
+        /* (10) ãƒãƒ¼ã‚ºçŠ¶æ…‹ã«å¿œã˜ãŸå‡¦ç† */
         if (player.IsPaused()){
-            /* (11) ƒ|[ƒY‚Ì‰ğœ */
+            /* (11) ãƒãƒ¼ã‚ºã®è§£é™¤ */
             player.Pause(false);
         }
         else{
-            /* (18) ƒLƒ…[î•ñ‚ğƒvƒŒ[ƒ„[İ’è */
+            /* (18) ã‚­ãƒ¥ãƒ¼æƒ…å ±ã‚’ãƒ—ãƒ¬ãƒ¼ãƒ¤ãƒ¼è¨­å®š */
             player.SetCue(acb, cueName);
-            /* (7) ƒvƒŒ[ƒ„[‚ÌÄ¶ */
+            /* (7) ãƒ—ãƒ¬ãƒ¼ãƒ¤ãƒ¼ã®å†ç”Ÿ */
             player.Start();
         }
 
     }
-    //ƒNƒ‰ƒQ—pƒvƒŒƒCƒoƒbƒN
+    //ã‚¯ãƒ©ã‚²ç”¨ãƒ—ãƒ¬ã‚¤ãƒãƒƒã‚¯
     public void KuragePlay(){
         player.SetCue(acb, cueName);
         Kurageplayback = player.Start();
     }
-    //‚¤‚È‚¬—pƒvƒŒƒCƒoƒbƒN
+    //ã†ãªãç”¨ãƒ—ãƒ¬ã‚¤ãƒãƒƒã‚¯
     public void EEPlay(){
         player.SetCue(acb, cueName);
         EEplayback = player.Start();
     }
-    //BGM—pƒvƒŒƒCƒoƒbƒN
+    //BGMç”¨ãƒ—ãƒ¬ã‚¤ãƒãƒƒã‚¯
     public void BGMPlay(){
         player.SetCue(acb, cueName);
         BGMplayback = player.Start();
     }
 
 
-    /* (8) ƒvƒŒ[ƒ„[‚Ì’â~ */
+    /* (8) ãƒ—ãƒ¬ãƒ¼ãƒ¤ãƒ¼ã®åœæ­¢ */
     public void Stop(){
         player.Stop();
     }
-    //ƒvƒŒƒCƒoƒbƒN’â~
+    //ãƒ—ãƒ¬ã‚¤ãƒãƒƒã‚¯åœæ­¢
     public void KurageStop(){
         Kurageplayback.Stop();
     }
@@ -83,41 +83,41 @@ public class PlayerController : MonoBehaviour
         BGMplayback.Stop();
     }
 
-    /* (9) ƒvƒŒ[ƒ„[‚Ìˆê’â~ */
+    /* (9) ãƒ—ãƒ¬ãƒ¼ãƒ¤ãƒ¼ã®ä¸€æ™‚åœæ­¢ */
     public void Pause(){
         player.Pause(true);
     }
 
-    /* (12) ACB ‚Ìw’è */
+    /* (12) ACB ã®æŒ‡å®š */
     public void SetAcb(CriAtomExAcb acb){
-        /* (14) ACB ‚Ì•Û‘¶ */
+        /* (14) ACB ã®ä¿å­˜ */
         this.acb = acb;
     }
 
-    /* (15) ƒLƒ…[–¼‚Ìw’è */
+    /* (15) ã‚­ãƒ¥ãƒ¼åã®æŒ‡å®š */
     public void SetCueName(string name){
-        /* (17) ƒLƒ…[–¼‚Ì•Û‘¶ */
+        /* (17) ã‚­ãƒ¥ãƒ¼åã®ä¿å­˜ */
         cueName = name;
     }
 
-    /* (19) ƒ{ƒŠƒ…[ƒ€‚Ìİ’è */
+    /* (19) ãƒœãƒªãƒ¥ãƒ¼ãƒ ã®è¨­å®š */
     public void SetVolume(float vol){
-        /* (19) ƒ{ƒŠƒ…[ƒ€‚Ìİ’è */
+        /* (19) ãƒœãƒªãƒ¥ãƒ¼ãƒ ã®è¨­å®š */
         player.SetVolume(vol);
-        /* (20) ƒpƒ‰ƒ[ƒ^[‚ÌXV */
+        /* (20) ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼ã®æ›´æ–° */
         player.UpdateAll();
     }
 
     public void Seek(float value){
-        /* (Ex) ƒLƒ…[‚ğƒV[ƒN‚³‚¹‚é */
+        /* (Ex) ã‚­ãƒ¥ãƒ¼ã‚’ã‚·ãƒ¼ã‚¯ã•ã›ã‚‹ */
     }
 
-    /* (21) AISAC ƒRƒ“ƒgƒ[ƒ‹’l‚Ìİ’è */
+    /* (21) AISAC ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«å€¤ã®è¨­å®š */
     public void SetAisacControl(float value){
-        /* (21) AISAC ƒRƒ“ƒgƒ[ƒ‹’l‚Ìİ’è */
+        /* (21) AISAC ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«å€¤ã®è¨­å®š */
         player.SetAisacControl("Any", value);
 
-        /* (22) ƒpƒ‰ƒ[ƒ^[‚ÌXV */
+        /* (22) ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼ã®æ›´æ–° */
         player.UpdateAll();
     }
 }

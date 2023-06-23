@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CriWare;
@@ -28,8 +28,9 @@ public class BGMplayer : MonoBehaviour
     {
         if (ActiveSceneManager.S_Title == true)
         {
-            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("skill_Jf_s");
+            playerController.BGMStop();
+            playerController.SetAcb(atomLoader.acbAssets[0].Handle);
+            playerController.SetCueName("Title_BGM");
             playerController.BGMPlay();
             ActiveSceneManager.S_Title = false;
         }
@@ -53,15 +54,9 @@ public class BGMplayer : MonoBehaviour
         {
             playerController.SetAcb(atomLoader.acbAssets[0].Handle);
             playerController.SetCueName("Skill_BGM");
-            playerController.Play();
+            playerController.BGMPlay();
             ActiveSceneManager.S_Boss = false;
             Debug.Log("Playing Skill_BGM for Scene_BossStage");
-        }
-        else if (ActiveSceneManager.S_StageSelect == true)
-        {
-            playerController.BGMStop();
-            ActiveSceneManager.S_StageSelect = false;
-            Debug.Log("Stop BGM");
         }
     }
 }
