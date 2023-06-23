@@ -8,7 +8,8 @@ public class BossAttack : MonoBehaviour
 
     private float countTime;　　　　　 //タイマー
 
-
+    //はるまサウンド用変数
+    public static bool Spear_Sound = false;
 
     public GameObject Speir;
 
@@ -33,5 +34,8 @@ public class BossAttack : MonoBehaviour
         GameObject ball = (GameObject)Instantiate(Speir, transform.position, Quaternion.identity);
         Destroy(ball, 3f);
         Debug.Log("ボス攻撃１");
+
+        //はるまサウンド用
+        Spear_Sound = true;
     }
 }
