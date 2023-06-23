@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CriWare;
@@ -22,7 +22,7 @@ public class SFXplayer : MonoBehaviour
     void Start(){}
 
     void Update(){
-        //���j���[SFX
+        //メニュー系SFX
         if (GameStart.menu_Sound == 1){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("menu_Confirm");
@@ -37,7 +37,7 @@ public class SFXplayer : MonoBehaviour
             GameStart.menu_Sound = 0;
             Debug.Log("Back");
         }
-        //��
+        //銛
         if (mori.Mori_Sound == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("attack_Hrpn");
@@ -45,7 +45,7 @@ public class SFXplayer : MonoBehaviour
             mori.Mori_Sound = false;
             Debug.Log("HrpnSound");
         }
-        //�J�W�L
+        //カジキ
         if (Kajiki.Kajiki_Sound == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_Sf");
@@ -53,7 +53,7 @@ public class SFXplayer : MonoBehaviour
             Kajiki.Kajiki_Sound = false;
             Debug.Log("KajikiSound");
         }
-        //�N���Q
+        //クラゲ
         if (Kurage.Kurage_Sound_s == true || FishSkillSystem.Kurage_Sound_s_2 == true)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
@@ -74,7 +74,7 @@ public class SFXplayer : MonoBehaviour
             Debug.Log("KurageSound_e");
         }
 
-        //�f���L�E�i�M
+        //電気ウナギ
         if (SkillElectronic.EE_Sound == 1)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
@@ -99,7 +99,7 @@ public class SFXplayer : MonoBehaviour
             SkillElectronic.EE_Sound = 0;
             Debug.Log("EESound_Stop");
         }
-        //��e���^�_���[�W��
+        //ダメージ系SFX
         if (PlayerHP.damaged_Sound_P == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("damage_P");
@@ -121,5 +121,28 @@ public class SFXplayer : MonoBehaviour
             EnemyHP.damaged_Sound_E = 0;
             Debug.Log("Enemy is Dead!");
         }
+        //泡音用コルーチンスタート
+        if(ActiveSceneManager.S_StageSelect == true){
+            playerController.BGMStop();
+            StartCoroutine(bubbleRondomize());
+            ActiveSceneManager.S_StageSelect = false;
+            Debug.Log("Coroutine Start");
+        }
+    }
+
+    //泡音用コルーチン
+    private IEnumerator bubbleRondomize(){
+        float rnd_bubble = Random.Range(3.0f,5.0f);
+        while(true){
+            bubble_Play();
+            yield return new WaitForSeconds(rnd_bubble);
+        }
+    }
+
+    private void bubble_Play(){
+        playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+        playerController.SetCueName("bubble");
+        playerController.BGMPlay();
+        Debug.Log("bubble Playing");
     }
 }

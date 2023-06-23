@@ -1,8 +1,8 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* (1) –¼‘O‹óŠÔ‚Ìİ’è */
+/* (1) åå‰ç©ºé–“ã®è¨­å®š */
 using CriWare;
 using CriWare.Assets;
 
@@ -18,12 +18,12 @@ public class AtomLoader : MonoBehaviour
         }
     }
 
-    /* (9) ‘Sƒf[ƒ^‚ªƒ[ƒhÏ‚İ‚©‚Ç‚¤‚©(‘¼ƒRƒ“ƒ|[ƒlƒ“ƒg‚Ö‚Ì•Ô“š—p) */
+    /* (9) å…¨ãƒ‡ãƒ¼ã‚¿ãŒãƒ­ãƒ¼ãƒ‰æ¸ˆã¿ã‹ã©ã†ã‹(ä»–ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã¸ã®è¿”ç­”ç”¨) */
     public bool isLoaded
     {
         get
         {
-            /* (11) Šeƒf[ƒ^‚ªƒ[ƒhÏ‚İ‚©‚Ç‚¤‚©‚ğƒ`ƒFƒbƒN(=‚Ì‘O‚É|‚ğ‹²‚Ş) */
+            /* (11) å„ãƒ‡ãƒ¼ã‚¿ãŒãƒ­ãƒ¼ãƒ‰æ¸ˆã¿ã‹ã©ã†ã‹ã‚’ãƒã‚§ãƒƒã‚¯(=ã®å‰ã«|ã‚’æŒŸã‚€) */
             bool value = acfIsRegisterd;
 
             foreach (var acbAsset in acbAssets)
@@ -37,32 +37,32 @@ public class AtomLoader : MonoBehaviour
 
 
 
-    /* (2) ACF ƒAƒZƒbƒg */
+    /* (2) ACF ã‚¢ã‚»ãƒƒãƒˆ */
     public CriAtomAcfAsset acfAsset;
 
-    /* (3) ACB ƒAƒZƒbƒg‚Ì”z—ñ */
-    /* Note: ACB ‚Í•¡”ƒtƒ@ƒCƒ‹‚É‚È‚Á‚Ä‚¢‚é‰Â”\«‚ª‚ ‚é‚½‚ß */
+    /* (3) ACB ã‚¢ã‚»ãƒƒãƒˆã®é…åˆ— */
+    /* Note: ACB ã¯è¤‡æ•°ãƒ•ã‚¡ã‚¤ãƒ«ã«ãªã£ã¦ã„ã‚‹å¯èƒ½æ€§ãŒã‚ã‚‹ãŸã‚ */
     public CriAtomAcbAsset[] acbAssets;
 
-    /* (10) ƒŒƒWƒXƒgÏ‚İ‚©‚Ç‚¤‚©‚Ìƒtƒ‰ƒO */
+    /* (10) ãƒ¬ã‚¸ã‚¹ãƒˆæ¸ˆã¿ã‹ã©ã†ã‹ã®ãƒ•ãƒ©ã‚° */
     private bool acfIsRegisterd = false;
 
-    /* (4) ƒRƒ‹[ƒ`ƒ“‰»(while‚Å~‚Ü‚ç‚¸‘¼‚Ìˆ—‚Éi‚ñ‚Å‚­‚ê‚é‚æ‚¤‚É‚È‚é) */
+    /* (4) ã‚³ãƒ«ãƒ¼ãƒãƒ³åŒ–(whileã§æ­¢ã¾ã‚‰ãšä»–ã®å‡¦ç†ã«é€²ã‚“ã§ãã‚Œã‚‹ã‚ˆã†ã«ãªã‚‹) */
     IEnumerator Start()
     {
-        /* (5) ƒ‰ƒCƒuƒ‰ƒŠ‚Ì‰Šú‰»Ï‚İƒ`ƒFƒbƒN */
+        /* (5) ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®åˆæœŸåŒ–æ¸ˆã¿ãƒã‚§ãƒƒã‚¯ */
         while (!CriWareInitializer.IsInitialized())
         {
             yield return null;
         }
 
-        /* (6) ACF ƒf[ƒ^‚Ì“o˜^ */
+        /* (6) ACF ãƒ‡ãƒ¼ã‚¿ã®ç™»éŒ² */
         acfIsRegisterd = acfAsset.Register();
 
-        /* (7) ƒfƒtƒHƒ‹ƒg‚Ì DSP ƒoƒXİ’è‚ğ“K‰(ƒŒƒWƒXƒg‚µ‚È‚¢‚ÆAƒJƒbƒR‚Ì’†g‚ª“®‚©‚È‚¢) */
+        /* (7) ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã® DSP ãƒã‚¹è¨­å®šã‚’é©å¿œ(ãƒ¬ã‚¸ã‚¹ãƒˆã—ãªã„ã¨ã€ã‚«ãƒƒã‚³ã®ä¸­èº«ãŒå‹•ã‹ãªã„) */
         CriAtomEx.AttachDspBusSetting(CriAtomExAcf.GetDspSettingNameByIndex(0));
 
-        /* (8) ACB ƒf[ƒ^(ƒLƒ…[ƒV[ƒg)‚Ìƒ[ƒh(foreach‚ÍacbAssets‚Ì’†g‚ğ—v‘f•ª‚¾‚¯Œ©‚Â‚¯‚Ä‚­‚ê‚é) */
+        /* (8) ACB ãƒ‡ãƒ¼ã‚¿(ã‚­ãƒ¥ãƒ¼ã‚·ãƒ¼ãƒˆ)ã®ãƒ­ãƒ¼ãƒ‰(foreachã¯acbAssetsã®ä¸­èº«ã‚’è¦ç´ åˆ†ã ã‘è¦‹ã¤ã‘ã¦ãã‚Œã‚‹) */
         foreach (var acbAsset in acbAssets)
         {
             if (!acbAsset.LoadRequested) acbAsset.LoadImmediate();

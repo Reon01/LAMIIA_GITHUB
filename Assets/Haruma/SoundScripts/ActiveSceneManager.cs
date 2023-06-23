@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,7 +12,7 @@ public class ActiveSceneManager : MonoBehaviour
     public static bool S_Boss = false;
     public static bool S_StageSelect = false;
 
-    //ƒV[ƒ“Ø‚è‘Ö‚í‚èŒŸ’m‚Ì€”õ
+    //ã‚·ãƒ¼ãƒ³åˆ‡ã‚Šæ›¿ã‚ã‚Šæ¤œçŸ¥ã®æº–å‚™
     void Start()
     {
         SceneManager.sceneLoaded += SceneLoaded;
@@ -27,7 +27,7 @@ public class ActiveSceneManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    //ƒV[ƒ“ƒ[ƒh‚É•Ï”‚ğTrue‚É•ÏX
+    //ã‚·ãƒ¼ãƒ³ãƒ­ãƒ¼ãƒ‰æ™‚ã«å¤‰æ•°ã‚’Trueã«å¤‰æ›´
     void SceneLoaded (Scene nextScene, LoadSceneMode mode)
     {
         Debug.Log("SceneLoaded");
@@ -61,7 +61,7 @@ public class ActiveSceneManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // ƒV[ƒ“‚ªØ‚è‘Ö‚í‚Á‚½‚Æ‚«‚ÉÀs‚³‚ê‚éˆ—
+        // ã‚·ãƒ¼ãƒ³ãŒåˆ‡ã‚Šæ›¿ã‚ã£ãŸã¨ãã«å®Ÿè¡Œã•ã‚Œã‚‹å‡¦ç†
         Debug.Log("OnSceneLoaded");
         Scene AScene = SceneManager.GetActiveScene();
         if (AScene.name == "Scene1_Start")
