@@ -12,12 +12,14 @@ public class S2_SkillChange : MonoBehaviour
 
     private int count;
     private GameObject player;
+    public GameObject mori;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
         count = 0;
+        button_mori.image.color = Color.yellow;
     }
 
     // Update is called once per frame
@@ -30,12 +32,12 @@ public class S2_SkillChange : MonoBehaviour
 
         if (count == 0)
         {
-            player.GetComponent<mori>().enabled = true;
+            mori.GetComponent<mori>().enabled = true;
         }
         if (count == 1)
         {
             kajikicolor();
-            player.GetComponent<mori>().enabled = false;
+            mori.GetComponent<mori>().enabled = false;
         }
         if (count == 2)
         {
@@ -44,18 +46,34 @@ public class S2_SkillChange : MonoBehaviour
         if (count == 3)
         {
             unagicolor();
-            player.GetComponent<mori>().enabled = true;
+            mori.GetComponent<mori>().enabled = true;
         }
         if (count == 4)
         {
+            moricolor();
             count = 0;
         }
+    }
+
+    public void moricolor()
+    {
+        button_mori.image.color = Color.yellow;
+        button_unagi.image.color = Color.white;
+
+        //他のスキルをオフにする
+        player.GetComponent<Kajiki>().isSkill = false;
+        player.GetComponent<Kurage>().isSkill = false;
+        player.GetComponent<SkillElectronic>().isSkill = false;
+        //スクリプトごとオフにする
+        player.GetComponent<Kajiki>().enabled = false;
+        player.GetComponent<Kurage>().enabled = false;
+        player.GetComponent<SkillElectronic>().enabled = false;
     }
 
     public void kajikicolor()
     {
         button_kajiki.image.color = Color.yellow;
-        button_unagi.image.color = Color.white;
+        button_mori.image.color = Color.white;
 
         //スキル選択
         //PlayerオブジェクトについてるKajikiスクリプトからisSkillをtrueに変えてスキルを変更する
