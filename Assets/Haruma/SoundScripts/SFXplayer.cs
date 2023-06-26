@@ -128,6 +128,32 @@ public class SFXplayer : MonoBehaviour
             ActiveSceneManager.S_StageSelect = false;
             Debug.Log("Coroutine Start");
         }
+        //ボス系アタックサウンド
+        /*
+        if(BossAttack.Spear_Sound == true){
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("");
+            playerController.Play();
+            BossAttack.Spear_Sound = false;
+            Debug.Log("Spear is Coming");
+
+        }
+        if(.Razor_Sound == true){
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("");
+            playerController.Play();
+            .Razor_Sound = false;
+            Debug.Log("Razor is Coming");
+
+        }
+        if(.Summon_Sound == true){
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("");
+            playerController.Play();
+            .Summon_Sound = false;
+            Debug.Log("Summon Voice");
+        }
+        */
     }
 
     //泡音用コルーチン
