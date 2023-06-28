@@ -9,6 +9,9 @@ using CriWare;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField]
+    public Slider volumeSlider;
+
     /* (2) プレーヤー */
     private CriAtomExPlayer player;
 
@@ -32,6 +35,10 @@ public class PlayerController : MonoBehaviour
 
         /* (5) プレーヤーの作成 */
         player = new CriAtomExPlayer();
+
+        volumeSlider.maxValue = 4.0f;
+        volumeSlider.value = 2.0f;
+        volumeSlider.minValue = 0.0f;
     }
 
     void Update() { }
