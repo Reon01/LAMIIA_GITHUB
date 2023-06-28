@@ -28,7 +28,7 @@ public class Kajiki : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && isSkill == true && GetComponent<GetSkill>().a_Kajiki >= 1)
+        if (Input.GetMouseButtonDown(0) && isSkill == true && GetComponent<GetSkill>().a_Kajiki >= 1)
         {
             FishShot();
             GetComponent<GetSkill>().a_Kajiki -= 1; //ÉXÉLÉãÇÇPè¡îÔ

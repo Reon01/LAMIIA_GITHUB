@@ -27,7 +27,7 @@ public class SkillElectronic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && isSkill == true &&
+        if (Input.GetMouseButtonDown(0) && isSkill == true &&
             GetComponent<GetSkill>().a_Unagi >= 1)
         {
             Lightning.SetActive(true);
