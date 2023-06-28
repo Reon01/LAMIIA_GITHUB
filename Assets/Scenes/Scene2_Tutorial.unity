@@ -1311,7 +1311,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eccc7bed2f5c1f409157ca5bf2a1039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   button_mori: {fileID: 1568246238}
+=======
+>>>>>>> parent of 1021a1c (オプションのスライダーによる音量変更)
   button_kajiki: {fileID: 1037920000}
   button_kurage: {fileID: 736422467}
   button_unagi: {fileID: 1290439693}
@@ -2739,6 +2742,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
 --- !u!1 &339692329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,6 +2827,8 @@ Transform:
   m_Father: {fileID: 1009768608}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 1021a1c (オプションのスライダーによる音量変更)
 --- !u!1 &373231238
 GameObject:
   m_ObjectHideFlags: 0
