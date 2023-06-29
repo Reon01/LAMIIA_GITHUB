@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class MSAL
 {
-    /*
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void LoadManagerScene()
     {
@@ -13,5 +12,4 @@ public class MSAL
             SceneManager.LoadScene(managerSceneName, LoadSceneMode.Additive);
         }
     }
-    */
 }

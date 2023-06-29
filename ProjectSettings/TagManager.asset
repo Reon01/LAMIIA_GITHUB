@@ -18,6 +18,7 @@ TagManager:
   - WhaleGO4
   - Boss
   - Shield
+  - SoundObjects
   layers:
   - Default
   - TransparentFX
