@@ -9,6 +9,10 @@ using CriWare;
 
 public class PlayerController : MonoBehaviour
 {
+    /* 音量設定用スライダー */
+    private GameObject sliderObject;
+    public Slider volumeSlider;
+
     /* (2) プレーヤー */
     private CriAtomExPlayer player;
 
@@ -25,6 +29,8 @@ public class PlayerController : MonoBehaviour
 
     /* (3) コルーチン化する */
     IEnumerator Start(){
+        volumeSlider = GameObject.Find("VolumeSlider").GetComponent<Slider>();
+
         /* (4) ライブラリの初期化済みチェック */
         while (!CriWareInitializer.IsInitialized()){
             yield return null;
@@ -32,6 +38,11 @@ public class PlayerController : MonoBehaviour
 
         /* (5) プレーヤーの作成 */
         player = new CriAtomExPlayer();
+        
+        volumeSlider.maxValue = 4.0f;
+	    volumeSlider.value = 2.0f;
+        volumeSlider.minValue = 0.0f;
+
     }
 
     void Update() { }
