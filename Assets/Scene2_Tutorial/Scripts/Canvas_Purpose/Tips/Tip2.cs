@@ -18,12 +18,13 @@ public class Tip2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //↓もしダミーを倒したら実行
         tagObjects = GameObject.FindGameObjectsWithTag("Enemy");
         if (tagObjects.Length == 0)
         {
-            nextcanvas.SetActive(true);
-            panel2.SetActive(false);
-            gameObject.SetActive(false);
+            nextcanvas.SetActive(true); //次のセリフを表示
+            panel2.SetActive(false); //左上のヒントを非表示
+            gameObject.SetActive(false); //このスクリプトを付けてるオブジェクトを非表示
         }
     }
 }

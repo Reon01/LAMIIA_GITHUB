@@ -21,7 +21,8 @@ public class Next : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") || 
+            other.gameObject.CompareTag("Weapon"))
         {
             warning1();
             Time.timeScale = 0;

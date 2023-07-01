@@ -23,7 +23,8 @@ public class TextController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(1) || 
+            Input.GetKeyDown(KeyCode.Space))
         {
             if (num == word.Length - 1)
             {
