@@ -5,10 +5,14 @@ using UnityEngine;
 public class BossMove : MonoBehaviour
 {
     //[SerializeField] private GameObject player;
+    //ëùÇ‚Ç∑á@
     [SerializeField] private GameObject WhaleGO1;
     [SerializeField] private GameObject WhaleGO2;
     [SerializeField] private GameObject WhaleGO3;
     [SerializeField] private GameObject WhaleGO4;
+    [SerializeField] private GameObject WhaleGO5;
+    [SerializeField] private GameObject WhaleGO6;
+    [SerializeField] private GameObject WhaleGO7;
     //[SerializeField] GameObject circlingtarget;
     //public float TurnSpan = 10f;
     //private float currentTime = 0f;
@@ -23,6 +27,7 @@ public class BossMove : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        //ëùÇ‚Ç∑áA
         if (other.CompareTag("WhaleGO1"))
         {
             transform.LookAt(WhaleGO2.transform);
@@ -39,6 +44,21 @@ public class BossMove : MonoBehaviour
 
         }
         if (other.CompareTag("WhaleGO4"))
+        {
+            transform.LookAt(WhaleGO5.transform);
+
+        }
+        if (other.CompareTag("WhaleGO5"))
+        {
+            transform.LookAt(WhaleGO6.transform);
+
+        }
+        if (other.CompareTag("WhaleGO6"))
+        {
+            transform.LookAt(WhaleGO7.transform);
+
+        }
+        if (other.CompareTag("WhaleGO7"))
         {
             transform.LookAt(WhaleGO1.transform);
 
