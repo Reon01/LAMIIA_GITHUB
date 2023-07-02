@@ -29,6 +29,7 @@ public class BGMplayer : MonoBehaviour
         if (ActiveSceneManager.S_Title == true)
         {
             playerController.BGMStop();
+            playerController.Stop();
             playerController.SetAcb(atomLoader.acbAssets[0].Handle);
             playerController.SetCueName("Title_BGM");
             playerController.BGMPlay();
