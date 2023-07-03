@@ -54,7 +54,7 @@ public class Tip : MonoBehaviour
             showcorrect();
             Invoke(nameof(Ctrl), 1f);
         }
-        if (Input.GetKeyDown(KeyCode.LeftControl) && step == 5)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && step == 5)
         {
             showcorrect();
             Invoke(nameof(Mouse), 1f);

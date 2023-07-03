@@ -37,5 +37,13 @@ public class MediumBossHP : MonoBehaviour
             hp -= 10;
             slider_mediumbosshp.value = hp;
         }
+
+        
+        //Å´ÉJÉWÉLÇÃèÍçá50DMG
+        if (other.gameObject.CompareTag("KajikiAttack"))
+        {
+            hp -= 50;
+            slider_mediumbosshp.value = hp;
+        }
     }
 }

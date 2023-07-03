@@ -697,7 +697,7 @@ GameObject:
   - component: {fileID: -2099776391356914255}
   m_Layer: 0
   m_Name: Kaziki_Edit
-  m_TagString: Weapon
+  m_TagString: KajikiAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

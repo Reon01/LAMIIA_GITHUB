@@ -34,5 +34,12 @@ public class S4_BossHP : MonoBehaviour
             hp -= 10;
             slider_bosshp.value = hp;
         }
+
+        //Å´ÉJÉWÉLÇÃèÍçá50DMG
+        if (other.gameObject.CompareTag("KajikiAttack"))
+        {
+            hp -= 50;
+            slider_bosshp.value = hp;
+        }
     }
 }
