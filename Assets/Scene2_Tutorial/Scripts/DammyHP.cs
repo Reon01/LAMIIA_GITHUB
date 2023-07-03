@@ -72,6 +72,13 @@ public class DammyHP : MonoBehaviour
                 HPBar.value = HP;
             }
         }
+
+        //Å´ÉJÉWÉLÇÃèÍçá50DMG
+        if (other.gameObject.CompareTag("KajikiAttack"))
+        {
+            HP -= 50;
+            HPBar.value = HP;
+        }
     }
 
     /*

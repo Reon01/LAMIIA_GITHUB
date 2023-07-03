@@ -81,6 +81,13 @@ public class EnemyHP : MonoBehaviour
                 SkillElectronic.EE_Sound = 2;
             }
         }
+
+        //Å´ÉJÉWÉLÇÃèÍçá50DMG
+        if (other.gameObject.CompareTag("KajikiAttack"))
+        {
+            HP -= 50;
+            HPBar.value = HP;
+        }
     }
 
     /*
