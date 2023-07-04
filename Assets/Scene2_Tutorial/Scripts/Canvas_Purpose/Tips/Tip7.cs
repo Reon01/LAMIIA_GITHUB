@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Tip5 : MonoBehaviour
+public class Tip7 : MonoBehaviour
 {
     private GameObject player;
     public GameObject nextcanvas;
-    public GameObject panel5;
+    public GameObject panel7;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +17,11 @@ public class Tip5 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //↓もしウナギを10匹手に入れたら
-        if (player.GetComponent<GetSkill>().a_Unagi >= 10)
+        //↓もしクラゲを10匹手に入れたら
+        if (player.GetComponent<GetSkill>().a_Kurage >= 10)
         {
             nextcanvas.SetActive(true); //次のセリフを表示
-            panel5.SetActive(false); //左上のヒントを非表示
+            panel7.SetActive(false); //左上のヒントを非表示
             gameObject.SetActive(false); //このスクリプトをつけてるオブジェクトを非表示
         }
     }

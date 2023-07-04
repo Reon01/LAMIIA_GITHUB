@@ -19,6 +19,7 @@ public class S4_BossBattleTimer : MonoBehaviour
         enemyspawn = GameObject.Find("EnemySpawn");
         timer = slider_bosstimer.value;
         istimer = true;
+        timer = 30;@//Å‰‚É30•b‚ğw’è‚·‚é
     }
 
     // Update is called once per frame
