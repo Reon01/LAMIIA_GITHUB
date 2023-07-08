@@ -10,16 +10,32 @@ public class SkillElectronic_new : MonoBehaviour
 
     public bool iscount;
     public float count;
+    private GameObject enemykillsystem;
+
+    public bool isunagi;
+    private GameObject player;
+    private GameObject unagitimer;
 
     // Start is called before the first frame update
     void Start()
     {
         IsLightning = false;
+        enemykillsystem = GameObject.Find("EnemyKillSystem");
+        player = GameObject.Find("Player");
+        unagitimer = GameObject.Find("UnagiTimer");
     }
 
     // Update is called once per frame
     void Update()
     {
+        //↓ウナギを選択して左クリックしたらスキル発動
+        if (isunagi == true && Input.GetMouseButtonDown(0) && 
+            enemykillsystem.GetComponent<EnemyKill>().a_Unagi >= 1)
+        {
+            skill();
+            unagitimer.GetComponent<S3_UnagiTimer>().iscount = true;
+        }
+
         if (iscount == true)
         {
             count += Time.deltaTime;
@@ -39,8 +55,13 @@ public class SkillElectronic_new : MonoBehaviour
     {
         Lightning.SetActive(true);
         IsLightning = true;
-        iscount = true;
+        //iscount = true;
+        spend();
 
         SkillElectronic.EE_Sound = 1;
+    }
+    public void spend()
+    {
+        enemykillsystem.GetComponent<EnemyKill>().a_Unagi -= 1; //スキルを１消費
     }
 }

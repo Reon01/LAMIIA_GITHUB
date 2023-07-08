@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float timer = 60;
+    public float timer;
     public GameObject canvas;
     public Slider slider_timer;
 
@@ -25,6 +25,7 @@ public class Timer : MonoBehaviour
         enemybattlesystem.SetActive(true);
         player = GameObject.Find("Player");
         player.GetComponent<PlayerHP>().maxheal();
+        timer = 20;
     }
 
     // Update is called once per frame

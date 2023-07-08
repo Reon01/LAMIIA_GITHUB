@@ -11,7 +11,7 @@ public class FishSkillSystem : MonoBehaviour
     private GameObject enemykill;
     public GameObject player;
     private GameObject cursorlocksystem;
-    public GameObject Canvas_SkillSelect;
+    private GameObject Canvas_SkillSelect;
 
     //↓クラゲシステム
     public GameObject kuragesield;
@@ -45,7 +45,7 @@ public class FishSkillSystem : MonoBehaviour
             Debug.Log("ウナギ使用");
         }
 
-        if (iskurage == true && Input.GetKeyDown(KeyCode.F) &&
+        if (iskurage == true && Input.GetMouseButtonDown(0) &&
             enemykill.GetComponent<EnemyKill>().a_Kurage >= 1)
         {
             Kurage();

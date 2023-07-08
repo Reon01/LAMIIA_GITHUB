@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MediumBossHP : MonoBehaviour
 {
     public Slider slider_mediumbosshp;
-    private int hp = 200;
+    private int hp;
     private GameObject mediumbosssystem;
     public GameObject gameclearsystem;
 
@@ -17,6 +17,7 @@ public class MediumBossHP : MonoBehaviour
     {
         mediumbosssystem = GameObject.Find("MediumBossSystem");
         player = GameObject.Find("Player");
+        hp = 200;
     }
 
     // Update is called once per frame

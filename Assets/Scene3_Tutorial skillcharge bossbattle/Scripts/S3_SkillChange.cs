@@ -14,12 +14,16 @@ public class S3_SkillChange : MonoBehaviour
     private GameObject player;
     public GameObject mori;
 
+    public bool isunagi;
+    private GameObject fishskillsystem;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
         count = 0;
         button_mori.image.color = Color.yellow;
+        fishskillsystem = GameObject.Find("FishSkillSystem");
     }
 
     // Update is called once per frame
@@ -83,10 +87,9 @@ public class S3_SkillChange : MonoBehaviour
 
 
         //他のスキルをオフにする
-        //player.GetComponent<Kurage>().isSkill = false;
+        fishskillsystem.GetComponent<FishSkillSystem>().iskurage = false;
         player.GetComponent<SkillElectronic_new>().isSkill = false;
         //スクリプトごとオフにする
-        //player.GetComponent<Kurage>().enabled = false;
         player.GetComponent<SkillElectronic_new>().enabled = false;
     }
     public void kuragecolor()
@@ -95,9 +98,7 @@ public class S3_SkillChange : MonoBehaviour
         button_kajiki.image.color = Color.white;
 
         //PlayerオブジェクトについてるKurageスクリプトからisSkillをtrueに変えてスキルを変更する
-        //player.GetComponent<Kurage>().isSkill = true;
-        //スクリプトをオンにする
-        //player.GetComponent<Kurage>().enabled = true;
+        fishskillsystem.GetComponent<FishSkillSystem>().iskurage = true;
 
         //他のスキルをオフにする
         player.GetComponent<Kajiki>().isSkill = false;
@@ -111,16 +112,13 @@ public class S3_SkillChange : MonoBehaviour
         button_unagi.image.color = Color.yellow;
         button_kurage.image.color = Color.white;
 
-        //PlayerオブジェクトについてるKurageスクリプトからisSkillをtrueに変えてスキルを変更する
-        player.GetComponent<SkillElectronic_new>().isSkill = true;
-        //スクリプトをオンにする
-        player.GetComponent<SkillElectronic_new>().enabled = true;
+        player.GetComponent<SkillElectronic_new>().enabled = true;　//スクリプトをオンにする
+        player.GetComponent<SkillElectronic_new>().isunagi = true;　//左のスクリプトのisunagiをtrueにする
 
         //他のスキルをオフにする
         player.GetComponent<Kajiki>().isSkill = false;
-        //player.GetComponent<Kurage>().isSkill = false;
+        fishskillsystem.GetComponent<FishSkillSystem>().iskurage = false;
         //スクリプトごとオフにする
         player.GetComponent<Kajiki>().enabled = false;
-        //player.GetComponent<Kurage>().enabled = false;
     }
 }
