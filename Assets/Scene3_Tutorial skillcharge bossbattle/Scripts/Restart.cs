@@ -21,4 +21,9 @@ public class Restart : MonoBehaviour
     {
         SceneManager.LoadScene("Scene3_Tutorial skillcharge bossbattle");
     }
+
+    public void S4restart()
+    {
+        SceneManager.LoadScene("Scene4_BossStage");
+    }
 }
