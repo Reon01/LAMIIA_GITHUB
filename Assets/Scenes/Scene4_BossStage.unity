@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2390,7 +2390,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 386423574}
         m_TargetAssemblyTypeName: Restart, Assembly-CSharp
-        m_MethodName: restart
+        m_MethodName: S4restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3809,6 +3809,7 @@ MonoBehaviour:
   isSkill: 0
   iscount: 0
   count: 0
+  isunagi: 0
 --- !u!1 &510360615
 GameObject:
   m_ObjectHideFlags: 0
@@ -4424,7 +4425,6 @@ MonoBehaviour:
   isunagi: 0
   iskurage: 0
   player: {fileID: 507153814}
-  Canvas_SkillSelect: {fileID: 712016840}
   kuragesield: {fileID: 328687267}
   kuragesieldHP: 0
 --- !u!4 &553946356
@@ -9037,6 +9037,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1118792024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1118792026}
+  - component: {fileID: 1118792025}
+  m_Layer: 0
+  m_Name: TimeScale
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1118792025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118792024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe0e5e4dba395ff46b19fe07ad001279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1118792026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118792024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1140442738
 GameObject:
   m_ObjectHideFlags: 3
@@ -12262,10 +12306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bfd5659bd718ee48a2c9a88adc8d199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Kajiki_Button: {fileID: 1039873570}
-  Kurage_Button: {fileID: 934427194}
-  Unagi_Button: {fileID: 2113363754}
-  Canvas_SkillSelect: {fileID: 712016840}
 --- !u!4 &1632350513
 Transform:
   m_ObjectHideFlags: 0
