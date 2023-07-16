@@ -13,6 +13,8 @@ public class PlayerMove2 : MonoBehaviour
     public float jumpHeight = 4f;
     public float downHeight = -4f;
 
+    public Animator anim;
+
 
     void Start()
     {
@@ -30,19 +32,32 @@ public class PlayerMove2 : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             moveDirection += transform.forward;
+            anim.SetFloat("Move", 1f);
         }
-        if (Input.GetKey(KeyCode.A))
+
+       else if (Input.GetKey(KeyCode.A))
         {
             moveDirection -= transform.right;
+            anim.SetFloat("Move", 1f);
         }
-        if (Input.GetKey(KeyCode.S))
+
+        else if (Input.GetKey(KeyCode.S))
         {
             moveDirection -= transform.forward;
+            anim.SetFloat("Move", 1f);
         }
-        if (Input.GetKey(KeyCode.D))
+
+       else if (Input.GetKey(KeyCode.D))
         {
             moveDirection += transform.right;
+            anim.SetFloat("Move", 1f);
         }
+
+        else
+        {
+            anim.SetFloat("Move", 0f);
+        }
+        
         moveDirection.Normalize();
 
 
