@@ -17774,7 +17774,7 @@ MonoBehaviour:
   button_kajiki: {fileID: 1081055903}
   button_kurage: {fileID: 1410449519}
   button_unagi: {fileID: 752739636}
-  mori: {fileID: 2105490028}
+  mori: {fileID: 1860527332}
   isunagi: 0
 --- !u!1 &2039299071
 GameObject:
