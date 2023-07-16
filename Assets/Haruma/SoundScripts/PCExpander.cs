@@ -23,6 +23,9 @@ public class PCExpander : MonoBehaviour
         if (SoundObject != null)
         {
             playerController.SetVolume(vol);
+            if(playerController.bossObjChk == true){
+                playerController.bossSetVolume(vol);
+            }
         }
     }
 }
