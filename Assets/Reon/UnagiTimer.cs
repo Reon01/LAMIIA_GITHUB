@@ -24,7 +24,7 @@ public class UnagiTimer : MonoBehaviour
             if (count >= 3)
             {
                 //Scene2—p
-                player.GetComponent<SkillElectronic>().Lightning.SetActive(false);
+                //player.GetComponent<SkillElectronic>().Lightning.SetActive(false);
                 player.GetComponent<SkillElectronic>().IsLightning = false;
                 player.GetComponent<SkillElectronic>().isSkill = true;
 
