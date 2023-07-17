@@ -16,7 +16,7 @@ public class PV : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            SceneManager.LoadScene("Scene_PV 1");
+            SceneManager.LoadScene("Scene3_Tutorial skillcharge bossbattle 1");
         }
     }
 }
