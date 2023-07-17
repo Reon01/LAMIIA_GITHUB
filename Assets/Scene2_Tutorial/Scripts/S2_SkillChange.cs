@@ -14,6 +14,8 @@ public class S2_SkillChange : MonoBehaviour
     private GameObject player;
     public GameObject mori;
 
+    public GameObject Lightning;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +59,8 @@ public class S2_SkillChange : MonoBehaviour
 
     public void moricolor()
     {
+        Lightning.SetActive(false); //電気のエフェクトをオフにする
+
         button_mori.image.color = Color.yellow;
         button_unagi.image.color = Color.white;
 
@@ -108,6 +112,8 @@ public class S2_SkillChange : MonoBehaviour
     }
     public void unagicolor()
     {
+        Lightning.SetActive(true);　//電気のエフェクトをオンにする
+
         button_unagi.image.color = Color.yellow;
         button_kurage.image.color = Color.white;
 
