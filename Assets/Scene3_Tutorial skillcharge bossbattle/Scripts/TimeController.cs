@@ -11,18 +11,30 @@ public class TimeController : MonoBehaviour
     public GameObject mediumbosssystem;
     public GameObject mediumboss;
 
+    private GameObject[] enemy;
+    public int amount;
+    public GameObject enemybattlesystem;
+    private GameObject skillcheat;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        skillcheat = GameObject.Find("SkillCheat");
     }
 
     // Update is called once per frame
     void Update()
     {
+        amount = enemybattlesystem.GetComponent<EnemyBattleSystem>().enemyamountsave;
         if (slider_timer.value <= 0)
         {
             warp();
+            enemy = GameObject.FindGameObjectsWithTag("Enemy");
+            if (enemy.Length == amount)
+            {
+                skillcheat.GetComponent<PV_SkillCheat>().cheat();
+                Debug.Log("スキル配布");
+            }
             gameObject.SetActive(false);
         }
     }

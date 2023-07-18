@@ -15,6 +15,7 @@ public class S3_SkillChange : MonoBehaviour
     public GameObject mori;
 
     public bool isunagi;
+    public GameObject Lightning;
     private GameObject fishskillsystem;
 
     // Start is called before the first frame update
@@ -61,6 +62,8 @@ public class S3_SkillChange : MonoBehaviour
 
     public void moricolor()
     {
+        Lightning.SetActive(false); //電気のエフェクトをオフにする
+
         button_mori.image.color = Color.yellow;
         button_unagi.image.color = Color.white;
 
@@ -109,6 +112,8 @@ public class S3_SkillChange : MonoBehaviour
     }
     public void unagicolor()
     {
+        Lightning.SetActive(true);　//電気のエフェクトをオンにする
+
         button_unagi.image.color = Color.yellow;
         button_kurage.image.color = Color.white;
 
