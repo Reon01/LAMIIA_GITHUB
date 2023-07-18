@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class S4_BossHP : MonoBehaviour
 {
     public Slider slider_bosshp;
-    private int hp = 600;
+    public int hp = 3000;
     public GameObject gameclearsystem;
     public GameObject bosssystems;
 
