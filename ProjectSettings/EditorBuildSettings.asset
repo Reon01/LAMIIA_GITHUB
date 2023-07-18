@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: 3db38b7f1b4d6b84192dd170867414a7
   - enabled: 1
     path: Assets/Scenes/Scene2_Tutorial.unity
-    guid: ff1abc597b3fb31418d00e0aea4dad32
+    guid: 2ae046b3eee29974cbf8e275e92b7941
   - enabled: 1
     path: Assets/Scenes/Scene3_Tutorial skillcharge bossbattle.unity
     guid: 62c9ff9ebaab6e74eb47d4dbca16cb5f

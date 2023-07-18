@@ -18,7 +18,12 @@ public class PV_SkillCheat : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            enemykill.GetComponent<EnemyKill>().getskill();
+            cheat();
         }
+    }
+
+    public void cheat()
+    {
+        enemykill.GetComponent<EnemyKill>().getskill();
     }
 }
