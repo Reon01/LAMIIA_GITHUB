@@ -36,19 +36,19 @@ public class GetSkill : MonoBehaviour
         //カジキ
         if (isKajiki == true && Input.GetKeyDown(KeyCode.E))　//　カジキエリアに入ってるときにEを押したらスキルが１もらえる
         {
-            a_Kajiki += 1;　//スキルの数＋１
+            a_Kajiki += 10;　//スキルの数＋１
         }
 
         //ウナギ
         if (isUnagi == true && Input.GetKeyDown(KeyCode.E))　//　ウナギエリアに入ってるときにEを押したらスキルが１もらえる
         {
-            a_Unagi += 1;　//スキルの数＋１
+            a_Unagi += 10;　//スキルの数＋１
         }
 
         //クラゲ
         if (isKurage == true && Input.GetKeyDown(KeyCode.E))　//　クラゲエリアに入ってるときにEを押したらスキルが１もらえる
         {
-            a_Kurage += 1;　//スキルの数＋１
+            a_Kurage += 10;　//スキルの数＋１
         }
 
         //カジキのスキルを使ったら、表記をー１する

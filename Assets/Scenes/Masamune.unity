@@ -1110,6 +1110,7 @@ MonoBehaviour:
   - "TAB\u30AD\u30FC\u3092\u62BC\u3057\u3066\u30AB\u30B8\u30AD\u3092\u9078\u629E\uFF01"
   - "F\u30AD\u30FC\u3067\u4F7F\u7528\u3067\u304D\u308B\u3088\uFF01"
   panel: {fileID: 259623419}
+  tip: {fileID: 0}
 --- !u!114 &139688276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1892,6 +1893,7 @@ MonoBehaviour:
   - "\u81EA\u7531\u306B\u9B5A\u3092\u4EF2\u9593\u306B\u3057\u3066\u30B9\u30AD\u30EB\u3092\u8A66\u305D\u3046\uFF01"
   - "\u4F7F\u3046\u30B9\u30AD\u30EB\u306FTAB\u30AD\u30FC\u3067\u9078\u629E\u3057\u3066\u306D\uFF01"
   panel: {fileID: 1994728161}
+  tip: {fileID: 0}
 --- !u!114 &210419340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4468,6 +4470,7 @@ MonoBehaviour:
   - "\u4EF2\u9593\u306B\u306A\u308B\u9B5A\u305F\u3061\u306E\u7A2E\u985E\u3084\u6570\u306F\u30E9\u30F3\u30C0\u30E0\uFF01"
   - "\u305F\u304F\u3055\u3093\u6575\u3092\u5012\u3057\u3066\u30B9\u30AD\u30EB\u3092\u305F\u3081\u3066\u30DC\u30B9\u6226\u306B\u5099\u3048\u3088\u3046\uFF01"
   panel: {fileID: 1420471298}
+  tip: {fileID: 0}
 --- !u!114 &532233321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7157,6 +7160,7 @@ MonoBehaviour:
   - "\u30DC\u30B9\u3068\u6226\u3046\u524D\u306B\u30B9\u30AD\u30EB\u3092\u30C1\u30E3\u30FC\u30B8\u3059\u308B\u30B9\u30C6\u30FC\u30B8\u304C\u3042\u308B\u3088\uFF01"
   - "\u8A66\u3057\u306B\u76EE\u306E\u524D\u306E\u6575\u3092\u5012\u3057\u3066\u307F\u3088\u3046\uFF01"
   panel: {fileID: 1386973315}
+  tip: {fileID: 0}
 --- !u!114 &1089300628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10074,6 +10078,7 @@ MonoBehaviour:
   isSkill: 0
   iscount: 0
   count: 0
+  isunagi: 0
 --- !u!114 &1479955337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10626,7 +10631,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1598082029}
   - component: {fileID: 1598082028}
-  - component: {fileID: 1598082027}
+  - component: {fileID: 1598082030}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -10634,26 +10639,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1598082027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598082026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &1598082028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10684,6 +10669,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1598082030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598082026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1 &1627720469
 GameObject:
   m_ObjectHideFlags: 0
@@ -11042,7 +11057,6 @@ MonoBehaviour:
   isunagi: 0
   iskurage: 0
   player: {fileID: 0}
-  Canvas_SkillSelect: {fileID: 1445244629}
   kuragesield: {fileID: 0}
   kuragesieldHP: 0
 --- !u!4 &1717473602
@@ -11493,6 +11507,9 @@ MonoBehaviour:
   WhaleGO2: {fileID: 374958594}
   WhaleGO3: {fileID: 1559280154}
   WhaleGO4: {fileID: 2110552905}
+  WhaleGO5: {fileID: 0}
+  WhaleGO6: {fileID: 0}
+  WhaleGO7: {fileID: 0}
   speed: 0
 --- !u!1 &1860774963
 GameObject:
@@ -12028,6 +12045,7 @@ MonoBehaviour:
   - "\u4E0A\u306E\u5236\u9650\u6642\u9593\u304C\u7D42\u308F\u3063\u305F\u3089\u307E\u305F\u30B9\u30AD\u30EB\u30C1\u30E3\u30FC\u30B8\u30D5\u30A7\u30A4\u30BA\u306B\u5207\u308A\u66FF\u308F\u308B\u3088\uFF01"
   - "\u3067\u304D\u308B\u3060\u3051\u30C0\u30E1\u30FC\u30B8\u3092\u5165\u308C\u3088\u3046\uFF01"
   panel: {fileID: 1918137880}
+  tip: {fileID: 0}
 --- !u!114 &1927080410
 MonoBehaviour:
   m_ObjectHideFlags: 0
