@@ -13351,7 +13351,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1574319122
+--- !u!114 &1574319123
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13360,7 +13360,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1574319115}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1406b3e082f8497eb73ee9f4c314365, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d08c27fe764e834fb909593809578af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
+  atomLoader: {fileID: 0}
+--- !u!114 &1574319124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574319115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e631c3b9947b54c823c6853a05529c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _playOnStart: 0
@@ -13382,23 +13396,8 @@ MonoBehaviour:
     - 0
     - 0
     - 0
-  cue:
-    acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
-    cueId: 9
---- !u!114 &1574319123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574319115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d08c27fe764e834fb909593809578af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  atomLoader: {fileID: 0}
+  _cueName: voice_Boss
+  _cueSheet: SFX
 --- !u!1001 &1581047871
 PrefabInstance:
   m_ObjectHideFlags: 0

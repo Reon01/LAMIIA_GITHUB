@@ -83,9 +83,9 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    //ボス用プレイヤー
+    //ボス用プレイ
     public void bossPlay(){
-        //bossPlayer.SetCue(acb, cueName);
+        bossPlayer.SetCue(acb, cueName);
         BV3dSource.Play();
     }
     //クラゲ用プレイバック
