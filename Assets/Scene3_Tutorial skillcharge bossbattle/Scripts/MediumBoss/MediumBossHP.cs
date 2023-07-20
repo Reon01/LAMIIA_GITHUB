@@ -17,7 +17,7 @@ public class MediumBossHP : MonoBehaviour
     {
         mediumbosssystem = GameObject.Find("MediumBossSystem");
         player = GameObject.Find("Player");
-        hp = 200;
+        hp = 1000;
     }
 
     // Update is called once per frame
