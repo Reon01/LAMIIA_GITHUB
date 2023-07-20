@@ -6021,7 +6021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 844b3f92dc0d5fc4382c83ec2b226b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy1: {fileID: 3630781181798207514, guid: 967570c3f75cf7c48ac2a32f9810465b, type: 3}
+  enemy1: {fileID: 1206488809899344735, guid: 31ef1987691af4541893fefe2dd86e9a, type: 3}
   rangeA: {fileID: 99328591}
   rangeB: {fileID: 415353718}
 --- !u!4 &723340946
