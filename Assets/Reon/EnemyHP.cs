@@ -9,6 +9,11 @@ public class EnemyHP : MonoBehaviour
     public Slider HPBar;
     public GameObject Enemy;
     private GameObject Player;
+    public GameObject damage10;
+    public GameObject damage20;
+    public GameObject damage50;
+    public float damagecooltime;
+    public GameObject damagetextposition;
 
     /*
     //スキル取得
@@ -71,6 +76,7 @@ public class EnemyHP : MonoBehaviour
                 HP = HP - 10;
                 HPBar.value = HP;
                 damaged_Sound_E = 1;
+                damagedisplay10(); //１０ダメージのテキストを表示
             }
             if (Player.GetComponent<SkillElectronic_new>().IsLightning == true)
             {
@@ -79,6 +85,7 @@ public class EnemyHP : MonoBehaviour
                 damaged_Sound_E = 1;
 
                 SkillElectronic.EE_Sound = 2;
+                damagedisplay20();　//２０ダメージのテキストを表示
             }
         }
 
@@ -87,26 +94,23 @@ public class EnemyHP : MonoBehaviour
         {
             HP -= 50;
             HPBar.value = HP;
+            damagedisplay50();　//５０ダメージのテキストを表示
         }
     }
 
-    /*
-    public void getskill()
+    //１０ダメージのテキストを表示
+    public void damagedisplay10()
     {
-        //カジキ
-        value = Random.Range(5, 10);
-        a_Kajiki += value; //スキルの数＋value
-        amount_Kajiki.text = "" + a_Kajiki;　//スキルの数を表記するテキストの中身を変更
-
-        //ウナギ
-        value = Random.Range(5, 10);
-        a_Unagi += value; //スキルの数＋value
-        amount_Unagi.text = "" + a_Unagi;　//スキルの数を表記するテキストの中身を変更
-
-        //クラゲ
-        value = Random.Range(5, 10);
-        a_Kurage += value; //スキルの数＋value
-        amount_Kurage.text = "" + a_Kurage;　//スキルの数を表記するテキストの中身を変更
+        Instantiate(damage10, damagetextposition.transform.position, Quaternion.identity);
     }
-    */
+    //２０ダメージのテキストを表示
+    public void damagedisplay20()
+    {
+        Instantiate(damage20, damagetextposition.transform.position, Quaternion.identity);
+    }
+    //５０ダメージのテキストを表示
+    public void damagedisplay50()
+    {
+        Instantiate(damage50, damagetextposition.transform.position, Quaternion.identity);
+    }
 }
