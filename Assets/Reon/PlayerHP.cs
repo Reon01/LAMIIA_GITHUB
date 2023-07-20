@@ -16,6 +16,9 @@ public class PlayerHP : MonoBehaviour
     public GameObject canvas_restart;
     private GameObject cursorlocksystem;
 
+    public GameObject hitdamege;
+    public float redcooltime = 0.5f;
+
     //はるまサウンド用変数
     public static bool damaged_Sound_P = false;
 
@@ -37,6 +40,7 @@ public class PlayerHP : MonoBehaviour
         }
     }
 
+    //プレイヤーがダメージを受けた時の処理
     public void damage()
     {
         damaged_Sound_P = true;
@@ -44,6 +48,19 @@ public class PlayerHP : MonoBehaviour
         HPBar.value = HP;
         HP_num = HP;
         Text_HP.text = "HP:" + HP_num;
+        redeffect();
+    }
+
+    public void redeffect()
+    {
+        hitdamege.SetActive(true);
+        Invoke("redeffectoff", redcooltime);
+        Debug.Log("赤エフェクト");
+    }
+
+    public void redeffectoff()
+    {
+        hitdamege.SetActive(false);
     }
 
     public void fivedamage()
@@ -53,6 +70,7 @@ public class PlayerHP : MonoBehaviour
         HPBar.value = HP;
         HP_num = HP;
         Text_HP.text = "HP:" + HP_num;
+        redeffect();
     }
 
     public void speirdamage()
@@ -62,6 +80,7 @@ public class PlayerHP : MonoBehaviour
         HPBar.value = HP;
         HP_num = HP;
         Text_HP.text = "HP:" + HP_num;
+        redeffect();
     }
 
     public void kaihuku()
