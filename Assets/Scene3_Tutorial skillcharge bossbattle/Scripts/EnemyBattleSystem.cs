@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EnemyBattleSystem : MonoBehaviour
 {
-    private int enemyamount;
+    public int enemyamount;
     public GameObject enemy1;
+    public int enemyamountsave;
 
     public float timer;
 
@@ -21,6 +22,7 @@ public class EnemyBattleSystem : MonoBehaviour
     void Start()
     {
         enemyamount = Random.Range(5, 10);
+        enemyamountsave = enemyamount;
     }
 
     // Update is called once per frame

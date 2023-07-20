@@ -19,19 +19,34 @@ public class Kajiki : MonoBehaviour
     [Tooltip("弾の発射場所")]
     private GameObject firingPoint;
 
+    private GameObject enemykillsystem;
+
     // Start is called before the first frame update
     void Start()
     {
         isSkill = false;
+        enemykillsystem = GameObject.Find("EnemyKillSystem");
     }
 
     // Update is called once per frame
     void Update()
     {
+        //↓Scene2用
         if (Input.GetMouseButtonDown(0) && isSkill == true && GetComponent<GetSkill>().a_Kajiki >= 1)
         {
             FishShot();
             GetComponent<GetSkill>().a_Kajiki -= 1; //スキルを１消費
+            spendskill = true;
+            Debug.Log("カジキ発射");
+            //はるまサウンド変数true
+            Kajiki_Sound = true;
+        }
+
+        //↓Scene3用
+        if (Input.GetMouseButtonDown(0) && isSkill == true && enemykillsystem.GetComponent<EnemyKill>().a_Kajiki >= 1)
+        {
+            FishShot();
+            enemykillsystem.GetComponent<EnemyKill>().a_Kajiki -= 1; //スキルを１消費
             spendskill = true;
             Debug.Log("カジキ発射");
             //はるまサウンド変数true

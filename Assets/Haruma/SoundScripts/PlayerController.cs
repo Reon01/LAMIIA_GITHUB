@@ -11,9 +11,10 @@ public class PlayerController : MonoBehaviour
 {
     /* 音量設定用スライダー */
     private Slider volumeSlider;
-
+    /* 3Dポジショニング用Source*/
+    public CriAtomSource BV3dSource;
     /* (2) プレーヤー */
-    private CriAtomExPlayer player;
+    private CriAtomExPlayer anyPlayer;
 
     //プレイバック
     private CriAtomExPlayback Kurageplayback;
@@ -26,6 +27,9 @@ public class PlayerController : MonoBehaviour
     /* (16) キュー名 */
     private string cueName;
 
+    //ボス用
+    public bool bossObjChk = false;
+
     /* (3) コルーチン化する */
     IEnumerator Start(){
 
@@ -35,7 +39,7 @@ public class PlayerController : MonoBehaviour
         }
 
         /* (5) プレーヤーの作成 */
-        player = new CriAtomExPlayer();
+        anyPlayer = new CriAtomExPlayer();
 
         if (ActiveSceneManager.S_Tutorial == true || ActiveSceneManager.S_Skill == true || ActiveSceneManager.S_Boss == true){
             Slider[] sliders = FindObjectsOfType<Slider>(true);
@@ -43,48 +47,69 @@ public class PlayerController : MonoBehaviour
             Debug.Log(volSlider);
             volumeSlider = volSlider;
 
-            volumeSlider.maxValue = 4.0f;
-            volumeSlider.value = 2.0f;
+            volumeSlider.maxValue = 2.0f;
+            volumeSlider.value = 1.0f;
             volumeSlider.minValue = 0.0f;
         }
     }
 
-    void Update() { }
+    void Update() {
+        //ボスボイス用
+        if(PCExpander.bossObj == true && bossObjChk == false){
+            BV3dSource = PCExpander.bossObj.GetComponent<CriAtomSource>();
+            Debug.Log(BV3dSource.player);
+            anyPlayer = BV3dSource.player;
+            Debug.Log(anyPlayer);
+            bossObjChk = true;
+        }
+        else if(PCExpander.bossObj == false && bossObjChk == true){
+            Debug.Log("bossFalse");
+            bossObjChk = false;
+        }
+    }
 
     public void Play(){
         /* (10) ポーズ状態に応じた処理 */
-        if (player.IsPaused()){
+        if (anyPlayer.IsPaused()){
             /* (11) ポーズの解除 */
-            player.Pause(false);
+            anyPlayer.Pause(false);
         }
         else{
             /* (18) キュー情報をプレーヤー設定 */
-            player.SetCue(acb, cueName);
+            anyPlayer.SetCue(acb, cueName);
             /* (7) プレーヤーの再生 */
-            player.Start();
+            anyPlayer.Start();
         }
 
     }
+    //ボス用プレイ
+    public void bossPlay(){
+        anyPlayer.SetCue(acb, cueName);
+        BV3dSource.Play();
+    }
     //クラゲ用プレイバック
     public void KuragePlay(){
-        player.SetCue(acb, cueName);
-        Kurageplayback = player.Start();
+        anyPlayer.SetCue(acb, cueName);
+        Kurageplayback = anyPlayer.Start();
     }
     //うなぎ用プレイバック
     public void EEPlay(){
-        player.SetCue(acb, cueName);
-        EEplayback = player.Start();
+        anyPlayer.SetCue(acb, cueName);
+        EEplayback = anyPlayer.Start();
     }
     //BGM用プレイバック
     public void BGMPlay(){
-        player.SetCue(acb, cueName);
-        BGMplayback = player.Start();
+        anyPlayer.SetCue(acb, cueName);
+        BGMplayback = anyPlayer.Start();
     }
-
 
     /* (8) プレーヤーの停止 */
     public void Stop(){
-        player.Stop();
+        anyPlayer.Stop();
+    }
+    //ボス用プレイヤーの停止
+    public void bossStop(){
+        BV3dSource.Stop();
     }
     //プレイバック停止
     public void KurageStop(){
@@ -100,7 +125,7 @@ public class PlayerController : MonoBehaviour
 
     /* (9) プレーヤーの一時停止 */
     public void Pause(){
-        player.Pause(true);
+        anyPlayer.Pause(true);
     }
 
     /* (12) ACB の指定 */
@@ -118,9 +143,9 @@ public class PlayerController : MonoBehaviour
     /* (19) ボリュームの設定 */
     public void SetVolume(float vol){
         /* (19) ボリュームの設定 */
-        player.SetVolume(vol);
+        anyPlayer.SetVolume(vol);
         /* (20) パラメーターの更新 */
-        player.UpdateAll();
+        anyPlayer.UpdateAll();
     }
 
     public void Seek(float value){
@@ -130,9 +155,9 @@ public class PlayerController : MonoBehaviour
     /* (21) AISAC コントロール値の設定 */
     public void SetAisacControl(float value){
         /* (21) AISAC コントロール値の設定 */
-        player.SetAisacControl("Any", value);
+        anyPlayer.SetAisacControl("Any", value);
 
         /* (22) パラメーターの更新 */
-        player.UpdateAll();
+        anyPlayer.UpdateAll();
     }
 }

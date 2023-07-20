@@ -27,15 +27,17 @@ public class SkillElectronic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //もし左クリックして、isSkillがtrueで、ウナギが１つ以上所持していた場合
         if (Input.GetMouseButtonDown(0) && isSkill == true &&
             GetComponent<GetSkill>().a_Unagi >= 1)
         {
-            Lightning.SetActive(true);
-            IsLightning = true;
-            spend();
-            iscount = true;
-            isSkill = false;
-            unagitimer.GetComponent<UnagiTimer>().iscount = true;
+            //Lightning.SetActive(true);　//雷のエフェクトをオンにする
+            IsLightning = true; //IsLightningをtrueにする
+            spend(); //spend()を実行する
+            iscount = true; //iscountをオンにする
+            isSkill = false;　//isSKillをオフにする
+            unagitimer.GetComponent<UnagiTimer>().iscount = true;　//ウナギタイマーについてるUnagiTimer
+                                                                  //というスクリプトをオンにする
 
             EE_Sound = 1;
         }

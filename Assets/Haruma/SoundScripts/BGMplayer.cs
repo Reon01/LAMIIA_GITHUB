@@ -26,15 +26,17 @@ public class BGMplayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (ActiveSceneManager.S_Title == true)
         {
-            playerController.BGMStop();
             playerController.Stop();
-            playerController.SetAcb(atomLoader.acbAssets[0].Handle);
-            playerController.SetCueName("Title_BGM");
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("bubble");
             playerController.BGMPlay();
-            ActiveSceneManager.S_Title = false;
+            
+        ActiveSceneManager.S_Title = false;
         }
+        */
         if (ActiveSceneManager.S_Tutorial == true)
         {
             playerController.SetAcb(atomLoader.acbAssets[0].Handle);

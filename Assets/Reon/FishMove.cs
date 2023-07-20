@@ -9,10 +9,12 @@ public class FishMove : MonoBehaviour
 
     public bool getdamage;
     private GameObject player;
+    private GameObject playertarget;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        playertarget = GameObject.Find("PlayerTarget");
     }
 
     void Update()
@@ -35,7 +37,7 @@ public class FishMove : MonoBehaviour
 
         if (getdamage == true)
         {
-            transform.LookAt(player.transform);
+            transform.LookAt(playertarget.transform);
         }
     }
 

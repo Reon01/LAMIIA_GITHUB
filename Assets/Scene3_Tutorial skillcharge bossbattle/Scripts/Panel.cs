@@ -23,4 +23,9 @@ public class Panel : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    public void CountStart()
+    {
+
+    }
 }
