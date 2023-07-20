@@ -17,15 +17,18 @@ public class BossSpeir : MonoBehaviour
     public Vector3 velocity;
 
     private GameObject player;
+    private GameObject playertarget;
 
     private void Start()
     {
         player = GameObject.Find("Player");
+        playertarget = GameObject.Find("PlayerTarget");
     }
 
     void Update()
     {
-        target = GameObject.FindGameObjectWithTag("Player");
+        //target = GameObject.FindGameObjectWithTag("Player");
+        target = GameObject.Find("PlayerTarget");
 
         position = transform.position;
 
