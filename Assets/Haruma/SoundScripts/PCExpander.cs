@@ -9,6 +9,8 @@ public class PCExpander : MonoBehaviour
     [SerializeField]
     private PlayerController playerController;
 
+    public static GameObject bossObj;
+
     // Start is called before the first frame update
     void Start(){
         playerController = GameObject.Find("AudioManager").GetComponent<PlayerController>();
@@ -23,9 +25,6 @@ public class PCExpander : MonoBehaviour
         if (SoundObject != null)
         {
             playerController.SetVolume(vol);
-            if(playerController.bossObjChk == true){
-                playerController.bossSetVolume(vol);
-            }
         }
     }
 }

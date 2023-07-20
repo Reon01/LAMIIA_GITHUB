@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     public CriAtomSource BV3dSource;
     /* (2) プレーヤー */
     private CriAtomExPlayer anyPlayer;
-    private CriAtomExPlayer bossPlayer;
 
     //プレイバック
     private CriAtomExPlayback Kurageplayback;
@@ -41,7 +40,6 @@ public class PlayerController : MonoBehaviour
 
         /* (5) プレーヤーの作成 */
         anyPlayer = new CriAtomExPlayer();
-        bossPlayer = new CriAtomExPlayer();
 
         if (ActiveSceneManager.S_Tutorial == true || ActiveSceneManager.S_Skill == true || ActiveSceneManager.S_Boss == true){
             Slider[] sliders = FindObjectsOfType<Slider>(true);
@@ -57,13 +55,14 @@ public class PlayerController : MonoBehaviour
 
     void Update() {
         //ボスボイス用
-        GameObject bossObj = GameObject.Find("BossSystems").transform.Find("Boss_kansei").gameObject;
-        if(bossObj == true && bossObjChk == false){
-            BV3dSource = bossObj.GetComponent<CriAtomSource>();
-            bossPlayer = bossObj.GetComponent<CriAtomSource>().player;
+        if(PCExpander.bossObj == true && bossObjChk == false){
+            BV3dSource = PCExpander.bossObj.GetComponent<CriAtomSource>();
+            Debug.Log(BV3dSource.player);
+            anyPlayer = BV3dSource.player;
+            Debug.Log(anyPlayer);
             bossObjChk = true;
         }
-        else if(bossObj == false && bossObjChk == true){
+        else if(PCExpander.bossObj == false && bossObjChk == true){
             Debug.Log("bossFalse");
             bossObjChk = false;
         }
@@ -85,7 +84,7 @@ public class PlayerController : MonoBehaviour
     }
     //ボス用プレイ
     public void bossPlay(){
-        bossPlayer.SetCue(acb, cueName);
+        anyPlayer.SetCue(acb, cueName);
         BV3dSource.Play();
     }
     //クラゲ用プレイバック
@@ -148,14 +147,6 @@ public class PlayerController : MonoBehaviour
         /* (20) パラメーターの更新 */
         anyPlayer.UpdateAll();
     }
-    //ボリュームの設定（ボス用）
-    public void bossSetVolume(float vol){
-        /* (19) ボリュームの設定 */
-        bossPlayer.SetVolume(vol);
-        /* (20) パラメーターの更新 */
-        bossPlayer.UpdateAll();
-    }
-
 
     public void Seek(float value){
         /* (Ex) キューをシークさせる */
