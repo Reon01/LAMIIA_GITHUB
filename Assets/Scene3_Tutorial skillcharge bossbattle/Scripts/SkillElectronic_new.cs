@@ -16,6 +16,9 @@ public class SkillElectronic_new : MonoBehaviour
     private GameObject player;
     private GameObject unagitimer;
 
+    //サウンド用
+    public static bool c_Unagi_S = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,11 +32,13 @@ public class SkillElectronic_new : MonoBehaviour
     void Update()
     {
         //↓ウナギを選択して左クリックしたらスキル発動
-        if (isunagi == true && Input.GetMouseButtonDown(0) && 
+        if (isunagi == true && Input.GetMouseButtonDown(0) &&
             enemykillsystem.GetComponent<EnemyKill>().a_Unagi >= 1)
         {
             skill();
             unagitimer.GetComponent<S3_UnagiTimer>().iscount = true;
+
+            SkillElectronic.EE_Sound = 2;
         }
 
         if (iscount == true)
@@ -45,9 +50,16 @@ public class SkillElectronic_new : MonoBehaviour
                 IsLightning = false;
                 count = 0;
                 iscount = false;
-
-                SkillElectronic.EE_Sound = 3;
             }
+        }
+
+        if (enemykillsystem.GetComponent<EnemyKill>().a_Unagi >= 1)
+        {
+            c_Unagi_S = true;
+        }
+        else
+        {
+            c_Unagi_S = false;
         }
     }
 
@@ -57,8 +69,6 @@ public class SkillElectronic_new : MonoBehaviour
         IsLightning = true;
         //iscount = true;
         spend();
-
-        SkillElectronic.EE_Sound = 1;
     }
     public void spend()
     {

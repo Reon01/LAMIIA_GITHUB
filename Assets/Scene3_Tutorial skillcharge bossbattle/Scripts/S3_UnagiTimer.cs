@@ -30,7 +30,6 @@ public class S3_UnagiTimer : MonoBehaviour
                 count = 0;
                 iscount = false;
 
-                SkillElectronic.EE_Sound = 3;
             }
         }
     }

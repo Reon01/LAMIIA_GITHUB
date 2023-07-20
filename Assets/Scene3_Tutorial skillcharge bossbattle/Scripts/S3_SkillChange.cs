@@ -62,6 +62,9 @@ public class S3_SkillChange : MonoBehaviour
 
     public void moricolor()
     {
+        //サウンド用
+        SFXplayer.isUnagi_act = false;
+
         Lightning.SetActive(false); //電気のエフェクトをオフにする
 
         button_mori.image.color = Color.yellow;
@@ -112,6 +115,13 @@ public class S3_SkillChange : MonoBehaviour
     }
     public void unagicolor()
     {
+        //サウンド用
+        SFXplayer.isUnagi_act = true;
+        if (SkillElectronic.EE_Sound == 0)
+        {
+            SkillElectronic.EE_Sound = 1;
+        }
+
         Lightning.SetActive(true);　//電気のエフェクトをオンにする
 
         button_unagi.image.color = Color.yellow;

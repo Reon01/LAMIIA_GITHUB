@@ -5,6 +5,9 @@ using CriWare;
 
 public class SFXplayer : MonoBehaviour
 {
+    //ウナギ用変数
+    public static bool isUnagi_act;
+
     public bool dontDestroyOnLoad = true;
 
     [SerializeField]
@@ -75,14 +78,14 @@ public class SFXplayer : MonoBehaviour
         }
 
         //電気ウナギ
-        if (SkillElectronic.EE_Sound == 1)
+        if (SkillElectronic_new.c_Unagi_S == true && isUnagi_act == true && SkillElectronic.EE_Sound == 1)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_EE_s");
             playerController.Play();
             playerController.SetCueName("skill_EE_l");
             playerController.EEPlay();
-            SkillElectronic.EE_Sound = 0;
+            SkillElectronic.EE_Sound = 4;
             Debug.Log("EESound_Start");
         }
         if (SkillElectronic.EE_Sound == 2)
@@ -90,14 +93,14 @@ public class SFXplayer : MonoBehaviour
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_EE_h");
             playerController.Play();
-            SkillElectronic.EE_Sound = 0;
+            SkillElectronic.EE_Sound = 4;
             Debug.Log("EESound_Hit");
         }
-        if (SkillElectronic.EE_Sound == 3)
+        if (SkillElectronic_new.c_Unagi_S == false || isUnagi_act == false)
         {
             playerController.EEStop();
-            SkillElectronic.EE_Sound = 0;
             Debug.Log("EESound_Stop");
+            SkillElectronic.EE_Sound = 0;
         }
         //ダメージ系SFX
         if (PlayerHP.damaged_Sound_P == true){
@@ -122,10 +125,11 @@ public class SFXplayer : MonoBehaviour
             Debug.Log("Enemy is Dead!");
         }
         //泡音用コルーチンスタート
-        if(ActiveSceneManager.S_StageSelect == true){
+        if (ActiveSceneManager.S_Title == true)
+        {
             playerController.BGMStop();
             StartCoroutine(bubbleRondomize());
-            ActiveSceneManager.S_StageSelect = false;
+            ActiveSceneManager.S_Title = false;
             Debug.Log("Coroutine Start");
         }
         //ボス系アタックサウンド
