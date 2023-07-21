@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7366931848386143039}
   - component: {fileID: 2080926470491654911}
   - component: {fileID: 1345247560549584635}
+  - component: {fileID: 3563124284709418686}
   m_Layer: 5
   m_Name: Text_Damage20
   m_TagString: Untagged
@@ -28,7 +29,7 @@ RectTransform:
   m_GameObject: {fileID: 1390000057178394203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 6.34}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4261770988579724806}
@@ -93,6 +94,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 143db8371aac0d64ebbb59558a35abc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3563124284709418686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390000057178394203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223bbf25b7d8bf8479ecd6889c7cf545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4261770988579724802

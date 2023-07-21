@@ -15,24 +15,6 @@ public class EnemyHP : MonoBehaviour
     public float damagecooltime;
     public GameObject damagetextposition;
 
-    /*
-    //スキル取得
-    private int value;
-
-    
-    //カジキ
-    public Text amount_Kajiki;　//残りの数を表記するテキスト
-    private int a_Kajiki; //数を計算する
-
-    //ウナギ
-    public Text amount_Unagi;　//残りの数を表記するテキスト
-    private int a_Unagi; //数を計算する
-
-    //クラゲ
-    public Text amount_Kurage;　//残りの数を表記するテキスト
-    private int a_Kurage; //数を計算する
-    */
-
 
     //EnemyKill
     private GameObject enemykill;

@@ -56,11 +56,14 @@ public class IgnoreSystem : MonoBehaviour
         text2.SetActive(true);　//テキストを表示
         count2 = 0; //カウントを０に戻す
         iscount2 = false;　//カウントを止める
+        //↓カーソル表示
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void yes() //はいを押した場合
     {
-        SceneManager.LoadScene("Scene2_Tutorial(2)");　//左のシーンをやり直す
+        SceneManager.LoadScene("Scene2_Tutorial");　//左のシーンをやり直す
     }
 
     public void no()　//いいえを押した場合

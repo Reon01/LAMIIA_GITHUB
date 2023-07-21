@@ -14,7 +14,7 @@ public class DamageTextMove : MonoBehaviour
     void Update()
     {
         transform.position += new Vector3(0.0f, 0.5f * Time.deltaTime, 0.0f);
-        Invoke("delete", 120f*Time.deltaTime);
+        Invoke("delete", 200f*Time.deltaTime);
     }
 
     public void delete()
