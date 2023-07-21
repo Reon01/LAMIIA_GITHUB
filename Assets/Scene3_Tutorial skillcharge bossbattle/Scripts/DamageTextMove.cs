@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DamageTextMove : MonoBehaviour
 {
+    public GameObject canvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class DamageTextMove : MonoBehaviour
 
     public void delete()
     {
+        Destroy(canvas);
         Destroy(gameObject);
     }
 }

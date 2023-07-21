@@ -42,12 +42,23 @@ public class MediumBossHP : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Weapon"))
         {
-            hp -= 10;
-            slider_mediumbosshp.value = hp;
-            damagedisplay10(); //１０ダメージのテキストを表示
+            if (player.GetComponent<SkillElectronic_new>().IsLightning == false)
+            {
+                hp = hp - 10;
+                slider_mediumbosshp.value = hp;
+                damagedisplay10(); //１０ダメージのテキストを表示
+            }
+            if (player.GetComponent<SkillElectronic_new>().IsLightning == true)
+            {
+                hp = hp - 20;
+                slider_mediumbosshp.value = hp;
+
+                SkillElectronic.EE_Sound = 2;
+                damagedisplay20();　//２０ダメージのテキストを表示
+            }
         }
 
-        
+
         //↓カジキの場合50DMG
         if (other.gameObject.CompareTag("KajikiAttack"))
         {
