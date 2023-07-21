@@ -36,22 +36,22 @@ public class SkillElectronic_new : MonoBehaviour
             enemykillsystem.GetComponent<EnemyKill>().a_Unagi >= 1)
         {
             skill();
-            unagitimer.GetComponent<S3_UnagiTimer>().iscount = true;
+            //unagitimer.GetComponent<S3_UnagiTimer>().iscount = true;
 
             SkillElectronic.EE_Sound = 2;
         }
 
-        if (iscount == true)
+        /*
+        if (enemykillsystem.GetComponent<EnemyKill>().a_Unagi >= 1)
         {
-            count += Time.deltaTime;
-            if (count >= 3)
-            {
-                Lightning.SetActive(false);
-                IsLightning = false;
-                count = 0;
-                iscount = false;
-            }
+            IsLightning = true;
         }
+
+        if (enemykillsystem.GetComponent<EnemyKill>().a_Unagi == 0)
+        {
+            IsLightning = false;
+        }
+        */
 
         if (enemykillsystem.GetComponent<EnemyKill>().a_Unagi >= 1)
         {
@@ -65,10 +65,16 @@ public class SkillElectronic_new : MonoBehaviour
 
     public void skill()
     {
-        Lightning.SetActive(true);
+        //Lightning.SetActive(true);
         IsLightning = true;
         //iscount = true;
         spend();
+        Invoke("lightningoff", 30f * Time.deltaTime);
+    }
+
+    public void lightningoff()
+    {
+        IsLightning = false;
     }
     public void spend()
     {

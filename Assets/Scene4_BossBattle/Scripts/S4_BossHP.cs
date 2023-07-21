@@ -17,10 +17,12 @@ public class S4_BossHP : MonoBehaviour
     public float damagecooltime;
     public GameObject damagetextposition;
 
+    private GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -38,9 +40,20 @@ public class S4_BossHP : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Weapon"))
         {
-            hp -= 10;
-            slider_bosshp.value = hp;
-            damagedisplay10(); //１０ダメージのテキストを表示
+            if (player.GetComponent<SkillElectronic_new>().IsLightning == false)
+            {
+                hp = hp - 10;
+                slider_bosshp.value = hp;
+                damagedisplay10(); //１０ダメージのテキストを表示
+            }
+            if (player.GetComponent<SkillElectronic_new>().IsLightning == true)
+            {
+                hp = hp - 20;
+                slider_bosshp.value = hp;
+
+                SkillElectronic.EE_Sound = 2;
+                damagedisplay20();　//２０ダメージのテキストを表示
+            }
         }
 
         //↓カジキの場合50DMG

@@ -52,11 +52,14 @@ public class S3_SkillChange : MonoBehaviour
         {
             unagicolor();
             mori.GetComponent<mori>().enabled = true;
+            player.GetComponent<SkillElectronic_new>().enabled = true; //ウナギのスクリプトをオンにする
         }
         if (count == 4)
         {
             moricolor();
             count = 0;
+            player.GetComponent<SkillElectronic_new>().enabled = false;　//ウナギのスクリプトをオフにする
+            player.GetComponent<SkillElectronic_new>().IsLightning = false;　//ウナギダメージ２倍をオフにする
         }
     }
 
