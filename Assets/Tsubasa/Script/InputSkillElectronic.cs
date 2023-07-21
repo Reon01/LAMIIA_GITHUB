@@ -32,13 +32,13 @@ public class InputSkillElectronic : MonoBehaviour
 
     public void spend()
     {
-        GetComponent<GetSkill>().a_Unagi -= 1; //スキルを１消費
+        GetComponent<InputGetSkill>().a_Unagi -= 1; //スキルを１消費
     }
 
     public void Electronic()
     {
         //isSkillがtrueで、ウナギが１つ以上所持していた場合
-        if (isSkill == true && GetComponent<GetSkill>().a_Unagi >= 1)
+        if (isSkill == true && GetComponent<InputGetSkill>().a_Unagi >= 1)
         {
             //Lightning.SetActive(true);　//雷のエフェクトをオンにする
             IsLightning = true; //IsLightningをtrueにする

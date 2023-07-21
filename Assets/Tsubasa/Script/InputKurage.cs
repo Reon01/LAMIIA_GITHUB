@@ -31,12 +31,12 @@ public class InputKurage : MonoBehaviour
     public void SkillKurage()
     {
         if (kuragesield.activeSelf == false && isSkill == true &&
-            GetComponent<GetSkill>().a_Kurage >= 1)
+            GetComponent<InputGetSkill>().a_Kurage >= 1)
         {
             kuragesield.SetActive(true);
             kuragesieldHP = 1;
             player.GetComponent<PlayerHP>().kaihuku();
-            GetComponent<GetSkill>().a_Kurage -= 1; //スキルを１消費
+            GetComponent<InputGetSkill>().a_Kurage -= 1; //スキルを１消費
 
             //はるまサウンド用変数true
             Kurage_Sound_s = true;

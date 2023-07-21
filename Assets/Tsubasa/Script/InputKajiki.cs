@@ -48,10 +48,10 @@ public class InputKajiki : MonoBehaviour
     public void KazikiShot()
     {
         //↓Scene2用
-        if (isSkill == true && GetComponent<GetSkill>().a_Kajiki >= 1)
+        if (isSkill == true && GetComponent<InputGetSkill>().a_Kajiki >= 1)
         {
             FishShot();
-            GetComponent<GetSkill>().a_Kajiki -= 1; //スキルを１消費
+            GetComponent<InputGetSkill>().a_Kajiki -= 1; //スキルを１消費
             spendskill = true;
             Debug.Log("カジキ発射");
             //はるまサウンド変数true

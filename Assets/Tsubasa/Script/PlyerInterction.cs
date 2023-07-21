@@ -23,6 +23,9 @@ public class PlyerInterction : MonoBehaviour
     [Tooltip("ウナギスクリプト")]
     public InputSkillElectronic _unagi;
 
+    [Tooltip("スキルチェンジ")]
+    public INputSkillChange _skillChange;
+
     private void Awake()
     {
         TryGetComponent(out _input);
@@ -38,6 +41,9 @@ public class PlyerInterction : MonoBehaviour
         //スキル取得
         _input.actions["GetSkill"].started += OnGetSkill;
 
+        //スキルチェンジ
+        _input.actions["SkillChange"].started += OnSkillChange;
+
         //カジキ発射
         _input.actions["Fire"].started += OnShotKajiki;
 
@@ -50,6 +56,7 @@ public class PlyerInterction : MonoBehaviour
 
     }
 
+  
 
     private void OnDisable()
     {
@@ -60,11 +67,16 @@ public class PlyerInterction : MonoBehaviour
         //スキル取得
         _input.actions["GetSkill"].started -= OnGetSkill;
 
+        //スキルチェンジ
+        _input.actions["SkillChange"].started -= OnSkillChange;
+
+        
+        //クラゲシールド
+        _input.actions["Fire"].started -= OnKurage;
+
         //カジキ発射
         _input.actions["Fire"].started -= OnShotKajiki;
 
-        //クラゲシールド
-        _input.actions["Fire"].started -= OnKurage;
 
         //電気ウナギ
         _input.actions["Fire"].started -= OnErectronic;
@@ -73,6 +85,7 @@ public class PlyerInterction : MonoBehaviour
     }
 
     
+
 
     /*----------------------------------------------　移動------------------------------------------------------*/
 
@@ -95,6 +108,15 @@ public class PlyerInterction : MonoBehaviour
     {
         _getSkill.GetSkill();
     }
+
+    /*----------------------------------------------　スキルチェンジ ------------------------------------------------------*/
+
+
+    private void OnSkillChange(InputAction.CallbackContext obj)
+    {
+        _skillChange.SkillChange();
+    }
+
 
     /*----------------------------------------------　カジキ発射 ------------------------------------------------------*/
 
