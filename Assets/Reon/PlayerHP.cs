@@ -19,6 +19,10 @@ public class PlayerHP : MonoBehaviour
     public GameObject hitdamege;
     public float redcooltime = 0.5f;
 
+    //ボスと重なった時の処理用
+    public bool ishitboss;
+    public float bosshitcount;
+
     //はるまサウンド用変数
     public static bool damaged_Sound_P = false;
 
@@ -37,6 +41,36 @@ public class PlayerHP : MonoBehaviour
         if (HP <= 0)
         {
             dead();
+        }
+
+        //プレイヤーがボスと重なった時の処理
+        if (ishitboss == true)
+        {
+            bosshitcount += Time.deltaTime;
+            if (bosshitcount >= 2)
+            {
+                fivedamage(); //５ダメ食らう
+                bosshitcount = 0; //カウント０に戻す
+                ishitboss = false; //カウント止める
+            }
+        }
+    }
+
+    //プレイヤーがボスと重なった時の処理
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Boss"))
+        {
+            ishitboss = true;
+        }
+    }
+    //ボスとの重なりが終わった時
+    public void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.CompareTag("Boss"))
+        {
+            ishitboss = false; //カウントを止める
+            bosshitcount = 0; //カウントを0に戻す
         }
     }
 
