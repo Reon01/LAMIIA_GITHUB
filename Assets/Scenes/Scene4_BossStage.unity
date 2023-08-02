@@ -4164,6 +4164,8 @@ MonoBehaviour:
   canvas_restart: {fileID: 1400087796}
   hitdamege: {fileID: 0}
   redcooltime: 1
+  ishitboss: 0
+  bosshitcount: 0
 --- !u!114 &507153831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12069,6 +12071,8 @@ MonoBehaviour:
   canvas_restart: {fileID: 1400087796}
   hitdamege: {fileID: 1572631082}
   redcooltime: 0.5
+  ishitboss: 0
+  bosshitcount: 0
 --- !u!114 &1581047879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14434,7 +14438,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1171558249}
   m_HandleRect: {fileID: 0}
@@ -14706,7 +14710,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 314007570}
   m_HandleRect: {fileID: 0}
@@ -15253,7 +15257,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 2012599582}
   m_HandleRect: {fileID: 0}
@@ -16972,7 +16976,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 576915217}
   m_HandleRect: {fileID: 0}
