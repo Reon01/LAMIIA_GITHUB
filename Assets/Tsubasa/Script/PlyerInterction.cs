@@ -26,6 +26,11 @@ public class PlyerInterction : MonoBehaviour
     [Tooltip("スキルチェンジ")]
     public INputSkillChange _skillChange;
 
+
+
+    //はるまサウンド用
+    public static bool Kajiki_Sound = false;
+
     private void Awake()
     {
         TryGetComponent(out _input);
@@ -61,7 +66,7 @@ public class PlyerInterction : MonoBehaviour
     private void OnDisable()
     {
         //移動
-        _input.actions["Move"].started -= OnMove;
+        _input.actions["Move"].performed -= OnMove;
         _input.actions["Move"].canceled -= OnMoveStop;
 
         //スキル取得
@@ -123,6 +128,10 @@ public class PlyerInterction : MonoBehaviour
     private void OnShotKajiki(InputAction.CallbackContext obj)
     {
         _shotKajiki.KazikiShot();
+        //カジキの音を鳴らす
+        Kajiki_Sound = true;
+
+        Debug.Log(Kajiki_Sound);
     }
 
     /*----------------------------------------------　クラゲシールド ------------------------------------------------------*/
