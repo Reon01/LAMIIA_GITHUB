@@ -88,11 +88,6 @@ public class PlayerControllerInput : MonoBehaviour
     }
 
 
-
-
-
-
-
     //------------------------------------------ ä÷êî ------------------------------------------------------------//
 
     /// <summary>
@@ -102,7 +97,6 @@ public class PlayerControllerInput : MonoBehaviour
     public void MoveSet(Vector3 direction)
     {
         moveDirection = new Vector3(direction.x, 0, direction.y).normalized * speed * Time.deltaTime;
-
     }
 
 

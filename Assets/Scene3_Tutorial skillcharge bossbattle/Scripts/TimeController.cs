@@ -14,13 +14,13 @@ public class TimeController : MonoBehaviour
     private GameObject[] enemy;
     public int amount;
     public GameObject enemybattlesystem;
-    private GameObject skillcheat;
+    //private GameObject skillcheat;
     public GameObject tip2;
 
     // Start is called before the first frame update
     void Start()
     {
-        skillcheat = GameObject.Find("SkillCheat");
+        //skillcheat = GameObject.Find("SkillCheat");
     }
 
     // Update is called once per frame
@@ -30,11 +30,13 @@ public class TimeController : MonoBehaviour
         if (slider_timer.value <= 0)
         {
             warp();
+            /*
             enemy = GameObject.FindGameObjectsWithTag("Enemy");　//敵の数を数える
             if (enemy.Length == amount)　//もし敵を１体も倒せなかったら
             {
                 skillcheat.GetComponent<PV_SkillCheat>().cheat();　//スキルを配布する
             }
+            */
             gameObject.SetActive(false);　//タイマーのスクリプトを消す
         }
     }
