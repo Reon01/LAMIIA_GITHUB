@@ -31,14 +31,12 @@ public class SFXplayer : MonoBehaviour
             playerController.SetCueName("menu_Confirm");
             playerController.Play();
             GameStart.menu_Sound = 0;
-            Debug.Log("Confirm");
         }
         if (GameStart.menu_Sound == 2){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("menu_Back");
             playerController.Play();
             GameStart.menu_Sound = 0;
-            Debug.Log("Back");
         }
         //銛
         if (mori.Mori_Sound == true){
@@ -46,7 +44,6 @@ public class SFXplayer : MonoBehaviour
             playerController.SetCueName("attack_Hrpn");
             playerController.Play();
             mori.Mori_Sound = false;
-            Debug.Log("HrpnSound");
         }
         //カジキ
         if (Kajiki.Kajiki_Sound == true){
@@ -54,7 +51,6 @@ public class SFXplayer : MonoBehaviour
             playerController.SetCueName("skill_Sf");
             playerController.Play();
             Kajiki.Kajiki_Sound = false;
-            Debug.Log("KajikiSound");
         }
         //クラゲ
         if (Kurage.Kurage_Sound_s == true || FishSkillSystem.Kurage_Sound_s_2 == true)
@@ -64,7 +60,6 @@ public class SFXplayer : MonoBehaviour
             playerController.KuragePlay();
             Kurage.Kurage_Sound_s = false;
             FishSkillSystem.Kurage_Sound_s_2 = false;
-            Debug.Log("KurageSound_s");
         }
         if (Kurage.Kurage_Sound_e == true || FishSkillSystem.Kurage_Sound_e_2 == true)
         {
@@ -74,7 +69,6 @@ public class SFXplayer : MonoBehaviour
             playerController.KurageStop();
             Kurage.Kurage_Sound_e = false;
             FishSkillSystem.Kurage_Sound_e_2 = false;
-            Debug.Log("KurageSound_e");
         }
 
         //電気ウナギ
@@ -86,7 +80,6 @@ public class SFXplayer : MonoBehaviour
             playerController.SetCueName("skill_EE_l");
             playerController.EEPlay();
             SkillElectronic.EE_Sound = 4;
-            Debug.Log("EESound_Start");
         }
         if (SkillElectronic.EE_Sound == 2)
         {
@@ -94,12 +87,10 @@ public class SFXplayer : MonoBehaviour
             playerController.SetCueName("skill_EE_h");
             playerController.Play();
             SkillElectronic.EE_Sound = 4;
-            Debug.Log("EESound_Hit");
         }
         if (SkillElectronic_new.c_Unagi_S == false || isUnagi_act == false)
         {
             playerController.EEStop();
-            Debug.Log("EESound_Stop");
             SkillElectronic.EE_Sound = 0;
         }
         //ダメージ系SFX
@@ -108,21 +99,18 @@ public class SFXplayer : MonoBehaviour
             playerController.SetCueName("damage_P");
             playerController.Play();
             PlayerHP.damaged_Sound_P = false;
-            Debug.Log("痛い！");
         }
         if (EnemyHP.damaged_Sound_E == 1){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("damage_E");
             playerController.Play();
             EnemyHP.damaged_Sound_E = 0;
-            Debug.Log("Hit!");
         }
         if (EnemyHP.damaged_Sound_E == 2){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("damage_E");
             playerController.Play();
             EnemyHP.damaged_Sound_E = 0;
-            Debug.Log("Enemy is Dead!");
         }
         //泡音用コルーチンスタート
         if (ActiveSceneManager.S_Title == true)
