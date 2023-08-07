@@ -21,7 +21,9 @@ public class PlayerHP : MonoBehaviour
 
     //ボスと重なった時の処理用
     public bool ishitboss;
-    public float bosshitcount;
+    public float bosshitcount = 2;
+    public GameObject canvas_bosshit;
+    public Slider slider_enemyhit;
 
     //はるまサウンド用変数
     public static bool damaged_Sound_P = false;
@@ -46,12 +48,12 @@ public class PlayerHP : MonoBehaviour
         //プレイヤーがボスと重なった時の処理
         if (ishitboss == true)
         {
-            bosshitcount += Time.deltaTime;
-            if (bosshitcount >= 2)
+            bosshitcount -= Time.deltaTime;
+            slider_enemyhit.value = bosshitcount;
+            if (bosshitcount <= 0)
             {
                 fivedamage(); //５ダメ食らう
-                bosshitcount = 0; //カウント０に戻す
-                ishitboss = false; //カウント止める
+                bosshitcount = 2; //カウント2に戻す
             }
         }
     }
@@ -59,18 +61,20 @@ public class PlayerHP : MonoBehaviour
     //プレイヤーがボスと重なった時の処理
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Boss"))
+        if (other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("MediumBoss"))
         {
-            ishitboss = true;
+            ishitboss = true; //カウントスタート
+            canvas_bosshit.SetActive(true); //ダメージ警告表示
         }
     }
     //ボスとの重なりが終わった時
     public void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.CompareTag("Boss"))
+        if (other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("MediumBoss"))
         {
             ishitboss = false; //カウントを止める
-            bosshitcount = 0; //カウントを0に戻す
+            bosshitcount = 2; //カウントを2に戻す
+            canvas_bosshit.SetActive(false); //ダメージ警告非表示
         }
     }
 
