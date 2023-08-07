@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene1.5_StageSelect.unity
     guid: 3db38b7f1b4d6b84192dd170867414a7
+  - enabled: 0
+    path: Assets/Scenes/Scene2_Tutorial_Botu.unity
+    guid: ff1abc597b3fb31418d00e0aea4dad32
   - enabled: 1
     path: Assets/Scenes/Scene2_Tutorial.unity
     guid: 8f11bb6fdeb83b04b817a9af90123249
