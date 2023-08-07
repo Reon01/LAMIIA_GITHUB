@@ -43,7 +43,6 @@ public class BGMplayer : MonoBehaviour
             playerController.SetCueName("Tutorial_BGM");
             playerController.BGMPlay();
             ActiveSceneManager.S_Tutorial = false;
-            Debug.Log("Playing Tutorial_BGM");
         }
         else if (ActiveSceneManager.S_Skill == true)
         {
@@ -51,15 +50,22 @@ public class BGMplayer : MonoBehaviour
             playerController.SetCueName("Skill_BGM");
             playerController.BGMPlay();
             ActiveSceneManager.S_Skill = false;
-            Debug.Log("Playing Skill_BGM");
         }
         else if (ActiveSceneManager.S_Boss == true)
         {
             playerController.SetAcb(atomLoader.acbAssets[0].Handle);
-            playerController.SetCueName("Skill_BGM");
+            playerController.SetCueName("Boss_BGM");
             playerController.BGMPlay();
             ActiveSceneManager.S_Boss = false;
-            Debug.Log("Playing Skill_BGM for Scene_BossStage");
+        }
+        //BGM用AISAC値の変更
+        if(BossVoice.lowhpObs == 1)
+        {
+            playerController.SetAcb(atomLoader.acbAssets[3].Handle);
+            playerController.SetCueName("act_bossBGM21");
+            playerController.Play();
+            BossVoice.lowhpObs = 2;
+            Debug.Log("AISAC Changed 21");
         }
     }
 }

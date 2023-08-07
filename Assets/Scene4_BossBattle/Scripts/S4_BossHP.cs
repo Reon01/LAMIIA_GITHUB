@@ -19,10 +19,16 @@ public class S4_BossHP : MonoBehaviour
 
     private GameObject player;
 
+    //サウンド用
+    public static int bossHP;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
+
+        //サウンド用
+        bossHP = hp;
     }
 
     // Update is called once per frame
@@ -34,6 +40,7 @@ public class S4_BossHP : MonoBehaviour
             bosssystems.SetActive(false);
             Time.timeScale = 0;
         }
+
     }
 
     public void OnTriggerEnter(Collider other)
@@ -45,6 +52,9 @@ public class S4_BossHP : MonoBehaviour
                 hp = hp - 10;
                 slider_bosshp.value = hp;
                 damagedisplay10(); //１０ダメージのテキストを表示
+
+                //サウンド用
+                bossHP = hp;
             }
             if (player.GetComponent<SkillElectronic_new>().IsLightning == true)
             {
@@ -53,6 +63,9 @@ public class S4_BossHP : MonoBehaviour
 
                 SkillElectronic.EE_Sound = 2;
                 damagedisplay20();　//２０ダメージのテキストを表示
+
+                //サウンド用
+                bossHP = hp;
             }
         }
 
@@ -61,7 +74,10 @@ public class S4_BossHP : MonoBehaviour
         {
             hp -= 50;
             slider_bosshp.value = hp;
-            damagedisplay50();　//５０ダメージのテキストを表示
+            damagedisplay50(); //５０ダメージのテキストを表示
+
+            //サウンド用
+            bossHP = hp;
         }
     }
 

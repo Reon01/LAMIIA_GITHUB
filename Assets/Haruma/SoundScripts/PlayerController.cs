@@ -51,6 +51,8 @@ public class PlayerController : MonoBehaviour
             volumeSlider.value = 1.0f;
             volumeSlider.minValue = 0.0f;
         }
+        //AISACの初期値設定
+        SetBossBGMAisacControl(0);
     }
 
     void Update() {
@@ -153,9 +155,9 @@ public class PlayerController : MonoBehaviour
     }
 
     /* (21) AISAC コントロール値の設定 */
-    public void SetAisacControl(float value){
+    public void SetBossBGMAisacControl(float value){
         /* (21) AISAC コントロール値の設定 */
-        anyPlayer.SetAisacControl("Any", value);
+        anyPlayer.SetAisacControl("BossBGM", value);
 
         /* (22) パラメーターの更新 */
         anyPlayer.UpdateAll();

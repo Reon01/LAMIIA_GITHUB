@@ -35,27 +35,22 @@ public class ActiveSceneManager : MonoBehaviour
         if (AScene.name == "Scene1_Start")
         {
             S_Title = true;
-            Debug.Log("AS = Title");
         }
         else if (AScene.name == "Scene2_Tutorial")
         {
             S_Tutorial = true;
-            Debug.Log("AS = Tutorial");
         }
         else if (AScene.name == "Scene3_Tutorial skillcharge bossbattle") 
         {
             S_Skill = true;
-            Debug.Log("AS = Scene_Tutorial skillcharge bossbattle");
         }
         else if (AScene.name == "Scene4_BossStage") 
         {
             S_Boss = true;
-            Debug.Log("AS = BossStage");
         }
         else if (AScene.name == "Scene1.5_StageSelect")
         {
             S_StageSelect = true;
-            Debug.Log("AS = StageSelect");
         }
     }
 
@@ -67,27 +62,22 @@ public class ActiveSceneManager : MonoBehaviour
         if (AScene.name == "Scene1_Start")
         {
             S_Title = true;
-            Debug.Log("AS = Title");
         }
         else if (AScene.name == "Scene2_Tutorial")
         {
             S_Tutorial = true;
-            Debug.Log("AS = Tutorial");
         }
         else if (AScene.name == "Scene3_Tutorial skillcharge bossbattle")
         {
             S_Skill = true;
-            Debug.Log("AS = Scene_Tutorial skillcharge bossbattle");
         }
         else if (AScene.name == "Scene4_BossStage")
         {
             S_Boss = true;
-            Debug.Log("AS = BossStage");
         }
         else if (AScene.name == "Scene1.5_StageSelect")
         {
             S_StageSelect = true;
-            Debug.Log("AS = StageSelect");
         }
     }
 }

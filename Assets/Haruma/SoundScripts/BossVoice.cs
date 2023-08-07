@@ -12,6 +12,10 @@ public class BossVoice : MonoBehaviour
     [SerializeField]
     private AtomLoader atomLoader;
 
+    //ボスHP監視用変数
+    public int bosshp = S4_BossHP.bossHP;
+    public static int lowhpObs = 0;
+
     void Start(){
         playerController = GameObject.Find("AudioManager").GetComponent<PlayerController>();
         atomLoader = GameObject.Find("AudioManager").GetComponent<AtomLoader>();
@@ -20,7 +24,13 @@ public class BossVoice : MonoBehaviour
     }
 
     void Update(){
-
+        bosshp = S4_BossHP.bossHP;
+        if (bosshp < 1500 && lowhpObs == 0){
+            lowhpObs = 1;
+        }
+        if (bosshp >= 3000){
+            lowhpObs = 0;
+        }
     }
 
     //Voice用コルーチン
