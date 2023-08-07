@@ -29,9 +29,11 @@ public class GetSkill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         amount_Kajiki.text = "" + a_Kajiki;　//スキルの数を表記するテキストの中身を変更
         amount_Unagi.text = "" + a_Unagi;　//スキルの数を表記するテキストの中身を変更
         amount_Kurage.text = "" + a_Kurage;　//スキルの数を表記するテキストの中身を変更
+        */
 
         //カジキ
         if (isKajiki == true && Input.GetKeyDown(KeyCode.E))　//　カジキエリアに入ってるときにEを押したらスキルが１もらえる

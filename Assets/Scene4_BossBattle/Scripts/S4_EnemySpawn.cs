@@ -6,6 +6,10 @@ public class S4_EnemySpawn : MonoBehaviour
 {
     private int enemyamount;
     public GameObject enemy1;
+    public GameObject rareenemy;
+    public int enemyamountsave;
+
+    private int enemygachanumber; //ガチャ用
 
     //ランダムな位置生成
     [SerializeField]
@@ -19,18 +23,39 @@ public class S4_EnemySpawn : MonoBehaviour
     void Start()
     {
         enemyamount = Random.Range(5, 10);
+        enemyamountsave = enemyamount;
+        enemyamountsave += 1;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //もし敵の数が０だったら、ガチャスタート
         if (enemyamount >= 0)
         {
-            enemyspawn();
+            //enemyspawn();
+            enemygacha();
         }
     }
 
-    public void enemyspawn()
+    //数字でガチャ（確率）を作る
+    public void enemygacha()
+    {
+        enemygachanumber = Random.Range(0, 100);
+        //70%の確率
+        if (enemygachanumber >= 31)
+        {
+            normalenemyspawn();
+        }
+        //30%の確率
+        if (enemygachanumber <= 30)
+        {
+            rareenemyspawn();
+        }
+    }
+
+    //普通の敵を召喚
+    public void normalenemyspawn()
     {
         // rangeAとrangeBのx座標の範囲内でランダムな数値を作成
         float x = Random.Range(rangeA.position.x, rangeB.position.x);
@@ -41,13 +66,27 @@ public class S4_EnemySpawn : MonoBehaviour
 
         Instantiate(enemy1, new Vector3(x, y, z), Quaternion.identity);
         enemyamount -= 1;
-        Debug.Log("雑魚的召喚");
+    }
+
+    //レアな敵を召喚
+    public void rareenemyspawn()
+    {
+        // rangeAとrangeBのx座標の範囲内でランダムな数値を作成
+        float x = Random.Range(rangeA.position.x, rangeB.position.x);
+        // rangeAとrangeBのy座標の範囲内でランダムな数値を作成
+        float y = Random.Range(rangeA.position.y, rangeB.position.y);
+        // rangeAとrangeBのz座標の範囲内でランダムな数値を作成
+        float z = Random.Range(rangeA.position.z, rangeB.position.z);
+
+        Instantiate(rareenemy, new Vector3(x, y, z), Quaternion.identity);
+        enemyamount -= 1;
     }
 
     public void enemyspawn2()
     {
         enemyamount = Random.Range(5, 10);　//敵の数
 
+        /*
         // rangeAとrangeBのx座標の範囲内でランダムな数値を作成
         float x = Random.Range(rangeA.position.x, rangeB.position.x);
         // rangeAとrangeBのy座標の範囲内でランダムな数値を作成
@@ -58,5 +97,6 @@ public class S4_EnemySpawn : MonoBehaviour
         Instantiate(enemy1, new Vector3(x, y, z), Quaternion.identity);
         enemyamount -= 1;
         Debug.Log("雑魚的召喚");
+        */
     }
 }

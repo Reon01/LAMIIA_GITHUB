@@ -18,6 +18,7 @@ public class MediumBossAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //スキル発動までのクールタイム
         timer += Time.deltaTime;
         if (timer >= 5)
         {
@@ -26,12 +27,15 @@ public class MediumBossAttack : MonoBehaviour
         }
     }
 
+    //弾を飛ばすスキル
     public void skill1()
     {
         Vector3 pos = gameObject.transform.position;
         Instantiate(ball, pos, Quaternion.identity);
     }
 
+    //プレイヤーに接触したらダメージを与える
+    /*
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -39,4 +43,5 @@ public class MediumBossAttack : MonoBehaviour
             player.GetComponent<PlayerHP>().damage();
         }
     }
+    */
 }

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHP : MonoBehaviour
+public class EnemyHP_Rare : MonoBehaviour
 {
-    public float HP = 100;
+    public float HP = 150;
     public Slider HPBar;
-    public GameObject Enemy;
+    public GameObject rareenemy;
     private GameObject Player;
     public GameObject damage10;
     public GameObject damage20;
@@ -35,15 +35,15 @@ public class EnemyHP : MonoBehaviour
         //€‚Êˆ—
         if (HP <= 0)
         {
-            //getskill();
             enemykill.GetComponent<EnemyKill>().getskill();
-            Destroy(Enemy);
+            enemykill.GetComponent<EnemyKill>().getskill();
+            Destroy(rareenemy);
 
             damaged_Sound_E = 2;
         }
 
         //UŒ‚‚³‚ê‚½‚Æ‚«
-        if (HP <= 90)
+        if (HP <= 140)
         {
             this.GetComponent<FishMove>().getdamage = true;
         }
