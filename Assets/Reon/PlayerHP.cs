@@ -58,6 +58,7 @@ public class PlayerHP : MonoBehaviour
         }
     }
 
+    /*
     //プレイヤーがボスと重なった時の処理
     public void OnTriggerEnter(Collider other)
     {
@@ -67,12 +68,30 @@ public class PlayerHP : MonoBehaviour
             canvas_bosshit.SetActive(true); //ダメージ警告表示
         }
     }
+    */
+
+    //ボスと重なっている間実行される
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("MediumBoss"))
+        {
+            canvas_bosshit.SetActive(true); //ダメージ警告表示
+            bosshitcount -= Time.deltaTime;
+            slider_enemyhit.value = bosshitcount;
+            if (bosshitcount <= 0)
+            {
+                fivedamage(); //５ダメ食らう
+                bosshitcount = 2; //カウント2に戻す
+            }
+        }
+    }
+    
     //ボスとの重なりが終わった時
     public void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("MediumBoss"))
         {
-            ishitboss = false; //カウントを止める
+            //ishitboss = false; //カウントを止める
             bosshitcount = 2; //カウントを2に戻す
             canvas_bosshit.SetActive(false); //ダメージ警告非表示
         }
@@ -123,7 +142,7 @@ public class PlayerHP : MonoBehaviour
 
     public void kaihuku()
     {
-        if (HP <= 90) //HPが９０以下の時のみ回復できる（HP上限は１００）
+        if (HP <= 99) //HPが９９以下の時のみ回復できる（HP上限は１０５）
         {
             HP += 10;
             HPBar.value = HP;
