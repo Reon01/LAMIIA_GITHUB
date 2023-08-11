@@ -20,19 +20,20 @@ public class StageSelect : MonoBehaviour
 
     public void Tutorial()
     {
-        GameStart.menu_Sound = 1;
+        GameStart.menu_Sound = 4;
         SceneManager.LoadScene("Scene2_Tutorial");
     }
 
     public void MainStage()
     {
-        GameStart.menu_Sound = 1;
+        GameStart.menu_Sound = 4;
         Time.timeScale = 1;
         SceneManager.LoadScene("Scene4_BossStage");
     }
 
     public void Home()
     {
+        GameStart.menu_Sound = 2;
         SceneManager.LoadScene("Scene1_Start");
     }
 }
