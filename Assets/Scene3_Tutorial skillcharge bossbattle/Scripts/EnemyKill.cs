@@ -43,11 +43,11 @@ public class EnemyKill : MonoBehaviour
     public void getskill()
     {
         //カジキ
-        value = Random.Range(3, 5);
+        value = Random.Range(2, 4);
         a_Kajiki += value; //スキルの数＋value
 
         //ウナギ
-        value = Random.Range(1, 2);
+        value = Random.Range(3, 5);
         a_Unagi += value; //スキルの数＋value
 
         //クラゲ

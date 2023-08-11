@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene1.5_StageSelect.unity
     guid: 3db38b7f1b4d6b84192dd170867414a7
   - enabled: 0
-    path: Assets/Scenes/Scene2_Tutorial_Botu.unity
+    path: Assets/Scenes/SceneBotu1.unity
     guid: ff1abc597b3fb31418d00e0aea4dad32
   - enabled: 1
     path: Assets/Scenes/Scene2_Tutorial.unity
@@ -26,13 +26,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ManagerScene.unity
     guid: 1e547d5269b40ec4f9badfd578190cf9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene_PV 1.unity
     guid: 20ce9ab270e49e545b7306500a5a6074
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SceneBotu1.unity
     guid: ff1abc597b3fb31418d00e0aea4dad32
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SceneBotu2.unity
     guid: da4c6935e9ac26b41a0c541119cca4eb
   m_configObjects:

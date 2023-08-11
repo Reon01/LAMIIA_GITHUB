@@ -6,12 +6,14 @@ public class BallMove : MonoBehaviour
 {
     private GameObject player;
     public int speed;
+    private GameObject playertarget;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
-        transform.LookAt(player.transform);
+        playertarget = GameObject.Find("PlayerTarget");
+        transform.LookAt(playertarget.transform);
     }
 
     // Update is called once per frame

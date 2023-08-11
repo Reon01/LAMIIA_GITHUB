@@ -5,6 +5,7 @@ using UnityEngine;
 public class SkillElectronic_new : MonoBehaviour
 {
     public GameObject Lightning;
+    public GameObject biglightning;
     public bool IsLightning;
     public bool isSkill;
 
@@ -65,6 +66,7 @@ public class SkillElectronic_new : MonoBehaviour
 
     public void skill()
     {
+        biglightning.SetActive(true);
         //Lightning.SetActive(true);
         IsLightning = true;
         //iscount = true;
@@ -75,6 +77,7 @@ public class SkillElectronic_new : MonoBehaviour
     public void lightningoff()
     {
         IsLightning = false;
+        biglightning.SetActive(false);
     }
     public void spend()
     {

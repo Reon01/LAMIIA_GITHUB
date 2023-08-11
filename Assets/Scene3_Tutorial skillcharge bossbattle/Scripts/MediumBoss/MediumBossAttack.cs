@@ -7,12 +7,10 @@ public class MediumBossAttack : MonoBehaviour
     public float timer = 0;
     public GameObject ball;
 
-    private GameObject player;
-
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+
     }
 
     // Update is called once per frame
@@ -33,15 +31,4 @@ public class MediumBossAttack : MonoBehaviour
         Vector3 pos = gameObject.transform.position;
         Instantiate(ball, pos, Quaternion.identity);
     }
-
-    //プレイヤーに接触したらダメージを与える
-    /*
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            player.GetComponent<PlayerHP>().damage();
-        }
-    }
-    */
 }
