@@ -38,6 +38,20 @@ public class SFXplayer : MonoBehaviour
             playerController.Play();
             GameStart.menu_Sound = 0;
         }
+        if (GameStart.menu_Sound == 3)
+        {
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("menu_Selecting");
+            playerController.Play();
+            GameStart.menu_Sound = 0;
+        }
+        if (GameStart.menu_Sound == 4)
+        {
+            playerController.SetAcb(atomLoader.acbAssets[1].Handle);
+            playerController.SetCueName("Start_JINGLE");
+            playerController.Play();
+            GameStart.menu_Sound = 0;
+        }
         //銛
         if (mori.Mori_Sound == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
