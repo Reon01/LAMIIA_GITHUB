@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-/* (1) 名前空間の設定 */
+/*名前空間の設定 */
 using CriWare;
 /*ここではデータを参照しないので、Assetのやつは書かない*/
 
@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private Slider volumeSlider;
     /* 3Dポジショニング用Source*/
     public CriAtomSource BV3dSource;
-    /* (2) プレーヤー */
+    /*プレーヤー */
     private CriAtomExPlayer anyPlayer;
 
     //プレイバック
@@ -21,24 +21,24 @@ public class PlayerController : MonoBehaviour
     private CriAtomExPlayback EEplayback;
     private CriAtomExPlayback BGMplayback;
 
-    /* (12) ACB 情報 */
+    /*ACB 情報 */
     private CriAtomExAcb acb;
 
-    /* (16) キュー名 */
+    /*キュー名 */
     private string cueName;
 
     //ボス用
     public bool bossObjChk = false;
 
-    /* (3) コルーチン化する */
+    /*コルーチン化する */
     IEnumerator Start(){
 
-        /* (4) ライブラリの初期化済みチェック */
+        /*ライブラリの初期化済みチェック */
         while (!CriWareInitializer.IsInitialized()){
             yield return null;
         }
 
-        /* (5) プレーヤーの作成 */
+        /*プレーヤーの作成 */
         anyPlayer = new CriAtomExPlayer();
 
         if (ActiveSceneManager.S_Tutorial == true || ActiveSceneManager.S_Skill == true || ActiveSceneManager.S_Boss == true){
@@ -71,15 +71,15 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Play(){
-        /* (10) ポーズ状態に応じた処理 */
+        /*ポーズ状態に応じた処理 */
         if (anyPlayer.IsPaused()){
-            /* (11) ポーズの解除 */
+            /*ポーズの解除 */
             anyPlayer.Pause(false);
         }
         else{
-            /* (18) キュー情報をプレーヤー設定 */
+            /*キュー情報をプレーヤー設定 */
             anyPlayer.SetCue(acb, cueName);
-            /* (7) プレーヤーの再生 */
+            /*プレーヤーの再生 */
             anyPlayer.Start();
         }
 
@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
         BGMplayback = anyPlayer.Start();
     }
 
-    /* (8) プレーヤーの停止 */
+    /*プレーヤーの停止 */
     public void Stop(){
         anyPlayer.Stop();
     }
@@ -125,47 +125,50 @@ public class PlayerController : MonoBehaviour
         BGMplayback.Stop();
     }
 
-    /* (9) プレーヤーの一時停止 */
+    /*プレーヤーの一時停止 */
     public void Pause(){
         anyPlayer.Pause(true);
     }
 
-    /* (12) ACB の指定 */
+    /*ACB の指定 */
     public void SetAcb(CriAtomExAcb acb){
-        /* (14) ACB の保存 */
+        /*ACB の保存 */
         this.acb = acb;
     }
 
-    /* (15) キュー名の指定 */
+    /*キュー名の指定 */
     public void SetCueName(string name){
-        /* (17) キュー名の保存 */
+        /*キュー名の保存 */
         cueName = name;
     }
 
-    /* (19) ボリュームの設定 */
+    /*ボリュームの設定 */
     public void SetVolume(float vol){
-        /* (19) ボリュームの設定 */
+        /*ボリュームの設定 */
         anyPlayer.SetVolume(vol);
-        /* (20) パラメーターの更新 */
+        /*パラメーターの更新 */
         anyPlayer.UpdateAll();
     }
 
     public void Seek(float value){
-        /* (Ex) キューをシークさせる */
+        /*キューをシークさせる */
     }
 
-    /* (21) AISAC コントロール値の設定 */
+    /*ボス用AISAC コントロール値の設定 */
     public void SetBossBGMAisacControl(float value){
-        /* (21) AISAC コントロール値の設定 */
         anyPlayer.SetAisacControl("BossBGM", value);
 
-        /* (22) パラメーターの更新 */
+        /*パラメーターの更新 */
         anyPlayer.UpdateAll();
     }
 
     //EE用ブロックの指定
     public void SetEEBlock(int index){
         SetNextBlock(index, EEplayback);
+    }
+    //Kurage用ブロックの指定
+    public void SetKurageBlock(int index){
+        SetNextBlock(index, Kurageplayback);
     }
 
     //ブロック再生：ブロックの切り替え
