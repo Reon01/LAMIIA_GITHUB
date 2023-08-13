@@ -74,19 +74,15 @@ public class SFXplayer : MonoBehaviour
         //クラゲ
         if (Kurage.Kurage_Sound_s == true || FishSkillSystem.Kurage_Sound_s_2 == true)
         {
-            playerController.KurageStop();
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("skill_Jf_s");
+            playerController.SetCueName("skill_Jf");
             playerController.KuragePlay();
             Kurage.Kurage_Sound_s = false;
             FishSkillSystem.Kurage_Sound_s_2 = false;
         }
         if (Kurage.Kurage_Sound_e == true || FishSkillSystem.Kurage_Sound_e_2 == true)
         {
-            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("skill_Jf_e");
-            playerController.Play();
-            playerController.KurageStop();
+            playerController.SetKurageBlock(1);
             Kurage.Kurage_Sound_e = false;
             FishSkillSystem.Kurage_Sound_e_2 = false;
         }
