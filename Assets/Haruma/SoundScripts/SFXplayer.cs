@@ -25,6 +25,11 @@ public class SFXplayer : MonoBehaviour
     void Start(){}
 
     void Update(){
+        if(ActiveSceneManager.S_Title == true)
+        {
+            playerController.EEStop();
+            SkillElectronic.EE_Sound = 0;
+        }
         //メニュー系SFX
         if (GameStart.menu_Sound == 1){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
@@ -85,28 +90,30 @@ public class SFXplayer : MonoBehaviour
             Kurage.Kurage_Sound_e = false;
             FishSkillSystem.Kurage_Sound_e_2 = false;
         }
-
         //電気ウナギ
         if (SkillElectronic_new.c_Unagi_S == true && isUnagi_act == true && SkillElectronic.EE_Sound == 1)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("skill_EE_s");
-            playerController.Play();
-            playerController.SetCueName("skill_EE_l");
+            playerController.SetCueName("skill_EE");
             playerController.EEPlay();
             SkillElectronic.EE_Sound = 4;
+            Debug.Log("EESound_Start");
         }
         if (SkillElectronic.EE_Sound == 2)
         {
-            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("skill_EE_h");
-            playerController.Play();
+            playerController.SetEEBlock(2);
             SkillElectronic.EE_Sound = 4;
+            Debug.Log("EESound_Hit");
         }
-        if (SkillElectronic_new.c_Unagi_S == false || isUnagi_act == false)
+        if (SkillElectronic.EE_Sound == 4)
         {
-            playerController.EEStop();
-            SkillElectronic.EE_Sound = 0;
+            if (SkillElectronic_new.c_Unagi_S == false || isUnagi_act == false)
+            {
+                playerController.EEStop();
+                Debug.Log("EESound_Stop");
+                SkillElectronic.EE_Sound = 0;
+
+            }
         }
         //ダメージ系SFX
         if (PlayerHP.damaged_Sound_P == true){
