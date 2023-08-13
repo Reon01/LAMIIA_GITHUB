@@ -24,6 +24,10 @@ public class EnemyKill : MonoBehaviour
     //敵が死んだら
     private GameObject enemy1prefab;
 
+
+    //サウンド用
+    public static bool e_Defeat_Sound = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,5 +57,9 @@ public class EnemyKill : MonoBehaviour
         //クラゲ
         value = Random.Range(1, 2);
         a_Kurage += value; //スキルの数＋value
+
+
+        //サウンド用
+        e_Defeat_Sound = true;
     }
 }

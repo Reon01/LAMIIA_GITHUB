@@ -69,6 +69,7 @@ public class SFXplayer : MonoBehaviour
         //クラゲ
         if (Kurage.Kurage_Sound_s == true || FishSkillSystem.Kurage_Sound_s_2 == true)
         {
+            playerController.KurageStop();
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_Jf_s");
             playerController.KuragePlay();
@@ -126,6 +127,14 @@ public class SFXplayer : MonoBehaviour
             playerController.Play();
             EnemyHP.damaged_Sound_E = 0;
         }
+        if (EnemyKill.e_Defeat_Sound == true)
+        {
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("e_Defeated");
+            playerController.Play();
+            EnemyKill.e_Defeat_Sound = false;
+        }
+
         //泡音用コルーチンスタート
         if (ActiveSceneManager.S_Title == true)
         {
