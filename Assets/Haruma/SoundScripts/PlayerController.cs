@@ -162,4 +162,15 @@ public class PlayerController : MonoBehaviour
         /* (22) パラメーターの更新 */
         anyPlayer.UpdateAll();
     }
+
+    //EE用ブロックの指定
+    public void SetEEBlock(int index){
+        SetNextBlock(index, EEplayback);
+    }
+
+    //ブロック再生：ブロックの切り替え
+    public void SetNextBlock(int index, CriAtomExPlayback playback){
+        playback.SetNextBlockIndex(index);
+    }
+
 }
