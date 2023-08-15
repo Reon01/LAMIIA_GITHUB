@@ -30,7 +30,7 @@ public class InputGetSkill : MonoBehaviour
     void Update()
     {
         //カジキのスキルを使ったら、表記をー１する
-        if (GetComponent<Kajiki>().spendskill == true)
+        if (GetComponent<InputKajiki>().spendskill == true)
         {
             amount_Kajiki.text = "" + a_Kajiki;
         }
