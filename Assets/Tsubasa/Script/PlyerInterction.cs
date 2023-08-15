@@ -37,11 +37,30 @@ public class PlyerInterction : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (_input.actions["UpMove"].ReadValue<float>() > 0f)
+        {
+            _moveAction.UpMove();
+
+            Debug.Log("UP");
+
+        }
+
+        else if(_input.actions["DownMove"].ReadValue<float>() > 0f)
+        {
+            _moveAction.DownMOve();
+        }
+    }
+
     private void OnEnable()
     {
         //移動
         _input.actions["Move"].performed += OnMove;
         _input.actions["Move"].canceled += OnMoveStop;
+
+        //回避
+        _input.actions["Avoidance"].started += OnAvoidance;
 
         //スキル取得
         _input.actions["GetSkill"].started += OnGetSkill;
@@ -61,13 +80,15 @@ public class PlyerInterction : MonoBehaviour
 
     }
 
-  
 
     private void OnDisable()
     {
         //移動
         _input.actions["Move"].performed -= OnMove;
         _input.actions["Move"].canceled -= OnMoveStop;
+
+        //回避
+        _input.actions["Avoidance"].started -= OnAvoidance;
 
         //スキル取得
         _input.actions["GetSkill"].started -= OnGetSkill;
@@ -101,6 +122,21 @@ public class PlyerInterction : MonoBehaviour
         _moveAction.MoveSet(direction);
 
     }
+
+    
+
+    /*----------------------------------------------　回避 ------------------------------------------------------*/
+
+    private void OnAvoidance(InputAction.CallbackContext obj)
+    {
+
+        _moveAction.Avoidance();
+
+        Debug.Log("回避");
+        
+    }
+
+
 
     private void OnMoveStop(InputAction.CallbackContext obj)
     {

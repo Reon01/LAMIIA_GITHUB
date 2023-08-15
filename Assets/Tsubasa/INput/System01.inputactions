@@ -58,6 +58,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "UpMove",
+                    "type": "Button",
+                    "id": "63779a6a-6ebb-4487-aa76-efaba1b799e8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DownMove",
+                    "type": "Button",
+                    "id": "7b61d7f0-34a7-4faa-af94-9ce201d33401",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Avoidance",
+                    "type": "Button",
+                    "id": "b703f089-63b5-4f3c-bc0d-78a6d6e3848f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -311,6 +338,39 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "SkillChange",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7003b528-c6a7-405d-b355-968597941a3f",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d4798390-1780-4d28-95a7-e16eb4d71e31",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DownMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "08976fd5-8b85-482e-b1f9-69e14db70454",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Avoidance",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

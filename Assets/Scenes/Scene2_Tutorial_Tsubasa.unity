@@ -5444,6 +5444,8 @@ MonoBehaviour:
   redcooltime: 0.5
   ishitboss: 0
   bosshitcount: 0
+  canvas_bosshit: {fileID: 0}
+  slider_enemyhit: {fileID: 0}
 --- !u!114 &507153831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15295,7 +15297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009768606}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7974429, y: 4.054349, z: -12.07}
+  m_LocalPosition: {x: 0.56199825, y: 4.054349, z: -12.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17657,24 +17659,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a58c8869e948817458a4cb570fd594d1, type: 3}
   m_PrefabInstance: {fileID: 1235414831}
   m_PrefabAsset: {fileID: 0}
---- !u!143 &1235414836
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235414833}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 4
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!54 &1235414837
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17684,29 +17668,13 @@ Rigidbody:
   m_GameObject: {fileID: 1235414833}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 10
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &1235414839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235414833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c14a089c1249d2e4790df984b6c606fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  jumpHeight: 4
-  downHeight: -4
-  anim: {fileID: 1235414843}
 --- !u!114 &1235414841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17728,6 +17696,8 @@ MonoBehaviour:
   redcooltime: 0.5
   ishitboss: 0
   bosshitcount: 0
+  canvas_bosshit: {fileID: 0}
+  slider_enemyhit: {fileID: 0}
 --- !u!95 &1235414843
 Animator:
   serializedVersion: 4
@@ -17828,10 +17798,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1235414837}
-  avoidanceForce: 0
+  avoidanceForce: 60
   speed: 5
-  jumpHeight: 4
-  downHeight: -4
+  jumpHeight: 0.3
+  downHeight: 0.3
   anim: {fileID: 1235414843}
 --- !u!114 &1235414849
 MonoBehaviour:
@@ -27791,7 +27761,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805346417}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7974429, y: 4.054349, z: -12.07}
+  m_LocalPosition: {x: 0.56199825, y: 4.054349, z: -12.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

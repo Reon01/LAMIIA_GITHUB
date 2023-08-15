@@ -13,6 +13,8 @@ public class PlayerControllerInput : MonoBehaviour
     public Rigidbody rb;
     public float avoidanceForce;
 
+    Vector3 avoidanceDir;
+
     //３次元の移動
     Vector3 moveDirection;
     [SerializeField] float speed = 5.0f;
@@ -68,10 +70,13 @@ public class PlayerControllerInput : MonoBehaviour
 
             playerVelocity.y = jumpHeight;
 
+
+
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
             playerVelocity.y = 0;
+            
         }
         if (Input.GetKey(KeyCode.LeftControl))
         {
@@ -100,44 +105,32 @@ public class PlayerControllerInput : MonoBehaviour
     }
 
 
+    public void UpMove()
+    {
+        playerVelocity.y += jumpHeight;
+
+        transform.position = playerVelocity;
+    }
+
+
+    public void DownMOve()
+    {
+        playerVelocity.y -= downHeight;
+
+        transform.position = playerVelocity;
+    }
+
+
     /// <summary>
     /// 回避
     /// </summary>
-    void Avoidance()
+    public void Avoidance()
     {
-        float horizontalInout = Input.GetAxisRaw("Horizontal");
-        float varticalInout = Input.GetAxisRaw("Vertical");
+        avoidanceDir = transform.right * moveDirection.x  + transform.forward * moveDirection.z;
 
+        
 
-        Vector3 dir = transform.forward * varticalInout + transform.right * horizontalInout;
-
-        Debug.Log(dir);
-
-
-        //前方回避
-        if (varticalInout > 0 && Input.GetKeyDown(KeyCode.T))
-        {
-            Debug.Log("前方回避！");
-            rb.AddForce(dir.normalized * avoidanceForce, ForceMode.Impulse);
-        }
-        //右回避
-        else if (horizontalInout > 0 && Input.GetKeyDown(KeyCode.T))
-        {
-            Debug.Log("右回避！");
-            rb.AddForce(transform.forward * avoidanceForce, ForceMode.Impulse);
-        }
-        //左回避
-        else if (horizontalInout < 0 && Input.GetKeyDown(KeyCode.T))
-        {
-            Debug.Log("左回避！");
-            rb.AddForce(transform.forward * avoidanceForce, ForceMode.Impulse);
-        }
-        //後方回避
-        else if (varticalInout < 0 && Input.GetKeyDown(KeyCode.T))
-        {
-            Debug.Log("後方回避！");
-            rb.AddForce(transform.forward * avoidanceForce, ForceMode.Impulse);
-        }
+        rb.AddForce(avoidanceDir.normalized * avoidanceForce, ForceMode.Impulse);
 
     }
 }  
