@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Kurage : MonoBehaviour
+public class MaKurage : MonoBehaviour
 {
     public GameObject kuragesield, player;
     public int kuragesieldHP;
