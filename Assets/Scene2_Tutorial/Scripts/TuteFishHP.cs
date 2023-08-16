@@ -47,7 +47,7 @@ public class TuteFishHP : MonoBehaviour
         if (HP <= 0)
         {
             //getskill();
-            enemykill.GetComponent<EnemyKill>().getskill();
+            enemykill.GetComponent<EnemyKillTute>().getskill();
             Destroy(Enemy);
         }
 
