@@ -17,8 +17,10 @@ public class BossVoice : MonoBehaviour
     public static int lowhpObs = 0;
 
     void Start(){
+        
         playerController = GameObject.Find("AudioManager").GetComponent<PlayerController>();
         atomLoader = GameObject.Find("AudioManager").GetComponent<AtomLoader>();
+        
         StartCoroutine(VoiceRondomize());
         Debug.Log("voiceCoroutine Start");
     }
@@ -46,8 +48,6 @@ public class BossVoice : MonoBehaviour
 
     private void voice_Play()
     {
-        playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-        playerController.SetCueName("voice_Boss");
         playerController.bossPlay();
         Debug.Log("BossVoice Playing");
     }

@@ -94,22 +94,18 @@ public class SFXplayer : MonoBehaviour
             playerController.SetCueName("skill_EE");
             playerController.EEPlay();
             SkillElectronic.EE_Sound = 4;
-            Debug.Log("EESound_Start");
         }
         if (SkillElectronic.EE_Sound == 2)
         {
             playerController.SetEEBlock(2);
             SkillElectronic.EE_Sound = 4;
-            Debug.Log("EESound_Hit");
         }
         if (SkillElectronic.EE_Sound == 4)
         {
             if (SkillElectronic_new.c_Unagi_S == false || isUnagi_act == false)
             {
                 playerController.EEStop();
-                Debug.Log("EESound_Stop");
                 SkillElectronic.EE_Sound = 0;
-
             }
         }
         //ダメージ系SFX

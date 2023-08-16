@@ -38,6 +38,9 @@ public class S4_BossBattleTimer : MonoBehaviour
                 canvas_boss.SetActive(false);
                 timer = 30;
                 istimer = false;
+
+                //サウンド用
+                PCExpander.bossObjChk = false;
             }
         }
     }
