@@ -65,11 +65,12 @@ public class SFXplayer : MonoBehaviour
             mori.Mori_Sound = false;
         }
         //カジキ
-        if (Kajiki.Kajiki_Sound == true){
+        if (Kajiki.Kajiki_Sound == true || S3_Kajiki.Kajiki_Sound == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_Sf");
             playerController.Play();
             Kajiki.Kajiki_Sound = false;
+            S3_Kajiki.Kajiki_Sound = false;
         }
         //クラゲ
         if (Kurage.Kurage_Sound_s == true || FishSkillSystem.Kurage_Sound_s_2 == true)
