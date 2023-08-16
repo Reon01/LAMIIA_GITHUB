@@ -32,10 +32,10 @@ public class Kajiki : MonoBehaviour
     void Update()
     {
         //↓Scene2用
-        if (Input.GetMouseButtonDown(0) && isSkill == true && GetComponent<GetSkill>().a_Kajiki >= 1)
+        if (Input.GetMouseButtonDown(0) && isSkill == true && enemykillsystem.GetComponent<EnemyKillTute>().a_Kajiki >= 1)
         {
             FishShot();
-            GetComponent<GetSkill>().a_Kajiki -= 1; //スキルを１消費
+            enemykillsystem.GetComponent<EnemyKillTute>().a_Kajiki -= 1; //スキルを１消費
             spendskill = true;
             Debug.Log("カジキ発射");
             //はるまサウンド変数true
