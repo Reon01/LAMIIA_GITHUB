@@ -5,6 +5,7 @@ using UnityEngine;
 public class SkillElectronic : MonoBehaviour
 {
     public GameObject Lightning;
+    public GameObject biglightning;
     public bool IsLightning;
     public bool isSkill;
 
@@ -33,6 +34,8 @@ public class SkillElectronic : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && isSkill == true &&
             GetComponent<GetSkill>().a_Unagi >= 1)
         {
+            Invoke("lightningoff", 30f * Time.deltaTime); //雷エフェクトを消す
+            biglightning.SetActive(true);
             //Lightning.SetActive(true);　//雷のエフェクトをオンにする
             IsLightning = true; //IsLightningをtrueにする
             spend(); //spend()を実行する
@@ -46,6 +49,8 @@ public class SkillElectronic : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && isSkill == true && enemykillsystem.GetComponent<EnemyKillTute>().a_Unagi >= 1)
         {
+            Invoke("lightningoff", 30f * Time.deltaTime); //雷エフェクトを消す
+            biglightning.SetActive(true);
             //Lightning.SetActive(true);　//雷のエフェクトをオンにする
             IsLightning = true; //IsLightningをtrueにする
             enemykillsystem.GetComponent<EnemyKillTute>().a_Unagi -= 1; //スキルを１消費
@@ -56,6 +61,11 @@ public class SkillElectronic : MonoBehaviour
 
             EE_Sound = 1;
         }
+    }
+    public void lightningoff()
+    {
+        //IsLightning = false;
+        biglightning.SetActive(false);
     }
 
     public void spend()

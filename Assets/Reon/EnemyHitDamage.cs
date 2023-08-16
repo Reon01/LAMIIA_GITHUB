@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EnemyHitDamage : MonoBehaviour
 {
     public float bosshitcount = 3;
-    public float enemyhitcount = 1;
+    public float enemyhitcount = 2;
     public GameObject canvas_bosshit;
     public Slider slider_bosshit;
     public GameObject canvas_enemyhit;
@@ -65,7 +65,7 @@ public class EnemyHitDamage : MonoBehaviour
             if (enemyhitcount <= 0)
             {
                 player.GetComponent<PlayerHP>().fivedamage(); //５ダメ食らう
-                enemyhitcount = 1; //カウント1に戻す
+                enemyhitcount = 2; //カウント2に戻す
             }
         }
     }
@@ -83,7 +83,7 @@ public class EnemyHitDamage : MonoBehaviour
         //↓雑魚敵の処理
         if (other.gameObject.CompareTag("Enemy"))
         {
-            enemyhitcount = 1; //カウントを1に戻す
+            enemyhitcount = 2; //カウントを2に戻す
             canvas_enemyhit.SetActive(false); //ダメージ警告非表示
         }
     }
@@ -91,7 +91,7 @@ public class EnemyHitDamage : MonoBehaviour
     //↓雑魚敵が死んだときに実行
     public void EnemyDead()
     {
-        enemyhitcount = 1; //カウントを1に戻す
+        enemyhitcount = 2; //カウントを2に戻す
         canvas_enemyhit.SetActive(false); //ダメージ警告非表示
     }
 }
