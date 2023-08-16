@@ -55,7 +55,7 @@ public class EnemyKill : MonoBehaviour
         a_Unagi += value; //スキルの数＋value
 
         //クラゲ
-        value = Random.Range(1, 2);
+        value = Random.Range(1, 3);
         a_Kurage += value; //スキルの数＋value
 
 

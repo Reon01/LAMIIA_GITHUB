@@ -27,6 +27,7 @@ public class BallMove : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             player.GetComponent<PlayerHP>().damage();
+            Destroy(gameObject);
         }
         else if (other.gameObject.CompareTag("Shield"))
         {

@@ -14,6 +14,7 @@ public class EnemyHP_Rare : MonoBehaviour
     public GameObject damage50;
     private float damagecooltime;
     public GameObject damagetextposition;
+    private GameObject EnemyHitDamage;
 
 
     //EnemyKill
@@ -27,6 +28,7 @@ public class EnemyHP_Rare : MonoBehaviour
     {
         Player = GameObject.Find("Player");
         enemykill = GameObject.Find("EnemyKillSystem");
+        EnemyHitDamage = GameObject.Find("EnemyHitDamage");
     }
 
     // Update is called once per frame
@@ -35,6 +37,7 @@ public class EnemyHP_Rare : MonoBehaviour
         //éÄÇ èàóù
         if (HP <= 0)
         {
+            EnemyHitDamage.GetComponent<EnemyHitDamage>().EnemyDead();
             enemykill.GetComponent<EnemyKill>().getskill();
             enemykill.GetComponent<EnemyKill>().getskill();
             Destroy(rareenemy);

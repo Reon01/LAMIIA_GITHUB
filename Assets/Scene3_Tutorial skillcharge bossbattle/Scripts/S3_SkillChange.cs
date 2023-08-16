@@ -74,11 +74,11 @@ public class S3_SkillChange : MonoBehaviour
         button_unagi.image.color = Color.white;
 
         //他のスキルをオフにする
-        player.GetComponent<Kajiki>().isSkill = false;
+        player.GetComponent<S3_Kajiki>().isSkill = false;
         //player.GetComponent<Kurage>().isSkill = false;
         player.GetComponent<SkillElectronic_new>().isSkill = false;
         //スクリプトごとオフにする
-        player.GetComponent<Kajiki>().enabled = false;
+        player.GetComponent<S3_Kajiki>().enabled = false;
         //player.GetComponent<Kurage>().enabled = false;
         player.GetComponent<SkillElectronic_new>().enabled = false;
     }
@@ -90,9 +90,9 @@ public class S3_SkillChange : MonoBehaviour
 
         //スキル選択
         //PlayerオブジェクトについてるKajikiスクリプトからisSkillをtrueに変えてスキルを変更する
-        player.GetComponent<Kajiki>().isSkill = true;
+        player.GetComponent<S3_Kajiki>().isSkill = true;
         //スクリプトをオンにする
-        player.GetComponent<Kajiki>().enabled = true;
+        player.GetComponent<S3_Kajiki>().enabled = true;
 
 
         //他のスキルをオフにする
@@ -110,10 +110,10 @@ public class S3_SkillChange : MonoBehaviour
         fishskillsystem.GetComponent<FishSkillSystem>().iskurage = true;
 
         //他のスキルをオフにする
-        player.GetComponent<Kajiki>().isSkill = false;
+        player.GetComponent<S3_Kajiki>().isSkill = false;
         player.GetComponent<SkillElectronic_new>().isSkill = false;
         //スクリプトごとオフにする
-        player.GetComponent<Kajiki>().enabled = false;
+        player.GetComponent<S3_Kajiki>().enabled = false;
         player.GetComponent<SkillElectronic_new>().enabled = false;
     }
     public void unagicolor()
@@ -134,9 +134,9 @@ public class S3_SkillChange : MonoBehaviour
         player.GetComponent<SkillElectronic_new>().isunagi = true;　//左のスクリプトのisunagiをtrueにする
 
         //他のスキルをオフにする
-        player.GetComponent<Kajiki>().isSkill = false;
+        player.GetComponent<S3_Kajiki>().isSkill = false;
         fishskillsystem.GetComponent<FishSkillSystem>().iskurage = false;
         //スクリプトごとオフにする
-        player.GetComponent<Kajiki>().enabled = false;
+        player.GetComponent<S3_Kajiki>().enabled = false;
     }
 }
