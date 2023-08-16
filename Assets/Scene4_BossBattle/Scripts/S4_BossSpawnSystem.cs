@@ -25,5 +25,8 @@ public class S4_BossSpawnSystem : MonoBehaviour
         canvas_boss.SetActive(true); //タイマー、体力を表示
         boss.SetActive(true);   //ボス召喚
         bossbattletimer.GetComponent<S4_BossBattleTimer>().enabled = true;  //タイマーのスクリプト起動
+
+        //サウンド用
+        PCExpander.bossObjChk = true;
     }
 }

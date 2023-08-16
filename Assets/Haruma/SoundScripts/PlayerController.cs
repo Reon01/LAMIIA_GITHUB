@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private CriAtomExPlayback Kurageplayback;
     private CriAtomExPlayback EEplayback;
     private CriAtomExPlayback BGMplayback;
+    private CriAtomExPlayback BVplayback;
 
     /*ACB 情報 */
     private CriAtomExAcb acb;
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour
     private string cueName;
 
     //ボス用
-    public bool bossObjChk = false;
+    private bool BossSourceChk;
 
     /*コルーチン化する */
     IEnumerator Start(){
@@ -57,16 +58,17 @@ public class PlayerController : MonoBehaviour
 
     void Update() {
         //ボスボイス用
-        if(PCExpander.bossObj == true && bossObjChk == false){
+        if(PCExpander.bossObj != null && BossSourceChk == false){
             BV3dSource = PCExpander.bossObj.GetComponent<CriAtomSource>();
-            Debug.Log(BV3dSource.player);
+            /*
+            BV3dSource.cueSheet = "SFX";
+            BV3dSource.cueName = "voice_Boss";
             anyPlayer = BV3dSource.player;
-            Debug.Log(anyPlayer);
-            bossObjChk = true;
+            */
+            BossSourceChk = true;
         }
-        else if(PCExpander.bossObj == false && bossObjChk == true){
-            Debug.Log("bossFalse");
-            bossObjChk = false;
+        if(PCExpander.bossObjChk == false){
+            BossSourceChk = false;
         }
     }
 
@@ -86,8 +88,9 @@ public class PlayerController : MonoBehaviour
     }
     //ボス用プレイ
     public void bossPlay(){
-        anyPlayer.SetCue(acb, cueName);
-        BV3dSource.Play();
+        BV3dSource.cueSheet = "SFX";
+        BV3dSource.cueName = "voice_Boss";
+        /*BVplayback = */BV3dSource.Play();
     }
     //クラゲ用プレイバック
     public void KuragePlay(){
@@ -109,7 +112,7 @@ public class PlayerController : MonoBehaviour
     public void Stop(){
         anyPlayer.Stop();
     }
-    //ボス用プレイヤーの停止
+    //ボス用AtomSourceの停止
     public void bossStop(){
         BV3dSource.Stop();
     }

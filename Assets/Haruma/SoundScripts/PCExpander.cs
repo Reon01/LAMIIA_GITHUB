@@ -9,15 +9,19 @@ public class PCExpander : MonoBehaviour
     [SerializeField]
     private PlayerController playerController;
 
+    //ボス用
     public static GameObject bossObj;
+    public static bool bossObjChk = false;
 
-    // Start is called before the first frame update
     void Start(){
         playerController = GameObject.Find("AudioManager").GetComponent<PlayerController>();
     }
 
-    // Update is called once per frame
-    void Update(){}
+    void Update(){
+        if(bossObjChk == true && bossObj == null){
+            bossObj = GameObject.Find("Boss_kansei");
+        }
+    }
 
     public void SetVolume_as(float vol)
     {
