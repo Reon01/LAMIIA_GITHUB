@@ -23,6 +23,7 @@ TagManager:
   - WhaleGO7
   - KajikiAttack
   - EnemyF
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX
