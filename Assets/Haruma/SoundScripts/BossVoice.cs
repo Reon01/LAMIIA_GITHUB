@@ -16,13 +16,14 @@ public class BossVoice : MonoBehaviour
     public int bosshp = S4_BossHP.bossHP;
     public static int lowhpObs = 0;
 
+
     void Start(){
-        
+        //Bossアクティブ化で代入
         playerController = GameObject.Find("AudioManager").GetComponent<PlayerController>();
         atomLoader = GameObject.Find("AudioManager").GetComponent<AtomLoader>();
         
+        //Voiceコルーチンのスタート
         StartCoroutine(VoiceRondomize());
-        Debug.Log("voiceCoroutine Start");
     }
 
     void Update(){
@@ -41,14 +42,15 @@ public class BossVoice : MonoBehaviour
         float rnd_voice = Random.Range(5.0f, 8.0f);
         while (true)
         {
-            voice_Play();
+            //ボス用Source
+            CriAtomSource BVSource = GetComponent<CriAtomSource>();
+            Debug.Log(BVSource);
+            BVSource.cueSheet = "SFX";
+            BVSource.cueName = "voice_Boss";
+            BVSource.Play();
+
+            Debug.Log("voice played in Coroutine");
             yield return new WaitForSeconds(rnd_voice);
         }
-    }
-
-    private void voice_Play()
-    {
-        playerController.bossPlay();
-        Debug.Log("BossVoice Playing");
     }
 }

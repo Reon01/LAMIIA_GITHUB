@@ -15097,8 +15097,8 @@ MonoBehaviour:
     - 0
     - 0
     - 0
-  _cueName: voice_Boss
-  _cueSheet: SFX
+  _cueName: 
+  _cueSheet: 
 --- !u!1001 &1575399496
 PrefabInstance:
   m_ObjectHideFlags: 0

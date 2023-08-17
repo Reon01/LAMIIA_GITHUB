@@ -11,8 +11,7 @@ public class PlayerController : MonoBehaviour
 {
     /* 音量設定用スライダー */
     private Slider volumeSlider;
-    /* 3Dポジショニング用Source*/
-    public CriAtomSource BV3dSource;
+
     /*プレーヤー */
     private CriAtomExPlayer anyPlayer;
 
@@ -20,16 +19,12 @@ public class PlayerController : MonoBehaviour
     private CriAtomExPlayback Kurageplayback;
     private CriAtomExPlayback EEplayback;
     private CriAtomExPlayback BGMplayback;
-    private CriAtomExPlayback BVplayback;
 
     /*ACB 情報 */
     private CriAtomExAcb acb;
 
     /*キュー名 */
     private string cueName;
-
-    //ボス用
-    private bool BossSourceChk;
 
     /*コルーチン化する */
     IEnumerator Start(){
@@ -56,21 +51,7 @@ public class PlayerController : MonoBehaviour
         SetBossBGMAisacControl(0);
     }
 
-    void Update() {
-        //ボスボイス用
-        if(PCExpander.bossObj != null && BossSourceChk == false){
-            BV3dSource = PCExpander.bossObj.GetComponent<CriAtomSource>();
-            /*
-            BV3dSource.cueSheet = "SFX";
-            BV3dSource.cueName = "voice_Boss";
-            anyPlayer = BV3dSource.player;
-            */
-            BossSourceChk = true;
-        }
-        if(PCExpander.bossObjChk == false){
-            BossSourceChk = false;
-        }
-    }
+    void Update() {}
 
     public void Play(){
         /*ポーズ状態に応じた処理 */
@@ -85,12 +66,6 @@ public class PlayerController : MonoBehaviour
             anyPlayer.Start();
         }
 
-    }
-    //ボス用プレイ
-    public void bossPlay(){
-        BV3dSource.cueSheet = "SFX";
-        BV3dSource.cueName = "voice_Boss";
-        /*BVplayback = */BV3dSource.Play();
     }
     //クラゲ用プレイバック
     public void KuragePlay(){
@@ -111,10 +86,6 @@ public class PlayerController : MonoBehaviour
     /*プレーヤーの停止 */
     public void Stop(){
         anyPlayer.Stop();
-    }
-    //ボス用AtomSourceの停止
-    public void bossStop(){
-        BV3dSource.Stop();
     }
     //プレイバック停止
     public void KurageStop(){
