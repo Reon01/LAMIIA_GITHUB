@@ -15,6 +15,7 @@ public class GameStart : MonoBehaviour
     public GameObject canvas_start;
     public GameObject canvas_option;
     public GameObject canvas_keyconfig;
+    public GameObject canvas_credit;
 
     // はるま用サウンド変数
     public static int menu_Sound = 0; 
@@ -71,6 +72,21 @@ public class GameStart : MonoBehaviour
         backgrounds.SetActive(true);
     }
     
+    　//クレジット用
+    public void back3()
+    {
+        menu_Sound = 2;
+        canvas_start.SetActive(true);
+        canvas_credit.SetActive(false);
+        backgrounds.SetActive(true);
+    }
+    public void Credit()
+    {
+        menu_Sound = 1;
+        canvas_start.SetActive(false);
+        canvas_credit.SetActive(true);
+    }
+
 
     public void quit()
     {
