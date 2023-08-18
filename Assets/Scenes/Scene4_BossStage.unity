@@ -15065,7 +15065,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
   atomLoader: {fileID: 0}
-  BVSource: {fileID: 0}
+  cueBossVoice:
+    acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
+    cueId: 9
   bosshp: 0
 --- !u!114 &1574319124
 MonoBehaviour:
@@ -15076,7 +15078,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1574319115}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1e631c3b9947b54c823c6853a05529c, type: 3}
+  m_Script: {fileID: 11500000, guid: c1406b3e082f8497eb73ee9f4c314365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _playOnStart: 0
@@ -15098,8 +15100,9 @@ MonoBehaviour:
     - 0
     - 0
     - 0
-  _cueName: 
-  _cueSheet: 
+  cue:
+    acbAsset: {fileID: 0}
+    cueId: 9
 --- !u!1001 &1575399496
 PrefabInstance:
   m_ObjectHideFlags: 0
