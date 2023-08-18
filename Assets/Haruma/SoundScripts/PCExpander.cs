@@ -10,16 +10,18 @@ public class PCExpander : MonoBehaviour
     private PlayerController playerController;
 
     //ボス用
-    public static GameObject bossObj;
     public static bool bossObjChk = false;
 
     void Start(){
         playerController = GameObject.Find("AudioManager").GetComponent<PlayerController>();
     }
 
+    //ボスのボイス再生
     void Update(){
-        if(bossObjChk == true && bossObj == null){
-            bossObj = GameObject.Find("Boss_kansei");
+        if(bossObjChk == false && BossVoice.VoiceActFrag == true){
+            StopCoroutine(BossVoice.voiceRondomize);
+            Debug.Log("VoiceStop");
+            BossVoice.VoiceActFrag = false;
         }
     }
 
