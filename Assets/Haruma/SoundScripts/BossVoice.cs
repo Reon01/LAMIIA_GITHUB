@@ -12,10 +12,12 @@ public class BossVoice : MonoBehaviour
     [SerializeField]
     private AtomLoader atomLoader;
 
+    [SerializeField]
+    CriAtomSource BVSource;
+
     //ボスHP監視用変数
     public int bosshp = S4_BossHP.bossHP;
     public static int lowhpObs = 0;
-
 
     void Start(){
         //Bossアクティブ化で代入
@@ -44,12 +46,12 @@ public class BossVoice : MonoBehaviour
         {
             //ボス用Source
             CriAtomSource BVSource = GetComponent<CriAtomSource>();
-            Debug.Log(BVSource);
+            //BVSource.use3dPositioning = true;
+            //BVSource.cue = cueBossVoice;
             BVSource.cueSheet = "SFX";
             BVSource.cueName = "voice_Boss";
             BVSource.Play();
 
-            Debug.Log("voice played in Coroutine");
             yield return new WaitForSeconds(rnd_voice);
         }
     }
