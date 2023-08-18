@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log(volSlider);
             volumeSlider = volSlider;
 
-            volumeSlider.maxValue = 2.0f;
+            volumeSlider.maxValue = 4.0f;
             volumeSlider.value = 1.0f;
             volumeSlider.minValue = 0.0f;
         }
