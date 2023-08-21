@@ -19,7 +19,7 @@ public class BossVoice : MonoBehaviour
     //ボスHP監視用変数
     public int bosshp = S4_BossHP.bossHP;
     public static int lowhpObs = 0;
-
+    //コルーチンの代入用変数とボイス管理用変数
     public static Coroutine voiceRondomize;
     public static bool VoiceActFrag;
 
