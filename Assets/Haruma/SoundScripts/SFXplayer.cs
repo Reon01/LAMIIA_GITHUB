@@ -7,6 +7,9 @@ public class SFXplayer : MonoBehaviour
 {
     //ウナギ用変数
     public static bool isUnagi_act;
+    //ラジオ用変数
+    public static int radio_Sound;
+    public static bool radio_Sound_obs;
     //Dont Destroy On Load
     public bool dontDestroyOnLoad = true;
 
@@ -25,11 +28,6 @@ public class SFXplayer : MonoBehaviour
     void Start(){}
 
     void Update(){
-        if(ActiveSceneManager.S_Title == true)
-        {
-            playerController.EEStop();
-            SkillElectronic.EE_Sound = 0;
-        }
         //メニュー系SFX
         if (GameStart.menu_Sound == 1){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
@@ -56,6 +54,23 @@ public class SFXplayer : MonoBehaviour
             playerController.SetCueName("Start_JINGLE");
             playerController.Play();
             GameStart.menu_Sound = 0;
+        }
+        //ラジオ
+        //ラジオ用変数変化
+        if(radio_Sound == 0){
+            radio_Sound = 1;
+        }
+        if (radio_Sound == 1){
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("radio");
+            playerController.Play();
+            radio_Sound = 2;
+        }
+        else if (radio_Sound == 2 && radio_Sound_obs == true){
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("radio_next");
+            playerController.Play();
+            radio_Sound_obs = false;
         }
         //銛
         if (mori.Mori_Sound == true){
@@ -136,7 +151,7 @@ public class SFXplayer : MonoBehaviour
         }
 
         //泡音用コルーチンスタート
-        if (ActiveSceneManager.S_Title == true)
+        if (ActiveSceneManager.S_Title == true || ActiveSceneManager.S_StageSelect == true)
         {
             playerController.Stop();
             playerController.BGMStop();
@@ -144,6 +159,7 @@ public class SFXplayer : MonoBehaviour
             playerController.EEStop();
             StartCoroutine(bubbleRondomize());
             ActiveSceneManager.S_Title = false;
+            ActiveSceneManager.S_StageSelect = false;
             Debug.Log("Coroutine Start");
         }
         //ボス系アタックサウンド

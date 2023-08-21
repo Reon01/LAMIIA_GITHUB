@@ -26,6 +26,9 @@ public class TextController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(1) || 
             Input.GetKeyDown(KeyCode.Space))
         {
+            //サウンド用
+            SFXplayer.radio_Sound_obs = true;
+
             if (num == word.Length - 1)
             {
                 this.gameObject.SetActive(false);
