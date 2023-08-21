@@ -7,7 +7,7 @@ public class SFXplayer : MonoBehaviour
 {
     //ウナギ用変数
     public static bool isUnagi_act;
-
+    //Dont Destroy On Load
     public bool dontDestroyOnLoad = true;
 
     [SerializeField]
@@ -138,7 +138,10 @@ public class SFXplayer : MonoBehaviour
         //泡音用コルーチンスタート
         if (ActiveSceneManager.S_Title == true)
         {
+            playerController.Stop();
             playerController.BGMStop();
+            playerController.KurageStop();
+            playerController.EEStop();
             StartCoroutine(bubbleRondomize());
             ActiveSceneManager.S_Title = false;
             Debug.Log("Coroutine Start");
@@ -173,8 +176,15 @@ public class SFXplayer : MonoBehaviour
 
     //泡音用コルーチン
     private IEnumerator bubbleRondomize(){
-        float rnd_bubble = Random.Range(3.0f,5.0f);
+        float rnd_bubble;
+        float rnd_Pan;
+        float rnd_Volume;
         while(true){
+            rnd_bubble = Random.Range(3.0f,5.0f);
+            rnd_Pan = Random.Range(0.0f,1.0f);
+            rnd_Volume = Random.Range(0.0f,1.0f);
+            playerController.SetAisacCtrl("Rondom_Pan",rnd_Pan);
+            playerController.SetAisacCtrl("Rondom_Volume",rnd_Volume);
             bubble_Play();
             yield return new WaitForSeconds(rnd_bubble);
         }
