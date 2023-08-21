@@ -34,12 +34,22 @@ public class BGMplayer : MonoBehaviour
         }
         */
         if (ActiveSceneManager.S_Tutorial == true){
+            //ラジオ用変数変化
+            if(SFXplayer.radio_Sound == 0){
+                SFXplayer.radio_Sound = 1;
+            }
+            //BGM再生
             playerController.SetAcb(atomLoader.acbAssets[0].Handle);
             playerController.SetCueName("Tutorial_BGM");
             playerController.BGMPlay();
             ActiveSceneManager.S_Tutorial = false;
         }
         else if (ActiveSceneManager.S_Skill == true){
+            //ラジオ用変数変化
+            if(SFXplayer.radio_Sound == 0){
+                SFXplayer.radio_Sound = 1;
+            }
+            //BGM再生
             playerController.SetAcb(atomLoader.acbAssets[0].Handle);
             playerController.SetCueName("Skill_BGM");
             playerController.BGMPlay();
