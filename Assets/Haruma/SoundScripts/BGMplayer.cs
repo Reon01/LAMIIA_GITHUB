@@ -70,4 +70,21 @@ public class BGMplayer : MonoBehaviour
             Debug.Log("AISAC Changed 21");
         }
     }
+    //フェードイン・アウト用コルーチン
+    /*
+    private IEnumerator FadeIn_Out(string nextmusic){
+        playerController.SetAcb(atomLoader.acbAssets[3].Handle);
+        playerController.SetCueName("FadeOut");
+        playerController.Play();
+        
+        yield return new WaitForSeconds(0.7f);
+        
+        playerController.SetAcb(atomLoader.acbAssets[0].Handle);
+        playerController.SetCueName(nextmusic);
+        playerController.BGMPlay();
+        playerController.SetAcb(atomLoader.acbAssets[3].Handle);
+        playerController.SetCueName("FadeIn");
+        playerController.Play();
+    }
+    */
 }

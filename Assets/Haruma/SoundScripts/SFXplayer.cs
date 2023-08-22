@@ -57,9 +57,11 @@ public class SFXplayer : MonoBehaviour
         }
         //ラジオ
         //ラジオ用変数変化
-        if(radio_Sound == 0){
+        /*
+        if(){
             radio_Sound = 1;
         }
+        */
         if (radio_Sound == 1){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("radio");
