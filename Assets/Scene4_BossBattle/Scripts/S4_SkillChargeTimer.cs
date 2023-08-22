@@ -12,6 +12,7 @@ public class S4_SkillChargeTimer:MonoBehaviour
     private GameObject enemydestroysystem;
     private GameObject bossspawnsystem;
     public GameObject bossbattletimer;
+    public Text text_timer; //テキストの時間表記
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class S4_SkillChargeTimer:MonoBehaviour
     void Update()
     {
         skillchargetimer.value = timer; //スライダーと時間を合わせる
+        text_timer.text = "残り時間：" + timer.ToString("f0"); //テキストで残り時間表記
         if (istimer == true)
         {
             timer -= Time.deltaTime; //１秒ずつ減らす

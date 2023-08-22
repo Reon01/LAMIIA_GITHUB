@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
     public float timer;
     public GameObject canvas;
     public Slider slider_timer;
+    public Text text_timer; //テキストで時間表記
 
     //プレイヤーのHP表示
     public GameObject hpcanvas;
@@ -25,7 +26,7 @@ public class Timer : MonoBehaviour
         enemybattlesystem.SetActive(true);
         player = GameObject.Find("Player");
         player.GetComponent<PlayerHP>().maxheal();
-        timer = 20;
+        timer = 30;
     }
 
     // Update is called once per frame
@@ -33,6 +34,7 @@ public class Timer : MonoBehaviour
     {
         timer -= Time.deltaTime;
         slider_timer.value = timer;
+        text_timer.text = "残り時間：" + timer.ToString("f0"); //テキストで残り時間表記
 
         if (timer <= 0)
         {

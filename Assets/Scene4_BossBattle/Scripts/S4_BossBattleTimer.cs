@@ -12,6 +12,8 @@ public class S4_BossBattleTimer : MonoBehaviour
     public GameObject canvas_boss;
     private GameObject enemyspawn;
     public GameObject canvas_skillchargetimer;
+    public Text text_timer; //テキストで時間表記
+    public GameObject canvas_bosshit;
 
     // Start is called before the first frame update
     void Start()
@@ -26,11 +28,13 @@ public class S4_BossBattleTimer : MonoBehaviour
     void Update()
     {
         slider_bosstimer.value = timer; //スライダーと時間を合わせる
+        text_timer.text = "残り時間：" + timer.ToString("f0"); //テキストで残り時間表記
         if (istimer == true)
         {
             timer -= Time.deltaTime; //１秒ずつ減らす
             if (timer <= 0)　//もしタイマーが０になった場合
             {
+                canvas_bosshit.SetActive(false); //接触中のゲージを消す
                 enemyspawn.GetComponent<S4_EnemySpawn>().enemyspawn2();
                 canvas_skillchargetimer.SetActive(true);
                 canvas_skillchargetimer.GetComponent<S4_SkillChargeTimer>().timerstart();
