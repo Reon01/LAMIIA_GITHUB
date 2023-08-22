@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene3_Tutorial skillcharge bossbattle.unity
     guid: 62c9ff9ebaab6e74eb47d4dbca16cb5f
   - enabled: 1
+    path: Assets/Scenes/Scene_Loading.unity
+    guid: 23cb3d1703961024b99811949991721f
+  - enabled: 1
     path: Assets/Scenes/Scene4_BossStage.unity
     guid: 281bbb06c85561f4c8d8084cc69cb31e
   - enabled: 1
