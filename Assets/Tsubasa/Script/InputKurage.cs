@@ -12,12 +12,15 @@ public class InputKurage : MonoBehaviour
     public static bool Kurage_Sound_s = false;
     public static bool Kurage_Sound_e = false;
 
+    private GameObject enemykillsystem;
+
     // Start is called before the first frame update
     void Start()
     {
         kuragesield.SetActive(false);
         kuragesieldHP = 0;
         isSkill = false;
+        enemykillsystem = GameObject.Find("EnemyKillSystem");
     }
 
     // Update is called once per frame
@@ -31,7 +34,7 @@ public class InputKurage : MonoBehaviour
     public void SkillKurage()
     {
         if (kuragesield.activeSelf == false && isSkill == true &&
-            GetComponent<InputGetSkill>().a_Kurage >= 1)
+            enemykillsystem.GetComponent<EnemyKill>().a_Kurage >= 1)
         {
             kuragesield.SetActive(true);
             kuragesieldHP = 1;

@@ -42,7 +42,7 @@ public class PlayerControllerInput : MonoBehaviour
     void Update()
     {
 
-        if (!(moveDirection.magnitude == 0))
+       /* if (!(moveDirection.magnitude == 0))
         {
             anim.SetFloat("Move", 1f);
         }
@@ -51,6 +51,7 @@ public class PlayerControllerInput : MonoBehaviour
             anim.SetFloat("Move", 0f);
         }
 
+        */
 
 
         transform.Translate(moveDirection.x, moveDirection.y, moveDirection.z);
@@ -107,17 +108,13 @@ public class PlayerControllerInput : MonoBehaviour
 
     public void UpMove()
     {
-        playerVelocity.y += jumpHeight;
-
-        transform.position = playerVelocity;
+        transform.Translate(0, jumpHeight, 0);
     }
 
 
     public void DownMOve()
     {
-        playerVelocity.y -= downHeight;
-
-        transform.position = playerVelocity;
+        transform.Translate(0, downHeight, 0);
     }
 
 
