@@ -25,12 +25,13 @@ public class BGMplayer : MonoBehaviour
     void Update(){
         /*
         if (ActiveSceneManager.S_Title == true){
+            //BGMや効果音の停止
             playerController.Stop();
-            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("bubble");
-            playerController.BGMPlay();
-            
-        ActiveSceneManager.S_Title = false;
+            playerController.BGMStop();
+            playerController.KurageStop();
+            playerController.EEStop();
+
+            ActiveSceneManager.S_Title = false;
         }
         */
         if (ActiveSceneManager.S_Tutorial == true){
