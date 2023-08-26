@@ -32,27 +32,25 @@ public class SFXplayer : MonoBehaviour
         if (GameStart.menu_Sound == 1){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("menu_Confirm");
-            playerController.Play();
+            playerController.MenuSFXPlay();
             GameStart.menu_Sound = 0;
         }
         if (GameStart.menu_Sound == 2){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("menu_Back");
-            playerController.Play();
+            playerController.MenuSFXPlay();
             GameStart.menu_Sound = 0;
         }
-        if (GameStart.menu_Sound == 3)
-        {
+        if (GameStart.menu_Sound == 3){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("menu_Selecting");
-            playerController.Play();
+            playerController.MenuSFXPlay();
             GameStart.menu_Sound = 0;
         }
-        if (GameStart.menu_Sound == 4)
-        {
+        if (GameStart.menu_Sound == 4){
             playerController.SetAcb(atomLoader.acbAssets[1].Handle);
             playerController.SetCueName("Start_JINGLE");
-            playerController.Play();
+            playerController.MenuSFXPlay();
             GameStart.menu_Sound = 0;
         }
         //ラジオ
@@ -155,10 +153,11 @@ public class SFXplayer : MonoBehaviour
         //泡音用コルーチンスタート
         if (ActiveSceneManager.S_Title == true || ActiveSceneManager.S_StageSelect == true)
         {
-            playerController.Stop();
+            //BGMや効果音の停止
             playerController.BGMStop();
             playerController.KurageStop();
             playerController.EEStop();
+
             StartCoroutine(bubbleRondomize());
             ActiveSceneManager.S_Title = false;
             ActiveSceneManager.S_StageSelect = false;
@@ -211,7 +210,7 @@ public class SFXplayer : MonoBehaviour
     private void bubble_Play(){
         playerController.SetAcb(atomLoader.acbAssets[2].Handle);
         playerController.SetCueName("bubble");
-        playerController.BGMPlay();
+        playerController.MenuSFXPlay();
         Debug.Log("bubble Playing");
     }
 }

@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private CriAtomExPlayback Kurageplayback;
     private CriAtomExPlayback EEplayback;
     private CriAtomExPlayback BGMplayback;
+    private CriAtomExPlayback MenuSFXplayback;
 
     /*ACB 情報 */
     private CriAtomExAcb acb;
@@ -82,6 +83,11 @@ public class PlayerController : MonoBehaviour
         anyPlayer.SetCue(acb, cueName);
         BGMplayback = anyPlayer.Start();
     }
+    //メニューSFX用プレイバック
+    public void MenuSFXPlay(){
+        anyPlayer.SetCue(acb, cueName);
+        MenuSFXplayback = anyPlayer.Start();
+    }
 
     /*プレーヤーの停止 */
     public void Stop(){
@@ -94,9 +100,11 @@ public class PlayerController : MonoBehaviour
     public void EEStop(){
         EEplayback.Stop();
     }
-    public void BGMStop()
-    {
+    public void BGMStop(){
         BGMplayback.Stop();
+    }
+    public void MenuSFXStop(){
+        MenuSFXplayback.Stop();
     }
 
     /*プレーヤーの一時停止 */
