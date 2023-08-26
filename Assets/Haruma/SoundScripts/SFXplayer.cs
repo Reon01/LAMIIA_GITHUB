@@ -47,9 +47,16 @@ public class SFXplayer : MonoBehaviour
             playerController.MenuSFXPlay();
             GameStart.menu_Sound = 0;
         }
+        //ジングル
         if (GameStart.menu_Sound == 4){
             playerController.SetAcb(atomLoader.acbAssets[1].Handle);
             playerController.SetCueName("Start_JINGLE");
+            playerController.MenuSFXPlay();
+            GameStart.menu_Sound = 0;
+        }
+        if (GameStart.menu_Sound == 5){
+            playerController.SetAcb(atomLoader.acbAssets[1].Handle);
+            playerController.SetCueName("Clear_JINGLE");
             playerController.MenuSFXPlay();
             GameStart.menu_Sound = 0;
         }
