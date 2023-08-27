@@ -33,6 +33,9 @@ public class S3_SkillChange : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             count += 1;
+
+            //サウンド用
+            SFXplayer.skillChange_Sound = true;
         }
 
         if (count == 0)
