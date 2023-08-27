@@ -644,6 +644,7 @@ GameObject:
   - component: {fileID: 4513251064778878287}
   - component: {fileID: 4513251064778878280}
   - component: {fileID: 4638994780542181429}
+  - component: {fileID: 5390713527987521856}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Enemy
@@ -697,6 +698,10 @@ MonoBehaviour:
   HP: 100
   HPBar: {fileID: 4513251063936998864}
   Enemy: {fileID: 3630781181798207514}
+  damage10: {fileID: 0}
+  damage20: {fileID: 0}
+  damage50: {fileID: 0}
+  damagetextposition: {fileID: 0}
 --- !u!114 &4638994780542181429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,6 +715,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   getdamage: 0
+--- !u!114 &5390713527987521856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630781181798207514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1406b3e082f8497eb73ee9f4c314365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playOnStart: 0
+  _regionOnStart: {fileID: 0}
+  _listenerOnStart: {fileID: 0}
+  _use3dPositioning: 1
+  _freezeOrientation: 0
+  _loop: 0
+  _volume: 1
+  _pitch: 0
+  _androidUseLowLatencyVoicePool: 0
+  need_to_player_update_all: 1
+  _use3dRandomization: 0
+  _randomPositionListMaxLength: 0
+  randomize3dConfig:
+    followsOriginalSource: 0
+    calculationType: 0
+    calculationParameters:
+    - 0
+    - 0
+    - 0
+  cue:
+    acbAsset: {fileID: 0}
+    cueId: 0
 --- !u!1 &3738152373252773575
 GameObject:
   m_ObjectHideFlags: 0
