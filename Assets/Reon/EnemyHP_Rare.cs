@@ -46,7 +46,7 @@ public class EnemyHP_Rare : MonoBehaviour
         }
 
         //UŒ‚‚³‚ê‚½‚Æ‚«
-        if (HP <= 140)
+        if (HP <= 49)
         {
             this.GetComponent<FishMove>().getdamage = true;
         }

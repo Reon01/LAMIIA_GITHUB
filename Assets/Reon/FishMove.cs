@@ -45,7 +45,7 @@ public class FishMove : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            //player.GetComponent<PlayerHP>().fivedamage();
+            player.GetComponent<PlayerHP>().fivedamage();
             //this.transform.Translate(0, 0, -2); //後ろにノックバック
         }
     }

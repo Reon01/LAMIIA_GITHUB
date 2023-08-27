@@ -8781,6 +8781,7 @@ MonoBehaviour:
   canvas_restart: {fileID: 1400087796}
   hitdamege: {fileID: 0}
   redcooltime: 0
+  canvas_heal: {fileID: 0}
 --- !u!114 &507153831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11372,7 +11373,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726408545}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 10, z: 20}
+  m_LocalPosition: {x: -20, y: 15, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13205,7 +13206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &915547578
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16678,7 +16679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263468512}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 10}
+  m_LocalPosition: {x: 20, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23433,6 +23434,7 @@ MonoBehaviour:
   canvas_restart: {fileID: 1400087796}
   hitdamege: {fileID: 970781294}
   redcooltime: 0.5
+  canvas_heal: {fileID: 0}
 --- !u!114 &1441464823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24682,6 +24684,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   ball: {fileID: 4149949934916438101, guid: f2c7eec1a44978f42ad4c063cc07b2e4, type: 3}
+--- !u!95 &1649273475
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649273470}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d0b7f96cdf797a40af7b473f041dd48, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1649273476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649273470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa67d6c0fcb1c7647b518b4f64528f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1687922034
 GameObject:
   m_ObjectHideFlags: 0
@@ -27284,7 +27318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1996052516
 RectTransform:
   m_ObjectHideFlags: 0

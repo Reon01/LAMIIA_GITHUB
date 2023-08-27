@@ -19,6 +19,9 @@ public class PlayerHP : MonoBehaviour
     public GameObject hitdamege;
     public float redcooltime = 0.5f;
 
+    //回復表記
+    public GameObject canvas_heal;
+
     //はるまサウンド用変数
     public static bool damaged_Sound_P = false;
 
@@ -92,7 +95,14 @@ public class PlayerHP : MonoBehaviour
             HP_num = HP;
             Text_HP.text = "HP:" + HP_num;
             Debug.Log("クラゲ回復");
+            canvas_heal.SetActive(true); //回復表記
+            Invoke("healend", 1f); //２秒後に回復表記をオフ
         }
+    }
+
+    public void healend()　
+    {
+        canvas_heal.SetActive(false); //回復表記をオフ
     }
 
     public void maxheal()
