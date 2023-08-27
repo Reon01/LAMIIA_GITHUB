@@ -1039,7 +1039,6 @@ MonoBehaviour:
   damage10: {fileID: 4966855426282700147, guid: 03d426027f11b4946aa653da4381ba4c, type: 3}
   damage20: {fileID: 4261770988579724802, guid: 78a54459996b78044a6808c4d8fd7ea2, type: 3}
   damage50: {fileID: 8741181677197669977, guid: efce3daa92d81984ea8540dd7fd24f32, type: 3}
-  damagecooltime: 0.3
   damagetextposition: {fileID: 6805596246895549153}
 --- !u!114 &7804555514210075258
 MonoBehaviour:
@@ -1104,14 +1103,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2183538768354751061}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9e125c47a2788e4e9bed5fde501260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 100
-  HPBar: {fileID: 0}
-  Enemy: {fileID: 0}
+  HPBar: {fileID: 1336466422364848031}
+  Enemy: {fileID: 2183538768354751061}
 --- !u!1 &2291990297704838280
 GameObject:
   m_ObjectHideFlags: 0

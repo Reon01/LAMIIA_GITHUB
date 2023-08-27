@@ -19,7 +19,7 @@ public class Enemy_Tutorial : MonoBehaviour
         Instantiate(enemy, new Vector3(3f, 0f, 6f), Quaternion.Euler(0,180,0));
         isspawn = true;
 
-        Instantiate(enemyF, new Vector3(-15f, 0f, 6f), Quaternion.Euler(0, 180, 0));
+        Instantiate(enemyF, new Vector3(-8f, 0f, 6f), Quaternion.Euler(0, 180, 0));
         isspawnF = true;
     }
 
