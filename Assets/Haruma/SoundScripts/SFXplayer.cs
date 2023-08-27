@@ -10,6 +10,8 @@ public class SFXplayer : MonoBehaviour
     //ラジオ用変数
     public static int radio_Sound;
     public static bool radio_Sound_obs;
+    //スキル切り替え用変数
+    public static bool skillChange_Sound;
     //Dont Destroy On Load
     public bool dontDestroyOnLoad = true;
 
@@ -61,12 +63,6 @@ public class SFXplayer : MonoBehaviour
             GameStart.menu_Sound = 0;
         }
         //ラジオ
-        //ラジオ用変数変化
-        /*
-        if(){
-            radio_Sound = 1;
-        }
-        */
         if (radio_Sound == 1){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("radio");
@@ -78,6 +74,13 @@ public class SFXplayer : MonoBehaviour
             playerController.SetCueName("radio_next");
             playerController.Play();
             radio_Sound_obs = false;
+        }
+        //スキル切り替え
+        if(skillChange_Sound == true){
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("skill_equip");
+            playerController.Play();
+            skillChange_Sound = false;
         }
         //銛
         if (mori.Mori_Sound == true){
