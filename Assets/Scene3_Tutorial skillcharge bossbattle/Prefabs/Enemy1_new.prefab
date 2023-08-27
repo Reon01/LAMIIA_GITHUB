@@ -327,6 +327,8 @@ GameObject:
   - component: {fileID: 2053402835244416522}
   - component: {fileID: 2053402835244416525}
   - component: {fileID: 7114678321644974960}
+  - component: {fileID: 7707980352976876575}
+  - component: {fileID: -3041426111406668381}
   m_Layer: 0
   m_Name: Enemy1_new
   m_TagString: Enemy
@@ -378,13 +380,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceeae1d05b7110a4f9b9b6e68c201067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
+  HP: 20
   HPBar: {fileID: 2053402834410917525}
   Enemy: {fileID: 1206488809899344735}
   damage10: {fileID: 4966855426282700147, guid: 03d426027f11b4946aa653da4381ba4c, type: 3}
   damage20: {fileID: 4261770988579724802, guid: 78a54459996b78044a6808c4d8fd7ea2, type: 3}
   damage50: {fileID: 8741181677197669977, guid: efce3daa92d81984ea8540dd7fd24f32, type: 3}
-  damagecooltime: 0.3
   damagetextposition: {fileID: 5801030376162601963}
 --- !u!114 &7114678321644974960
 MonoBehaviour:
@@ -399,6 +400,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   getdamage: 0
+--- !u!95 &7707980352976876575
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206488809899344735}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d0b7f96cdf797a40af7b473f041dd48, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-3041426111406668381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206488809899344735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa67d6c0fcb1c7647b518b4f64528f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1242424871565804930
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,9 +688,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 20
   m_WholeNumbers: 1
-  m_Value: 100
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

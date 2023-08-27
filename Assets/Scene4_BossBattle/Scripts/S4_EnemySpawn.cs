@@ -22,7 +22,7 @@ public class S4_EnemySpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyamount = Random.Range(5, 10);
+        enemyamount = Random.Range(10, 21);
         enemyamountsave = enemyamount;
         enemyamountsave += 1;
     }

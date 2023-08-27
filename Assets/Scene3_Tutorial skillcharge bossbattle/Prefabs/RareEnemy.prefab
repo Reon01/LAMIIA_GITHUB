@@ -11036,6 +11036,8 @@ GameObject:
   - component: {fileID: 7684699367249065359}
   - component: {fileID: 1470079590341507314}
   - component: {fileID: -2463902491728409641}
+  - component: {fileID: -3214555421204287638}
+  - component: {fileID: 4134787213143195529}
   m_Layer: 0
   m_Name: RareEnemy
   m_TagString: Enemy
@@ -11089,7 +11091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceeae1d05b7110a4f9b9b6e68c201067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
+  HP: 50
   HPBar: {fileID: 7684699365878695191}
   Enemy: {fileID: 7378268973160302813}
   damage10: {fileID: 4966855426282700147, guid: 03d426027f11b4946aa653da4381ba4c, type: 3}
@@ -11121,13 +11123,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ecc1ec7fcd8a048b48a337baf46912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 150
+  HP: 50
   HPBar: {fileID: 7684699365878695191}
   rareenemy: {fileID: 7378268973160302813}
   damage10: {fileID: 4966855426282700147, guid: 03d426027f11b4946aa653da4381ba4c, type: 3}
   damage20: {fileID: 4261770988579724802, guid: 78a54459996b78044a6808c4d8fd7ea2, type: 3}
   damage50: {fileID: 8741181677197669977, guid: efce3daa92d81984ea8540dd7fd24f32, type: 3}
   damagetextposition: {fileID: 2764024624661749865}
+--- !u!95 &-3214555421204287638
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7378268973160302813}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d0b7f96cdf797a40af7b473f041dd48, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4134787213143195529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7378268973160302813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa67d6c0fcb1c7647b518b4f64528f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7487046856606944768
 GameObject:
   m_ObjectHideFlags: 0
@@ -11245,9 +11279,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 150
+  m_MaxValue: 50
   m_WholeNumbers: 1
-  m_Value: 150
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
