@@ -62,12 +62,12 @@ public class TuteFishHP : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Weapon"))
         {
-            if (Player.GetComponent<SkillElectronic>().IsLightning == false)
+            if (Player.GetComponent<InputSkillElectronic>().IsLightning == false)
             {
                 HP = HP - 10;
                 HPBar.value = HP;
             }
-            if (Player.GetComponent<SkillElectronic>().IsLightning == true)
+            if (Player.GetComponent<InputSkillElectronic>().IsLightning == true)
             {
                 HP = HP - 20;
                 HPBar.value = HP;
