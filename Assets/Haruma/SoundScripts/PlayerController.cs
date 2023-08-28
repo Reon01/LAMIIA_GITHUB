@@ -136,7 +136,7 @@ public class PlayerController : MonoBehaviour
         /*キューをシークさせる */
     }
 
-    /*ボス用AISAC コントロール値の設定 */
+    /*AISAC コントロール値の設定 */
     public void SetAisacCtrl(string aisacControl, float value){
         anyPlayer.SetAisacControl(aisacControl, value);
 
@@ -157,5 +157,4 @@ public class PlayerController : MonoBehaviour
     public void SetNextBlock(int index, CriAtomExPlayback playback){
         playback.SetNextBlockIndex(index);
     }
-
 }

@@ -645,6 +645,7 @@ GameObject:
   - component: {fileID: 4513251064778878280}
   - component: {fileID: 4638994780542181429}
   - component: {fileID: 5390713527987521856}
+  - component: {fileID: -2203635288252015169}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Enemy
@@ -749,6 +750,27 @@ MonoBehaviour:
   cue:
     acbAsset: {fileID: 0}
     cueId: 0
+--- !u!114 &-2203635288252015169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630781181798207514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0df1081ced374c4b83ca0fc29761cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cueE_Defeated:
+    acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
+    cueId: 32
+  cueSf_Hit:
+    acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
+    cueId: 3
+  cueDamaged:
+    acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
+    cueId: 3
 --- !u!1 &3738152373252773575
 GameObject:
   m_ObjectHideFlags: 0

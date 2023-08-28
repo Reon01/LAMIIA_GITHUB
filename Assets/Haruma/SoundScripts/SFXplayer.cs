@@ -140,25 +140,6 @@ public class SFXplayer : MonoBehaviour
             playerController.Play();
             PlayerHP.damaged_Sound_P = false;
         }
-        if (EnemyHP.damaged_Sound_E == 1){
-            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("damage_E");
-            playerController.Play();
-            EnemyHP.damaged_Sound_E = 0;
-        }
-        if (EnemyHP.damaged_Sound_E == 2){
-            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("damage_E");
-            playerController.Play();
-            EnemyHP.damaged_Sound_E = 0;
-        }
-        if (EnemyKill.e_Defeat_Sound == true)
-        {
-            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("e_Defeated");
-            playerController.Play();
-            EnemyKill.e_Defeat_Sound = false;
-        }
 
         //泡音用コルーチンスタート
         if (ActiveSceneManager.S_Title == true || ActiveSceneManager.S_StageSelect == true)
