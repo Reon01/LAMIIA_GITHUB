@@ -20,8 +20,6 @@ public class EnemyHP_Rare : MonoBehaviour
     //EnemyKill
     private GameObject enemykill;
 
-    //はるまサウンド用変数
-    public static int damaged_Sound_E;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +40,7 @@ public class EnemyHP_Rare : MonoBehaviour
             enemykill.GetComponent<EnemyKill>().getskill();
             Destroy(rareenemy);
 
-            damaged_Sound_E = 2;
+            EnemyHP.damaged_Sound_E = 2;
         }
 
         //攻撃されたとき
@@ -60,14 +58,14 @@ public class EnemyHP_Rare : MonoBehaviour
             {
                 HP = HP - 10;
                 HPBar.value = HP;
-                damaged_Sound_E = 1;
+                EnemyHP.damaged_Sound_E = 1;
                 damagedisplay10(); //１０ダメージのテキストを表示
             }
             if (Player.GetComponent<SkillElectronic_new>().IsLightning == true)
             {
                 HP = HP - 20;
                 HPBar.value = HP;
-                damaged_Sound_E = 1;
+                EnemyHP.damaged_Sound_E = 1;
 
                 SkillElectronic.EE_Sound = 2;
                 damagedisplay20();　//２０ダメージのテキストを表示
