@@ -261,8 +261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bdba503b6c96f4da5104dfa4392379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BV3dSource: {fileID: 0}
-  bossObjChk: 0
 --- !u!1 &950511654
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +367,7 @@ MonoBehaviour:
       streamingVoices: 0
     outputSamplingRate: 0
     usesInGamePreview: 0
-    inGamePreviewMode: 0
+    inGamePreviewMode: 2
     inGamePreviewConfig:
       maxPreviewObjects: 200
       communicationBufferSize: 2048
