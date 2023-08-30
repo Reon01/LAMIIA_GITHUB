@@ -32,7 +32,7 @@ public class TextController : MonoBehaviour
             if (num == word.Length - 1)
             {
                 //サウンド用
-                SFXplayer.radio_Sound = 0;
+                SFXplayer.radio_Sound = 3;
                 
                 this.gameObject.SetActive(false);
                 Time.timeScale = 1;

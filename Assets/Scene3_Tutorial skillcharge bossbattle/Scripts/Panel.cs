@@ -19,6 +19,9 @@ public class Panel : MonoBehaviour
         enemy = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemy.Length == 0)
         {
+            //サウンド用
+            SFXplayer.radio_Sound = 1;
+
             canvas.SetActive(true);
             gameObject.SetActive(false);
         }
