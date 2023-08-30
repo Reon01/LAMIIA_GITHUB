@@ -5222,6 +5222,7 @@ MonoBehaviour:
   canvas_restart: {fileID: 0}
   hitdamege: {fileID: 0}
   redcooltime: 0.5
+  canvas_heal: {fileID: 0}
 --- !u!114 &507153831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8318,6 +8319,7 @@ MonoBehaviour:
   _kurage: {fileID: 1235414847}
   _unagi: {fileID: 1235414846}
   _skillChange: {fileID: 193238714}
+  _moriAttack: {fileID: 1309036977}
 --- !u!114 &845830077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12182,6 +12184,7 @@ MonoBehaviour:
   canvas_restart: {fileID: 0}
   hitdamege: {fileID: 0}
   redcooltime: 0.5
+  canvas_heal: {fileID: 0}
 --- !u!114 &1235414842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13592,7 +13595,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309036971}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df1aa710d975a6d408efb3cf084383d7, type: 3}
   m_Name: 
@@ -13630,6 +13633,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.33, y: 1, z: 3.92}
   m_Center: {x: 0, y: 0, z: 1.3}
+--- !u!114 &1309036977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309036971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9a6fd0008ca584982ea2a445d2988b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1323106795
 PrefabInstance:
   m_ObjectHideFlags: 0

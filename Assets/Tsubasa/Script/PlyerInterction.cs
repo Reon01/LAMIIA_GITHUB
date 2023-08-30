@@ -26,6 +26,14 @@ public class PlyerInterction : MonoBehaviour
     [Tooltip("スキルチェンジ")]
     public INputSkillChange _skillChange;
 
+    [Tooltip("モリ攻撃")]
+    public InputMoriAttack _moriAttack;
+
+
+    //ボタン
+
+    private InputAction _buttonAction;
+
 
 
     //はるまサウンド用
@@ -34,6 +42,8 @@ public class PlyerInterction : MonoBehaviour
     private void Awake()
     {
         TryGetComponent(out _input);
+
+        _buttonAction = _input.actions.FindAction("MoriAttack");
 
     }
 
@@ -50,6 +60,30 @@ public class PlyerInterction : MonoBehaviour
         else if(_input.actions["DownMove"].ReadValue<float>() > 0f)
         {
             _moveAction.DownMOve();
+        }
+
+        //ボタンが押された瞬間
+        if (_buttonAction.WasPressedThisFrame())
+        {
+            Debug.Log("Press");
+
+            //モリのアニメーションとコライダーをTrueにする
+            _moriAttack.MoriAttack();
+        }
+        else
+        {
+            //モリのアニメーションをFalseにする
+            _moriAttack.EnableMori();
+        }
+
+
+        // ボタンが離された瞬間
+        if (_buttonAction.WasReleasedThisFrame())
+        {
+            Debug.Log("Release");
+
+            //モリのコライダーをFalseにする
+            _moriAttack.RaleseMori();
         }
     }
 
