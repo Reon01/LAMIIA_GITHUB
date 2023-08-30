@@ -75,6 +75,15 @@ public class SFXplayer : MonoBehaviour
             playerController.Play();
             radio_Sound_obs = false;
         }
+        else if (radio_Sound == 3){
+            //ラジオ終了の音を追加予定
+            /*
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("radio_next");
+            playerController.Play();
+            */
+            radio_Sound = 0;
+        }
         //スキル切り替え
         if(skillChange_Sound == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
