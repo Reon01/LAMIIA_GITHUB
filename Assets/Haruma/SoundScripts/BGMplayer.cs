@@ -57,6 +57,7 @@ public class BGMplayer : MonoBehaviour
             ActiveSceneManager.S_Skill = false;
         }
         else if (ActiveSceneManager.S_Boss == true){
+            playerController.SetAisacCtrl("BossBGM", 0);
             playerController.SetAcb(atomLoader.acbAssets[0].Handle);
             playerController.SetCueName("Boss_BGM");
             playerController.BGMPlay();
