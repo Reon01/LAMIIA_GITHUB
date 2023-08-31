@@ -19437,11 +19437,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amount_Kajiki: {fileID: 1079036223}
-  a_Kajiki: 0
+  a_Kajiki: 10
   amount_Unagi: {fileID: 76967331}
-  a_Unagi: 0
+  a_Unagi: 10
   amount_Kurage: {fileID: 624703902}
-  a_Kurage: 0
+  a_Kurage: 10
 --- !u!1 &2009639047
 GameObject:
   m_ObjectHideFlags: 0

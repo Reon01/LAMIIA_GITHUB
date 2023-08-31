@@ -197,6 +197,7 @@ public class PlyerInterction : MonoBehaviour
 
     private void OnShotKajiki(InputAction.CallbackContext obj)
     {
+        Debug.Log("Fire");
         _shotKajiki.KazikiShot();
         //ƒJƒWƒL‚Ì‰¹‚ð–Â‚ç‚·
         Kajiki_Sound = true;
