@@ -20,6 +20,9 @@ public class Tip3 : MonoBehaviour
         //↓もしカジキを10匹手に入れたら
         if (player.GetComponent<GetSkill>().a_Kajiki >= 10)
         {
+            //サウンド用
+            SFXplayer.radio_Sound = 1;
+
             nextcanvas.SetActive(true); //次のセリフを表示
             panel3.SetActive(false); //左上のヒントを非表示
             gameObject.SetActive(false); //このスクリプトをつけてるオブジェクトを非表示

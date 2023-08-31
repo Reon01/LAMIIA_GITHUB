@@ -20,6 +20,9 @@ public class Tip4 : MonoBehaviour
         enemytag = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemytag.Length == 0)
         {
+            //サウンド用
+            SFXplayer.radio_Sound = 1;
+
             nextcanvas.SetActive(true); //次のセリフを表示
             panel4.SetActive(false); //左上のヒントを非表示
             gameObject.SetActive(false); //このスクリプトをつけてるオブジェクトを非表示

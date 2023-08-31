@@ -18,6 +18,9 @@ public class TextController : MonoBehaviour
     {
         textLabel.text = charaName + "\n" + word[num];
         Time.timeScale = 0;
+
+        //サウンド用
+        SFXplayer.radio_Sound = 1;
     }
 
     // Update is called once per frame
