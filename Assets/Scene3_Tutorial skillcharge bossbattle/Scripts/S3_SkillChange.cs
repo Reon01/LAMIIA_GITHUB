@@ -40,21 +40,22 @@ public class S3_SkillChange : MonoBehaviour
 
         if (count == 0)
         {
-            mori.GetComponent<mori>().enabled = true;
+            mori.GetComponent<mori>().enabled = true;　//銛攻撃を有効化
         }
         if (count == 1)
         {
             kajikicolor();
-            mori.GetComponent<mori>().enabled = false;
+            mori.GetComponent<mori>().enabled = false;　//銛攻撃を無効化
         }
         if (count == 2)
         {
             kuragecolor();
+            mori.GetComponent<mori>().enabled = true; //銛攻撃を有効
         }
         if (count == 3)
         {
             unagicolor();
-            mori.GetComponent<mori>().enabled = true;
+            mori.GetComponent<mori>().enabled = true;　//銛攻撃を有効化
             player.GetComponent<SkillElectronic_new>().enabled = true; //ウナギのスクリプトをオンにする
         }
         if (count == 4)

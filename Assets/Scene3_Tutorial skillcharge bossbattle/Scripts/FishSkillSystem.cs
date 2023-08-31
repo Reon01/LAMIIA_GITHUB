@@ -45,7 +45,7 @@ public class FishSkillSystem : MonoBehaviour
             Debug.Log("ウナギ使用");
         }
 
-        if (iskurage == true && Input.GetMouseButtonDown(0) &&
+        if (iskurage == true && Input.GetMouseButtonDown(1) &&
             enemykill.GetComponent<EnemyKill>().a_Kurage >= 1)
         {
             Kurage();

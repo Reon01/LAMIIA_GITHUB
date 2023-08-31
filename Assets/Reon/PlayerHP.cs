@@ -88,7 +88,17 @@ public class PlayerHP : MonoBehaviour
 
     public void kaihuku()
     {
-        if (HP <= 99) //HP‚ª‚X‚XˆÈ‰º‚Ì‚Ì‚İ‰ñ•œ‚Å‚«‚éiHPãŒÀ‚Í‚P‚O‚Tj
+        if (HP >= 90) //HP‚ª‚X‚OˆÈã‚Ì
+        {
+            HP = 100;
+            HPBar.value = HP;
+            HP_num = HP;
+            Text_HP.text = "HP:" + HP_num;
+            Debug.Log("ƒNƒ‰ƒQ‰ñ•œ");
+            canvas_heal.SetActive(true); //‰ñ•œ•\‹L
+            Invoke("healend", 1f); //‚Q•bŒã‚É‰ñ•œ•\‹L‚ğƒIƒt
+        }
+        if (HP <= 89) //HP‚ª‚W‚XˆÈ‰º‚Ì
         {
             HP += 10;
             HPBar.value = HP;

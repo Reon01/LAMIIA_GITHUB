@@ -13,6 +13,7 @@ public class S4_SkillChargeTimer:MonoBehaviour
     private GameObject bossspawnsystem;
     public GameObject bossbattletimer;
     public Text text_timer; //テキストの時間表記
+    public GameObject canvas_enemyhit; //雑魚敵との接触のUI
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class S4_SkillChargeTimer:MonoBehaviour
                 istimer = false;　//istimerをオフにして繰り返し予防
                 bossspawnsystem.GetComponent<S4_BossSpawnSystem>().BossSpawn(); //ボス召喚
                 bossbattletimer.GetComponent<S4_BossBattleTimer>().timerstart();　//ボスタイマーを起動
+                canvas_enemyhit.SetActive(false); //ダメージ警告非表示
             }
         }
     }
