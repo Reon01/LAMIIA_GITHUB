@@ -14,11 +14,11 @@ public class HealMove : MonoBehaviour
     void Update()
     {
         transform.position += new Vector3(0.0f, 50f * Time.deltaTime, 0.0f);
-        Invoke("delete", 2f);
+        Invoke("positionreset", 1f);
     }
 
-    public void delete()
+    public void positionreset()
     {
-        Destroy(gameObject);
+        this.gameObject.transform.position += new Vector3(0, -54f * Time.deltaTime, 0);
     }
 }

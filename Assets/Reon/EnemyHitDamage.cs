@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EnemyHitDamage : MonoBehaviour
 {
     public float bosshitcount = 3;
-    public float enemyhitcount = 2;
+    public float enemyhitcount = 1;
     public GameObject canvas_bosshit;
     public Slider slider_bosshit;
     public GameObject canvas_enemyhit;
@@ -24,23 +24,7 @@ public class EnemyHitDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        //中ボスが消えた時に警告も消す
-        amount_mediumboss = GameObject.FindGameObjectsWithTag("MediumBoss");
-        if (amount_mediumboss.Length == 0)
-        {
-            bosshitcount = 3; //カウントを3に戻す
-            canvas_bosshit.SetActive(false); //ダメージ警告非表示
-        }
 
-        //ボスが消えた時に警告も消す
-        amount_boss = GameObject.FindGameObjectsWithTag("Boss");
-        if (amount_boss.Length == 0)
-        {
-            bosshitcount = 3; //カウントを3に戻す
-            canvas_bosshit.SetActive(false); //ダメージ警告非表示
-        }
-        */
     }
 
     public void OnTriggerStay(Collider other)
@@ -65,7 +49,7 @@ public class EnemyHitDamage : MonoBehaviour
             if (enemyhitcount <= 0)
             {
                 player.GetComponent<PlayerHP>().fivedamage(); //５ダメ食らう
-                enemyhitcount = 2; //カウント2に戻す
+                enemyhitcount = 1; //カウント1に戻す
             }
         }
     }
@@ -83,7 +67,7 @@ public class EnemyHitDamage : MonoBehaviour
         //↓雑魚敵の処理
         if (other.gameObject.CompareTag("Enemy"))
         {
-            enemyhitcount = 2; //カウントを2に戻す
+            enemyhitcount = 1; //カウントを1に戻す
             canvas_enemyhit.SetActive(false); //ダメージ警告非表示
         }
     }
@@ -91,7 +75,7 @@ public class EnemyHitDamage : MonoBehaviour
     //↓雑魚敵が死んだときに実行
     public void EnemyDead()
     {
-        enemyhitcount = 2; //カウントを2に戻す
+        enemyhitcount = 1; //カウントを1に戻す
         canvas_enemyhit.SetActive(false); //ダメージ警告非表示
     }
 }
