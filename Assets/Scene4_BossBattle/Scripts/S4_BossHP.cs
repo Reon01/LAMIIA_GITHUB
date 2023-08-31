@@ -55,17 +55,19 @@ public class S4_BossHP : MonoBehaviour
 
                 //サウンド用
                 bossHP = hp;
+                EnemyHP.damaged_Sound_E = 1;
             }
             if (player.GetComponent<SkillElectronic_new>().IsLightning == true)
             {
                 hp = hp - 20;
                 slider_bosshp.value = hp;
 
-                SkillElectronic.EE_Sound = 2;
-                damagedisplay20();　//２０ダメージのテキストを表示
-
                 //サウンド用
                 bossHP = hp;
+                EnemyHP.damaged_Sound_E = 1;
+                SkillElectronic.EE_Sound = 2;
+                
+                damagedisplay20();　//２０ダメージのテキストを表示
             }
         }
 
@@ -77,6 +79,7 @@ public class S4_BossHP : MonoBehaviour
             damagedisplay50(); //５０ダメージのテキストを表示
 
             //サウンド用
+            EnemyHP.damaged_Sound_E = 1;
             bossHP = hp;
         }
     }
