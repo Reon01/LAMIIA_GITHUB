@@ -11,6 +11,7 @@ public class InputSkillElectronic : MonoBehaviour
     public bool iscount;
     public float count;
 
+    private GameObject enemykillsystem;
     private GameObject unagitimer;
 
     //はるまサウンド用変数
@@ -22,6 +23,7 @@ public class InputSkillElectronic : MonoBehaviour
     {
         IsLightning = false;
         unagitimer = GameObject.Find("UnagiTimer");
+        enemykillsystem = GameObject.Find("EnemyKillSystem");
     }
 
     // Update is called once per frame
@@ -38,11 +40,12 @@ public class InputSkillElectronic : MonoBehaviour
     public void Electronic()
     {
         //isSkillがtrueで、ウナギが１つ以上所持していた場合
-        if (isSkill == true && GetComponent<InputGetSkill>().a_Unagi >= 1)
+        if (isSkill == true && enemykillsystem.GetComponent<EnemyKillTute>().a_Unagi >= 1)
         {
             //Lightning.SetActive(true);　//雷のエフェクトをオンにする
             IsLightning = true; //IsLightningをtrueにする
             spend(); //spend()を実行する
+            enemykillsystem.GetComponent<EnemyKillTute>().a_Unagi -= 1; //スキルを１消費
             iscount = true; //iscountをオンにする
             isSkill = false;　//isSKillをオフにする
             unagitimer.GetComponent<UnagiTimer>().iscount = true; //ウナギタイマーについてるUnagiTimer

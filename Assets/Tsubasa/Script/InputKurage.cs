@@ -33,6 +33,7 @@ public class InputKurage : MonoBehaviour
 
     public void SkillKurage()
     {
+        //Scene3
         if (kuragesield.activeSelf == false && isSkill == true &&
             enemykillsystem.GetComponent<EnemyKill>().a_Kurage >= 1)
         {
@@ -45,6 +46,25 @@ public class InputKurage : MonoBehaviour
             Kurage_Sound_s = true;
         }
 
+        if (kuragesieldHP <= 0)
+        {
+            kuragesield.SetActive(false);
+            //Debug.Log("クラゲ消滅");
+        }
+
+
+        //Scene2
+        if (kuragesield.activeSelf == false && isSkill == true &&
+            enemykillsystem.GetComponent<EnemyKillTute>().a_Kurage >= 1)
+        {
+            kuragesield.SetActive(true);
+            kuragesieldHP = 1;
+            player.GetComponent<PlayerHP>().kaihuku();
+            enemykillsystem.GetComponent<EnemyKillTute>().a_Kurage -= 1; //スキルを１消費
+
+            //はるまサウンド用変数true
+            Kurage_Sound_s = true;
+        }
         if (kuragesieldHP <= 0)
         {
             kuragesield.SetActive(false);
