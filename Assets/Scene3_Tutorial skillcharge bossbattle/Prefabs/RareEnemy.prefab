@@ -11038,6 +11038,8 @@ GameObject:
   - component: {fileID: -2463902491728409641}
   - component: {fileID: -3214555421204287638}
   - component: {fileID: 4134787213143195529}
+  - component: {fileID: 8147754838756809033}
+  - component: {fileID: 2935265557088781125}
   m_Layer: 0
   m_Name: RareEnemy
   m_TagString: Enemy
@@ -11162,6 +11164,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa67d6c0fcb1c7647b518b4f64528f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8147754838756809033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7378268973160302813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1406b3e082f8497eb73ee9f4c314365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playOnStart: 0
+  _regionOnStart: {fileID: 0}
+  _listenerOnStart: {fileID: 0}
+  _use3dPositioning: 1
+  _freezeOrientation: 0
+  _loop: 0
+  _volume: 1
+  _pitch: 0
+  _androidUseLowLatencyVoicePool: 0
+  need_to_player_update_all: 1
+  _use3dRandomization: 0
+  _randomPositionListMaxLength: 0
+  randomize3dConfig:
+    followsOriginalSource: 0
+    calculationType: 0
+    calculationParameters:
+    - 0
+    - 0
+    - 0
+  cue:
+    acbAsset: {fileID: 0}
+    cueId: 0
+--- !u!114 &2935265557088781125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7378268973160302813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0df1081ced374c4b83ca0fc29761cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cueE_Defeated:
+    acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
+    cueId: 32
+  cueSf_Hit:
+    acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
+    cueId: 3
+  cueDamaged:
+    acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
+    cueId: 3
 --- !u!1 &7487046856606944768
 GameObject:
   m_ObjectHideFlags: 0

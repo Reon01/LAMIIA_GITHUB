@@ -41,6 +41,7 @@ public class EnemyHP : MonoBehaviour
             enemykill.GetComponent<EnemyKill>().getskill();
             Destroy(Enemy);
 
+            //サウンド用
             damaged_Sound_E = 2;
         }
 
@@ -59,7 +60,10 @@ public class EnemyHP : MonoBehaviour
             {
                 HP = HP - 10;
                 HPBar.value = HP;
+
+                //サウンド用
                 damaged_Sound_E = 1;
+                
                 damagedisplay10(); //１０ダメージのテキストを表示
             }
             if (Player.GetComponent<SkillElectronic_new>().IsLightning == true)
@@ -68,7 +72,9 @@ public class EnemyHP : MonoBehaviour
                 HPBar.value = HP;
                 damaged_Sound_E = 1;
 
+                //サウンド用
                 SkillElectronic.EE_Sound = 2;
+
                 damagedisplay20();　//２０ダメージのテキストを表示
             }
         }
@@ -79,6 +85,9 @@ public class EnemyHP : MonoBehaviour
             HP -= 50;
             HPBar.value = HP;
             damagedisplay50();　//５０ダメージのテキストを表示
+
+            //サウンド用
+            damaged_Sound_E = 2;
         }
     }
 
