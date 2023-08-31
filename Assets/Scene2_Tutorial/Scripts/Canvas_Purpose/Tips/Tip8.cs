@@ -20,6 +20,9 @@ public class Tip8 : MonoBehaviour
         //↓もしクラゲを3匹使用したら
         if (player.GetComponent<GetSkill>().a_Kurage <= 9)
         {
+            //サウンド用
+            SFXplayer.radio_Sound = 1;
+
             nextcanvas.SetActive(true); //次のセリフを表示
             panel8.SetActive(false); //左上のヒントを非表示
             gameObject.SetActive(false); //このスクリプトをつけてるオブジェクトを非表示

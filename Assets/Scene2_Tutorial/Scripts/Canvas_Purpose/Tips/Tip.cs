@@ -130,6 +130,10 @@ public class Tip : MonoBehaviour
         mouse.SetActive(false);
         correct.SetActive(false);
         step = 7;
+
+        //サウンド用
+        SFXplayer.radio_Sound = 1;
+        
         nextcanvas.SetActive(true);
         panel.SetActive(false);
         gameObject.GetComponent<Tip>().enabled = false;

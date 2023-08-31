@@ -20,6 +20,9 @@ public class Tip7 : MonoBehaviour
         //↓もしクラゲを10匹手に入れたら
         if (player.GetComponent<GetSkill>().a_Kurage >= 10)
         {
+            //サウンド用
+            SFXplayer.radio_Sound = 1;
+
             nextcanvas.SetActive(true); //次のセリフを表示
             panel7.SetActive(false); //左上のヒントを非表示
             gameObject.SetActive(false); //このスクリプトをつけてるオブジェクトを非表示

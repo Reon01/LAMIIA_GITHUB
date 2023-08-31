@@ -69,13 +69,13 @@ public class SFXplayer : MonoBehaviour
             playerController.Play();
             radio_Sound = 2;
         }
-        else if (radio_Sound == 2 && radio_Sound_obs == true){
+        if (radio_Sound == 2 && radio_Sound_obs == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("radio_next");
             playerController.Play();
             radio_Sound_obs = false;
         }
-        else if (radio_Sound == 3){
+        if (radio_Sound == 3){
             //ラジオ終了の音を追加予定
             /*
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
