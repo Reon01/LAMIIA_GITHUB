@@ -3799,6 +3799,7 @@ MonoBehaviour:
   - "\u300C\u30AF\u30E9\u30B2\u306F\u6575\u306E\u653B\u6483\u30921\u56DE\u9632\u3044\u3067\u304F\u308C\u307E\u3059\u3002\u300D"
   - "\u300C\u305D\u308C\u3067\u306F\u30B9\u30AD\u30EB\u3092\u8A66\u3057\u3066\u307F\u307E\u3057\u3087\u3046\u3002\u300D"
   - "\u300CTab\u30AD\u30FC\u3067\u30B9\u30AD\u30EB\u5909\u66F4\u3001\u5DE6\u30AF\u30EA\u30C3\u30AF\u3067\u4F7F\u7528\u3057\u307E\u3059\u3002\u300D"
+  - "\u300C\u30DC\u30B9\u3092\u5012\u3059\u305F\u3081\u6226\u3044\u65B9\u3092\u8EAB\u306B\u7740\u3051\u3066\u304F\u3060\u3055\u3044\u3002\u300D"
   panel: {fileID: 1195792576}
   tip: {fileID: 0}
 --- !u!114 &435476790
@@ -13831,7 +13832,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324372290}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.49, y: 0, z: 5.59}
+  m_LocalPosition: {x: 4, y: 3, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18332,7 +18333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18352,7 +18353,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6B21\u306E\u30B9\u30C6\u30C3\u30D7\u3078\u9032\u307F\u307E\u3059\u304B\uFF1F"
+  m_Text: "\u30E1\u30A4\u30F3\u30B9\u30C6\u30FC\u30B8\u3078\u9032\u307F\u307E\u3059\u304B\uFF1F"
 --- !u!222 &1874587838
 CanvasRenderer:
   m_ObjectHideFlags: 0
