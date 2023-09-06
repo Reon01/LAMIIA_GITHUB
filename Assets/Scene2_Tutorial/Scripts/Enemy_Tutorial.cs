@@ -52,7 +52,7 @@ public class Enemy_Tutorial : MonoBehaviour
 
     public void enemyspawnF() //“G‚ğ1‘Ì¢Š«
     {
-        Instantiate(enemyF, new Vector3(-15f, 0f, 6f), Quaternion.Euler(0, 180, 0));
+        Instantiate(enemyF, new Vector3(-4f, 0f, 6f), Quaternion.Euler(0, 180, 0));
         isspawnF = true;
     }
 }
