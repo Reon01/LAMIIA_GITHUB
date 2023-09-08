@@ -30,7 +30,7 @@ public class S4_EnemySpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //もし敵の数が０だったら、ガチャスタート
+        //もし敵の数が０以上だったら、ガチャスタート
         if (enemyamount >= 0)
         {
             //enemyspawn();
@@ -84,7 +84,7 @@ public class S4_EnemySpawn : MonoBehaviour
 
     public void enemyspawn2()
     {
-        enemyamount = Random.Range(5, 10);　//敵の数
+        enemyamount = Random.Range(10, 21);　//敵の数
 
         /*
         // rangeAとrangeBのx座標の範囲内でランダムな数値を作成
