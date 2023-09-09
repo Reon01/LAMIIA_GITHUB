@@ -31,7 +31,7 @@ public class S3_Kajiki : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isSkill == true && enemykillsystem.GetComponent<EnemyKill>().a_Kajiki >= 1)
+        if (Input.GetMouseButtonDown(0) && isSkill == true && enemykillsystem.GetComponent<EnemyKill>().a_Kajiki >= 1 && Time.timeScale == 1)
         {
             FishShot();
             enemykillsystem.GetComponent<EnemyKill>().a_Kajiki -= 1; //ÉXÉLÉãÇÇPè¡îÔ

@@ -27,7 +27,7 @@ public class Kurage : MonoBehaviour
     {
         //Scene3
         if (Input.GetMouseButtonDown(0) && kuragesield.activeSelf == false && isSkill == true &&
-            enemykillsystem.GetComponent<EnemyKill>().a_Kurage >= 1)
+            enemykillsystem.GetComponent<EnemyKill>().a_Kurage >= 1&&Time.timeScale==1)
         {
             kuragesield.SetActive(true);
             kuragesieldHP = 1;
@@ -39,7 +39,7 @@ public class Kurage : MonoBehaviour
         }
         //Scene2
         if (Input.GetMouseButtonDown(0) && kuragesield.activeSelf == false && isSkill == true &&
-            enemykillsystem.GetComponent<EnemyKillTute>().a_Kurage >= 1)
+            enemykillsystem.GetComponent<EnemyKillTute>().a_Kurage >= 1&&Time.timeScale==1)
         {
             kuragesield.SetActive(true);
             kuragesieldHP = 1;

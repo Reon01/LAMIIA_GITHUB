@@ -27,7 +27,7 @@ public class S2_SkillChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && Time.timeScale == 1)
         {
             count += 1;
         }

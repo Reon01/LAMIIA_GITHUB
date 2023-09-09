@@ -32,7 +32,7 @@ public class Kajiki : MonoBehaviour
     void Update()
     {
         //↓Scene2用
-        if (Input.GetMouseButtonDown(0) && isSkill == true && enemykillsystem.GetComponent<EnemyKillTute>().a_Kajiki >= 1)
+        if (Input.GetMouseButtonDown(0) && isSkill == true && enemykillsystem.GetComponent<EnemyKillTute>().a_Kajiki >= 1 && Time.timeScale == 1)
         {
             FishShot();
             enemykillsystem.GetComponent<EnemyKillTute>().a_Kajiki -= 1; //スキルを１消費
@@ -43,7 +43,7 @@ public class Kajiki : MonoBehaviour
         }
 
         //↓Scene3用
-        if (Input.GetMouseButtonDown(0) && isSkill == true && enemykillsystem.GetComponent<EnemyKill>().a_Kajiki >= 1)
+        if (Input.GetMouseButtonDown(0) && isSkill == true && enemykillsystem.GetComponent<EnemyKill>().a_Kajiki >= 1 && Time.timeScale == 1)
         {
             FishShot();
             enemykillsystem.GetComponent<EnemyKill>().a_Kajiki -= 1; //スキルを１消費
