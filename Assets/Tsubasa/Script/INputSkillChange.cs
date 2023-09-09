@@ -58,8 +58,11 @@ public class INputSkillChange : MonoBehaviour
 
 
     public void SkillChange()
-    {      
-       count += 1;        
+    { if(Time.timeScale == 1)
+        {
+            count += 1;
+        }
+              
     }
 
     

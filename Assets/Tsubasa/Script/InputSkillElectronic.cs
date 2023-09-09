@@ -40,7 +40,7 @@ public class InputSkillElectronic : MonoBehaviour
     public void Electronic()
     {
         //isSkillがtrueで、ウナギが１つ以上所持していた場合
-        if (isSkill == true && enemykillsystem.GetComponent<EnemyKillTute>().a_Unagi >= 1)
+        if (isSkill == true && enemykillsystem.GetComponent<EnemyKillTute>().a_Unagi >= 1&&Time.timeScale==1)
         {
             //Lightning.SetActive(true);　//雷のエフェクトをオンにする
             IsLightning = true; //IsLightningをtrueにする

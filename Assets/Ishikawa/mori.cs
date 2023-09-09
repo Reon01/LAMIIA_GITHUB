@@ -23,7 +23,7 @@ public class mori : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.timeScale == 1)
         {
             this.animator.SetBool(AttackStr, true);
         }
@@ -33,7 +33,7 @@ public class mori : MonoBehaviour
         }
 
         //Collider‚ğo‚µ‚½‚èÁ‚µ‚½‚è‚·‚éi•Ší‚ğU‚Á‚½‚¾‚¯HP‚ğí‚è‚½‚¢‚©‚çj
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)&&Time.timeScale==1)
         {
             boxCol.enabled = true;
 

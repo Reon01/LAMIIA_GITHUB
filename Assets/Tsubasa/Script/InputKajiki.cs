@@ -48,7 +48,7 @@ public class InputKajiki : MonoBehaviour
     public void KazikiShot()
     {
         //↓Scene2用
-        if (isSkill == true && enemykillsystem.GetComponent<EnemyKillTute>().a_Kajiki >= 1)
+        if (isSkill == true && enemykillsystem.GetComponent<EnemyKillTute>().a_Kajiki >= 1 && Time.timeScale == 1)
         {
             FishShot();
            enemykillsystem.GetComponent<EnemyKillTute>().a_Kajiki -= 1; //スキルを１消費
@@ -59,7 +59,7 @@ public class InputKajiki : MonoBehaviour
         }
 
         //↓Scene3用
-        if (isSkill == true && enemykillsystem.GetComponent<EnemyKill>().a_Kajiki >= 1)
+        if (isSkill == true && enemykillsystem.GetComponent<EnemyKill>().a_Kajiki >= 1 && Time.timeScale == 1)
         {
             FishShot();
             enemykillsystem.GetComponent<EnemyKill>().a_Kajiki -= 1; //スキルを１消費
