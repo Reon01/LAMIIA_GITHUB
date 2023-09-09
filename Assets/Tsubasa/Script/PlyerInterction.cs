@@ -8,6 +8,12 @@ public class PlyerInterction : MonoBehaviour
 {
     PlayerInput _input;
 
+
+    private float countTime;　　　　　 //タイマー
+
+    [Tooltip("クールタイム")]
+    [SerializeField] float CoolTime;
+
     [Tooltip("移動スクリプト")]
     public PlayerControllerInput _moveAction;
 
@@ -85,6 +91,8 @@ public class PlyerInterction : MonoBehaviour
             //モリのコライダーをFalseにする
             _moriAttack.RaleseMori();
         }
+
+        countTime += Time.deltaTime;
     }
 
     private void OnEnable()
@@ -163,10 +171,17 @@ public class PlyerInterction : MonoBehaviour
 
     private void OnAvoidance(InputAction.CallbackContext obj)
     {
+        
 
-        _moveAction.Avoidance();
+        if (countTime >= CoolTime)
+        {
+            countTime = 0;
 
-        Debug.Log("回避");
+            _moveAction.Avoidance();
+
+            Debug.Log("回避");
+
+        }     
         
     }
 

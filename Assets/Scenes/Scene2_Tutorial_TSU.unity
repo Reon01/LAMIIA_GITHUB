@@ -8313,6 +8313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb308c7626bbe54291cd1a539aa6bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CoolTime: 0.5
   _moveAction: {fileID: 1235414848}
   _getSkill: {fileID: 1235414845}
   _shotKajiki: {fileID: 1235414844}
