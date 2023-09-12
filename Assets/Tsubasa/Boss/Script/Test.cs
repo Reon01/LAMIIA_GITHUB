@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-	[SerializeField]
-	GameObject taget;
-
+	
+	
 
 	[SerializeField]
 	GameObject cubePrefab;
@@ -24,6 +23,9 @@ public class Test : MonoBehaviour
 	float speed;
 
 	Rigidbody rb;
+
+	GameObject taget;
+
 
 
 	int zakoNumber;      //雑魚の数
@@ -46,14 +48,19 @@ public class Test : MonoBehaviour
 		zakoNumber = 0;
 		maxNum = 0;
 
+		taget = GameObject.FindGameObjectWithTag("Player");
 
-		InvokeRepeating(nameof(InstantiateZako), 1f, 3f);
 	}
 
-	
+    private void Update()
+    {
+		InstantiateZako();
+    }
 
 
-	void InstantiateSmallCubeAtRandom()
+
+
+    void InstantiateSmallCubeAtRandom()
 	{
 		// オブジェクトを立方体内のランダムな位置にインスタンス化する
 		for (int i = 1; i <= batchNum; i++)
@@ -69,6 +76,9 @@ public class Test : MonoBehaviour
 		}
 	}
 
+	/// <summary>
+	/// 複数の雑魚がプレイヤーに向かってくる攻撃
+	/// </summary>
 	void InstantiateZako()
     {
 		while(zakoNumber <= batchNum)

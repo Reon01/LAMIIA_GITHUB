@@ -9,6 +9,11 @@ public class ChaseZako : MonoBehaviour
 
     Vector3 tagetPos;
 
+    float timer;
+
+    [SerializeField]
+    float chaseTime;
+
     [SerializeField]
     float speed;
 
@@ -16,15 +21,26 @@ public class ChaseZako : MonoBehaviour
     private void Start()
     {
         taget = GameObject.FindGameObjectWithTag("Player");
+
+        timer = 0;
     }
 
     private void Update()
     {
-        tagetPos.z = speed;
+        timer += Time.deltaTime;
 
-        transform.LookAt(taget.transform);
+        if(timer < chaseTime)
+        {
+            tagetPos.z = speed;
 
-        transform.Translate(tagetPos * Time.deltaTime);
+            transform.LookAt(taget.transform);
+
+            transform.Translate(tagetPos * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(transform.forward * Time.deltaTime * speed);
+        }
 
     }
 
