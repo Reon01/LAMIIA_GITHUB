@@ -108,13 +108,13 @@ public class PlayerControllerInput : MonoBehaviour
 
     public void UpMove()
     {
-        transform.Translate(0, jumpHeight, 0);
+        transform.Translate(0, jumpHeight * Time.deltaTime, 0);
     }
 
 
     public void DownMOve()
     {
-        transform.Translate(0, downHeight, 0);
+        transform.Translate(0, downHeight * Time.deltaTime, 0);
     }
 
 
