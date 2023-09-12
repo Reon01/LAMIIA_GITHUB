@@ -3801,6 +3801,7 @@ MonoBehaviour:
   - "\u300CTab\u30AD\u30FC\u3067\u30B9\u30AD\u30EB\u306E\u5909\u66F4\u3001\u5DE6\u30AF\u30EA\u30C3\u30AF\u3067\u4F7F\u7528\u3067\u304D\u307E\u3059\u3002\u300D"
   panel: {fileID: 1195792576}
   tip: {fileID: 0}
+  HP: {fileID: 0}
 --- !u!114 &435476790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4842,6 +4843,7 @@ MonoBehaviour:
   - "\u300C\u5DE6\u30AF\u30EA\u30C3\u30AF\u3067\u4F7F\u7528\u3067\u304D\u307E\u3059\u3002\u300D"
   panel: {fileID: 1126029218}
   tip: {fileID: 1836366132}
+  HP: {fileID: 0}
 --- !u!114 &505565671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8077,6 +8079,7 @@ MonoBehaviour:
   - "\u300C\u5DE6\u30AF\u30EA\u30C3\u30AF\u3067\u901A\u5E38\u653B\u6483\u304C\u3067\u304D\u307E\u3059\u3002\u300D"
   panel: {fileID: 1335132113}
   tip: {fileID: 2122648573}
+  HP: {fileID: 0}
 --- !u!114 &813626269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12304,8 +12307,8 @@ MonoBehaviour:
   rb: {fileID: 1235414837}
   avoidanceForce: 80
   speed: 5
-  jumpHeight: 0.3
-  downHeight: -0.3
+  jumpHeight: 5
+  downHeight: -5
   anim: {fileID: 1235414843}
 --- !u!1 &1239981956
 GameObject:
@@ -12633,6 +12636,7 @@ MonoBehaviour:
   - "\u300C\u6B21\u306B\u30AF\u30E9\u30B2\u3092\u9078\u629E\u3057\u3066\u304F\u3060\u3055\u3044\u3002\u300D"
   panel: {fileID: 2045171375}
   tip: {fileID: 1222959856}
+  HP: {fileID: 0}
 --- !u!114 &1267277644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14618,6 +14622,7 @@ MonoBehaviour:
   - "\u300C\u307E\u305F\u3001\u4F53\u529B\u309210\u56DE\u5FA9\u3059\u308B\u3053\u3068\u3082\u3067\u304D\u307E\u3059\u3002\u300D"
   panel: {fileID: 1797170049}
   tip: {fileID: 301754882}
+  HP: {fileID: 0}
 --- !u!114 &1472825381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17892,6 +17897,7 @@ MonoBehaviour:
   - "\u300C\u53F3\u306E\u6570\u5B57\u304C\u6240\u6301\u3057\u3066\u3044\u308B\u30B9\u30AD\u30EB\u306E\u6570\u306B\u306A\u308A\u307E\u3059\u3002\u300D"
   panel: {fileID: 1739258529}
   tip: {fileID: 679986018}
+  HP: {fileID: 0}
 --- !u!114 &1835027991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18439,6 +18445,7 @@ MonoBehaviour:
   - "\u300C\u929B\u306E\u653B\u6483\u304C\uFF12\u500D\u306B\u306A\u308A\u307E\u3059\u3002\u300D"
   panel: {fileID: 1130163880}
   tip: {fileID: 1151924051}
+  HP: {fileID: 0}
 --- !u!114 &1878054974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18781,6 +18788,7 @@ MonoBehaviour:
   - "\u300C\u753B\u9762\u4E0A\u306E\u6307\u793A\u901A\u308A\u306B\u64CD\u4F5C\u3057\u3066\u304F\u3060\u3055\u3044\u3002\u300D"
   panel: {fileID: 2088525782}
   tip: {fileID: 376093693}
+  HP: {fileID: 0}
 --- !u!1 &1909188538
 GameObject:
   m_ObjectHideFlags: 0
@@ -20331,6 +20339,7 @@ MonoBehaviour:
   - "\u300C\u6B21\u306F\u5B9F\u6226\u306B\u79FB\u308A\u307E\u3057\u3087\u3046\u3002\u300D"
   panel: {fileID: 119558101}
   tip: {fileID: 1782849367}
+  HP: {fileID: 0}
 --- !u!114 &2105230319
 MonoBehaviour:
   m_ObjectHideFlags: 0
