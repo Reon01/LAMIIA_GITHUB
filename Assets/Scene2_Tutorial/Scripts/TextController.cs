@@ -12,6 +12,7 @@ public class TextController : MonoBehaviour
 
     public GameObject panel;
     public GameObject tip;
+    public GameObject HP;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,8 @@ public class TextController : MonoBehaviour
                 Time.timeScale = 1;
                 panel.SetActive(true);
                 tip.SetActive(true);
+                HP.SetActive(true);
+
                 return;
             }
 
