@@ -20,9 +20,6 @@ public class EnemyHP : MonoBehaviour
     //EnemyKill
     private GameObject enemykill;
 
-    //はるまサウンド用変数
-    public static int damaged_Sound_E;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -40,9 +37,6 @@ public class EnemyHP : MonoBehaviour
             EnemyHitDamage.GetComponent<EnemyHitDamage>().EnemyDead();
             enemykill.GetComponent<EnemyKill>().getskill();
             Destroy(Enemy);
-
-            //サウンド用
-            damaged_Sound_E = 2;
         }
 
         //攻撃されたとき
@@ -62,7 +56,7 @@ public class EnemyHP : MonoBehaviour
                 HPBar.value = HP;
 
                 //サウンド用
-                damaged_Sound_E = 1;
+                SFXplayer.damaged_Sound_E = 1;
                 
                 damagedisplay10(); //１０ダメージのテキストを表示
             }
@@ -70,9 +64,9 @@ public class EnemyHP : MonoBehaviour
             {
                 HP = HP - 20;
                 HPBar.value = HP;
-                damaged_Sound_E = 1;
-
+                
                 //サウンド用
+                SFXplayer.damaged_Sound_E = 1;
                 SkillElectronic.EE_Sound = 2;
 
                 damagedisplay20();　//２０ダメージのテキストを表示
@@ -87,7 +81,8 @@ public class EnemyHP : MonoBehaviour
             damagedisplay50();　//５０ダメージのテキストを表示
 
             //サウンド用
-            damaged_Sound_E = 2;
+            SFXplayer.damaged_Sound_E = 1;
+            SFXplayer.Sf_Sound = 2;
         }
     }
 
