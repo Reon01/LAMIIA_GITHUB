@@ -15,27 +15,34 @@ public class EnemySound : MonoBehaviour
     [SerializeField]
     CriAtomCueReference cueDamaged;
 
+    [SerializeField]
+    CriAtomCueReference cuePpf_Hit;
+
     void Start(){}
 
     void Update(){
         CriAtomSourceForAsset enemy_Sound = GetComponent<CriAtomSourceForAsset>();
         enemy_Sound.use3dPositioning = true;
 
-        if (EnemyHP.damaged_Sound_E == 1){
+        if (SFXplayer.damaged_Sound_E == 1){
             ESPlay(cueDamaged, enemy_Sound);
-            EnemyHP.damaged_Sound_E = 0;
+            SFXplayer.damaged_Sound_E = 0;
         }
-        if (EnemyHP.damaged_Sound_E == 2){
+        if (SFXplayer.damaged_Sound_E == 2){
             ESPlay(cueDamaged, enemy_Sound);
-            EnemyHP.damaged_Sound_E = 0;
+            SFXplayer.damaged_Sound_E = 0;
         }
-        if(EnemyHP.damaged_Sound_E == 3){
+        if(SFXplayer.damaged_Sound_E == 3){
             ESPlay(cueSf_Hit, enemy_Sound);
-            EnemyHP.damaged_Sound_E = 0;
+            SFXplayer.damaged_Sound_E = 0;
         }
         if (EnemyKill.e_Defeat_Sound == true){
             ESPlay(cueE_Defeated, enemy_Sound);
             EnemyKill.e_Defeat_Sound = false;
+        }
+        if(SFXplayer.ppf_Sound == 3){
+            ESPlay(cuePpf_Hit, enemy_Sound);
+            SFXplayer.ppf_Sound = 0;
         }
     }
 

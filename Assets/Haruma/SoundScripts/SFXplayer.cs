@@ -5,8 +5,14 @@ using CriWare;
 
 public class SFXplayer : MonoBehaviour
 {
+    //カジキ用変数
+    public static int Sf_Sound;
     //ウナギ用変数
     public static bool isUnagi_act;
+    //ハリセンボン用変数
+    public static int ppf_Sound;
+    //ダメージ用変数
+    public static int damaged_Sound_E;
     //ラジオ用変数
     public static int radio_Sound;
     public static bool radio_Sound_obs;
@@ -99,6 +105,7 @@ public class SFXplayer : MonoBehaviour
             mori.Mori_Sound = false;
         }
         //カジキ
+        /*
         if (Kajiki.Kajiki_Sound == true || S3_Kajiki.Kajiki_Sound == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_Sf");
@@ -106,6 +113,7 @@ public class SFXplayer : MonoBehaviour
             Kajiki.Kajiki_Sound = false;
             S3_Kajiki.Kajiki_Sound = false;
         }
+        */
         //クラゲ
         if (Kurage.Kurage_Sound_s == true || FishSkillSystem.Kurage_Sound_s_2 == true)
         {
