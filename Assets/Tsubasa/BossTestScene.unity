@@ -302,7 +302,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 805565815}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -319,6 +320,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!4 &805565815 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5754973514312419272, guid: 804eb6fbbe255ce459d27c2bf3c6ecc6, type: 3}
+  m_PrefabInstance: {fileID: 2039286178}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &932022884
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 932022885}
   - component: {fileID: 932022886}
+  - component: {fileID: 932022887}
   m_Layer: 0
   m_Name: BossAtackPos
   m_TagString: Untagged
@@ -365,6 +372,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CoolTime: 1
   Speir: {fileID: 6825989121083321228, guid: 9cfea235cbe93c94c81b6e31134865f5, type: 3}
+--- !u!114 &932022887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932022884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4980ed2c6ed656146a7a8aef9bd0b24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoolTime: 0
+  Speir: {fileID: 6825989121083321228, guid: 9cfea235cbe93c94c81b6e31134865f5, type: 3}
+  chaseZako: {fileID: 6261930945504224390, guid: eb1089c3b9850c24f95afd6e05c424f6, type: 3}
 --- !u!1 &1063123776
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +571,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237337995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.4, y: 39.4, z: 0}
+  m_LocalPosition: {x: -17, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -557,73 +579,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1819576693059520859
+--- !u!1001 &2039286178
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6261930945504224390, guid: eb1089c3b9850c24f95afd6e05c424f6, type: 3}
-      propertyPath: m_Name
-      value: ChaseZako
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750062034001231420, guid: eb1089c3b9850c24f95afd6e05c424f6, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750062034001231420, guid: eb1089c3b9850c24f95afd6e05c424f6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -11.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750062034001231420, guid: eb1089c3b9850c24f95afd6e05c424f6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750062034001231420, guid: eb1089c3b9850c24f95afd6e05c424f6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.852
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750062034001231420, guid: eb1089c3b9850c24f95afd6e05c424f6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750062034001231420, guid: eb1089c3b9850c24f95afd6e05c424f6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750062034001231420, guid: eb1089c3b9850c24f95afd6e05c424f6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750062034001231420, guid: eb1089c3b9850c24f95afd6e05c424f6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750062034001231420, guid: eb1089c3b9850c24f95afd6e05c424f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750062034001231420, guid: eb1089c3b9850c24f95afd6e05c424f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6750062034001231420, guid: eb1089c3b9850c24f95afd6e05c424f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: eb1089c3b9850c24f95afd6e05c424f6, type: 3}
---- !u!1001 &5754973514453116462
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 672929191}
     m_Modifications:
     - target: {fileID: 5754973514312419272, guid: 804eb6fbbe255ce459d27c2bf3c6ecc6, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5754973514312419272, guid: 804eb6fbbe255ce459d27c2bf3c6ecc6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -667,7 +632,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5754973514312419279, guid: 804eb6fbbe255ce459d27c2bf3c6ecc6, type: 3}
       propertyPath: m_Name
-      value: ZakoAttackBox
+      value: 'ZakoAttackBox '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754973514312419279, guid: 804eb6fbbe255ce459d27c2bf3c6ecc6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 804eb6fbbe255ce459d27c2bf3c6ecc6, type: 3}
