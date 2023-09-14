@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EscSystem : MonoBehaviour
+public class EscSystemTute : MonoBehaviour
 {
     public GameObject canvas_esc;
     private GameObject cursourlocksystem;
     public GameObject canvas_option;
     public GameObject story;
-    
+    public GameObject story2;
+    public GameObject story3;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -50,10 +53,11 @@ public class EscSystem : MonoBehaviour
 
     public void GameContinue()
     {
-        if (story.activeInHierarchy == false)
+        if (story.activeInHierarchy == false&& story2.activeInHierarchy == false && story3.activeInHierarchy == false)
         {
             Time.timeScale = 1;
         }
+        
         cursourlocksystem.GetComponent<CursorLockSystem>().cursorlock();
         canvas_esc.SetActive(false);
 
