@@ -16,10 +16,10 @@ public class Enemy_Tutorial : MonoBehaviour
     void Start()
     {
         //«“G‚P‘Ì¢Š«
-        Instantiate(enemy, new Vector3(3f, 0f, 6f), Quaternion.Euler(0,180,0));
+        Instantiate(enemy, new Vector3(-47f, 0f, 6f), Quaternion.Euler(0,180,0));
         isspawn = true;
 
-        Instantiate(enemyF, new Vector3(-3f, 0f, 18f), Quaternion.Euler(0, 90, 0));
+        Instantiate(enemyF, new Vector3(-53f, 0f, 18f), Quaternion.Euler(0, 90, 0));
         isspawnF = true;
     }
 
@@ -46,13 +46,13 @@ public class Enemy_Tutorial : MonoBehaviour
 
     public void enemyspawn() //“G‚ğ1‘Ì¢Š«
     {
-        Instantiate(enemy, new Vector3(3f, 0f, 6f), Quaternion.Euler(0, 180, 0));
+        Instantiate(enemy, new Vector3(-47f, 0f, 6f), Quaternion.Euler(0, 180, 0));
         isspawn = true;
     }
 
     public void enemyspawnF() //“G‚ğ1‘Ì¢Š«
     {
-        Instantiate(enemyF, new Vector3(-3f, 0f, 6f), Quaternion.Euler(0, 180, 0));
+        Instantiate(enemyF, new Vector3(-53f, 0f, 1f), Quaternion.Euler(0, 90, 0));
         isspawnF = true;
     }
 }
