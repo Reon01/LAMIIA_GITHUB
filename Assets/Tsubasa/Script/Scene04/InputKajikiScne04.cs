@@ -28,15 +28,7 @@ public class InputKajikiScne04 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isSkill == true && enemykillsystem.GetComponent<EnemyKill>().a_Kajiki >= 1 && Time.timeScale == 1)
-        {
-            FishShot();
-            enemykillsystem.GetComponent<EnemyKill>().a_Kajiki -= 1; //スキルを１消費
-            spendskill = true;
-            Debug.Log("カジキ発射");
-            //はるまサウンド変数true
-            SFXplayer.Sf_Sound = 1;
-        }
+        
     }
 
     public void KajikiScene04()
