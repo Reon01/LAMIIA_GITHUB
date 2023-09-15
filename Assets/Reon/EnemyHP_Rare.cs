@@ -20,9 +20,6 @@ public class EnemyHP_Rare : MonoBehaviour
     //EnemyKill
     private GameObject enemykill;
 
-    //サウンド用
-    public static int damaged_Sound_RE;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -41,9 +38,6 @@ public class EnemyHP_Rare : MonoBehaviour
             enemykill.GetComponent<EnemyKill>().getskill();
             enemykill.GetComponent<EnemyKill>().getskill();
             Destroy(rareenemy);
-
-            //サウンド用
-            EnemyHP.damaged_Sound_E = 2;
         }
 
         //攻撃されたとき
@@ -63,7 +57,7 @@ public class EnemyHP_Rare : MonoBehaviour
                 HPBar.value = HP;
 
                 //サウンド用
-                EnemyHP.damaged_Sound_E = 1;
+                SFXplayer.damaged_Sound_E = 1;
 
                 damagedisplay10(); //１０ダメージのテキストを表示
             }
@@ -74,7 +68,7 @@ public class EnemyHP_Rare : MonoBehaviour
 
                 //サウンド用
                 SkillElectronic.EE_Sound = 2;
-                EnemyHP.damaged_Sound_E = 1;
+                SFXplayer.damaged_Sound_E = 1;
 
                 damagedisplay20();　//２０ダメージのテキストを表示
             }
@@ -88,7 +82,8 @@ public class EnemyHP_Rare : MonoBehaviour
             damagedisplay50();　//５０ダメージのテキストを表示
 
             //サウンド用
-            EnemyHP.damaged_Sound_E = 2;
+            SFXplayer.damaged_Sound_E = 1;
+            SFXplayer.Sf_Sound = 2;
         }
     }
 

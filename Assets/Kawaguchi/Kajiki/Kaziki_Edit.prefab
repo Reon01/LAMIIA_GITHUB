@@ -696,6 +696,8 @@ GameObject:
   - component: {fileID: 6813622872528475989}
   - component: {fileID: -2099776391356914255}
   - component: {fileID: -8458331596202596757}
+  - component: {fileID: 6880636917577430006}
+  - component: {fileID: -4695425983130974704}
   m_Layer: 0
   m_Name: Kaziki_Edit
   m_TagString: KajikiAttack
@@ -762,6 +764,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5126508b4e892c64e92ddec5afd09198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6880636917577430006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5931152984045283842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca71a2bf46637a4c920610476c5fdca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
+  cueSf_shoot:
+    acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
+    cueId: 15
+  cuePpf_shoot:
+    acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
+    cueId: 11
+--- !u!114 &-4695425983130974704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5931152984045283842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1406b3e082f8497eb73ee9f4c314365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playOnStart: 0
+  _regionOnStart: {fileID: 0}
+  _listenerOnStart: {fileID: 0}
+  _use3dPositioning: 1
+  _freezeOrientation: 0
+  _loop: 0
+  _volume: 1
+  _pitch: 0
+  _androidUseLowLatencyVoicePool: 0
+  need_to_player_update_all: 1
+  _use3dRandomization: 0
+  _randomPositionListMaxLength: 0
+  randomize3dConfig:
+    followsOriginalSource: 0
+    calculationType: 0
+    calculationParameters:
+    - 0
+    - 0
+    - 0
+  cue:
+    acbAsset: {fileID: 0}
+    cueId: 0
 --- !u!1 &6117123949884779305
 GameObject:
   m_ObjectHideFlags: 0

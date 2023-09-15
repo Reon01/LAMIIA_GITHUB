@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OptionAble : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,9 @@ public class OptionAble : MonoBehaviour
     }
     private void OnDisable()//アクティブじゃないとき
     {
-        Time.timeScale = 1;
+        
+            Time.timeScale = 1;
+        
+       
     }
 }
