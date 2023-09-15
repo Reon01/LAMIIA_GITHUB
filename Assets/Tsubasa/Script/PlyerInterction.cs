@@ -41,6 +41,9 @@ public class PlyerInterction : MonoBehaviour
     [Tooltip("スキルチェンジ")]
     public INputSkillChange _skillChange;
 
+    [Tooltip("スキルチェンジシーン４")]
+    public InputSkillChangeScene04 _skillChangeScene04;
+
     [Tooltip("モリ攻撃")]
     public InputMoriAttack _moriAttack;
 
@@ -119,6 +122,9 @@ public class PlyerInterction : MonoBehaviour
         //スキルチェンジ
         _input.actions["SkillChange"].started += OnSkillChange;
 
+        //スキルチェンジシーン04
+        _input.actions["SkillChange"].started += OnSkillChangeScene04;
+
         //カジキ発射
         _input.actions["Fire"].started += OnShotKajiki;
 
@@ -156,7 +162,10 @@ public class PlyerInterction : MonoBehaviour
         //スキルチェンジ
         _input.actions["SkillChange"].started -= OnSkillChange;
 
-        
+        //スキルチェンジシーン04
+        _input.actions["SkillChange"].started -= OnSkillChangeScene04;
+
+
         //クラゲシールド
         _input.actions["Fire"].started -= OnKurage;
 
@@ -232,6 +241,11 @@ public class PlyerInterction : MonoBehaviour
     private void OnSkillChange(InputAction.CallbackContext obj)
     {
         _skillChange.SkillChange();
+    }
+
+    private void OnSkillChangeScene04(InputAction.CallbackContext obj)
+    {
+        _skillChangeScene04.SkillChangeScene04();
     }
 
 

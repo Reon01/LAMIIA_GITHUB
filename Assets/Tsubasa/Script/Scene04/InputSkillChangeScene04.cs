@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class S3_SkillChange : MonoBehaviour
+public class InputSkillChangeScene04 : MonoBehaviour
 {
     public Button button_mori;
     public Button button_kajiki;
     public Button button_kurage;
     public Button button_unagi;
+
 
     private int count;
     private GameObject player;
@@ -30,44 +31,48 @@ public class S3_SkillChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab) && Time.timeScale == 1)
+        
+        if (count == 0)
+        {
+            mori.GetComponent<InputMoriAttack>().enabled = true;　//銛攻撃を有効化
+        }
+        if (count == 1)
+        {
+            kajikicolor();
+            mori.GetComponent<InputMoriAttack>().enabled = false;　//銛攻撃を無効化
+        }
+        if (count == 2)
+        {
+            kuragecolor();
+            mori.GetComponent<InputMoriAttack>().enabled = true; //銛攻撃を有効
+        }
+        if (count == 3)
+        {
+            unagicolor();
+            mori.GetComponent<InputMoriAttack>().enabled = true;　//銛攻撃を有効化
+            player.GetComponent<InputElectronicScene4>().enabled = true; //ウナギのスクリプトをオンにする
+        }
+        if (count == 4)
+        {
+            moricolor();
+            count = 0;
+            player.GetComponent<InputElectronicScene4>().enabled = false;　//ウナギのスクリプトをオフにする
+            player.GetComponent<InputElectronicScene4>().IsLightning = false;　//ウナギダメージ２倍をオフにする
+        }
+    }
+
+    public void SkillChangeScene04()
+    {
+        if (Time.timeScale == 1)
         {
             count += 1;
 
             //サウンド用
             SFXplayer.skillChange_Sound = true;
         }
-
-        if (count == 0)
-        {
-            mori.GetComponent<mori>().enabled = true;　//銛攻撃を有効化
-        }
-        if (count == 1)
-        {
-            kajikicolor();
-            mori.GetComponent<mori>().enabled = false;　//銛攻撃を無効化
-        }
-        if (count == 2)
-        {
-            kuragecolor();
-            mori.GetComponent<mori>().enabled = true; //銛攻撃を有効
-        }
-        if (count == 3)
-        {
-            unagicolor();
-            mori.GetComponent<mori>().enabled = true;　//銛攻撃を有効化
-            player.GetComponent<SkillElectronic_new>().enabled = true; //ウナギのスクリプトをオンにする
-        }
-        if (count == 4)
-        {
-            moricolor();
-            count = 0;
-            player.GetComponent<SkillElectronic_new>().enabled = false;　//ウナギのスクリプトをオフにする
-            player.GetComponent<SkillElectronic_new>().IsLightning = false;　//ウナギダメージ２倍をオフにする
-        }
     }
 
-    
+
     public void moricolor()
     {
         //サウンド用
@@ -79,13 +84,13 @@ public class S3_SkillChange : MonoBehaviour
         button_unagi.image.color = Color.white;
 
         //他のスキルをオフにする
-        player.GetComponent<S3_Kajiki>().isSkill = false;
+        player.GetComponent<InputKajikiScne04>().isSkill = false;
         //player.GetComponent<Kurage>().isSkill = false;
-        player.GetComponent<SkillElectronic_new>().isSkill = false;
+        player.GetComponent<InputElectronicScene4>().isSkill = false;
         //スクリプトごとオフにする
-        player.GetComponent<S3_Kajiki>().enabled = false;
+        player.GetComponent<InputKajikiScne04>().enabled = false;
         //player.GetComponent<Kurage>().enabled = false;
-        player.GetComponent<SkillElectronic_new>().enabled = false;
+        player.GetComponent<InputElectronicScene4>().enabled = false;
     }
 
     public void kajikicolor()
@@ -95,16 +100,16 @@ public class S3_SkillChange : MonoBehaviour
 
         //スキル選択
         //PlayerオブジェクトについてるKajikiスクリプトからisSkillをtrueに変えてスキルを変更する
-        player.GetComponent<S3_Kajiki>().isSkill = true;
+        player.GetComponent<InputKajikiScne04>().isSkill = true;
         //スクリプトをオンにする
-        player.GetComponent<S3_Kajiki>().enabled = true;
+        player.GetComponent<InputKajikiScne04>().enabled = true;
 
 
         //他のスキルをオフにする
-        fishskillsystem.GetComponent<FishSkillSystem>().iskurage = false;
-        player.GetComponent<SkillElectronic_new>().isSkill = false;
+        fishskillsystem.GetComponent<InputKurageScene04>().iskurage = false;
+        player.GetComponent<InputElectronicScene4>().isSkill = false;
         //スクリプトごとオフにする
-        player.GetComponent<SkillElectronic_new>().enabled = false;
+        player.GetComponent<InputElectronicScene4>().enabled = false;
     }
     public void kuragecolor()
     {
@@ -112,14 +117,14 @@ public class S3_SkillChange : MonoBehaviour
         button_kajiki.image.color = Color.white;
 
         //PlayerオブジェクトについてるKurageスクリプトからisSkillをtrueに変えてスキルを変更する
-        fishskillsystem.GetComponent<FishSkillSystem>().iskurage = true;
+        fishskillsystem.GetComponent<InputKurageScene04>().iskurage = true;
 
         //他のスキルをオフにする
-        player.GetComponent<S3_Kajiki>().isSkill = false;
-        player.GetComponent<SkillElectronic_new>().isSkill = false;
+        player.GetComponent<InputKajikiScne04>().isSkill = false;
+        player.GetComponent<InputElectronicScene4>().isSkill = false;
         //スクリプトごとオフにする
-        player.GetComponent<S3_Kajiki>().enabled = false;
-        player.GetComponent<SkillElectronic_new>().enabled = false;
+        player.GetComponent<InputKajikiScne04>().enabled = false;
+        player.GetComponent<InputElectronicScene4>().enabled = false;
     }
     public void unagicolor()
     {
@@ -135,13 +140,13 @@ public class S3_SkillChange : MonoBehaviour
         button_unagi.image.color = Color.yellow;
         button_kurage.image.color = Color.white;
 
-        player.GetComponent<SkillElectronic_new>().enabled = true;　//スクリプトをオンにする
-        player.GetComponent<SkillElectronic_new>().isunagi = true;　//左のスクリプトのisunagiをtrueにする
+        player.GetComponent<InputElectronicScene4>().enabled = true;　//スクリプトをオンにする
+        player.GetComponent<InputElectronicScene4>().isunagi = true;　//左のスクリプトのisunagiをtrueにする
 
         //他のスキルをオフにする
-        player.GetComponent<S3_Kajiki>().isSkill = false;
-        fishskillsystem.GetComponent<FishSkillSystem>().iskurage = false;
+        player.GetComponent<InputKajikiScne04>().isSkill = false;
+        fishskillsystem.GetComponent<InputKurageScene04>().iskurage = false;
         //スクリプトごとオフにする
-        player.GetComponent<S3_Kajiki>().enabled = false;
+        player.GetComponent<InputKajikiScne04>().enabled = false;
     }
 }
