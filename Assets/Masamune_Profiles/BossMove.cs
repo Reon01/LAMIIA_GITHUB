@@ -17,6 +17,7 @@ public class BossMove : MonoBehaviour
     //public float TurnSpan = 10f;
     //private float currentTime = 0f;
     public float speed;
+    private int a;
 
     // Start is called before the first frame update
     void Start()
@@ -30,44 +31,78 @@ public class BossMove : MonoBehaviour
         //ëùÇ‚Ç∑áA
         if (other.CompareTag("WhaleGO1"))
         {
-            transform.LookAt(WhaleGO2.transform);
+            a = 1;
+            
             Debug.Log("ä—í ÇP");
         }
-        if (other.CompareTag("WhaleGO2"))
+        if (a==1&&other.CompareTag("WhaleGO2"))
         {
-            transform.LookAt(WhaleGO3.transform);
+            a = 2;
+            
 
         }
-        if (other.CompareTag("WhaleGO3"))
+        if (a == 2 && other.CompareTag("WhaleGO3"))
         {
-            transform.LookAt(WhaleGO4.transform);
+            a = 3;
+            
 
         }
-        if (other.CompareTag("WhaleGO4"))
+        if (a == 3 && other.CompareTag("WhaleGO4"))
         {
-            transform.LookAt(WhaleGO5.transform);
+            a = 4;
+            
 
         }
-        if (other.CompareTag("WhaleGO5"))
+        if (a == 4 && other.CompareTag("WhaleGO5"))
         {
-            transform.LookAt(WhaleGO6.transform);
+            a = 5;
+           
 
         }
-        if (other.CompareTag("WhaleGO6"))
+        if (a == 5 && other.CompareTag("WhaleGO6"))
         {
-            transform.LookAt(WhaleGO7.transform);
+            a = 6;
+           
 
         }
-        if (other.CompareTag("WhaleGO7"))
+        if (a == 6 && other.CompareTag("WhaleGO7"))
         {
-            transform.LookAt(WhaleGO1.transform);
+            a = 7;
+            
 
         }
     }
     // Update is called once per frame
     void Update()
     {
-
+        if(a==1)
+        {
+            transform.LookAt(WhaleGO2.transform);
+        }
+        if (a == 2)
+        {
+            transform.LookAt(WhaleGO3.transform);
+        }
+        if (a == 3)
+        {
+            transform.LookAt(WhaleGO4.transform);
+        }
+        if (a == 4)
+        {
+            transform.LookAt(WhaleGO5.transform);
+        }
+        if (a == 5)
+        {
+            transform.LookAt(WhaleGO6.transform);
+        }
+        if (a == 6)
+        {
+            transform.LookAt(WhaleGO7.transform);
+        }
+        if (a == 7)
+        {
+            transform.LookAt(WhaleGO1.transform);
+        }
 
         transform.Translate(0, 0, 0 + speed * Time.deltaTime);
 
