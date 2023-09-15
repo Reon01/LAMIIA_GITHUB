@@ -15,7 +15,7 @@ public class Enemy_Tutorial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //«“G‚P‘Ì¢Š«
+        //â†“æ•µï¼‘ä½“å¬å–š
         Instantiate(enemy, new Vector3(-47f, 0f, 6f), Quaternion.Euler(0,180,0));
         isspawn = true;
 
@@ -26,33 +26,33 @@ public class Enemy_Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //«‚àí‚ÉEnemyƒ^ƒO‚ğŒŸ’m
+        //â†“ã‚‚å¸¸ã«Enemyã‚¿ã‚°ã‚’æ¤œçŸ¥
         tagObjects = GameObject.FindGameObjectsWithTag("Enemy");
         tagObjectsF = GameObject.FindGameObjectsWithTag("EnemyF");
 
-        //«‚à‚µEnemyƒ^ƒO‚ª0‚¾‚Á‚½ê‡
+        //â†“ã‚‚ã—Enemyã‚¿ã‚°ãŒ0ã ã£ãŸå ´åˆ
         if (tagObjects.Length == 0 && isspawn == true)
         {
-            Invoke(nameof(enemyspawn),2f); //2fŒã‚Éenemyspawn()‚ğÀs
+            Invoke(nameof(enemyspawn),2f); //2få¾Œã«enemyspawn()ã‚’å®Ÿè¡Œ
             isspawn = false;
         }
 
         if (tagObjectsF.Length == 0 && isspawnF == true)
         {
-            Invoke(nameof(enemyspawnF), 2f); //2fŒã‚Éenemyspawn()‚ğÀs
+            Invoke(nameof(enemyspawnF), 2f); //2få¾Œã«enemyspawn()ã‚’å®Ÿè¡Œ
             isspawnF = false;
         }
     }
 
-    public void enemyspawn() //“G‚ğ1‘Ì¢Š«
+    public void enemyspawn() //æ•µã‚’1ä½“å¬å–š
     {
         Instantiate(enemy, new Vector3(-47f, 0f, 6f), Quaternion.Euler(0, 180, 0));
         isspawn = true;
     }
 
-    public void enemyspawnF() //“G‚ğ1‘Ì¢Š«
+    public void enemyspawnF() //æ•µã‚’1ä½“å¬å–š
     {
-        Instantiate(enemyF, new Vector3(-53f, 0f, 1f), Quaternion.Euler(0, 90, 0));
+        Instantiate(enemyF, new Vector3(-53f, 0f, 6f), Quaternion.Euler(0, 180, 0));
         isspawnF = true;
     }
 }
