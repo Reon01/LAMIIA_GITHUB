@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8336,6 +8336,7 @@ MonoBehaviour:
   - "\u300C\u30B9\u30AD\u30EB\u3092\u99C6\u4F7F\u3057\u3066\u8A0E\u4F10\u3057\u3066\u304F\u3060\u3055\u3044\u3002\u300D"
   panel: {fileID: 1203109059}
   tip: {fileID: 295660311}
+  HP: {fileID: 0}
 --- !u!114 &435476790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11423,6 +11424,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas_esc: {fileID: 638297762}
   canvas_option: {fileID: 1980741622}
+  story: {fileID: 0}
+  story2: {fileID: 0}
+  story3: {fileID: 0}
 --- !u!4 &700338658
 Transform:
   m_ObjectHideFlags: 0
@@ -12610,6 +12614,7 @@ MonoBehaviour:
   - "\u300C\u30DC\u30B9\u6226\u306B\u5099\u3048\u3066\u30B9\u30AD\u30EB\u3092\u96C6\u3081\u3066\u304F\u3060\u3055\u3044\u3002\u300D"
   panel: {fileID: 1235882292}
   tip: {fileID: 150148662}
+  HP: {fileID: 0}
 --- !u!114 &813626269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17057,9 +17062,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1085553717}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 4
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -26643,6 +26648,7 @@ MonoBehaviour:
   - "\u300C\u30E2\u30EA\u3067\u653B\u6483\u3057\u3066\u5012\u3057\u307E\u3057\u3087\u3046\u3002\u300D"
   panel: {fileID: 753634225}
   tip: {fileID: 295660311}
+  HP: {fileID: 0}
 --- !u!1 &1904317530
 GameObject:
   m_ObjectHideFlags: 0

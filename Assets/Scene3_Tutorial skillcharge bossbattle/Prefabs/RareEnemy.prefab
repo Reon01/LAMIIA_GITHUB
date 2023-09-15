@@ -11215,7 +11215,7 @@ MonoBehaviour:
     cueId: 32
   cueSf_Hit:
     acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
-    cueId: 3
+    cueId: 39
   cueDamaged:
     acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
     cueId: 3

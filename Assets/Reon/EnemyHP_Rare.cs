@@ -82,8 +82,7 @@ public class EnemyHP_Rare : MonoBehaviour
             damagedisplay50();　//５０ダメージのテキストを表示
 
             //サウンド用
-            SFXplayer.damaged_Sound_E = 1;
-            SFXplayer.Sf_Sound = 2;
+            SFXplayer.damaged_Sound_E = 3;
         }
     }
 

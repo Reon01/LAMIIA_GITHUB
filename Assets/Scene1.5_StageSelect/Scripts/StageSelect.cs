@@ -44,7 +44,7 @@ public class StageSelect : MonoBehaviour
     IEnumerator Tutorial()
     {
         GameStart.menu_Sound = 4;
-        async = SceneManager.LoadSceneAsync("Scene2_Tutorial"); // シーンの読み込みをする
+        async = SceneManager.LoadSceneAsync("Scene2_Tutorial_old"); // シーンの読み込みをする
 
         //　読み込みが終わるまで進捗状況をスライダーの値に反映させる
         while (!async.isDone)
