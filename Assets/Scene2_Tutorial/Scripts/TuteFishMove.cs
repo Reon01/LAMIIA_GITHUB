@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TuteFishMove : MonoBehaviour
 {
-    public GameObject circlingtarget;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +14,6 @@ public class TuteFishMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(/*周回の中心*/circlingtarget.transform.position, -Vector3.up, -10 * Time.deltaTime);
+        transform.RotateAround(/*周回の中心(動かないエネミーの位置を変えたときここも変える)*/new Vector3(-47f, 0f, 6f), Vector3.up, 10 * Time.deltaTime);
     }
 }
