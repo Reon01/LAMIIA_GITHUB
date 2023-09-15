@@ -14,6 +14,6 @@ public class TuteFishMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(/*ü‰ñ‚Ì’†S*/circlingtarget.transform.position, Vector3.up, -10 * Time.deltaTime);
+        transform.RotateAround(/*ü‰ñ‚Ì’†S*/circlingtarget.transform.position, -Vector3.up, -10 * Time.deltaTime);
     }
 }
