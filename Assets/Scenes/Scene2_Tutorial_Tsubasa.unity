@@ -4022,6 +4022,7 @@ MonoBehaviour:
   - "\u300C\u89E3\u653E\u3057\u305F\u9B5A\u306F\u80FD\u529B\u3067\u624B\u52A9\u3051\u3057\u3066\u304F\u308C\u307E\u3059\u3002\u300D"
   panel: {fileID: 1195792576}
   tip: {fileID: 863535985}
+  HP: {fileID: 0}
 --- !u!114 &435476790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5063,6 +5064,7 @@ MonoBehaviour:
   - "\u300C\u5DE6\u30AF\u30EA\u30C3\u30AF\u3067\u4F7F\u7528\u3067\u304D\u307E\u3059\u3002\u300D"
   panel: {fileID: 1126029218}
   tip: {fileID: 1836366132}
+  HP: {fileID: 0}
 --- !u!114 &505565671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5357,6 +5359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lightning: {fileID: 198142545}
+  biglightning: {fileID: 0}
   IsLightning: 0
   isSkill: 0
   iscount: 0
@@ -5442,10 +5445,7 @@ MonoBehaviour:
   canvas_restart: {fileID: 0}
   hitdamege: {fileID: 0}
   redcooltime: 0.5
-  ishitboss: 0
-  bosshitcount: 0
-  canvas_bosshit: {fileID: 0}
-  slider_enemyhit: {fileID: 0}
+  canvas_heal: {fileID: 0}
 --- !u!114 &507153831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13446,6 +13446,7 @@ MonoBehaviour:
   - "\u300C\u5DE6\u30AF\u30EA\u30C3\u30AF\u3067\u901A\u5E38\u653B\u6483\u304C\u3067\u304D\u307E\u3059\u3002\u300D"
   panel: {fileID: 1335132113}
   tip: {fileID: 2122648573}
+  HP: {fileID: 0}
 --- !u!114 &813626269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17694,10 +17695,7 @@ MonoBehaviour:
   canvas_restart: {fileID: 0}
   hitdamege: {fileID: 0}
   redcooltime: 0.5
-  ishitboss: 0
-  bosshitcount: 0
-  canvas_bosshit: {fileID: 0}
-  slider_enemyhit: {fileID: 0}
+  canvas_heal: {fileID: 0}
 --- !u!95 &1235414843
 Animator:
   serializedVersion: 4
@@ -18244,6 +18242,7 @@ MonoBehaviour:
   - "\u300C\u6B21\u306B\u30AF\u30E9\u30B2\u3092\u9078\u629E\u3057\u3066\u304F\u3060\u3055\u3044\u3002\u300D"
   panel: {fileID: 2045171375}
   tip: {fileID: 1222959856}
+  HP: {fileID: 0}
 --- !u!114 &1267277644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19212,7 +19211,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309036971}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df1aa710d975a6d408efb3cf084383d7, type: 3}
   m_Name: 
@@ -19250,6 +19249,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.33, y: 1, z: 3.92}
   m_Center: {x: 0, y: 0, z: 1.3}
+--- !u!114 &1309036977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309036971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a9a6fd0008ca584982ea2a445d2988b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1324372290
 GameObject:
   m_ObjectHideFlags: 0
@@ -25034,6 +25045,7 @@ MonoBehaviour:
   - "\u300C\u307E\u305F\u3001\u4F53\u529B\u309210\u56DE\u5FA9\u3059\u308B\u3053\u3068\u3082\u3067\u304D\u307E\u3059\u3002\u300D"
   panel: {fileID: 1797170049}
   tip: {fileID: 301754882}
+  HP: {fileID: 0}
 --- !u!114 &1472825381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25160,12 +25172,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb308c7626bbe54291cd1a539aa6bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CoolTime: 0
   _moveAction: {fileID: 1235414848}
   _getSkill: {fileID: 1235414844}
   _shotKajiki: {fileID: 1235414847}
   _kurage: {fileID: 1235414846}
   _unagi: {fileID: 1235414845}
   _skillChange: {fileID: 193238714}
+  _moriAttack: {fileID: 1309036977}
 --- !u!114 &1494380358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26154,6 +26168,9 @@ MonoBehaviour:
   enemy: {fileID: 669677707160422561, guid: e6d02728e110428438075c0212d727d2, type: 3}
   isspawn: 0
   tagObjects: []
+  enemyF: {fileID: 0}
+  isspawnF: 0
+  tagObjectsF: []
 --- !u!1 &1611232034
 GameObject:
   m_ObjectHideFlags: 0
@@ -26550,6 +26567,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas_esc: {fileID: 1298944620}
   canvas_option: {fileID: 693830150}
+  story: {fileID: 0}
+  story2: {fileID: 0}
+  story3: {fileID: 0}
 --- !u!4 &1686520312
 Transform:
   m_ObjectHideFlags: 0
@@ -28512,6 +28532,7 @@ MonoBehaviour:
   - "\u300C\u53F3\u306E\u6570\u5B57\u304C\u6240\u6301\u3057\u3066\u3044\u308B\u30B9\u30AD\u30EB\u306E\u6570\u306B\u306A\u308A\u307E\u3059\u3002\u300D"
   panel: {fileID: 1739258529}
   tip: {fileID: 679986018}
+  HP: {fileID: 0}
 --- !u!114 &1835027991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29059,6 +29080,7 @@ MonoBehaviour:
   - "\u300C\u929B\u306E\u653B\u6483\u304C\uFF12\u500D\u306B\u306A\u308A\u307E\u3059\u3002\u300D"
   panel: {fileID: 1130163880}
   tip: {fileID: 1151924051}
+  HP: {fileID: 0}
 --- !u!114 &1878054974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29401,6 +29423,7 @@ MonoBehaviour:
   - "\u300C\u753B\u9762\u4E0A\u306E\u6307\u793A\u901A\u308A\u306B\u64CD\u4F5C\u3057\u3066\u304F\u3060\u3055\u3044\u3002\u300D"
   panel: {fileID: 2088525782}
   tip: {fileID: 376093693}
+  HP: {fileID: 0}
 --- !u!1 &1909188538
 GameObject:
   m_ObjectHideFlags: 0
@@ -31153,6 +31176,7 @@ MonoBehaviour:
   - "\u300C\u6B21\u306F\u5B9F\u6226\u306B\u79FB\u308A\u307E\u3057\u3087\u3046\u3002\u300D"
   panel: {fileID: 119558101}
   tip: {fileID: 1782849367}
+  HP: {fileID: 0}
 --- !u!114 &2105230319
 MonoBehaviour:
   m_ObjectHideFlags: 0
