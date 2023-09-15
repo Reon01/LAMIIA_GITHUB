@@ -23,11 +23,20 @@ public class PlyerInterction : MonoBehaviour
     [Tooltip("カジキ発射スクリプト")]
     public InputKajiki _shotKajiki;
 
+    [Tooltip("カジキ発射スクリプトシーン04")]
+    public InputKajikiScne04 _shotKajikiScene04;
+
     [Tooltip("クラゲシールド！スクリプト")]
     public InputKurage _kurage;
 
+    [Tooltip("クラゲシールドシーン4")]
+    public InputKurageScene04 _kurageScene04;
+
     [Tooltip("ウナギスクリプト")]
     public InputSkillElectronic _unagi;
+
+    [Tooltip("シーン4ウナギスクリプト")]
+    public InputElectronicScene4 _unagiScene4;
 
     [Tooltip("スキルチェンジ")]
     public INputSkillChange _skillChange;
@@ -113,11 +122,20 @@ public class PlyerInterction : MonoBehaviour
         //カジキ発射
         _input.actions["Fire"].started += OnShotKajiki;
 
+        //カジキ発射シーン04
+        _input.actions["Fire"].started += OnShotKajikiScene04;
+
         //クラゲシールド
         _input.actions["Fire"].started += OnKurage;
 
+        //クラゲシールドシーン4
+        _input.actions["Fire"].started += OnKurageScene04;
+
         //電気ウナギ
         _input.actions["Fire"].started += OnErectronic;
+
+        //電気ウナギシーン4
+        _input.actions["Fire"].started += OnEretronicSecene4;
 
 
     }
@@ -142,12 +160,21 @@ public class PlyerInterction : MonoBehaviour
         //クラゲシールド
         _input.actions["Fire"].started -= OnKurage;
 
+        //クラゲシールドシーン4
+        _input.actions["Fire"].started -= OnKurageScene04;
+
         //カジキ発射
         _input.actions["Fire"].started -= OnShotKajiki;
+
+        //カジキ発射シーン04
+        _input.actions["Fire"].started -= OnShotKajikiScene04;
 
 
         //電気ウナギ
         _input.actions["Fire"].started -= OnErectronic;
+
+        //電気ウナギシーン4
+        _input.actions["Fire"].started -= OnEretronicSecene4;
 
 
     }
@@ -220,6 +247,11 @@ public class PlyerInterction : MonoBehaviour
         Debug.Log(Kajiki_Sound);
     }
 
+    private void OnShotKajikiScene04(InputAction.CallbackContext obj)
+    {
+        _shotKajikiScene04.KajikiScene04();
+    }
+
     /*----------------------------------------------　クラゲシールド ------------------------------------------------------*/
 
     private void OnKurage(InputAction.CallbackContext obj)
@@ -227,11 +259,21 @@ public class PlyerInterction : MonoBehaviour
         _kurage.SkillKurage();
     }
 
+    private void OnKurageScene04(InputAction.CallbackContext obj)
+    {
+        _kurageScene04.KurageScene04();
+    }
+
     /*----------------------------------------------　電気ウナギ ------------------------------------------------------*/
 
     private void OnErectronic(InputAction.CallbackContext obj)
     {
         _unagi.Electronic();
+    }
+    
+    private void OnEretronicSecene4(InputAction.CallbackContext obj)
+    {
+        _unagiScene4.ElectronicScene4();
     }
 
 
