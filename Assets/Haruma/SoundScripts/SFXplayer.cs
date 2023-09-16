@@ -7,8 +7,15 @@ public class SFXplayer : MonoBehaviour
 {
     //カジキ用変数
     public static int Sf_Sound;
+    public static bool c_Sf_S;
+    public static bool isSf_act;
+    //クラゲ用
+    public static bool isJf_act;
+    public static bool c_Jf_S;
     //ウナギ用変数
     public static bool isUnagi_act;
+    public static bool c_Unagi_S = false;
+
     //ハリセンボン用変数
     public static int ppf_Sound;
     //ダメージ用変数
@@ -97,6 +104,25 @@ public class SFXplayer : MonoBehaviour
             playerController.Play();
             skillChange_Sound = false;
         }
+        //スキルの空撃ち
+        if(Input.GetMouseButtonDown(0)){
+            if(isUnagi_act == true && c_Unagi_S == false){
+                playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+                playerController.SetCueName("skill_noAmmo");
+                playerController.Play();
+            }
+            if(isSf_act == true && c_Sf_S == false){
+                playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+                playerController.SetCueName("skill_noAmmo");
+                playerController.Play();
+            }
+            if(isJf_act == true && c_Jf_S == false){
+                playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+                playerController.SetCueName("skill_noAmmo");
+                playerController.Play();
+            }
+        }
+
         //銛
         if (mori.Mori_Sound == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
@@ -127,7 +153,7 @@ public class SFXplayer : MonoBehaviour
             FishSkillSystem.Kurage_Sound_e_2 = false;
         }
         //電気ウナギ
-        if (SkillElectronic_new.c_Unagi_S == true && isUnagi_act == true && SkillElectronic.EE_Sound == 1)
+        if (c_Unagi_S == true && isUnagi_act == true && SkillElectronic.EE_Sound == 1)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_EE");
@@ -141,7 +167,7 @@ public class SFXplayer : MonoBehaviour
         }
         if (SkillElectronic.EE_Sound == 4)
         {
-            if (SkillElectronic_new.c_Unagi_S == false || isUnagi_act == false)
+            if (c_Unagi_S == false || isUnagi_act == false)
             {
                 playerController.EEStop();
                 SkillElectronic.EE_Sound = 0;

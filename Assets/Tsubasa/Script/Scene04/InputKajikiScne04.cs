@@ -28,7 +28,13 @@ public class InputKajikiScne04 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //サウンド用
+        if(enemykillsystem.GetComponent<EnemyKill>().a_Kajiki >= 1){
+            SFXplayer.c_Sf_S = true;
+        }
+        else{
+            SFXplayer.c_Sf_S = false;
+        }
     }
 
     public void KajikiScene04()

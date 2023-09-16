@@ -95,6 +95,9 @@ public class InputSkillChangeScene04 : MonoBehaviour
 
     public void kajikicolor()
     {
+        //サウンド用
+        SFXplayer.isSf_act = true;
+
         button_kajiki.image.color = Color.yellow;
         button_mori.image.color = Color.white;
 
@@ -113,6 +116,10 @@ public class InputSkillChangeScene04 : MonoBehaviour
     }
     public void kuragecolor()
     {
+        //サウンド用
+        SFXplayer.isSf_act = false;
+        SFXplayer.isJf_act = true;
+        
         button_kurage.image.color = Color.yellow;
         button_kajiki.image.color = Color.white;
 
@@ -129,6 +136,7 @@ public class InputSkillChangeScene04 : MonoBehaviour
     public void unagicolor()
     {
         //サウンド用
+        SFXplayer.isJf_act = false;
         SFXplayer.isUnagi_act = true;
         if (SkillElectronic.EE_Sound == 0)
         {

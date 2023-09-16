@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15317,7 +15317,7 @@ MonoBehaviour:
     cueId: 32
   cueSf_Hit:
     acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
-    cueId: 3
+    cueId: 39
   cueDamaged:
     acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
     cueId: 3
