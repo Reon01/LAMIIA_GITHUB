@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4602,7 +4602,7 @@ MonoBehaviour:
   - "\u300C\u30A6\u30CA\u30AE\u306F\u96FB\u6C17\u3067\u929B\u306E\u653B\u6483\u529B\u3092\u9AD8\u3081\u307E\u3059\u3002\u300D"
   - "\u300C\u30AF\u30E9\u30B2\u306F\u6575\u306E\u653B\u6483\u30921\u56DE\u9632\u3044\u3067\u304F\u308C\u307E\u3059\u3002\u300D"
   - "\u300C\u305D\u308C\u3067\u306F\u30B9\u30AD\u30EB\u3092\u8A66\u3057\u3066\u307F\u307E\u3057\u3087\u3046\u3002\u300D"
-  - "\u300CTab\u30AD\u30FC\u3067\u30B9\u30AD\u30EB\u5909\u66F4\u3001\u5DE6\u30AF\u30EA\u30C3\u30AF\u3067\u4F7F\u7528\u3057\u307E\u3059\u3002\u300D"
+  - "\u300CL1\u3067\u30B9\u30AD\u30EB\u5909\u66F4\u3001\u3007\u30DC\u30BF\u30F3\u3067\u4F7F\u7528\u3057\u307E\u3059\u3002\u300D"
   panel: {fileID: 1195792576}
   tip: {fileID: 0}
   HP: {fileID: 0}
@@ -4719,11 +4719,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLabel: {fileID: 1638515122}
-  charaName: wuhathai
+  charaName: Communication device
   word:
-  - "\u300CEnglish\u300D"
-  - "\u300CLOL\u300D"
-  - "\u300Cwa\u300D"
+  - "\u300CNext, let's talk about the abilities of fish.\u300D"
+  - "\u300CThe fish you get will help you with their abilities.\u300D"
+  - "\u300CThe marlin flies straight ahead and attacks the enemy.\u300D"
+  - "\u300CThe eel uses electricity to increase the attack power of the harpoon.\u300D"
+  - "\u300CThe jellyfish will block one enemy attack.\u300D"
+  - "\u300CLet's use these skills.\u300D"
+  - "\u300CChange skills with L1 and use with the \u25CB button.\u300D"
   panel: {fileID: 1195792576}
   tip: {fileID: 0}
   HP: {fileID: 0}
@@ -9146,7 +9150,7 @@ MonoBehaviour:
   charaName: "\u901A\u4FE1"
   word:
   - "\u300C\u6B21\u306F\u653B\u6483\u306B\u3064\u3044\u3066\u3067\u3059\u3002\u300D"
-  - "\u300C\u5DE6\u30AF\u30EA\u30C3\u30AF\u3067\u901A\u5E38\u653B\u6483\u304C\u3067\u304D\u307E\u3059\u3002\u300D"
+  - "\u300C\u3007\u30DC\u30BF\u30F3\u3067\u901A\u5E38\u653B\u6483\u304C\u3067\u304D\u307E\u3059\u3002\u300D"
   panel: {fileID: 1335132113}
   tip: {fileID: 2122648573}
   HP: {fileID: 0}
@@ -9263,10 +9267,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLabel: {fileID: 2054348749}
-  charaName: nfjisoagoa
+  charaName: Communication device
   word:
-  - "\u300CSecond\u300D"
-  - "\u300CNice\u300D"
+  - "\u300CNext is the attack.\u300D"
+  - "\u300CYou can perform normal attacks with the \u25CB button.\u300D"
   panel: {fileID: 1335132113}
   tip: {fileID: 2122648573}
   HP: {fileID: 0}
@@ -9484,6 +9488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CoolTime: 0
+  attackCoolTime: 0
   _moveAction: {fileID: 1235414848}
   _getSkill: {fileID: 1235414845}
   _shotKajiki: {fileID: 1235414844}
@@ -9493,6 +9498,7 @@ MonoBehaviour:
   _unagi: {fileID: 1235414846}
   _unagiScene4: {fileID: 0}
   _skillChange: {fileID: 193238714}
+  _skillChangeScene04: {fileID: 0}
   _moriAttack: {fileID: 0}
 --- !u!114 &845830077
 MonoBehaviour:
@@ -14449,6 +14455,8 @@ MonoBehaviour:
   jumpHeight: 4
   downHeight: -4
   anim: {fileID: 1235414843}
+  AttackType: 0
+  AttackCount: 0
 --- !u!1 &1239981956
 GameObject:
   m_ObjectHideFlags: 0
@@ -22100,11 +22108,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textLabel: {fileID: 1197338433}
-  charaName: tguai
+  charaName: Communication device
   word:
-  - "\u300CHello\u300D"
-  - "\u300CThanks\u300D"
-  - "\u300CBye\u300D"
+  - "\u300C...Can you hear me?\u300D"
+  - "\u300CI will support you from now on.\u300D"
+  - "\u300CPlease get used to the operation first.\u300D"
+  - "\u300CPlease follow the instructions on the screen.\u300D"
   panel: {fileID: 2088525782}
   tip: {fileID: 376093693}
   HP: {fileID: 0}
