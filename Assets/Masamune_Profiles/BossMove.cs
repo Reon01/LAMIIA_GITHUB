@@ -30,8 +30,8 @@ public class BossMove : MonoBehaviour
     {
         //お試しWhaleGO数とa=数-1がセット　１のときは１３
         //フィールド上周回
-        transform.LookAt(WhaleGO7.transform);
-        a = 6;
+        transform.LookAt(WhaleGO1.transform);
+        a = 13;
     }
 
     public void OnTriggerEnter(Collider other)
