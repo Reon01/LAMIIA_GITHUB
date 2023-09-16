@@ -27,6 +27,14 @@ public class InputKurageScene04 : MonoBehaviour
         {
             kuragesield.SetActive(false);
         }
+
+        //サウンド用
+        if(enemykill.GetComponent<EnemyKill>().a_Kurage >= 1){
+            SFXplayer.c_Jf_S = true;
+        }
+        else{
+            SFXplayer.c_Jf_S = false;
+        }
     }
 
     public void KurageScene04()

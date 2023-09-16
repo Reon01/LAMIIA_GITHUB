@@ -17,9 +17,6 @@ public class InputElectronicScene4 : MonoBehaviour
     private GameObject player;
     private GameObject unagitimer;
 
-    //サウンド用
-    public static bool c_Unagi_S = false;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -56,11 +53,11 @@ public class InputElectronicScene4 : MonoBehaviour
 
         if (enemykillsystem.GetComponent<EnemyKill>().a_Unagi >= 1)
         {
-            c_Unagi_S = true;
+            SFXplayer.c_Unagi_S = true;
         }
         else
         {
-            c_Unagi_S = false;
+            SFXplayer.c_Unagi_S = false;
         }
     }
 
