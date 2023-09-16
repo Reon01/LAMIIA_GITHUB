@@ -98,7 +98,7 @@ public class PlyerInterction : MonoBehaviour
 
             Attack += 1;
 
-            if (Attack > 1 && _moveAction.AttackCount >= attackCount)
+            /*if (Attack > 1 && _moveAction.AttackCount >= attackCount)
             {
                 _moveAction.anim.SetInteger("AttackType", 1);
             }
@@ -108,15 +108,24 @@ public class PlyerInterction : MonoBehaviour
 
                 Attack = 0;
             }
+            */
 
             //モリのアニメーションとコライダーをTrueにする
             _moriAttack.MoriAttack();
                   
         }
+        else if(_buttonAction.WasPressedThisFrame() && Attack == 2)
+        {
+            _moveAction.anim.SetInteger("AttackType", 1);
+
+            Attack = 0;
+        }
         else
         {
             //モリのアニメーションをFalseにする
-            _moriAttack.EnableMori();            
+            _moriAttack.EnableMori();
+          
+            
         }
 
         
@@ -126,7 +135,7 @@ public class PlyerInterction : MonoBehaviour
         // ボタンが離された瞬間
         if (_buttonAction.WasReleasedThisFrame())
         {
-            _moveAction.EndAttack();
+            
 
             Debug.Log("Release");
 
