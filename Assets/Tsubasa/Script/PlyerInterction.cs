@@ -11,8 +11,13 @@ public class PlyerInterction : MonoBehaviour
 
     private float countTime;　　　　　 //タイマー
 
+    private float attackCount;
+
     [Tooltip("クールタイム")]
     [SerializeField] float CoolTime;
+
+    [Tooltip("攻撃クールタイム")]
+    [SerializeField] float attackCoolTime;
 
     [Tooltip("移動スクリプト")]
     public PlayerControllerInput _moveAction;
@@ -52,6 +57,10 @@ public class PlyerInterction : MonoBehaviour
 
     private InputAction _buttonAction;
 
+    //攻撃
+    private int Attack = 0;
+
+
 
 
     //はるまサウンド用
@@ -83,21 +92,42 @@ public class PlyerInterction : MonoBehaviour
         //ボタンが押された瞬間
         if (_buttonAction.WasPressedThisFrame())
         {
-            Debug.Log("Press");
+            attackCount = 0;
+
+            _moveAction.FirstAttack();
+
+            Attack += 1;
+
+            if (Attack > 1 && _moveAction.AttackCount >= attackCount)
+            {
+                _moveAction.anim.SetInteger("AttackType", 1);
+            }
+            else if (_moveAction.AttackCount <= attackCount)
+            {
+                _moveAction.anim.SetInteger("AttackType", 2);
+
+                Attack = 0;
+            }
 
             //モリのアニメーションとコライダーをTrueにする
             _moriAttack.MoriAttack();
+                  
         }
         else
         {
             //モリのアニメーションをFalseにする
-            _moriAttack.EnableMori();
+            _moriAttack.EnableMori();            
         }
+
+        
+
 
 
         // ボタンが離された瞬間
         if (_buttonAction.WasReleasedThisFrame())
         {
+            _moveAction.EndAttack();
+
             Debug.Log("Release");
 
             //モリのコライダーをFalseにする
@@ -105,6 +135,9 @@ public class PlyerInterction : MonoBehaviour
         }
 
         countTime += Time.deltaTime;
+        attackCount += Time.deltaTime;
+
+        Debug.Log(attackCount);
     }
 
     private void OnEnable()
