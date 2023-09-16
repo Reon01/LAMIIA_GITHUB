@@ -138,13 +138,9 @@ public class PlayerControllerInput : MonoBehaviour
 
     public void FirstAttack()
     {
-        AttackType = 0;
-
+       
         //1Œ‚–Ú
-        anim.SetBool("Attack 0", true);
-        Attack0 = true;
-
-        
+        anim.SetTrigger("Attack");      
     }
 
     public void SecoundAttack()
@@ -161,10 +157,7 @@ public class PlayerControllerInput : MonoBehaviour
         }
     }
 
-    public void EndAttack()
-    {
-        anim.SetBool("Attack 0", false);
-    }
+    
 }  
 
 
