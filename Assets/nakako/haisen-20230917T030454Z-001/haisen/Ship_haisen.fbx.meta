@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: 2961f86e5916fe749b069821e6eaec59
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_BaseColor
+    second: {fileID: 2800000, guid: 696a37b9fad62fc4690bc59f844e1674, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_Metallic
+    second: {fileID: 2800000, guid: fa38d744445acd74490babbdebe659ee, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_Normal
+    second: {fileID: 2800000, guid: f231b234618059c43ae0173d74693ce5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_Roughness
+    second: {fileID: 2800000, guid: 1e445164b8bace4468c4ad9af3216e2a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_hasira_BaseColor
+    second: {fileID: 2800000, guid: c78209f6f19580f4b8f8682aced67d54, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_hasira_Metallic
+    second: {fileID: 2800000, guid: 2e3543503d12ab74f87d188320bce4e9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_hasira_Normal
+    second: {fileID: 2800000, guid: 921316a391b05fa42b666e0024c11208, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_hasira_Roughness
+    second: {fileID: 2800000, guid: 51b54e5ccc9a5f347beb584e5b5aab86, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_soto_parts_BaseColor
+    second: {fileID: 2800000, guid: 219c1b8a3a3aaf34297541c8a727226a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_soto_parts_Metallic
+    second: {fileID: 2800000, guid: f96d38e26464de1458af8115e5a5a7e1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_soto_parts_Normal
+    second: {fileID: 2800000, guid: 52fd95929e7eca3448e836a77924ca8c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_soto_parts_Roughness
+    second: {fileID: 2800000, guid: 5a381d0b43b994f4aa006aeb3806cee9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_waku_BaseColor
+    second: {fileID: 2800000, guid: d1c8dd8aa34eb1d449fb16078bded11c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_waku_Metallic
+    second: {fileID: 2800000, guid: 9afadd99888b9464c9c78af1d5e2d6ab, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_waku_Normal
+    second: {fileID: 2800000, guid: e9ab190b61e5cff44bda792b3b749d2a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Haisen_Ship_waku_Roughness
+    second: {fileID: 2800000, guid: c526f396108dd4845b89892b6bd4a6e8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Kazi_lambert1_BaseColor
+    second: {fileID: 2800000, guid: 0eaae1f9342615f4f903231e2e988bcd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Kazi_lambert1_Metallic
+    second: {fileID: 2800000, guid: 801d11bd16c50ca41ab19c0abe6f5edd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Kazi_lambert1_Normal
+    second: {fileID: 2800000, guid: 9a0ccbedcb004e74dbba644a56ba8dbe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Kazi_lambert1_Roughness
+    second: {fileID: 2800000, guid: a5fe3afc89bcfc544922367fef8c4ec9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: haisen__naibu_Ship_naibu_parts_BaseColor
+    second: {fileID: 2800000, guid: 361e70032d9b2a14888c377a77e6040c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: haisen__naibu_Ship_naibu_parts_Metallic
+    second: {fileID: 2800000, guid: 4714a846f4810804ab6f19a38359df2e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: haisen__naibu_Ship_naibu_parts_Normal
+    second: {fileID: 2800000, guid: 2b38cfce993aa98408a19da1e729a483, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
