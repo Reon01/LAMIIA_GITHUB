@@ -4667,6 +4667,7 @@ MonoBehaviour:
   panel: {fileID: 1195792576}
   tip: {fileID: 0}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!114 &435476790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4792,6 +4793,7 @@ MonoBehaviour:
   panel: {fileID: 1195792576}
   tip: {fileID: 0}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!1 &450210401
 GameObject:
   m_ObjectHideFlags: 0
@@ -5768,6 +5770,7 @@ MonoBehaviour:
   panel: {fileID: 1126029218}
   tip: {fileID: 1836366132}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!114 &505565671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9215,6 +9218,7 @@ MonoBehaviour:
   panel: {fileID: 1335132113}
   tip: {fileID: 2122648573}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!114 &813626269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9335,6 +9339,7 @@ MonoBehaviour:
   panel: {fileID: 1335132113}
   tip: {fileID: 2122648573}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!1 &817536857
 GameObject:
   m_ObjectHideFlags: 0
@@ -14449,7 +14454,8 @@ Animator:
     by Humanoid clips.\n\tTransform 'Spine'\n\tTransform 'RightForeArm'\n\tTransform
     'LeftHand'\n\tTransform 'RightLeg'\n\tTransform 'RightArm'\n\tTransform 'Neck'\n\tTransform
     'LeftArm'\n\tTransform 'RightUpLeg'\n\tTransform 'LeftLeg'\n\tTransform 'LeftUpLeg'\n\tand
-    more ...\n\tFrom animation clip 'idol'\n\tFrom animation clip 'zenshin'"
+    more ...\n\tFrom animation clip 'idol'\n\tFrom animation clip 'zenshin'\n\tFrom
+    animation clip 'Attak1'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -14476,7 +14482,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235414833}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7eb9ee7b1b776e4b9b5210ef3883e53, type: 3}
   m_Name: 
@@ -14901,6 +14907,7 @@ MonoBehaviour:
   panel: {fileID: 2045171375}
   tip: {fileID: 1222959856}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!114 &1267277644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15724,6 +15731,121 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.33, y: 1, z: 3.92}
   m_Center: {x: 0, y: 0, z: 1.3}
+--- !u!1001 &1315473905
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8579715306081966548, guid: 80139fa28149b1e4b94184fd8a548df1, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579715306081966548, guid: 80139fa28149b1e4b94184fd8a548df1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579715306081966548, guid: 80139fa28149b1e4b94184fd8a548df1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579715306081966548, guid: 80139fa28149b1e4b94184fd8a548df1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579715306081966548, guid: 80139fa28149b1e4b94184fd8a548df1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579715306081966548, guid: 80139fa28149b1e4b94184fd8a548df1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579715306081966548, guid: 80139fa28149b1e4b94184fd8a548df1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579715306081966548, guid: 80139fa28149b1e4b94184fd8a548df1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579715306081966548, guid: 80139fa28149b1e4b94184fd8a548df1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579715306081966548, guid: 80139fa28149b1e4b94184fd8a548df1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579715306081966548, guid: 80139fa28149b1e4b94184fd8a548df1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960638448680502126, guid: 80139fa28149b1e4b94184fd8a548df1, type: 3}
+      propertyPath: m_Name
+      value: NewPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960638448680502126, guid: 80139fa28149b1e4b94184fd8a548df1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 80139fa28149b1e4b94184fd8a548df1, type: 3}
+--- !u!1 &1315473906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8960638448680502126, guid: 80139fa28149b1e4b94184fd8a548df1, type: 3}
+  m_PrefabInstance: {fileID: 1315473905}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1315473907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315473906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9401bba8acdd13e44acb5c5c817735b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lightning: {fileID: 962399356}
+  IsLightning: 0
+  isSkill: 0
+  iscount: 0
+  count: 0
+--- !u!114 &1315473908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315473906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f95bfadb721b81543b25313e2bc3eaa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kuragesield: {fileID: 1323106796}
+  player: {fileID: 0}
+  kuragesieldHP: 0
+  isSkill: 0
+--- !u!114 &1315473909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315473906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 178943f3f9b599042a4cfdb45875c3b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSkill: 0
+  spendskill: 0
+  kajiki: {fileID: 5931152984045283842, guid: 25d6a0fedc47558469a8d3aa07ef1d00, type: 3}
+  firingPoint: {fileID: 250920598}
 --- !u!1001 &1323106795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17207,6 +17329,7 @@ MonoBehaviour:
   panel: {fileID: 1797170049}
   tip: {fileID: 301754882}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!114 &1472825381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21282,6 +21405,7 @@ MonoBehaviour:
   panel: {fileID: 1739258529}
   tip: {fileID: 679986018}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!114 &1835027991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21909,6 +22033,7 @@ MonoBehaviour:
   panel: {fileID: 1130163880}
   tip: {fileID: 1151924051}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!114 &1878054974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22178,6 +22303,7 @@ MonoBehaviour:
   panel: {fileID: 2088525782}
   tip: {fileID: 376093693}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!114 &1894208101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22200,6 +22326,7 @@ MonoBehaviour:
   panel: {fileID: 2088525782}
   tip: {fileID: 376093693}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!1 &1906436958
 GameObject:
   m_ObjectHideFlags: 0
@@ -24388,6 +24515,7 @@ MonoBehaviour:
   panel: {fileID: 119558101}
   tip: {fileID: 1782849367}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!114 &2105230319
 MonoBehaviour:
   m_ObjectHideFlags: 0

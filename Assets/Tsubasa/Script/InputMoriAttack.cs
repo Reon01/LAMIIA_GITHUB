@@ -18,6 +18,7 @@ public class InputMoriAttack : MonoBehaviour
         this.animator = GetComponent<Animator>();
 
         boxCol = GetComponent<BoxCollider>();
+
     }
 
    
@@ -26,7 +27,6 @@ public class InputMoriAttack : MonoBehaviour
 
     public void MoriAttack()
     {
-        this.animator.SetBool(AttackStr, true);
 
         boxCol.enabled = true;
 
@@ -34,10 +34,6 @@ public class InputMoriAttack : MonoBehaviour
         Mori_Sound = true;
     }
 
-    public void EnableMori()
-    {
-        this.animator.SetBool(AttackStr, false);
-    }
 
     public void RaleseMori()
     {
