@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2051,6 +2051,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9892f6a83fd8d4468ce0c8a3d09d3cd, type: 3}
+--- !u!1001 &167292624
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12747021bf5e47a47addceef2015a811, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12747021bf5e47a47addceef2015a811, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12747021bf5e47a47addceef2015a811, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12747021bf5e47a47addceef2015a811, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12747021bf5e47a47addceef2015a811, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12747021bf5e47a47addceef2015a811, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12747021bf5e47a47addceef2015a811, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12747021bf5e47a47addceef2015a811, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12747021bf5e47a47addceef2015a811, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12747021bf5e47a47addceef2015a811, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12747021bf5e47a47addceef2015a811, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12747021bf5e47a47addceef2015a811, type: 3}
+      propertyPath: m_Name
+      value: Player02
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12747021bf5e47a47addceef2015a811, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12747021bf5e47a47addceef2015a811, type: 3}
 --- !u!1 &169539013
 GameObject:
   m_ObjectHideFlags: 0
@@ -11289,6 +11350,7 @@ GameObject:
   - component: {fileID: 1009768608}
   - component: {fileID: 1009768607}
   - component: {fileID: 1009768609}
+  - component: {fileID: 1009768610}
   m_Layer: 0
   m_Name: ChinemachineVirtualCamera
   m_TagString: Untagged
@@ -11361,6 +11423,22 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009768606}
   m_Enabled: 1
+--- !u!114 &1009768610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009768606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7194dc27b9df64c8beca7482ee8e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerIndex: -1
+  AutoEnableInputs: 1
+  XYAxis: {fileID: -5630151704836100654, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  ZAxis: {fileID: 0}
 --- !u!1 &1037919997
 GameObject:
   m_ObjectHideFlags: 0
@@ -14259,7 +14337,7 @@ Rigidbody:
   m_GameObject: {fileID: 1235414833}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 10
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
@@ -14273,7 +14351,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235414833}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38aed15bd5c7be849a0d50d9215802bc, type: 3}
   m_Name: 
@@ -14287,7 +14365,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235414833}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c14a089c1249d2e4790df984b6c606fb, type: 3}
   m_Name: 
@@ -14360,13 +14438,18 @@ Animator:
   m_GameObject: {fileID: 1235414833}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a58c8869e948817458a4cb570fd594d1, type: 3}
-  m_Controller: {fileID: 9100000, guid: a89fadbeb1dac7e42b6502e3a4e3e8dc, type: 2}
+  m_Controller: {fileID: 9100000, guid: c3429efe366ef9d45bff1440b58062f8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'Spine'\n\tTransform 'RightForeArm'\n\tTransform
+    'LeftHand'\n\tTransform 'RightLeg'\n\tTransform 'RightArm'\n\tTransform 'Neck'\n\tTransform
+    'LeftArm'\n\tTransform 'RightUpLeg'\n\tTransform 'LeftLeg'\n\tTransform 'LeftUpLeg'\n\tand
+    more ...\n\tFrom animation clip 'idol'\n\tFrom animation clip 'zenshin'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -14433,7 +14516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f95bfadb721b81543b25313e2bc3eaa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kuragesield: {fileID: 0}
+  kuragesield: {fileID: 1323106796}
   player: {fileID: 1235414833}
   kuragesieldHP: 0
   isSkill: 0
@@ -14450,7 +14533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1235414837}
-  avoidanceForce: 0
+  avoidanceForce: 60
   speed: 5
   jumpHeight: 4
   downHeight: -4
@@ -23201,11 +23284,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amount_Kajiki: {fileID: 1079036223}
-  a_Kajiki: 0
+  a_Kajiki: 10
   amount_Unagi: {fileID: 76967331}
-  a_Unagi: 0
+  a_Unagi: 10
   amount_Kurage: {fileID: 624703902}
-  a_Kurage: 0
+  a_Kurage: 10
 --- !u!1 &2001587858
 GameObject:
   m_ObjectHideFlags: 0
