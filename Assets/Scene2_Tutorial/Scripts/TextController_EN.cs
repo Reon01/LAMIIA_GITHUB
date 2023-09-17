@@ -13,7 +13,7 @@ public class TextController_EN : MonoBehaviour
     public GameObject panel;
     public GameObject tip;
     public GameObject HP;
-
+    public GameObject Skill;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +43,7 @@ public class TextController_EN : MonoBehaviour
                 panel.SetActive(true);
                 tip.SetActive(true);
                 HP.SetActive(true);
+                Skill.SetActive(true);
 
                 return;
             }
