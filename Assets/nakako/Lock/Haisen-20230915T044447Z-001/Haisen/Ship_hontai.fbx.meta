@@ -3,7 +3,37 @@ guid: d783c3311529d824387fa4cb13b953d9
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ship_Kazi
+    second: {fileID: 2100000, guid: 41627d0a858e2fe48ab79698409b6c23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ship_fllor
+    second: {fileID: 2100000, guid: fc4323a22744cbe44b8f31c011985ab6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ship_hasira
+    second: {fileID: 2100000, guid: 5ca606bd089578c44a5564141f3cb658, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ship_naibu_parts
+    second: {fileID: 2100000, guid: 59db1623f8121b44287669a926edc7a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ship_soto_parts
+    second: {fileID: 2100000, guid: 4734cf0229916b8449b8b49c94508336, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ship_waku
+    second: {fileID: 2100000, guid: 57de8b39ccee05e49a57b60e62470267, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
