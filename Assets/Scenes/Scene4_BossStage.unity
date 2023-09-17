@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1067,6 +1067,7 @@ MonoBehaviour:
   panel: {fileID: 1687922034}
   tip: {fileID: 1687922034}
   HP: {fileID: 1687922034}
+  Skill: {fileID: 850265067}
 --- !u!114 &45720428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1151,6 +1152,7 @@ MonoBehaviour:
   panel: {fileID: 1687922034}
   tip: {fileID: 1687922034}
   HP: {fileID: 1687922034}
+  Skill: {fileID: 850265067}
 --- !u!1 &46245087
 GameObject:
   m_ObjectHideFlags: 0
@@ -5262,6 +5264,7 @@ MonoBehaviour:
   panel: {fileID: 1286875439}
   tip: {fileID: 0}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!114 &435476790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6606,6 +6609,7 @@ MonoBehaviour:
   panel: {fileID: 451376580}
   tip: {fileID: 0}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!114 &505565671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10882,6 +10886,7 @@ MonoBehaviour:
   panel: {fileID: 10343642}
   tip: {fileID: 0}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!114 &813626269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11271,7 +11276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &850265068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20809,7 +20814,13 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'Spine'\n\tTransform 'RightForeArm'\n\tTransform
+    'LeftHand'\n\tTransform 'RightLeg'\n\tTransform 'RightArm'\n\tTransform 'Neck'\n\tTransform
+    'LeftArm'\n\tTransform 'RightUpLeg'\n\tTransform 'LeftLeg'\n\tTransform 'LeftUpLeg'\n\tand
+    more ...\n\tFrom animation clip 'idol'\n\tFrom animation clip 'zenshin'\n\tFrom
+    animation clip 'Attak1'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -24009,6 +24020,7 @@ MonoBehaviour:
   panel: {fileID: 898977450}
   tip: {fileID: 0}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!114 &1835027991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24866,6 +24878,7 @@ MonoBehaviour:
   panel: {fileID: 1261515870}
   tip: {fileID: 0}
   HP: {fileID: 0}
+  Skill: {fileID: 0}
 --- !u!1 &1911272405
 GameObject:
   m_ObjectHideFlags: 0
