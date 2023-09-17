@@ -136,26 +136,13 @@ public class PlayerControllerInput : MonoBehaviour
 
     }
 
+    //‘„UŒ‚”­“®
     public void FirstAttack()
     {
-       
-        //1Œ‚–Ú
+        
         anim.SetTrigger("Attack");      
     }
 
-    public void SecoundAttack()
-    {
-        
-
-        if (AttackType == 1 && Attack0)
-        {
-            anim.SetInteger("AttackType", 0);
-        }
-        else if (AttackType == 2 && Attack0)
-        {
-            anim.SetInteger("AttackType", 1);
-        }
-    }
 
     
 }  

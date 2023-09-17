@@ -57,11 +57,6 @@ public class PlyerInterction : MonoBehaviour
 
     private InputAction _buttonAction;
 
-    //攻撃
-    private int Attack = 0;
-
-
-
 
     //はるまサウンド用
     public static bool Kajiki_Sound = false;
@@ -70,7 +65,9 @@ public class PlyerInterction : MonoBehaviour
     {
         TryGetComponent(out _input);
 
+
         _buttonAction = _input.actions.FindAction("MoriAttack");
+
 
     }
 
@@ -92,52 +89,19 @@ public class PlyerInterction : MonoBehaviour
         //ボタンが押された瞬間
         if (_buttonAction.WasPressedThisFrame())
         {
-            attackCount = 0;
 
             _moveAction.FirstAttack();
 
-            Attack += 1;
 
-            /*if (Attack > 1 && _moveAction.AttackCount >= attackCount)
-            {
-                _moveAction.anim.SetInteger("AttackType", 1);
-            }
-            else if (_moveAction.AttackCount <= attackCount)
-            {
-                _moveAction.anim.SetInteger("AttackType", 2);
-
-                Attack = 0;
-            }
-            */
-
-            //モリのアニメーションとコライダーをTrueにする
+            //モリコライダーをTrueにする
             _moriAttack.MoriAttack();
                   
         }
-        else if(_buttonAction.WasPressedThisFrame() && Attack == 2)
-        {
-            _moveAction.anim.SetInteger("AttackType", 1);
-
-            Attack = 0;
-        }
-        else
-        {
-            //モリのアニメーションをFalseにする
-            _moriAttack.EnableMori();
-          
-            
-        }
-
         
-
-
 
         // ボタンが離された瞬間
         if (_buttonAction.WasReleasedThisFrame())
         {
-            
-
-            Debug.Log("Release");
 
             //モリのコライダーをFalseにする
             _moriAttack.RaleseMori();
