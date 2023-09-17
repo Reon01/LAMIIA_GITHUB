@@ -25,8 +25,15 @@ public class PlayerControllerInput : MonoBehaviour
     public float jumpHeight = 4f;
     public float downHeight = -4f;
 
-
     public Animator anim;
+
+    //çUåÇ
+    bool Attack0 = false;
+
+    public int AttackType;
+    public float AttackCount;
+
+
 
 
 
@@ -42,7 +49,7 @@ public class PlayerControllerInput : MonoBehaviour
     void Update()
     {
 
-       /* if (!(moveDirection.magnitude == 0))
+        if (!(moveDirection.magnitude == 0))
         {
             anim.SetFloat("Move", 1f);
         }
@@ -51,9 +58,7 @@ public class PlayerControllerInput : MonoBehaviour
             anim.SetFloat("Move", 0f);
         }
 
-        */
-
-
+        
         transform.Translate(moveDirection.x, moveDirection.y, moveDirection.z);
 
         if (moveDirection == Vector3.zero)
@@ -130,6 +135,29 @@ public class PlayerControllerInput : MonoBehaviour
         rb.AddForce(avoidanceDir.normalized * avoidanceForce, ForceMode.Impulse);
 
     }
+
+    public void FirstAttack()
+    {
+       
+        //1åÇñ⁄
+        anim.SetTrigger("Attack");      
+    }
+
+    public void SecoundAttack()
+    {
+        
+
+        if (AttackType == 1 && Attack0)
+        {
+            anim.SetInteger("AttackType", 0);
+        }
+        else if (AttackType == 2 && Attack0)
+        {
+            anim.SetInteger("AttackType", 1);
+        }
+    }
+
+    
 }  
 
 

@@ -13,6 +13,12 @@ public class BossMove : MonoBehaviour
     [SerializeField] private GameObject WhaleGO5;
     [SerializeField] private GameObject WhaleGO6;
     [SerializeField] private GameObject WhaleGO7;
+    [SerializeField] private GameObject WhaleGO8;
+    [SerializeField] private GameObject WhaleGO9;
+    [SerializeField] private GameObject WhaleGO10;
+    [SerializeField] private GameObject WhaleGO11;
+    [SerializeField] private GameObject WhaleGO12;
+    [SerializeField] private GameObject WhaleGO13;
     //[SerializeField] GameObject circlingtarget;
     //public float TurnSpan = 10f;
     //private float currentTime = 0f;
@@ -22,14 +28,16 @@ public class BossMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //お試しWhaleGO数とa=数-1がセット　１のときは１３
         //フィールド上周回
         transform.LookAt(WhaleGO1.transform);
+        a = 13;
     }
 
     public void OnTriggerEnter(Collider other)
     {
         //増やす②
-        if (other.CompareTag("WhaleGO1"))
+        if (a==13&&other.CompareTag("WhaleGO1"))
         {
             a = 1;
             
@@ -71,9 +79,44 @@ public class BossMove : MonoBehaviour
             
 
         }
-    }
-    // Update is called once per frame
-    void Update()
+        if (a == 7 && other.CompareTag("WhaleGO8"))
+        {
+            a = 8;
+
+
+        }
+        if (a == 8 && other.CompareTag("WhaleGO9"))
+        {
+            a = 9;
+
+
+        }
+        if (a == 9 && other.CompareTag("WhaleGO10"))
+        {
+            a = 10;
+
+
+        }
+        if (a == 10 && other.CompareTag("WhaleGO11"))
+        {
+            a = 11;
+
+
+        }
+        if (a == 11 && other.CompareTag("WhaleGO12"))
+        {
+            a = 12;
+
+
+        }
+        if (a == 12 && other.CompareTag("WhaleGO13"))
+        {
+            a = 13;
+        }
+
+        }
+        // Update is called once per frame
+        void Update()
     {
         if(a==1)
         {
@@ -100,6 +143,30 @@ public class BossMove : MonoBehaviour
             transform.LookAt(WhaleGO7.transform);
         }
         if (a == 7)
+        {
+            transform.LookAt(WhaleGO8.transform);
+        }
+        if (a == 8)
+        {
+            transform.LookAt(WhaleGO9.transform);
+        }
+        if (a == 9)
+        {
+            transform.LookAt(WhaleGO10.transform);
+        }
+        if (a == 10)
+        {
+            transform.LookAt(WhaleGO11.transform);
+        }
+        if (a == 11)
+        {
+            transform.LookAt(WhaleGO12.transform);
+        }
+        if (a == 12)
+        {
+            transform.LookAt(WhaleGO13.transform);
+        }
+        if (a == 13)
         {
             transform.LookAt(WhaleGO1.transform);
         }

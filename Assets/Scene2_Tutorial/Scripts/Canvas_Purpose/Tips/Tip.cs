@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Tip : MonoBehaviour
 {
@@ -29,7 +30,8 @@ public class Tip : MonoBehaviour
     void Update()
     {
         //ステップに応じてキーを押すことで次に進む
-        if (Input.GetKeyDown(KeyCode.W)&&step == 0)
+        if (Input.GetKeyDown(KeyCode.W)&&step == 0
+            || Gamepad.current.leftStick.noisy)
         {
             showcorrect();//正解の円を出す
             Invoke(nameof(S), 1f);//２秒後に次のステップに進む

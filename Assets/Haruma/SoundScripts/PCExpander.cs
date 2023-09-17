@@ -10,7 +10,7 @@ public class PCExpander : MonoBehaviour
     private PlayerController playerController;
 
     //ボス用
-    public static bool bossObjChk = false;
+    public static bool bossObjChk = true;
 
     void Start(){
         playerController = GameObject.Find("AudioManager").GetComponent<PlayerController>();
