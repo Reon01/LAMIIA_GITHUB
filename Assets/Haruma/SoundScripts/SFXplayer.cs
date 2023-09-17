@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using CriWare;
+using UnityEngine.InputSystem;
 
 public class SFXplayer : MonoBehaviour
 {
+    //InputSystem
+    private PlayerInput playerInput;
+    private InputAction inputAction;
     //カジキ用変数
     public static int Sf_Sound;
     public static bool c_Sf_S;
@@ -38,6 +42,8 @@ public class SFXplayer : MonoBehaviour
         if (dontDestroyOnLoad){
             DontDestroyOnLoad(transform.gameObject);
         }
+        playerInput = GameObject.Find("PlayerInput").GetComponent<PlayerInput>();
+        inputAction = playerInput.actions.FindAction("Fire");
     }
 
     void Start(){}
@@ -105,7 +111,7 @@ public class SFXplayer : MonoBehaviour
             skillChange_Sound = false;
         }
         //スキルの空撃ち
-        if(Input.GetMouseButtonDown(0)){
+        if(inputAction.WasPressedThisFrame()){
             if(isUnagi_act == true && c_Unagi_S == false){
                 playerController.SetAcb(atomLoader.acbAssets[2].Handle);
                 playerController.SetCueName("skill_noAmmo");
@@ -202,7 +208,6 @@ public class SFXplayer : MonoBehaviour
             playerController.Play();
             BossAttack.Spear_Sound = false;
             Debug.Log("Spear is Coming");
-
         }
         if(.Razor_Sound == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
