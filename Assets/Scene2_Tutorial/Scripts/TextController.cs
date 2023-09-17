@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class TextController : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class TextController : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(1) || 
-            Input.GetKeyDown(KeyCode.Space))
+            Input.GetKeyDown(KeyCode.Space) || Gamepad.current.buttonEast.wasPressedThisFrame)
         {
             //サウンド用
             SFXplayer.radio_Sound_obs = true;
