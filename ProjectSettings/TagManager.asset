@@ -30,6 +30,7 @@ TagManager:
   - WhaleGO11
   - WhaleGO12
   - WhaleGO13
+  - UnagiAttack
   layers:
   - Default
   - TransparentFX
