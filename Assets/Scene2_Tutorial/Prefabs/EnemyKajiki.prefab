@@ -1082,6 +1082,8 @@ MonoBehaviour:
   HP: 20
   HPBar: {fileID: 1336466422364848031}
   Enemy: {fileID: 2183538768354751061}
+  damage10: {fileID: 4966855426282700147, guid: 03d426027f11b4946aa653da4381ba4c, type: 3}
+  damagetextposition: {fileID: 6805596246895549153}
 --- !u!114 &8283145573332874128
 MonoBehaviour:
   m_ObjectHideFlags: 0
