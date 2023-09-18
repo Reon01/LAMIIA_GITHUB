@@ -13,6 +13,10 @@ public class BossAttack : MonoBehaviour
 
     public GameObject Speir;
 
+    public GameObject chaseZako;
+
+    GameObject chaseZakos;
+
 
     void Update()
     {
@@ -37,5 +41,15 @@ public class BossAttack : MonoBehaviour
 
         //はるまサウンド用
         Spear_Sound = true;
+    }
+
+    private void ChaseZako()
+    {
+
+    }
+
+    private void ChAseZaks()
+    {
+
     }
 }
