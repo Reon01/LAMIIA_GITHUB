@@ -1467,7 +1467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178460, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_TagString
-      value: UnagiAttack
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_RootOrder
@@ -1487,7 +1487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.85
+      value: -0.565
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2537,43 +2537,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.85
+      value: -0.185
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.14
+      value: 1.433
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: -1.084
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.86822796
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.18433596
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.27490225
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.369634
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -31.555
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -23.595
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -39.368
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
@@ -2593,8 +2593,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.12, y: 1.26, z: 1.31}
-  m_Center: {x: 0, y: -2.4, z: 0.34}
+  m_Size: {x: 8.12, y: 2.84, z: 2.61}
+  m_Center: {x: 0, y: -2.25, z: -0.18}
 --- !u!1 &193299593
 GameObject:
   m_ObjectHideFlags: 0
@@ -5040,7 +5040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lightning: {fileID: 87637050}
-  biglightning: {fileID: 87637050}
+  biglightning: {fileID: 175644254}
   IsLightning: 0
   isSkill: 0
   iscount: 0
@@ -5179,7 +5179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lightning: {fileID: 87637050}
-  biglightning: {fileID: 87637050}
+  biglightning: {fileID: 175644254}
   IsLightning: 0
   isSkill: 0
   iscount: 0
