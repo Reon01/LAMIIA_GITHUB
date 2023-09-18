@@ -9378,7 +9378,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427455278}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9388,7 +9388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 743, y: -482}
+  m_AnchoredPosition: {x: 697, y: -426}
   m_SizeDelta: {x: 518.4, y: 361.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &427455280
@@ -9424,7 +9424,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F3\u30AF\u30EA\u30C3\u30AF"
+  m_Text: "\u3007\u30DC\u30BF\u30F3"
 --- !u!222 &427455281
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11727,7 +11727,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569919226}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -14692,11 +14692,11 @@ MonoBehaviour:
   attackCoolTime: 0
   _moveAction: {fileID: 1014070551}
   _getSkill: {fileID: 1014070556}
-  _shotKajiki: {fileID: 1235414844}
+  _shotKajiki: {fileID: 1014070557}
   _shotKajikiScene04: {fileID: 0}
-  _kurage: {fileID: 1235414847}
+  _kurage: {fileID: 1014070558}
   _kurageScene04: {fileID: 0}
-  _unagi: {fileID: 1235414846}
+  _unagi: {fileID: 1014070559}
   _unagiScene4: {fileID: 0}
   _skillChange: {fileID: 193238714}
   _skillChangeScene04: {fileID: 0}
@@ -15923,7 +15923,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F3\u30AF\u30EA\u30C3\u30AF"
+  m_Text: "\u3007\u30DC\u30BF\u30F3"
 --- !u!222 &961437452
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16699,6 +16699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 89045a15b9807a7498d7b231dcf3312a, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5112956150999511308, guid: 89045a15b9807a7498d7b231dcf3312a, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -16748,7 +16752,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1.8232975, y: 0.1831371, z: 0.053528324}
+  m_Size: {x: 1.8232975, y: 0.27, z: 0.37}
   m_Center: {x: -0.69706154, y: 0.055740424, z: 0.0018652225}
 --- !u!114 &1014070546
 MonoBehaviour:
@@ -16947,6 +16951,19 @@ MonoBehaviour:
   isSkill: 0
   iscount: 0
   count: 0
+--- !u!65 &1014070560
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014070542}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 3.7, z: 1}
+  m_Center: {x: 0, y: 2.5, z: -0.46}
 --- !u!1 &1037919997
 GameObject:
   m_ObjectHideFlags: 0
@@ -25779,7 +25796,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u53F3\u30AF\u30EA\u30C3\u30AF"
+  m_Text: "\u3007\u30DC\u30BF\u30F3"
 --- !u!222 &1732481407
 CanvasRenderer:
   m_ObjectHideFlags: 0
