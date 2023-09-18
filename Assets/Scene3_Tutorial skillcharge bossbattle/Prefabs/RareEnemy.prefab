@@ -11039,7 +11039,7 @@ GameObject:
   - component: {fileID: -3214555421204287638}
   - component: {fileID: 4134787213143195529}
   - component: {fileID: 8147754838756809033}
-  - component: {fileID: 2935265557088781125}
+  - component: {fileID: -5702977015795626441}
   m_Layer: 0
   m_Name: RareEnemy
   m_TagString: Enemy
@@ -11198,7 +11198,7 @@ MonoBehaviour:
   cue:
     acbAsset: {fileID: 0}
     cueId: 0
---- !u!114 &2935265557088781125
+--- !u!114 &-5702977015795626441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11207,7 +11207,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7378268973160302813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0df1081ced374c4b83ca0fc29761cc7, type: 3}
+  m_Script: {fileID: 11500000, guid: 39d482a97ed81ec49a5872de371cceac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cueE_Defeated:
@@ -11225,6 +11225,12 @@ MonoBehaviour:
   cueSummoned:
     acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
     cueId: 28
+  cueRare_Hit:
+    acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
+    cueId: 43
+  cueRare_defeat:
+    acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
+    cueId: 42
 --- !u!1 &7487046856606944768
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,6 +33,8 @@ public class SFXplayer : MonoBehaviour
     public static bool radio_Sound_obs;
     //スキル切り替え用変数
     public static bool skillChange_Sound;
+    //スキル獲得音用変数
+    public static bool skillCharge_Sound;
     //Dont Destroy On Load
     public bool dontDestroyOnLoad = true;
 
@@ -136,6 +138,13 @@ public class SFXplayer : MonoBehaviour
                     playerController.Play();
                 }
             }
+        }
+        //スキル獲得音
+        if(skillCharge_Sound == true){
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("skill_charge");
+            playerController.Play();
+            skillCharge_Sound = false;
         }
         //移動中効果音
         if(isPlayerMoving_S == true){
