@@ -1450,6 +1450,101 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &87637049
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1041129585}
+    m_Modifications:
+    - target: {fileID: 178460, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_Name
+      value: SimpleLightningBoltAnimatedPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 178460, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 178460, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_TagString
+      value: UnagiAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+--- !u!1 &87637050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 178460, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
+  m_PrefabInstance: {fileID: 87637049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &87637052
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87637050}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.12, y: 1.26, z: 1.31}
+  m_Center: {x: 0, y: -2.4, z: 0.34}
 --- !u!1 &96278608
 GameObject:
   m_ObjectHideFlags: 0
@@ -4845,8 +4940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e65fcbc5ae50d489818ac025830627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lightning: {fileID: 0}
-  biglightning: {fileID: 0}
+  Lightning: {fileID: 87637050}
+  biglightning: {fileID: 87637050}
   IsLightning: 0
   isSkill: 0
   iscount: 0
@@ -4984,8 +5079,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce8bb81380efc5e478e7a822b54dc8d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lightning: {fileID: 0}
-  biglightning: {fileID: 0}
+  Lightning: {fileID: 87637050}
+  biglightning: {fileID: 87637050}
   IsLightning: 0
   isSkill: 0
   iscount: 0
@@ -19011,6 +19106,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8232975, y: 0.1831371, z: 0.053528324}
   m_Center: {x: -0.69706154, y: 0.055740424, z: 0.0018652225}
+--- !u!4 &1041129585 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 306124180581726968, guid: 89045a15b9807a7498d7b231dcf3312a, type: 3}
+  m_PrefabInstance: {fileID: 401206667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1042269228 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2639638324218457063, guid: 35d846e3c374b9349923a5b878e1e608, type: 3}
@@ -25217,6 +25317,7 @@ MonoBehaviour:
   CoolTime: 3
   Speir: {fileID: 6825989121083321228, guid: 9cfea235cbe93c94c81b6e31134865f5, type: 3}
   chaseZako: {fileID: 0}
+  state: 0
 --- !u!114 &1574319118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26741,7 +26842,7 @@ MonoBehaviour:
   button_unagi: {fileID: 2052454274}
   mori: {fileID: 1041129581}
   isunagi: 0
-  Lightning: {fileID: 0}
+  Lightning: {fileID: 87637050}
 --- !u!1 &1691463574
 GameObject:
   m_ObjectHideFlags: 0
@@ -27931,11 +28032,11 @@ MonoBehaviour:
   _moveAction: {fileID: 401206672}
   _getSkill: {fileID: 0}
   _shotKajiki: {fileID: 0}
-  _shotKajikiScene04: {fileID: 0}
+  _shotKajikiScene04: {fileID: 401206671}
   _kurage: {fileID: 0}
   _kurageScene04: {fileID: 553946357}
   _unagi: {fileID: 0}
-  _unagiScene4: {fileID: 0}
+  _unagiScene4: {fileID: 401206670}
   _skillChange: {fileID: 0}
   _skillChangeScene04: {fileID: 1688555258}
   _moriAttack: {fileID: 1041129583}

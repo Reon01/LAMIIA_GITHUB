@@ -84,6 +84,18 @@ public class EnemyHP_Rare : MonoBehaviour
             //サウンド用
             SFXplayer.damaged_Sound_E = 3;
         }
+
+        //↓ウナギの場合20DMG
+        if (other.gameObject.CompareTag("UnagiAttack"))
+        {
+            HP -= 20;
+            HPBar.value = HP;
+            damagedisplay20(); //２０ダメージのテキストを表示
+
+            //サウンド用
+            SFXplayer.damaged_Sound_E = 1;
+            SkillElectronic.EE_Sound = 2;
+        }
     }
 
     //１０ダメージのテキストを表示
