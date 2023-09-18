@@ -67,7 +67,7 @@ public class EnemyHP_Rare : MonoBehaviour
                 HPBar.value = HP;
 
                 //サウンド用
-                SkillElectronic.EE_Sound = 2;
+                SFXplayer.EE_Sound = 2;
                 SFXplayer.damaged_Sound_E = 1;
 
                 damagedisplay20();　//２０ダメージのテキストを表示
@@ -94,7 +94,7 @@ public class EnemyHP_Rare : MonoBehaviour
 
             //サウンド用
             SFXplayer.damaged_Sound_E = 1;
-            SkillElectronic.EE_Sound = 2;
+            SFXplayer.EE_Sound = 2;
         }
     }
 

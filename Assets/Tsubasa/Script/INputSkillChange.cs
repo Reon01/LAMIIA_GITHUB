@@ -61,6 +61,10 @@ public class INputSkillChange : MonoBehaviour
     { if(Time.timeScale == 1)
         {
             count += 1;
+
+            //サウンド用
+            SFXplayer.skillChange_Sound = true;
+
         }
               
     }
@@ -89,6 +93,9 @@ public void moricolor()
 
     public void kajikicolor()
     {
+        //サウンド用
+        SFXplayer.isSf_act = true;
+
         button_kajiki.image.color = Color.yellow;
         button_mori.image.color = Color.white;
 
@@ -108,6 +115,10 @@ public void moricolor()
     }
     public void kuragecolor()
     {
+        //サウンド用
+        SFXplayer.isSf_act = false;
+        SFXplayer.isJf_act = true;
+
         button_kurage.image.color = Color.yellow;
         button_kajiki.image.color = Color.white;
 
@@ -126,10 +137,12 @@ public void moricolor()
     public void unagicolor()
     {
         //サウンド用
+        SFXplayer.isJf_act = false;
         SFXplayer.isUnagi_act = true;
-        if (InputSkillElectronic.EE_Sound == 0)
+        
+        if (SFXplayer.EE_Sound == 0)
         {
-            InputSkillElectronic.EE_Sound = 1;
+            SFXplayer.EE_Sound = 1;
         }
 
         Lightning.SetActive(true);　//電気のエフェクトをオンにする

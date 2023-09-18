@@ -111,7 +111,7 @@ public class PlyerInterction : MonoBehaviour
         countTime += Time.deltaTime;
         attackCount += Time.deltaTime;
 
-        Debug.Log(attackCount);
+        //Debug.Log(attackCount);
     }
 
     private void OnEnable()
@@ -297,6 +297,7 @@ public class PlyerInterction : MonoBehaviour
     private void OnErectronic(InputAction.CallbackContext obj)
     {
         _unagi.Electronic();
+        SFXplayer.EE_Sound = 2;
     }
     
     private void OnEretronicSecene4(InputAction.CallbackContext obj)

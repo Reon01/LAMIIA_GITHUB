@@ -32,13 +32,12 @@ public class ActiveSceneManager : MonoBehaviour
     //シーンロード時に変数をTrueに変更
     void SceneLoaded (Scene nextScene, LoadSceneMode mode)
     {
-        Debug.Log("SceneLoaded");
         AScene = SceneManager.GetActiveScene();
         if (AScene.name == "Scene1_Start")
         {
             S_Title = true;
         }
-        else if (AScene.name == "Scene2_Tutorial")
+        else if (AScene.name == "Scene2_Tutorial_old")
         {
             S_Tutorial = true;
         }
@@ -59,13 +58,12 @@ public class ActiveSceneManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // シーンが切り替わったときに実行される処理
-        Debug.Log("OnSceneLoaded");
         Scene AScene = SceneManager.GetActiveScene();
         if (AScene.name == "Scene1_Start")
         {
             S_Title = true;
         }
-        else if (AScene.name == "Scene2_Tutorial")
+        else if (AScene.name == "Scene2_Tutorial_old")
         {
             S_Tutorial = true;
         }

@@ -8,9 +8,6 @@ public class InputKurage : MonoBehaviour
     public int kuragesieldHP;
     public bool isSkill;
 
-    //はるまサウンド用
-    public static bool Kurage_Sound_s = false;
-    public static bool Kurage_Sound_e = false;
 
     private GameObject enemykillsystem;
 
@@ -43,7 +40,7 @@ public class InputKurage : MonoBehaviour
             GetComponent<InputGetSkill>().a_Kurage -= 1; //スキルを１消費
 
             //はるまサウンド用変数true
-            Kurage_Sound_s = true;
+            SFXplayer.Jf_S = 1;
         }
 
         if (kuragesieldHP <= 0)
@@ -63,7 +60,7 @@ public class InputKurage : MonoBehaviour
             enemykillsystem.GetComponent<EnemyKillTute>().a_Kurage -= 1; //スキルを１消費
 
             //はるまサウンド用変数true
-            Kurage_Sound_s = true;
+            SFXplayer.Jf_S = 1;
         }
         if (kuragesieldHP <= 0)
         {
@@ -77,7 +74,9 @@ public class InputKurage : MonoBehaviour
         //kuragesieldHP -= 1;
         kuragesield.SetActive(false);
         Debug.Log("クラゲ消滅");
-        Kurage_Sound_e = true;
+
+        //サウンド用
+        SFXplayer.Jf_S = 2;
     }
 
 }

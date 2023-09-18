@@ -9,9 +9,6 @@ public class InputKajiki : MonoBehaviour
     public bool isSkill; //スキルが選択されてるか制御
     public bool spendskill; //スキルを消費
 
-    //はるまサウンド用
-    public static bool Kajiki_Sound = false;
-
     [SerializeField] GameObject kajiki;
 
     private float fishspeed = 1000;
@@ -54,8 +51,9 @@ public class InputKajiki : MonoBehaviour
            enemykillsystem.GetComponent<EnemyKillTute>().a_Kajiki -= 1; //スキルを１消費
             spendskill = true;
             Debug.Log("カジキ発射");
+
             //はるまサウンド変数true
-            Kajiki_Sound = true;
+            SFXplayer.Sf_Sound = 1;
         }
 
         //↓Scene3用
@@ -65,8 +63,9 @@ public class InputKajiki : MonoBehaviour
             enemykillsystem.GetComponent<EnemyKill>().a_Kajiki -= 1; //スキルを１消費
             spendskill = true;
             Debug.Log("カジキ発射");
+
             //はるまサウンド変数true
-            Kajiki_Sound = true;
+            SFXplayer.Sf_Sound = 1;
         }
     }
 }

@@ -15,10 +15,6 @@ public class InputSkillElectronic : MonoBehaviour
     private GameObject enemykillsystem;
     private GameObject unagitimer;
 
-    //はるまサウンド用変数
-    public static int EE_Sound = 0;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +26,15 @@ public class InputSkillElectronic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //サウンド用
+        if (enemykillsystem.GetComponent<EnemyKillTute>().a_Unagi >= 1)
+        {
+            SFXplayer.c_Unagi_S = true;
+        }
+        else
+        {
+            SFXplayer.c_Unagi_S = false;
+        }
     }
 
     public void spend()
@@ -54,7 +58,7 @@ public class InputSkillElectronic : MonoBehaviour
                                                                   //というスクリプトをオンにする
             Invoke("lightningoff", 30f * Time.deltaTime);
 
-            EE_Sound = 1;
+            SFXplayer.EE_Sound = 2;
         }
     }
 

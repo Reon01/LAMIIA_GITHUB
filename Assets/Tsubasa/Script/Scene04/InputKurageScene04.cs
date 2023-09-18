@@ -12,10 +12,6 @@ public class InputKurageScene04 : MonoBehaviour
     public GameObject kuragesield;
     public int kuragesieldHP;
 
-    //はるまサウンド用変数
-    public static bool Kurage_Sound_s_2 = false;
-    public static bool Kurage_Sound_e_2 = false;
-
     void Start()
     {
         enemykill = GameObject.Find("EnemyKillSystem");
@@ -55,14 +51,14 @@ public class InputKurageScene04 : MonoBehaviour
         enemykill.GetComponent<EnemyKill>().a_Kurage -= 1;
         Debug.Log("クラゲ使用");
 
-        Kurage_Sound_s_2 = true;
+        SFXplayer.Jf_S = 1;
     }
 
     public void damage()
     {
         kuragesieldHP -= 1;
 
-        Kurage_Sound_e_2 = true;
+        SFXplayer.Jf_S = 2;
     }
 
 
