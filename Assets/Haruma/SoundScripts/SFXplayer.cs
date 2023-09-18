@@ -52,15 +52,16 @@ public class SFXplayer : MonoBehaviour
         }
     }
 
-    void Start(){
-        if(ActiveSceneManager.S_Title != true && ActiveSceneManager.S_StageSelect != true){
-            playerInput = GameObject.Find("PlayerInput").GetComponent<PlayerInput>();
-            Debug.Log(playerInput);
-            inputAction = playerInput.actions.FindAction("Fire");
-        }
-    }
+    void Start(){}
 
     void Update(){
+        if(ActiveSceneManager.S_Title != true && ActiveSceneManager.S_StageSelect != true){
+            if(playerInput == null){
+                playerInput = GameObject.Find("PlayerInput").GetComponent<PlayerInput>();
+                Debug.Log(playerInput);
+                inputAction = playerInput.actions.FindAction("Fire");
+            }
+        }
         //メニュー系SFX
         if (GameStart.menu_Sound == 1){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
@@ -123,7 +124,7 @@ public class SFXplayer : MonoBehaviour
             skillChange_Sound = false;
         }
         //スキルの空撃ち
-        if(ActiveSceneManager.AScene.name == "Scene2_Tutorial" || ActiveSceneManager.AScene.name == "Scene3_Tutorial skillcharge bossbattle" || ActiveSceneManager.AScene.name == "Scene4_BossStage"){
+        if(ActiveSceneManager.AScene.name == "Scene2_Tutorial_"|| ActiveSceneManager.AScene.name == "Scene4_BossStage"){
             if(inputAction.WasPressedThisFrame()){
                 if(isUnagi_act == true && c_Unagi_S == false){
                     playerController.SetAcb(atomLoader.acbAssets[2].Handle);
