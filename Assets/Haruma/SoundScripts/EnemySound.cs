@@ -57,5 +57,6 @@ public class EnemySound : MonoBehaviour
     public void ESPlay(CriAtomCueReference cueReference, CriAtomSourceForAsset atomSource){
         atomSource.Cue = cueReference;
         atomSource.Play();
+        Debug.Log("ESPlay");
     }
 }

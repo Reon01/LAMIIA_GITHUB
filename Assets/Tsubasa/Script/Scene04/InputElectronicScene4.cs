@@ -36,7 +36,7 @@ public class InputElectronicScene4 : MonoBehaviour
             skill();
             //unagitimer.GetComponent<S3_UnagiTimer>().iscount = true;
 
-            SkillElectronic.EE_Sound = 2;
+            SFXplayer.EE_Sound = 2;
         }
 
         /*
@@ -68,7 +68,7 @@ public class InputElectronicScene4 : MonoBehaviour
             skill();
             //unagitimer.GetComponent<S3_UnagiTimer>().iscount = true;
 
-            SkillElectronic.EE_Sound = 2;
+            SFXplayer.EE_Sound = 2;
         }
 
     }

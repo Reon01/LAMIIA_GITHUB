@@ -138,9 +138,10 @@ public class InputSkillChangeScene04 : MonoBehaviour
         //サウンド用
         SFXplayer.isJf_act = false;
         SFXplayer.isUnagi_act = true;
-        if (SkillElectronic.EE_Sound == 0)
+        
+        if (SFXplayer.EE_Sound == 0)
         {
-            SkillElectronic.EE_Sound = 1;
+            SFXplayer.EE_Sound = 1;
         }
 
         Lightning.SetActive(true);　//電気のエフェクトをオンにする

@@ -64,5 +64,6 @@ public class RareEnemySound : MonoBehaviour
     public void RESPlay(CriAtomCueReference cueReference, CriAtomSourceForAsset atomSource){
         atomSource.Cue = cueReference;
         atomSource.Play();
+        Debug.Log("RESPlay");
     }
 }

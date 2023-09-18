@@ -19,9 +19,11 @@ public class SFXplayer : MonoBehaviour
     public static bool c_Sf_S;
     public static bool isSf_act;
     //クラゲ用
+    public static int Jf_S;
     public static bool isJf_act;
     public static bool c_Jf_S;
     //ウナギ用変数
+    public static int EE_Sound;
     public static bool isUnagi_act;
     public static bool c_Unagi_S = false;
     //ハリセンボン用変数
@@ -53,6 +55,7 @@ public class SFXplayer : MonoBehaviour
     void Start(){
         if(ActiveSceneManager.S_Title != true && ActiveSceneManager.S_StageSelect != true){
             playerInput = GameObject.Find("PlayerInput").GetComponent<PlayerInput>();
+            Debug.Log(playerInput);
             inputAction = playerInput.actions.FindAction("Fire");
         }
     }
@@ -170,11 +173,11 @@ public class SFXplayer : MonoBehaviour
             Step_Soud = false;
         }
         //銛
-        if (mori.Mori_Sound == true){
+        if (InputMoriAttack.Mori_Sound == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("attack_Hrpn");
             playerController.Play();
-            mori.Mori_Sound = false;
+            InputMoriAttack.Mori_Sound = false;
         }
         //カジキ
         if (Sf_Sound == 1){
@@ -184,39 +187,39 @@ public class SFXplayer : MonoBehaviour
             Sf_Sound = 0;
         }
         //クラゲ
-        if (Kurage.Kurage_Sound_s == true || FishSkillSystem.Kurage_Sound_s_2 == true)
+        if (Jf_S == 1 || FishSkillSystem.Kurage_Sound_s_2 == true)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_Jf");
             playerController.KuragePlay();
-            Kurage.Kurage_Sound_s = false;
+            Jf_S = 0;
             FishSkillSystem.Kurage_Sound_s_2 = false;
         }
-        if (Kurage.Kurage_Sound_e == true || FishSkillSystem.Kurage_Sound_e_2 == true)
+        if (Jf_S == 2 || FishSkillSystem.Kurage_Sound_e_2 == true)
         {
             playerController.SetKurageBlock(1);
-            Kurage.Kurage_Sound_e = false;
+            Jf_S = 0;
             FishSkillSystem.Kurage_Sound_e_2 = false;
         }
         //電気ウナギ
-        if (c_Unagi_S == true && isUnagi_act == true && SkillElectronic.EE_Sound == 1)
+        if (c_Unagi_S == true && isUnagi_act == true && EE_Sound == 1)
         {
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("skill_EE");
             playerController.EEPlay();
-            SkillElectronic.EE_Sound = 4;
+            EE_Sound = 4;
         }
-        if (SkillElectronic.EE_Sound == 2)
+        if (EE_Sound == 2)
         {
             playerController.SetEEBlock(2);
-            SkillElectronic.EE_Sound = 4;
+            EE_Sound = 4;
         }
-        if (SkillElectronic.EE_Sound == 4)
+        if (EE_Sound == 4)
         {
             if (c_Unagi_S == false || isUnagi_act == false)
             {
                 playerController.EEStop();
-                SkillElectronic.EE_Sound = 0;
+                EE_Sound = 0;
             }
         }
         //ダメージ系SFX
@@ -238,7 +241,6 @@ public class SFXplayer : MonoBehaviour
             StartCoroutine(bubbleRondomize());
             ActiveSceneManager.S_Title = false;
             ActiveSceneManager.S_StageSelect = false;
-            Debug.Log("Coroutine Start");
         }
     }
 
@@ -261,7 +263,6 @@ public class SFXplayer : MonoBehaviour
         playerController.SetAcb(atomLoader.acbAssets[2].Handle);
         playerController.SetCueName("bubble");
         playerController.MenuSFXPlay();
-        Debug.Log("bubble Playing");
     }
 
     //移動中効果音用コルーチン
