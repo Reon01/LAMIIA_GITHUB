@@ -6,12 +6,15 @@ public class BossAttack : MonoBehaviour
 {
     [SerializeField] float CoolTime;   //攻撃のクールタイム
 
+
     private float countTime;　　　　　 //タイマー
 
     private int attackType;
 
     //はるまサウンド用変数
     public static bool Spear_Sound = false;
+
+    //ボス攻撃用オブジェクト
 
     public GameObject Speir;
 
@@ -24,8 +27,6 @@ public class BossAttack : MonoBehaviour
     private void Awake()
     {
         chaseZakos = GameObject.Find("ZakoAttackBox").GetComponent<Test>();
-
-        chaseZakos.enabled = false;
 
         attackType = 0;
     }
@@ -45,36 +46,35 @@ public class BossAttack : MonoBehaviour
 
         if (countTime > CoolTime)
         {
-            countTime = 0;
-
+            
             attackType = Random.Range(0, 3);
 
+            Debug.Log(attackType);
+
             //StateHandler();
-            
+
+            StateHandler();
+
+            countTime = 0;
+
         }
-
-
-       
-
-
-        Debug.Log(attackType);
+              
 
     }
 
     private void StateHandler()
     {
-        chaseZakos.enabled = false;
-
+        
         if (attackType == 0)
         {
             state = BossAttackState.Spier;
-
+            SpeirAttackSet();
             Debug.Log("槍攻撃");
         }
         else if(attackType == 1)
         {
             state = BossAttackState.ChaseZako;
-            ChaseZako();
+            //ChaseZako();
             Debug.Log("雑魚攻撃");
         }
         else if(attackType == 2)
@@ -106,6 +106,7 @@ public class BossAttack : MonoBehaviour
 
     private void ChaseZakos()
     {
-        chaseZakos.enabled = true;
+        chaseZakos.oneShotFlag = true;
+
     }
 }

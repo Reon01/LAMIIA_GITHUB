@@ -40,6 +40,12 @@ public class Test : MonoBehaviour
 	const float max = 0.5f;
 
 
+
+	public bool oneShotFlag;
+	
+	private bool flagCache;
+
+
 	void Start()
 	{
 		rb = GetComponent<Rigidbody>();
@@ -52,11 +58,21 @@ public class Test : MonoBehaviour
 
 		taget = GameObject.FindGameObjectWithTag("Player");
 
+		flagCache = true;
+
+		oneShotFlag = false;
+
 	}
 
     private void Update()
     {
+		if (oneShotFlag == false)
+			return;
+
 		InstantiateZako();
+
+		oneShotFlag = false;
+
 
 	}
 
