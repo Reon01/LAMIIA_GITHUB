@@ -55,7 +55,7 @@ public class SFXplayer : MonoBehaviour
     void Start(){}
 
     void Update(){
-        if(ActiveSceneManager.S_Title != true && ActiveSceneManager.S_StageSelect != true){
+        if(ActiveSceneManager.AScene.name == "Scene2_Tutorial_"|| ActiveSceneManager.AScene.name == "Scene4_BossStage"){
             if(playerInput == null){
                 playerInput = GameObject.Find("PlayerInput").GetComponent<PlayerInput>();
                 Debug.Log(playerInput);
@@ -67,12 +67,14 @@ public class SFXplayer : MonoBehaviour
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("menu_Confirm");
             playerController.MenuSFXPlay();
+            Debug.Log("Confirm");
             GameStart.menu_Sound = 0;
         }
         if (GameStart.menu_Sound == 2){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("menu_Back");
             playerController.MenuSFXPlay();
+            Debug.Log("Cancel");
             GameStart.menu_Sound = 0;
         }
         if (GameStart.menu_Sound == 3){
@@ -268,13 +270,13 @@ public class SFXplayer : MonoBehaviour
 
     //移動中効果音用コルーチン
     private IEnumerator swimmingDelay(){
-        float SBDelayTime = 0.6f;
+        float SBDelayTime = 1.0f;
         while(true){
             yield return new WaitForSeconds(SBDelayTime);
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("swimming_bubble");
             playerController.Play();
-            SBDelayTime = 0.4f;
+            SBDelayTime = 0.6f;
         }
     }
 }

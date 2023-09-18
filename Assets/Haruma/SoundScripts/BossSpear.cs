@@ -18,6 +18,7 @@ public class BossSpear : MonoBehaviour
         if(BossAttack.Spear_Sound == true){
             Spear_Sound.Cue = cueSpear_Shoot;
             Spear_Sound.Play();
+            BossAttack.Spear_Sound = false;
         }
     }
 }

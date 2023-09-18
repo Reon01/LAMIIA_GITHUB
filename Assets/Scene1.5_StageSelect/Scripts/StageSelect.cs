@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using CriWare;
 
 public class StageSelect : MonoBehaviour
 {
@@ -15,12 +16,19 @@ public class StageSelect : MonoBehaviour
     [SerializeField]
     private Slider slider;
 
+    //サウンド用
+    [SerializeField]
+    PlayerController playerController;
+    [SerializeField]
+    AtomLoader atomLoader;
+
     public GameObject canvas_stageselect;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        playerController = GameObject.Find("AudioManager").GetComponent<PlayerController>();
+        atomLoader = GameObject.Find("AudioManager").GetComponent<AtomLoader>();
     }
 
     // Update is called once per frame
@@ -43,7 +51,12 @@ public class StageSelect : MonoBehaviour
 
     IEnumerator Tutorial()
     {
-        GameStart.menu_Sound = 4;
+        //サウンド用
+        //GameStart.menu_Sound = 4;
+        playerController.SetAcb(atomLoader.acbAssets[1].Handle);
+        playerController.SetCueName("Start_JINGLE");
+        playerController.MenuSFXPlay();
+        
         async = SceneManager.LoadSceneAsync("Scene2_Tutorial_old"); // シーンの読み込みをする
 
         //　読み込みが終わるまで進捗状況をスライダーの値に反映させる
@@ -69,7 +82,13 @@ public class StageSelect : MonoBehaviour
 
     IEnumerator MainStage()
     {
-        GameStart.menu_Sound = 4;
+        //サウンド用
+        //GameStart.menu_Sound = 4;
+        playerController.SetAcb(atomLoader.acbAssets[1].Handle);
+        playerController.SetCueName("Start_JINGLE");
+        playerController.MenuSFXPlay();
+
+
         Time.timeScale = 1;
         async = SceneManager.LoadSceneAsync("Scene4_BossStage"); // シーンの読み込みをする
 
