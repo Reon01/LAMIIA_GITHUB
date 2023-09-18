@@ -251,7 +251,7 @@ public class SFXplayer : MonoBehaviour
         float rnd_Pan;
         float rnd_Volume;
         while(true){
-            rnd_bubble = Random.Range(3.0f,5.0f);
+            rnd_bubble = Random.Range(3.5f,5.5f);
             rnd_Pan = Random.Range(0.0f,1.0f);
             rnd_Volume = Random.Range(0.0f,1.0f);
             playerController.SetAisacCtrl("Rondom_Pan",rnd_Pan);
