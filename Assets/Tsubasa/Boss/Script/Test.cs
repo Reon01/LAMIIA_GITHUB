@@ -56,7 +56,7 @@ public class Test : MonoBehaviour
 		zakoNumber = 0;
 		maxNum = 0;
 
-		taget = GameObject.FindGameObjectWithTag("Player");
+		taget = GameObject.Find("Player");
 
 		flagCache = true;
 
