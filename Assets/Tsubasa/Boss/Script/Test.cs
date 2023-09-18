@@ -121,7 +121,7 @@ public class Test : MonoBehaviour
 
 			zakoNumber++;
 
-			Destroy(zako, 2f);
+			Destroy(zako, 10f);
 
 		}
 
