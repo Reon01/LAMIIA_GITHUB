@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private CriAtomExPlayback EEplayback;
     private CriAtomExPlayback BGMplayback;
     private CriAtomExPlayback MenuSFXplayback;
+    private CriAtomExPlayback Movingplayback;
 
     /*ACB 情報 */
     private CriAtomExAcb acb;
@@ -88,6 +89,11 @@ public class PlayerController : MonoBehaviour
         anyPlayer.SetCue(acb, cueName);
         MenuSFXplayback = anyPlayer.Start();
     }
+    //移動効果音プレイバック
+    public void MovingSFXPlay(){
+        anyPlayer.SetCue(acb, cueName);
+        Movingplayback = anyPlayer.Start();
+    }
 
     /*プレーヤーの停止 */
     public void Stop(){
@@ -105,6 +111,9 @@ public class PlayerController : MonoBehaviour
     }
     public void MenuSFXStop(){
         MenuSFXplayback.Stop();
+    }
+    public void MovingSFXStop(){
+        Movingplayback.Stop();
     }
 
     /*プレーヤーの一時停止 */
@@ -151,6 +160,10 @@ public class PlayerController : MonoBehaviour
     //Kurage用ブロックの指定
     public void SetKurageBlock(int index){
         SetNextBlock(index, Kurageplayback);
+    }
+    //移動中効果音用ブロックの指定
+    public void SetMovingBlock(int index){
+        SetNextBlock(index, Movingplayback);
     }
 
     //ブロック再生：ブロックの切り替え

@@ -16,6 +16,14 @@ public class BossVoice : MonoBehaviour
     [SerializeField]
     CriAtomCueReference cueBossVoice;
 
+    [SerializeField]
+    CriAtomCueReference cueBeam;
+
+    [SerializeField]
+    CriAtomCueReference cueSummon;
+
+    private CriAtomExPlayback Beamplayback;
+
     //ボスHP監視用変数
     public int bosshp = S4_BossHP.bossHP;
     public static int lowhpObs = 0;
@@ -30,6 +38,9 @@ public class BossVoice : MonoBehaviour
     }
 
     void Update(){
+        CriAtomSourceForAsset BA_Sound = GetComponent<CriAtomSourceForAsset>();
+        BA_Sound.use3dPositioning = true;
+        //BGM変化
         bosshp = S4_BossHP.bossHP;
         if (bosshp < 1500 && lowhpObs == 0){
             lowhpObs = 1;
@@ -37,10 +48,29 @@ public class BossVoice : MonoBehaviour
         if (bosshp >= 3000){
             lowhpObs = 0;
         }
+        //ボス咆哮
         if(VoiceActFrag == false){
             voiceRondomize = StartCoroutine(VoiceRondomize());
             VoiceActFrag = true;
         }
+        //ビーム攻撃
+        /*
+        if(. == true){
+            BA_Sound.Cue = cueBeam;
+            Beamplayback = BA_Sound.Play();
+            . = false;
+        }
+        if(. == true){
+            playerController.SetNextBlock(2, Beamplayback);
+            . = false;
+        }
+        //雑魚召喚
+        if(. == true){
+            BA_Sound.Cue = cueSummon;
+            BA_Sound.Play();
+            . = false;
+        }
+        */
     }
 
     //Voice用コルーチン

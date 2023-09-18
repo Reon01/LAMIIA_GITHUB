@@ -18,6 +18,9 @@ public class EnemySound : MonoBehaviour
     [SerializeField]
     CriAtomCueReference cuePpf_Hit;
 
+    [SerializeField]
+    CriAtomCueReference cueSummoned;
+
     void Start(){}
 
     void Update(){
@@ -44,6 +47,12 @@ public class EnemySound : MonoBehaviour
             ESPlay(cuePpf_Hit, enemy_Sound);
             SFXplayer.ppf_Sound = 0;
         }
+        /*
+        if(. == true && this.GameObject != ("Boss_kansei")){
+            ESPlay(cueSummoned, enemy_Sound);
+            . = false;
+        }
+        */
     }
 
     public void ESPlay(CriAtomCueReference cueReference, CriAtomSourceForAsset atomSource){

@@ -9,6 +9,11 @@ public class SFXplayer : MonoBehaviour
     //InputSystem
     private PlayerInput playerInput;
     private InputAction inputAction;
+    //移動を検出する変数
+    public static bool isPlayerMoving_S;
+    public static bool isMovSdPlaying_S;
+    //回避用変数
+    public static bool Step_Soud;
     //カジキ用変数
     public static int Sf_Sound;
     public static bool c_Sf_S;
@@ -19,7 +24,6 @@ public class SFXplayer : MonoBehaviour
     //ウナギ用変数
     public static bool isUnagi_act;
     public static bool c_Unagi_S = false;
-
     //ハリセンボン用変数
     public static int ppf_Sound;
     //ダメージ用変数
@@ -42,11 +46,14 @@ public class SFXplayer : MonoBehaviour
         if (dontDestroyOnLoad){
             DontDestroyOnLoad(transform.gameObject);
         }
-        playerInput = GameObject.Find("PlayerInput").GetComponent<PlayerInput>();
-        inputAction = playerInput.actions.FindAction("Fire");
     }
 
-    void Start(){}
+    void Start(){
+        if(ActiveSceneManager.S_Title != true && ActiveSceneManager.S_StageSelect != true){
+            playerInput = GameObject.Find("PlayerInput").GetComponent<PlayerInput>();
+            inputAction = playerInput.actions.FindAction("Fire");
+        }
+    }
 
     void Update(){
         //メニュー系SFX
@@ -111,24 +118,49 @@ public class SFXplayer : MonoBehaviour
             skillChange_Sound = false;
         }
         //スキルの空撃ち
-        if(inputAction.WasPressedThisFrame()){
-            if(isUnagi_act == true && c_Unagi_S == false){
-                playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-                playerController.SetCueName("skill_noAmmo");
-                playerController.Play();
-            }
-            if(isSf_act == true && c_Sf_S == false){
-                playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-                playerController.SetCueName("skill_noAmmo");
-                playerController.Play();
-            }
-            if(isJf_act == true && c_Jf_S == false){
-                playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-                playerController.SetCueName("skill_noAmmo");
-                playerController.Play();
+        if(ActiveSceneManager.AScene.name == "Scene2_Tutorial" ||
+         ActiveSceneManager.AScene.name == "Scene3_Tutorial skillcharge bossbattle" ||
+         ActiveSceneManager.AScene.name == "Scene4_BossStage"){
+            if(inputAction.WasPressedThisFrame()){
+                if(isUnagi_act == true && c_Unagi_S == false){
+                    playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+                    playerController.SetCueName("skill_noAmmo");
+                    playerController.Play();
+                }
+                if(isSf_act == true && c_Sf_S == false){
+                    playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+                    playerController.SetCueName("skill_noAmmo");
+                    playerController.Play();
+                }
+                if(isJf_act == true && c_Jf_S == false){
+                    playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+                    playerController.SetCueName("skill_noAmmo");
+                    playerController.Play();
+                }
             }
         }
-
+        //移動中効果音
+        if(isPlayerMoving_S == true){
+            if(isMovSdPlaying_S == false){
+                playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+                playerController.SetCueName("swimmming");
+                playerController.MovingSFXPlay();
+                StartCoroutine(swimmingDelay());
+                isMovSdPlaying_S = true;
+            }
+        }
+        if(isMovSdPlaying_S == true && isPlayerMoving_S == false){
+            playerController.SetMovingBlock(2);
+            StopCoroutine(swimmingDelay());
+            isMovSdPlaying_S = false;
+        }
+        //回避の音
+        if(Step_Soud == true){
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("step");
+            playerController.Play();
+            Step_Soud = false;
+        }
         //銛
         if (mori.Mori_Sound == true){
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
@@ -200,31 +232,6 @@ public class SFXplayer : MonoBehaviour
             ActiveSceneManager.S_StageSelect = false;
             Debug.Log("Coroutine Start");
         }
-        //ボス系アタックサウンド
-        /*
-        if(BossAttack.Spear_Sound == true){
-            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("");
-            playerController.Play();
-            BossAttack.Spear_Sound = false;
-            Debug.Log("Spear is Coming");
-        }
-        if(.Razor_Sound == true){
-            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("");
-            playerController.Play();
-            .Razor_Sound = false;
-            Debug.Log("Razor is Coming");
-
-        }
-        if(.Summon_Sound == true){
-            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-            playerController.SetCueName("");
-            playerController.Play();
-            .Summon_Sound = false;
-            Debug.Log("Summon Voice");
-        }
-        */
     }
 
     //泡音用コルーチン
@@ -242,11 +249,22 @@ public class SFXplayer : MonoBehaviour
             yield return new WaitForSeconds(rnd_bubble);
         }
     }
-
     private void bubble_Play(){
         playerController.SetAcb(atomLoader.acbAssets[2].Handle);
         playerController.SetCueName("bubble");
         playerController.MenuSFXPlay();
         Debug.Log("bubble Playing");
+    }
+
+    //移動中効果音用コルーチン
+    private IEnumerator swimmingDelay(){
+        float SBDelayTime = 0.6f;
+        while(true){
+            yield return new WaitForSeconds(SBDelayTime);
+            playerController.SetAcb(atomLoader.acbAssets[2].Handle);
+            playerController.SetCueName("swimming_bubble");
+            playerController.Play();
+            SBDelayTime = 0.25f;
+        }
     }
 }
