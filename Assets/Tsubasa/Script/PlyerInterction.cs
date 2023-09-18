@@ -61,6 +61,7 @@ public class PlyerInterction : MonoBehaviour
     //はるまサウンド用
     public static bool Kajiki_Sound = false;
 
+
     private void Awake()
     {
         TryGetComponent(out _input);
@@ -222,6 +223,8 @@ public class PlyerInterction : MonoBehaviour
             countTime = 0;
 
             _moveAction.Avoidance();
+
+            SFXplayer.Step_Soud = true;
 
             Debug.Log("回避");
 
