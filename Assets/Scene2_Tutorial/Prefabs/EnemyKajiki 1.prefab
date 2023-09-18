@@ -884,9 +884,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 20
   m_WholeNumbers: 1
-  m_Value: 100
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1095,7 +1095,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba0adc28f1cf104cb7de65299bd0e85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circlingtarget: {fileID: 2183538768354751061, guid: c66337012a696fb41b8bc8d713658551, type: 3}
 --- !u!114 &5557129511448756537
 MonoBehaviour:
   m_ObjectHideFlags: 0
