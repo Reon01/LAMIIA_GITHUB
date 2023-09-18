@@ -108,5 +108,7 @@ public class BossAttack : MonoBehaviour
     {
         chaseZakos.oneShotFlag = true;
 
+        //サウンド用
+        BossVoice.Summon_Sound = true;
     }
 }

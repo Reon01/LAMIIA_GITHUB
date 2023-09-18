@@ -22,17 +22,20 @@ public class BossVoice : MonoBehaviour
     [SerializeField]
     CriAtomCueReference cueSummon;
 
+    //ボス攻撃用変数
+    public static bool Summon_Sound;
+    //プレイバック
     private CriAtomExPlayback Beamplayback;
 
-    //ボスHP監視用変数
+    //ﾂボﾂスHPﾂ甘?ﾂ篠仰用ﾂ米篠青?
     public int bosshp = S4_BossHP.bossHP;
     public static int lowhpObs = 0;
-    //コルーチンの代入用変数とボイス管理用変数
+    //ﾂコﾂδ仰ーﾂチﾂδ督て堋惰δ禿ｼﾂ用ﾂ米篠青板て?ﾂボﾂイﾂスﾂ甘?ﾂ猟敖用ﾂ米篠青?
     public static Coroutine voiceRondomize;
     public static bool VoiceActFrag;
 
     void Start(){
-        //Bossアクティブ化で代入
+        //Bossﾂアﾂクﾂテﾂィﾂブﾂ嫁･ﾂてｹﾂ惰δ禿ｼ
         playerController = GameObject.Find("AudioManager").GetComponent<PlayerController>();
         atomLoader = GameObject.Find("AudioManager").GetComponent<AtomLoader>();
     }
@@ -40,7 +43,7 @@ public class BossVoice : MonoBehaviour
     void Update(){
         CriAtomSourceForAsset BA_Sound = GetComponent<CriAtomSourceForAsset>();
         BA_Sound.use3dPositioning = true;
-        //BGM変化
+        //BGMﾂ米篠嫁･
         bosshp = S4_BossHP.bossHP;
         if (bosshp < 1500 && lowhpObs == 0){
             lowhpObs = 1;
@@ -48,12 +51,12 @@ public class BossVoice : MonoBehaviour
         if (bosshp >= 3000){
             lowhpObs = 0;
         }
-        //ボス咆哮
+        //ﾂボﾂスﾂ凖ｴﾂ哮
         if(VoiceActFrag == false){
             voiceRondomize = StartCoroutine(VoiceRondomize());
             VoiceActFrag = true;
         }
-        //ビーム攻撃
+        //ﾂビﾂーﾂδﾂ攻ﾂ個?
         /*
         if(. == true){
             BA_Sound.Cue = cueBeam;
@@ -64,20 +67,20 @@ public class BossVoice : MonoBehaviour
             playerController.SetNextBlock(2, Beamplayback);
             . = false;
         }
-        //雑魚召喚
-        if(. == true){
+        */
+        //ﾂ雑ﾂ仰崢祥伉看､
+        if(Summon_Sound == true){
             BA_Sound.Cue = cueSummon;
             BA_Sound.Play();
-            . = false;
+            Summon_Sound = false;
         }
-        */
     }
 
-    //Voice用コルーチン
+    //Voiceﾂ用ﾂコﾂδ仰ーﾂチﾂδ?
     private IEnumerator VoiceRondomize(){
         float rnd_voice = Random.Range(5.0f, 8.0f);
         while (true){
-            //ボス用Source
+            //ﾂボﾂスﾂ用Source
             CriAtomSourceForAsset BVSource = GetComponent<CriAtomSourceForAsset>();
             BVSource.use3dPositioning = true;
             BVSource.Cue = cueBossVoice;

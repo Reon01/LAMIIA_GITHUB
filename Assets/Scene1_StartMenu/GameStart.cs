@@ -18,7 +18,7 @@ public class GameStart : MonoBehaviour
     public GameObject canvas_credit;
 
     // はるま用サウンド変数
-    public static int menu_Sound = 0; 
+    public static int menu_Sound; 
 
     // Start is called before the first frame update
     void Start()
@@ -35,61 +35,70 @@ public class GameStart : MonoBehaviour
     public void gamestart()
     {
         menu_Sound = 1;
+        Debug.Log(menu_Sound);
         SceneManager.LoadScene("Scene1.5_StageSelect");
     }
 
 
     public void option()
     {
-        menu_Sound = 1;
         canvas_start.SetActive(false);
         canvas_option.SetActive(true);
+        menu_Sound = 1;
+        Debug.Log(menu_Sound);
     }
 
     public void KeyConfig()
     {
-        menu_Sound = 1;
         backgrounds.SetActive(false);
         keyconfiggallary.SetActive(true);
         canvas_option.SetActive(false);
         canvas_keyconfig.SetActive(true);
+        menu_Sound = 1;
+        Debug.Log(menu_Sound);
     }
     
     public void back1()
     {
-        menu_Sound = 2;
         canvas_start.SetActive(true);
         canvas_option.SetActive(false);
         backgrounds.SetActive(true);
+        menu_Sound = 2;
+        Debug.Log(menu_Sound);
     }
 
     public void back2()
     {
-        menu_Sound = 2;
         canvas_option.SetActive(true);
         canvas_keyconfig.SetActive(false);
         keyconfiggallary.SetActive(false);
         backgrounds.SetActive(true);
+        menu_Sound = 2;
+        Debug.Log(menu_Sound);
     }
     
     　//クレジット用
     public void back3()
     {
-        menu_Sound = 2;
         canvas_start.SetActive(true);
         canvas_credit.SetActive(false);
         backgrounds.SetActive(true);
+        menu_Sound = 2;
+        Debug.Log(menu_Sound);
     }
     public void Credit()
     {
-        menu_Sound = 1;
         canvas_start.SetActive(false);
         canvas_credit.SetActive(true);
+        menu_Sound = 1;
+        Debug.Log(menu_Sound);
     }
 
 
     public void quit()
     {
+        menu_Sound = 2;
+        Debug.Log(menu_Sound);
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;//ゲームプレイ終了
 #else
