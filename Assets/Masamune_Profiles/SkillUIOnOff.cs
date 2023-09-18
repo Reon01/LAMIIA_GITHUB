@@ -22,6 +22,10 @@ public class SkillUIOnOff : MonoBehaviour
         {
             HP.SetActive(true);
             Skill.SetActive(true);
+        }else
+        {
+            HP.SetActive(false);
+            Skill.SetActive(false);
         }
     }
 }
