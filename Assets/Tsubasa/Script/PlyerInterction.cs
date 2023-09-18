@@ -205,8 +205,6 @@ public class PlyerInterction : MonoBehaviour
 
         _moveAction.MoveSet(direction);
 
-        //サウンド用
-        SFXplayer.isPlayerMoving_S = true;
     }
 
     
@@ -234,9 +232,6 @@ public class PlyerInterction : MonoBehaviour
     private void OnMoveStop(InputAction.CallbackContext obj)
     {
         _moveAction.MoveSet(Vector3.zero);
-
-        //サウンド用
-        SFXplayer.isPlayerMoving_S = false;
     }
 
     /*----------------------------------------------　スキル取得 ------------------------------------------------------*/
