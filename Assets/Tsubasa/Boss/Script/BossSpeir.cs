@@ -28,7 +28,7 @@ public class BossSpeir : MonoBehaviour
     void Update()
     {
         //target = GameObject.FindGameObjectWithTag("Player");
-        target = GameObject.Find("PlayerTarget");
+        target = GameObject.Find("Player");
 
         position = transform.position;
 
