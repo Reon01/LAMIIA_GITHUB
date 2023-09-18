@@ -21,19 +21,23 @@ public class KurageHit_New : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            fishskillsystem.GetComponent<FishSkillSystem>().damage();
+            //fishskillsystem.GetComponent<FishSkillSystem>().damage();　ボツ案
+            fishskillsystem.GetComponent<InputKurageScene04>().damage();
         }
         else if (other.CompareTag("MediumBoss"))
         {
-            fishskillsystem.GetComponent<FishSkillSystem>().damage();
+            //fishskillsystem.GetComponent<FishSkillSystem>().damage();　ボツ案
+            fishskillsystem.GetComponent<InputKurageScene04>().damage();
         }
         else if (other.CompareTag("Boss"))
         {
-            fishskillsystem.GetComponent<FishSkillSystem>().damage();
+            //fishskillsystem.GetComponent<FishSkillSystem>().damage();　ボツ案
+            fishskillsystem.GetComponent<InputKurageScene04>().damage();
         }
         else if (other.CompareTag("EnemyAttack"))
         {
-            fishskillsystem.GetComponent<FishSkillSystem>().damage();
+            //fishskillsystem.GetComponent<FishSkillSystem>().damage();　ボツ案
+            fishskillsystem.GetComponent<InputKurageScene04>().damage();
         }
 
     }

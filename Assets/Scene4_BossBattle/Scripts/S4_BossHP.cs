@@ -82,6 +82,18 @@ public class S4_BossHP : MonoBehaviour
             SFXplayer.damaged_Sound_E = 3;
             bossHP = hp;
         }
+
+        //↓ウナギの場合20DMG
+        if (other.gameObject.CompareTag("UnagiAttack"))
+        {
+            hp -= 20;
+            slider_bosshp.value = hp;
+            damagedisplay20(); //２０ダメージのテキストを表示
+
+            //サウンド用
+            SFXplayer.damaged_Sound_E = 1;
+            SkillElectronic.EE_Sound = 2;
+        }
     }
 
     //１０ダメージのテキストを表示
