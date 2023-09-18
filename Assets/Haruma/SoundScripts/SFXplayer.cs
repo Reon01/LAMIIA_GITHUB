@@ -118,9 +118,7 @@ public class SFXplayer : MonoBehaviour
             skillChange_Sound = false;
         }
         //スキルの空撃ち
-        if(ActiveSceneManager.AScene.name == "Scene2_Tutorial" ||
-         ActiveSceneManager.AScene.name == "Scene3_Tutorial skillcharge bossbattle" ||
-         ActiveSceneManager.AScene.name == "Scene4_BossStage"){
+        if(ActiveSceneManager.AScene.name == "Scene2_Tutorial" || ActiveSceneManager.AScene.name == "Scene3_Tutorial skillcharge bossbattle" || ActiveSceneManager.AScene.name == "Scene4_BossStage"){
             if(inputAction.WasPressedThisFrame()){
                 if(isUnagi_act == true && c_Unagi_S == false){
                     playerController.SetAcb(atomLoader.acbAssets[2].Handle);
@@ -143,16 +141,17 @@ public class SFXplayer : MonoBehaviour
         if(isPlayerMoving_S == true){
             if(isMovSdPlaying_S == false){
                 playerController.SetAcb(atomLoader.acbAssets[2].Handle);
-                playerController.SetCueName("swimmming");
+                playerController.SetCueName("swimming");
                 playerController.MovingSFXPlay();
-                StartCoroutine(swimmingDelay());
+                StartCoroutine("swimmingDelay");
                 isMovSdPlaying_S = true;
             }
         }
         if(isMovSdPlaying_S == true && isPlayerMoving_S == false){
             playerController.SetMovingBlock(2);
-            StopCoroutine(swimmingDelay());
+            StopCoroutine("swimmingDelay");
             isMovSdPlaying_S = false;
+            Debug.Log("Stop swimmmingDelay");
         }
         //回避の音
         if(Step_Soud == true){
@@ -264,7 +263,7 @@ public class SFXplayer : MonoBehaviour
             playerController.SetAcb(atomLoader.acbAssets[2].Handle);
             playerController.SetCueName("swimming_bubble");
             playerController.Play();
-            SBDelayTime = 0.25f;
+            SBDelayTime = 0.4f;
         }
     }
 }
