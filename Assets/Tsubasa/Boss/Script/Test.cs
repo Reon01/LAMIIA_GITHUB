@@ -26,6 +26,8 @@ public class Test : MonoBehaviour
 
 	GameObject taget;
 
+	GameObject zako;
+
 
 
 	int zakoNumber;      //G‹›‚Ì”
@@ -55,7 +57,8 @@ public class Test : MonoBehaviour
     private void Update()
     {
 		InstantiateZako();
-    }
+
+	}
 
 
 
@@ -79,8 +82,9 @@ public class Test : MonoBehaviour
 	/// <summary>
 	/// •¡”‚ÌG‹›‚ªƒvƒŒƒCƒ„[‚ÉŒü‚©‚Á‚Ä‚­‚éUŒ‚
 	/// </summary>
-	void InstantiateZako()
+	public void InstantiateZako()
     {
+
 		while(zakoNumber <= batchNum)
         {
 			float xPos = GetRandomRangeInCube() * cubeSize.x;
@@ -88,20 +92,27 @@ public class Test : MonoBehaviour
 			float zPos = GetRandomRangeInCube() * cubeSize.z;
 			Vector3 position = new Vector3(xPos, yPos, zPos) + offset;
 
-			GameObject obj = Instantiate(zakoPrefab, position, Quaternion.identity);
+		    zako = Instantiate(zakoPrefab, position, Quaternion.identity);
 
 
-			var dir = taget.transform.position - obj.transform.position;
+			var dir = taget.transform.position - zako.transform.position;
 
 			var lookAtRotation = Quaternion.LookRotation(dir, Vector3.up);
 
-			obj.transform.rotation = lookAtRotation;
+			zako.transform.rotation = lookAtRotation;
 				
-		    obj.GetComponent<Rigidbody>().AddForce(dir.normalized * speed, ForceMode.Impulse);
+		    zako.GetComponent<Rigidbody>().AddForce(dir.normalized * speed, ForceMode.Impulse);
 
 			zakoNumber++;
 
+			Destroy(zako, 2f);
+
 		}
+
+		if(zakoNumber >= batchNum)
+        {
+			zakoNumber = 0;
+        }
     }
 
 	float GetRandomRangeInCube()
