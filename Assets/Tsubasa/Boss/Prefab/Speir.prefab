@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6164664999083024972}
   - component: {fileID: 8084033398410970951}
   - component: {fileID: 5173974097656270448}
+  - component: {fileID: 1800176773416020235}
   m_Layer: 0
   m_Name: Speir
   m_TagString: EnemyAttack
@@ -116,6 +117,21 @@ MonoBehaviour:
   randomPower: 200
   randomPeriod: 2
   velocity: {x: 0, y: 0, z: 0}
+--- !u!114 &1800176773416020235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6825989121083321228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d235936bf02a1c4a94dd0898e0705e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cueSpear_Shoot:
+    acbAsset: {fileID: -6750239444755058063, guid: 94f4f0a64d94a9f438d0959bb34c00df, type: 3}
+    cueId: 23
 --- !u!1 &8407433000585105651
 GameObject:
   m_ObjectHideFlags: 0

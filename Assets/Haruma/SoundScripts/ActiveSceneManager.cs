@@ -12,6 +12,8 @@ public class ActiveSceneManager : MonoBehaviour
     public static bool S_Boss = false;
     public static bool S_StageSelect = false;
 
+    public static Scene AScene;
+
     //シーン切り替わり検知の準備
     void Start()
     {
@@ -31,7 +33,7 @@ public class ActiveSceneManager : MonoBehaviour
     void SceneLoaded (Scene nextScene, LoadSceneMode mode)
     {
         Debug.Log("SceneLoaded");
-        Scene AScene = SceneManager.GetActiveScene();
+        AScene = SceneManager.GetActiveScene();
         if (AScene.name == "Scene1_Start")
         {
             S_Title = true;
