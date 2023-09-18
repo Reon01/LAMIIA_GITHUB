@@ -10,6 +10,8 @@ public class TuteFishHP : MonoBehaviour
     public Slider HPBar;
     public GameObject Enemy;
     private GameObject Player;
+    public GameObject damage10;
+    public GameObject damagetextposition;
 
     /*
     //スキル取得
@@ -66,6 +68,7 @@ public class TuteFishHP : MonoBehaviour
             {
                 HP = HP - 10;
                 HPBar.value = HP;
+                damagedisplay10(); //１０ダメージのテキストを表示
             }
             if (Player.GetComponent<InputSkillElectronic>().IsLightning == true)
             {
@@ -94,5 +97,10 @@ public class TuteFishHP : MonoBehaviour
         }
     }
 
-   
+    public void damagedisplay10()
+    {
+        Instantiate(damage10, damagetextposition.transform.position, Quaternion.identity);
+    }
+
+
 }
