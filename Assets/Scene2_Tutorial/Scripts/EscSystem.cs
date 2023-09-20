@@ -30,6 +30,17 @@ public class EscSystem : MonoBehaviour
 
             GameStart.menu_Sound = 1;
         }
+       
+    }
+
+    public void MainManyu()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
+        Time.timeScale = 0;
+        canvas_esc.SetActive(true);
+
+        GameStart.menu_Sound = 1;
     }
 
     public void quit()

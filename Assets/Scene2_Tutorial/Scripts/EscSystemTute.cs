@@ -34,6 +34,16 @@ public class EscSystemTute : MonoBehaviour
         }
     }
 
+    public void MainMnyuu()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
+        Time.timeScale = 0;
+        canvas_esc.SetActive(true);
+
+        GameStart.menu_Sound = 1;
+    }
+
     public void quit()
     {
 #if UNITY_EDITOR

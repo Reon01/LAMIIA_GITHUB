@@ -52,6 +52,12 @@ public class PlyerInterction : MonoBehaviour
     [Tooltip("モリ攻撃")]
     public InputMoriAttack _moriAttack;
 
+    [Tooltip("メニュー")]
+    public EscSystem _manyu;
+
+    [Tooltip("メニュー")]
+    public EscSystemTute _manyuTute;
+
 
     //ボタン
 
@@ -150,6 +156,12 @@ public class PlyerInterction : MonoBehaviour
         //電気ウナギシーン4
         _input.actions["Fire"].started += OnEretronicSecene4;
 
+        //メインメニュー
+        _input.actions["MainManyu"].started += OnManyu;
+
+        //メインメニューシーン4
+        _input.actions["MainManyu"].started += OnManyuScene4;
+
 
     }
 
@@ -191,6 +203,12 @@ public class PlyerInterction : MonoBehaviour
 
         //電気ウナギシーン4
         _input.actions["Fire"].started -= OnEretronicSecene4;
+
+        //メインメニュー
+        _input.actions["MainManyu"].started -= OnManyu;
+
+        //メインメニューシーン4
+        _input.actions["MainManyu"].started -= OnManyuScene4;
 
 
     }
@@ -303,6 +321,19 @@ public class PlyerInterction : MonoBehaviour
     private void OnEretronicSecene4(InputAction.CallbackContext obj)
     {
         _unagiScene4.ElectronicScene4();
+    }
+
+
+    /*----------------------------------------------　メインメニュー ------------------------------------------------------*/
+
+    private void OnManyu(InputAction.CallbackContext obj)
+    {
+        _manyu.MainManyu();
+    }
+
+    private void OnManyuScene4(InputAction.CallbackContext obj)
+    {
+        _manyuTute.MainMnyuu();
     }
 
 
