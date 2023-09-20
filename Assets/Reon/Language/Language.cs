@@ -9,6 +9,10 @@ public class Language : MonoBehaviour
     public GameObject textlabel;
     public GameObject textlabel_en;
 
+    //ÉVÅ[ÉìÇPóp
+    public GameObject panel_japanese;
+    public GameObject panel_english;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,10 +42,14 @@ public class Language : MonoBehaviour
     public void japanese()
     {
         languageint = 0;
+        panel_japanese.SetActive(true);
+        panel_english.SetActive(false);
     }
 
     public void english()
     {
         languageint = 1;
+        panel_english.SetActive(true);
+        panel_japanese.SetActive(false);
     }
 }

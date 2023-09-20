@@ -16,6 +16,7 @@ public class GameStart : MonoBehaviour
     public GameObject canvas_option;
     public GameObject canvas_keyconfig;
     public GameObject canvas_credit;
+    public GameObject canvas_language;
 
     // はるま用サウンド変数
     public static int menu_Sound; 
@@ -30,6 +31,12 @@ public class GameStart : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Language()
+    {
+        canvas_language.SetActive(true);
+        canvas_option.SetActive(false);
     }
 
     public void gamestart()
@@ -63,6 +70,7 @@ public class GameStart : MonoBehaviour
         canvas_start.SetActive(true);
         canvas_option.SetActive(false);
         backgrounds.SetActive(true);
+        canvas_language.SetActive(false);
         menu_Sound = 2;
         Debug.Log(menu_Sound);
     }
@@ -72,6 +80,7 @@ public class GameStart : MonoBehaviour
         canvas_option.SetActive(true);
         canvas_keyconfig.SetActive(false);
         keyconfiggallary.SetActive(false);
+        canvas_language.SetActive(false);
         backgrounds.SetActive(true);
         menu_Sound = 2;
         Debug.Log(menu_Sound);

@@ -58,6 +58,7 @@ public class InputSkillChangeScene04 : MonoBehaviour
             count = 0;
             player.GetComponent<InputElectronicScene4>().enabled = false;　//ウナギのスクリプトをオフにする
             player.GetComponent<InputElectronicScene4>().IsLightning = false;　//ウナギダメージ２倍をオフにする
+            player.GetComponent<InputElectronicScene4>().isunagi = false;　//bool型のisunagiをオフにする
         }
     }
 
