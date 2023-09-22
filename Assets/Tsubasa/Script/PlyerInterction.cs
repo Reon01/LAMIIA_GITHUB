@@ -141,9 +141,11 @@ public class PlyerInterction : MonoBehaviour
         //カジキ発射
         _input.actions["Fire"].started += OnShotKajiki;
 
+
         //カジキ発射シーン04
         _input.actions["Fire"].started += OnShotKajikiScene04;
 
+        
         //クラゲシールド
         _input.actions["Fire"].started += OnKurage;
 
@@ -153,8 +155,12 @@ public class PlyerInterction : MonoBehaviour
         //電気ウナギ
         _input.actions["Fire"].started += OnErectronic;
 
+        _input.actions["Unagi"].started += OnErectronic;
+
         //電気ウナギシーン4
         _input.actions["Fire"].started += OnEretronicSecene4;
+
+        _input.actions["Unagi"].started += OnEretronicSecene4;
 
         //メインメニュー
         _input.actions["MainManyu"].started += OnManyu;
@@ -201,8 +207,12 @@ public class PlyerInterction : MonoBehaviour
         //電気ウナギ
         _input.actions["Fire"].started -= OnErectronic;
 
+        _input.actions["Unagi"].started += OnErectronic;
+
         //電気ウナギシーン4
         _input.actions["Fire"].started -= OnEretronicSecene4;
+
+        _input.actions["Unagi"].started += OnEretronicSecene4;
 
         //メインメニュー
         _input.actions["MainManyu"].started -= OnManyu;
