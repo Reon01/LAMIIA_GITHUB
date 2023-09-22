@@ -10822,6 +10822,8 @@ MonoBehaviour:
   textcontroller: {fileID: 435476788}
   textlabel: {fileID: 989652169}
   textlabel_en: {fileID: 1638515121}
+  panel_japanese: {fileID: 0}
+  panel_english: {fileID: 0}
 --- !u!114 &435476795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16522,6 +16524,8 @@ MonoBehaviour:
   textcontroller: {fileID: 813626267}
   textlabel: {fileID: 1185813416}
   textlabel_en: {fileID: 2054348748}
+  panel_japanese: {fileID: 0}
+  panel_english: {fileID: 0}
 --- !u!114 &813626274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20521,7 +20525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brain: {fileID: 1710901646}
-  kando: 200
+  kando: 85
 --- !u!114 &1014070547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26544,7 +26548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_LocalScale.x
@@ -30140,7 +30144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 430986, guid: 2736bbc2f2c78a949957b0719c2992bd, type: 3}
       propertyPath: m_LocalScale.x
@@ -37823,6 +37827,8 @@ MonoBehaviour:
   textcontroller: {fileID: 1894208095}
   textlabel: {fileID: 1287078140}
   textlabel_en: {fileID: 1197338431}
+  panel_japanese: {fileID: 0}
+  panel_english: {fileID: 0}
 --- !u!4 &1955229509
 Transform:
   m_ObjectHideFlags: 0
@@ -45765,7 +45771,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 400
   m_WholeNumbers: 0
-  m_Value: 200
+  m_Value: 85
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

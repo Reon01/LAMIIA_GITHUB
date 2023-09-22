@@ -5286,7 +5286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brain: {fileID: 2117642943}
-  kando: 200
+  kando: 85
 --- !u!114 &401206678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28320,6 +28320,7 @@ MonoBehaviour:
   _skillChangeScene04: {fileID: 1688555258}
   _moriAttack: {fileID: 1041129583}
   _manyu: {fileID: 1541276400}
+  _manyuTute: {fileID: 0}
 --- !u!114 &1801858240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30592,7 +30593,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 400
   m_WholeNumbers: 0
-  m_Value: 200
+  m_Value: 85
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -31854,6 +31855,8 @@ MonoBehaviour:
   textcontroller: {fileID: 45720425}
   textlabel: {fileID: 2023813275}
   textlabel_en: {fileID: 1381569946}
+  panel_japanese: {fileID: 0}
+  panel_english: {fileID: 0}
 --- !u!4 &2053178334
 Transform:
   m_ObjectHideFlags: 0
