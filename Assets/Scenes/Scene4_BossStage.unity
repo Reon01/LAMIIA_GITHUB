@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -25655,7 +25655,7 @@ MonoBehaviour:
   WhaleGO11: {fileID: 925975787}
   WhaleGO12: {fileID: 1658768677}
   WhaleGO13: {fileID: 1245966123}
-  speed: 11
+  speed: 5
 --- !u!54 &1574319121
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -28320,6 +28320,7 @@ MonoBehaviour:
   _skillChangeScene04: {fileID: 1688555258}
   _moriAttack: {fileID: 1041129583}
   _manyu: {fileID: 1541276400}
+  _manyuTute: {fileID: 0}
 --- !u!114 &1801858240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29826,7 +29827,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 150.7}
+  m_AnchoredPosition: {x: 0, y: -353}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1920845531
@@ -31854,6 +31855,8 @@ MonoBehaviour:
   textcontroller: {fileID: 45720425}
   textlabel: {fileID: 2023813275}
   textlabel_en: {fileID: 1381569946}
+  panel_japanese: {fileID: 0}
+  panel_english: {fileID: 0}
 --- !u!4 &2053178334
 Transform:
   m_ObjectHideFlags: 0
@@ -31905,7 +31908,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 150.7}
+  m_AnchoredPosition: {x: 0, y: -353}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2054621230
