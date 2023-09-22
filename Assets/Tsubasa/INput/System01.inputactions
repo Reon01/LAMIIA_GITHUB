@@ -103,6 +103,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Unagi",
+                    "type": "Button",
+                    "id": "84a8f474-2366-4d70-901d-f230d4e9bedf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -433,6 +442,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "MainManyu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b8cbe328-a341-4ac8-b62f-2980af74dc3e",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Unagi",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -866,11 +886,11 @@
                 },
                 {
                     "name": "",
-                    "id": "4faf7dc9-b979-4210-aa8c-e808e1ef89f5",
-                    "path": "<Mouse>/leftButton",
+                    "id": "3033235d-b400-4df0-99ab-4b7f97ae3157",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": "Gamepad",
                     "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -910,11 +930,11 @@
                 },
                 {
                     "name": "",
-                    "id": "3033235d-b400-4df0-99ab-4b7f97ae3157",
-                    "path": "<Gamepad>/buttonEast",
+                    "id": "b99c8c34-41eb-4e94-8891-474c3de6ce8f",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad",
+                    "groups": "",
                     "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
