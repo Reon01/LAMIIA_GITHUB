@@ -5286,7 +5286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brain: {fileID: 2117642943}
-  kando: 200
+  kando: 85
 --- !u!114 &401206678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30593,7 +30593,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 400
   m_WholeNumbers: 0
-  m_Value: 200
+  m_Value: 85
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

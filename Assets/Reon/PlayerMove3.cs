@@ -35,5 +35,6 @@ public class PlayerMove3 : MonoBehaviour
     {
         // カメラ感度をスライドバーの値に変更
         kando = newSliderValue;
+        //PlayerMove3のkandoとCameraSliderのvalueがセット（変えるときは両方変える）
     }
 }
