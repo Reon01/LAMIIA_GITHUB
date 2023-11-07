@@ -18,25 +18,39 @@ public class S3_Kajiki : MonoBehaviour
 
     private GameObject enemykillsystem;
 
+    //ReloadTime
+    //[SerializeField] 
+    bool reloading;
+
+
     // Start is called before the first frame update
     void Start()
     {
         isSkill = false;
         enemykillsystem = GameObject.Find("EnemyKillSystem");
+
+        //Reload
+        reloading = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isSkill == true && enemykillsystem.GetComponent<EnemyKill>().a_Kajiki >= 1 && Time.timeScale == 1)
-        {
-            FishShot();
-            enemykillsystem.GetComponent<EnemyKill>().a_Kajiki -= 1; //スキルを１消費
-            spendskill = true;
-            Debug.Log("カジキ発射");
-            //はるまサウンド変数true
-            SFXplayer.Sf_Sound = 1;
-        }
+        
+            if (Input.GetMouseButtonDown(0) && isSkill == true && enemykillsystem.GetComponent<EnemyKill>().a_Kajiki >= 1 && Time.timeScale == 1)
+            {
+                FishShot();
+                enemykillsystem.GetComponent<EnemyKill>().a_Kajiki -= 1; //スキルを１消費
+                spendskill = true;
+                Debug.Log("カジキ発射");
+                //はるまサウンド変数true
+                SFXplayer.Sf_Sound = 1;
+
+            //Reload
+            StartCoroutine(Reload());
+            }
+        
+ 
     }
     public void FishShot()
     {
@@ -47,5 +61,15 @@ public class S3_Kajiki : MonoBehaviour
 
         ballRigidbody.AddForce(transform.forward * fishspeed);
         Destroy(ball, 3.0f);
+    }
+
+    private IEnumerable Reload()
+    {
+        Debug.Log("Reloading");
+        reloading = true;
+
+        yield return new WaitForSeconds(2); //ReloadTime
+        Debug.Log("Reload");
+        reloading = false;
     }
 }
