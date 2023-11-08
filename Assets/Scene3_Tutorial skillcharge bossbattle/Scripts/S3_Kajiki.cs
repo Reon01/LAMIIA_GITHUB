@@ -37,7 +37,7 @@ public class S3_Kajiki : MonoBehaviour
     void Update()
     {
         
-            if (Input.GetMouseButtonDown(0) && isSkill == true && enemykillsystem.GetComponent<EnemyKill>().a_Kajiki >= 1 && Time.timeScale == 1)
+            if (Input.GetMouseButtonDown(0) && isSkill == true && enemykillsystem.GetComponent<EnemyKill>().a_Kajiki >= 1 && Time.timeScale == 1 && !reloading)
             {
                 FishShot();
                 enemykillsystem.GetComponent<EnemyKill>().a_Kajiki -= 1; //スキルを１消費
@@ -46,8 +46,8 @@ public class S3_Kajiki : MonoBehaviour
                 //はるまサウンド変数true
                 SFXplayer.Sf_Sound = 1;
 
-            //Reload
-            StartCoroutine(Reload());
+                //Reload
+                StartCoroutine(Reload());
             }
         
  
@@ -63,12 +63,13 @@ public class S3_Kajiki : MonoBehaviour
         Destroy(ball, 3.0f);
     }
 
-    private IEnumerable Reload()
+    private IEnumerator Reload()
     {
         Debug.Log("Reloading");
         reloading = true;
 
         yield return new WaitForSeconds(2); //ReloadTime
+
         Debug.Log("Reload");
         reloading = false;
     }
