@@ -19,10 +19,16 @@ public class InputKajikiScne04 : MonoBehaviour
     private GameObject enemykillsystem;
 
     // Start is called before the first frame update
+
+    //ReloadTime
+    //[SerializeField] 
+    bool reloading;
     void Start()
     {
         isSkill = false;
         enemykillsystem = GameObject.Find("EnemyKillSystem");
+
+        reloading = false;
     }
 
     // Update is called once per frame
@@ -47,6 +53,8 @@ public class InputKajikiScne04 : MonoBehaviour
             Debug.Log("カジキ発射");
             //はるまサウンド変数true
             SFXplayer.Sf_Sound = 1;
+            //Reload
+            StartCoroutine(Reload());
         }
     }
 
@@ -60,5 +68,15 @@ public class InputKajikiScne04 : MonoBehaviour
 
         ballRigidbody.AddForce(transform.forward * fishspeed);
         Destroy(ball, 3.0f);
+    }
+    private IEnumerator Reload()
+    {
+        Debug.Log("Reloading");
+        reloading = true;
+
+        yield return new WaitForSeconds(2); //ReloadTime
+
+        Debug.Log("Reload");
+        reloading = false;
     }
 }
