@@ -45,10 +45,10 @@ public class InputKajikiScne04 : MonoBehaviour
 
     public void KajikiScene04()
     {
-        if (isSkill == true && enemykillsystem.GetComponent<EnemyKill>().a_Kajiki >= 1 && Time.timeScale == 1)
+        if (isSkill == true && enemykillsystem.GetComponent<EnemyKill>().a_Kajiki >= 1 && Time.timeScale == 1 && !reloading)
         {
             FishShot();
-            enemykillsystem.GetComponent<EnemyKill>().a_Kajiki -= 1; //スキルを１消費
+            enemykillsystem.GetComponent<EnemyKill>().a_Kajiki -= 1; //スキルを1消費
             spendskill = true;
             Debug.Log("カジキ発射");
             //はるまサウンド変数true
@@ -71,12 +71,13 @@ public class InputKajikiScne04 : MonoBehaviour
     }
     private IEnumerator Reload()
     {
-        Debug.Log("Reloading");
+        Debug.Log("リロード中");
         reloading = true;
 
-        yield return new WaitForSeconds(2); //ReloadTime
+        // 2秒待機（必要に応じて調整してください）
+        yield return new WaitForSeconds(1);
 
-        Debug.Log("Reload");
+        Debug.Log("リロード完了");
         reloading = false;
     }
 }

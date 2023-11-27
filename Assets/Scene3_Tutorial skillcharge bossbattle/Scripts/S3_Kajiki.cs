@@ -68,7 +68,7 @@ public class S3_Kajiki : MonoBehaviour
         Debug.Log("Reloading");
         reloading = true;
 
-        yield return new WaitForSeconds(2); //ReloadTime
+        yield return new WaitForSeconds(120); //ReloadTime
 
         Debug.Log("Reload");
         reloading = false;
