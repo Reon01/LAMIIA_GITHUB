@@ -6,34 +6,34 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
-      value: 510905040757590d0e56597746725944154f1c727c7072332e7f4430e0b3653d
+      value: 5503575f0353505e0f0f0d204626084413154c7d287c22322e284c65e1e2613e
       flags: 0
     RecentlyUsedSceneGuid-1:
-      value: 505556555d575e5d5c0c582646210744474e4a2e28797160757f4a67b3b4356f
-      flags: 0
-    RecentlyUsedSceneGuid-2:
-      value: 5254015252515c095b570e7640265c44104e1a2b282e22657a714c6ab2e33261
-      flags: 0
-    RecentlyUsedSceneGuid-3:
       value: 5157005454510d090b0d5576497b074413164e2e7a7077667b2f1963e6e4313a
       flags: 0
-    RecentlyUsedSceneGuid-4:
-      value: 510257045651580c5d5d557441730d44144e41727d797f6474704462b5b2653e
-      flags: 0
-    RecentlyUsedSceneGuid-5:
-      value: 5a090c5351075e095a0c592011760c44404e1c2b7b707165782f4d31e4e2306c
-      flags: 0
-    RecentlyUsedSceneGuid-6:
-      value: 510000005c560d025c0b5a2643735c4445151d78742c7f337e281b62e1b6606c
-      flags: 0
-    RecentlyUsedSceneGuid-7:
+    RecentlyUsedSceneGuid-2:
       value: 0250010200035c595958587649730a444f154d7d2f7f73662f784d65b0b4606c
       flags: 0
-    RecentlyUsedSceneGuid-8:
+    RecentlyUsedSceneGuid-3:
+      value: 02050c0350020f0e585959244175064410151c79757e2335792b496ae6b9616c
+      flags: 0
+    RecentlyUsedSceneGuid-4:
       value: 5b57055707575f5d090b0e7a43210f44144f497d2d71273674794c61b1b26061
       flags: 0
-    RecentlyUsedSceneGuid-9:
+    RecentlyUsedSceneGuid-5:
       value: 510957575c505b0f0f5d5b7742255b44474f497e7d7c726975714b32e4e5376d
+      flags: 0
+    RecentlyUsedSceneGuid-6:
+      value: 0104000501035a5e545e5977137a074417164b727c2d75612b7a1c65e7e3663d
+      flags: 0
+    RecentlyUsedSceneGuid-7:
+      value: 510905040757590d0e56597746725944154f1c727c7072332e7f4430e0b3653d
+      flags: 0
+    RecentlyUsedSceneGuid-8:
+      value: 5a090c5351075e095a0c592011760c44404e1c2b7b707165782f4d31e4e2306c
+      flags: 0
+    RecentlyUsedSceneGuid-9:
+      value: 510000005c560d025c0b5a2643735c4445151d78742c7f337e281b62e1b6606c
       flags: 0
   m_VCAutomaticAdd: 1
   m_VCDebugCom: 0

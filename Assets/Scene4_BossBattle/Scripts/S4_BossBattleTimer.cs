@@ -28,7 +28,7 @@ public class S4_BossBattleTimer : MonoBehaviour
     void Update()
     {
         slider_bosstimer.value = timer; //スライダーと時間を合わせる
-        text_timer.text = "残り時間：" + timer.ToString("f0"); //テキストで残り時間表記
+        text_timer.text = "Time Limit：" + timer.ToString("f0"); //テキストで残り時間表記
         if (istimer == true)
         {
             timer -= Time.deltaTime; //１秒ずつ減らす
