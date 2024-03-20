@@ -11,6 +11,11 @@ public class INputSkillChange : MonoBehaviour
     public Button button_kurage;
     public Button button_unagi;
 
+    public Text text_mori;
+    public Text text_kajiki;
+    public Text text_kurage;
+    public Text text_unagi;
+
     private int count;
     private GameObject player;
     public GameObject mori;
@@ -51,7 +56,7 @@ public class INputSkillChange : MonoBehaviour
         if (count == 4)
         {
             moricolor();
-            count = 0;
+            count = 1;
         }
     }
 

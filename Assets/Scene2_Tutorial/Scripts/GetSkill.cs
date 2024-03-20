@@ -54,14 +54,15 @@ public class GetSkill : MonoBehaviour
         }
 
         //カジキのスキルを使ったら、表記をー１する
-        if (GetComponent<Kajiki>().spendskill == true)
+        Kajiki kajikiComponent = GetComponent<Kajiki>();
+        if (kajikiComponent != null && kajikiComponent.spendskill == true)
         {
             amount_Kajiki.text = "" + a_Kajiki;
         }
     }
 
-    //　↓カジキのエリアに入ったらスキルを取得できるようにする
-    public void OnTriggerEnter(Collider other)
+        //　↓カジキのエリアに入ったらスキルを取得できるようにする
+        public void OnTriggerEnter(Collider other)
     {
         //カジキ
         if (other.gameObject.CompareTag("Kajiki"))

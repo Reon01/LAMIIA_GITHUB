@@ -75,7 +75,7 @@ public class InputKajikiScne04 : MonoBehaviour
         reloading = true;
 
         // 2秒待機（必要に応じて調整してください）
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.25f);
 
         Debug.Log("リロード完了");
         reloading = false;

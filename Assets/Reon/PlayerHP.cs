@@ -35,7 +35,7 @@ public class PlayerHP : MonoBehaviour
     void Update()
     {
         HP_num = HP;
-        Text_HP.text = "HP:" + HP_num;
+        Text_HP.text = "" + HP_num;
 
         if (HP <= 0)
         {
@@ -50,7 +50,7 @@ public class PlayerHP : MonoBehaviour
         HP -= 5; //TSGŒü‚¯‚É‚P‚Oƒ_ƒ‚©‚ç‚Tƒ_ƒ‚É•ÏX
         HPBar.value = HP;
         HP_num = HP;
-        Text_HP.text = "HP:" + HP_num;
+        Text_HP.text = "" + HP_num;
         redeffect();
     }
 
@@ -72,7 +72,7 @@ public class PlayerHP : MonoBehaviour
         HP -= 2; //TSGŒü‚¯‚É‚Tƒ_ƒ‚©‚ç‚Qƒ_ƒ‚É•ÏX
         HPBar.value = HP;
         HP_num = HP;
-        Text_HP.text = "HP:" + HP_num;
+        Text_HP.text = "" + HP_num;
         redeffect();
     }
 
@@ -82,7 +82,7 @@ public class PlayerHP : MonoBehaviour
         HP -= 2; //TSGŒü‚¯‚É‚Tƒ_ƒ‚©‚ç‚Qƒ_ƒ‚É•ÏX
         HPBar.value = HP;
         HP_num = HP;
-        Text_HP.text = "HP:" + HP_num;
+        Text_HP.text = "" + HP_num;
         redeffect();
     }
 
@@ -93,7 +93,7 @@ public class PlayerHP : MonoBehaviour
             HP = 100;
             HPBar.value = HP;
             HP_num = HP;
-            Text_HP.text = "HP:" + HP_num;
+            Text_HP.text = "" + HP_num;
             Debug.Log("ƒNƒ‰ƒQ‰ñ•œ");
             canvas_heal.SetActive(true); //‰ñ•œ•\‹L
             Invoke("healend", 1f); //‚Q•bŒã‚É‰ñ•œ•\‹L‚ðƒIƒt
@@ -103,7 +103,7 @@ public class PlayerHP : MonoBehaviour
             HP += 10;
             HPBar.value = HP;
             HP_num = HP;
-            Text_HP.text = "HP:" + HP_num;
+            Text_HP.text = "" + HP_num;
             Debug.Log("ƒNƒ‰ƒQ‰ñ•œ");
             canvas_heal.SetActive(true); //‰ñ•œ•\‹L
             Invoke("healend", 1f); //‚Q•bŒã‚É‰ñ•œ•\‹L‚ðƒIƒt
@@ -120,7 +120,7 @@ public class PlayerHP : MonoBehaviour
         HP = 100;
         HPBar.value = HP;
         HP_num = HP;
-        Text_HP.text = "HP:" + HP_num;
+        Text_HP.text = "" + HP_num;
         Debug.Log("maxheal");
     }
 
